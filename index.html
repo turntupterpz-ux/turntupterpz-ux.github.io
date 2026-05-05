@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TurntUpDev</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(180deg, #0b3d34, #062a24);
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+        margin: 10px 0 5px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .subtitle {
+        opacity: 0.8;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        background: #cfd8d3;
+        color: #1b1b1b;
+
+        text-decoration: none;
+        padding: 16px;
+        margin: 12px 0;
+
+        border-radius: 14px;
+        font-weight: 500;
+
+        transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    }
+
+    .button.secondary {
+        background: #e6ece9;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LOGO (replace src with your image URL) -->
+    <img src="https://via.placeholder.com/200" class="logo">
+
+    <h1>TurntUpDev</h1>
+    <div class="subtitle">Lock in ⬇️</div>
+
+    <!-- TELEGRAM BUTTON -->
+    <a class="button" href="https://t.me/YOUR_LINK_HERE">
+        New Telegram Menu 🛩️
+    </a>
+
+    <!-- SMS BUTTON (IMPORTANT) -->
+    <a class="button secondary"
+       href="sms:youremail@icloud.com?body=Hey%20I%20came%20from%20your%20page">
+        Text Me (iPhone)
+    </a>
+
+    <!-- EMAIL BACKUP -->
+    <a class="button secondary"
+       href="mailto:youremail@icloud.com?subject=Inquiry&body=Hey%20I%20came%20from%20your%20page">
+        Email Me
+    </a>
+
+</div>
+
+</body>
+</html>
