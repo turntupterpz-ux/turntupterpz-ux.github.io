@@ -13,6 +13,7 @@
   --bg2:#0b3a30;
   --waxA:#7cffc4;
   --waxB:#d6ffb7;
+  --purple:#a855f7;
 }
 
 body{
@@ -26,7 +27,7 @@ body{
   text-align:center;
 }
 
-/* glow blobs */
+/* background blobs */
 body::before, body::after{
   content:"";
   position:fixed;
@@ -60,7 +61,8 @@ h1{margin:18px 0 6px;}
   display:flex;
   justify-content:center;
   align-items:center;
-  margin:16px 0;
+  gap:8px;
+  margin:18px 0;
   padding:18px;
   border-radius:20px;
   text-decoration:none;
@@ -75,6 +77,23 @@ h1{margin:18px 0 6px;}
     inset 0 0 20px rgba(255,255,255,.1);
 
   transition:.15s ease;
+}
+
+/* PURPLE GLOW BEHIND BUTTON */
+.button::after{
+  content:"";
+  position:absolute;
+  width:120%;
+  height:120%;
+  background:radial-gradient(circle, rgba(168,85,247,.45), transparent 60%);
+  filter:blur(40px);
+  z-index:-1;
+  animation:glowMove 6s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove{
+  0%{transform:translate(-20%, -10%) scale(1);}
+  100%{transform:translate(20%, 10%) scale(1.2);}
 }
 
 /* squish */
@@ -126,13 +145,12 @@ h1{margin:18px 0 6px;}
   animation:drip 3.2s infinite;
 }
 
-/* sticky edge stretch */
 @keyframes drip{
   0%{transform:translateY(0) scaleY(.8); opacity:0;}
   15%{opacity:1;}
   40%{transform:translateY(20px) scaleY(1.5);}
   65%{transform:translateY(42px) scaleY(.9);}
-  80%{transform:translateY(55px) scaleY(1.2);} /* stretch */
+  80%{transform:translateY(55px) scaleY(1.2);}
   100%{transform:translateY(65px) scaleY(.5); opacity:0;}
 }
 
@@ -140,8 +158,33 @@ h1{margin:18px 0 6px;}
 .d2{left:50%; animation-delay:.6s;}
 .d3{left:75%; animation-delay:1.2s;}
 
+/* EMOJI ANIMATION */
+.emoji{
+  display:inline-block;
+  animation:float 2.5s ease-in-out infinite;
+}
+.emoji:nth-child(2){animation-delay:.2s;}
+.emoji:nth-child(3){animation-delay:.4s;}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-4px);}
+}
+
+/* INFO BOX */
+.info{
+  margin-top:25px;
+  padding:16px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  font-size:14px;
+  line-height:1.6;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
 .footer{
-  margin-top:30px;
+  margin-top:20px;
   font-size:12px;
   opacity:.5;
 }
@@ -159,7 +202,7 @@ h1{margin:18px 0 6px;}
 
 <!-- TELEGRAM -->
 <a class="button" href="https://t.me/+ipSPiiM8HiUzOWQx" onclick="buzz()">
-  ✈️ New Telegram Menu
+  <span class="emoji">✈️</span> New Telegram Menu
   <div class="drip d1"></div>
   <div class="drip d2"></div>
   <div class="drip d3"></div>
@@ -170,7 +213,7 @@ h1{margin:18px 0 6px;}
 
 <!-- TEXT -->
 <a class="button" href="sms:7079414402?body=Hey%20I%20came%20from%20your%20page" onclick="buzz()">
-  💬 Text Me
+  <span class="emoji">💬</span> Text Me
   <div class="drip d1"></div>
   <div class="drip d2"></div>
   <div class="drip d3"></div>
@@ -178,6 +221,13 @@ h1{margin:18px 0 6px;}
   <div class="bubble b2"></div>
   <div class="bubble b3"></div>
 </a>
+
+<!-- INFO -->
+<div class="info">
+  Meet ups <span class="emoji">✅</span><br>
+  Worldwide shipping <span class="emoji">✅</span><br>
+  FaceTime verification & customer vouches available <span class="emoji">💚</span>
+</div>
 
 <div class="footer">Quality over quantity 🔥</div>
 
