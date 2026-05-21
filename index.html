@@ -1,208 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MS9WLJWYEQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MS9WLJWYEQ');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TurntUpTerpz</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
 <style>
-:root{
-  --bg1:#061d18;
-  --bg2:#0b3a30;
-  --waxA:#7cffc4;
-  --waxB:#d6ffb7;
-}
-
 body{
   margin:0;
-  font-family:'Inter',sans-serif;
+  font-family:Inter,sans-serif;
+  min-height:100vh;
+  overflow:hidden;
   background:
-    radial-gradient(circle at 20% 20%, #0f5a45 0%, transparent 40%),
-    radial-gradient(circle at 80% 30%, #1a7a5d 0%, transparent 40%),
-    linear-gradient(180deg,var(--bg1),var(--bg2));
+    radial-gradient(circle at top,#ff00aa33,transparent 25%),
+    radial-gradient(circle at bottom,#00ffee33,transparent 25%),
+    linear-gradient(180deg,#050510,#09091c,#060b16);
   color:white;
-  text-align:center;
 }
 
-/* background blobs */
-body::before, body::after{
-  content:"";
-  position:fixed;
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  filter:blur(60px);
-  opacity:.35;
-  pointer-events:none;
+.island{
+  position:absolute;
+  border-radius:30px;
+  backdrop-filter:blur(22px);
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
 }
-body::before{background:#7cffc4; top:-80px; left:-80px;}
-body::after{background:#d6ffb7; bottom:-80px; right:-80px;}
 
-.container{
-  max-width:420px;
-  margin:auto;
-  padding:50px 20px;
+.logo-box{
+  width:280px;
+  height:280px;
+  top:40px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
 .logo{
   width:140px;
   border-radius:50%;
-  box-shadow:0 15px 50px rgba(0,0,0,.7);
 }
 
 h1{
-  margin:18px 0 8px;
+  margin-top:18px;
+  font-size:42px;
 }
 
-/* NEW TOP NOTICE (replaces lock in) */
-.top-notice{
-  margin-bottom:22px;
-  padding:12px 14px;
-  border-radius:14px;
-  background:rgba(255,255,255,0.06);
-  backdrop-filter:blur(8px);
-  font-size:14px;
-  line-height:1.5;
+.notice{
+  width:320px;
+  padding:22px;
+  top:360px;
+  left:50%;
+  transform:translateX(-50%);
+  text-align:center;
 }
 
-/* BUTTON */
 .button{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  margin:18px 0;
-  padding:18px;
-  border-radius:20px;
+  position:absolute;
+  width:320px;
+  padding:24px;
   text-decoration:none;
-  color:#05332a;
-  font-weight:600;
-
-  background:linear-gradient(135deg,var(--waxA),var(--waxB));
-  overflow:hidden;
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.5),
-    inset 0 0 20px rgba(255,255,255,.1);
-
-  transition:.15s ease;
-
-  z-index:1;
+  text-align:center;
+  color:#021;
+  font-weight:800;
+  border-radius:24px;
+  background:linear-gradient(135deg,#7cffc4,#d6ffb7);
 }
 
-/* FIX CLICK ISSUE */
-.button::before,
-.button::after{
-  pointer-events:none;
+.b1{
+  top:520px;
+  left:50%;
+  transform:translateX(-50%) rotate(-2deg);
 }
 
-/* purple glow */
-.button::after{
-  content:"";
-  position:absolute;
-  width:120%;
-  height:120%;
-  background:radial-gradient(circle, rgba(168,85,247,.45), transparent 60%);
-  filter:blur(40px);
-  z-index:-1;
-  animation:glowMove 6s ease-in-out infinite alternate;
-}
-
-@keyframes glowMove{
-  0%{transform:translate(-20%, -10%) scale(1);}
-  100%{transform:translate(20%, 10%) scale(1.2);}
-}
-
-/* squish */
-.button:active{
-  transform:scale(.93);
-}
-
-/* shimmer */
-.button::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35),transparent 70%);
-  animation:shimmer 3s linear infinite;
-}
-@keyframes shimmer{
-  0%{transform:translateX(-100%)}
-  100%{transform:translateX(100%)}
-}
-
-/* bubbles */
-.bubble{
-  position:absolute;
-  bottom:-10px;
-  width:10px;
-  height:10px;
-  background:rgba(255,255,255,.4);
-  border-radius:50%;
-  animation:bubble 6s infinite ease-in;
-}
-.b1{left:20%;}
-.b2{left:50%; animation-delay:2s;}
-.b3{left:75%; animation-delay:4s;}
-
-@keyframes bubble{
-  0%{transform:translateY(0) scale(.6); opacity:.4;}
-  50%{opacity:.8;}
-  100%{transform:translateY(-80px) scale(1.2); opacity:0;}
-}
-
-/* drips */
-.drip{
-  position:absolute;
-  top:-8px;
-  width:16px;
-  height:26px;
-  border-radius:50%;
-  background:linear-gradient(180deg,var(--waxB),var(--waxA));
-  animation:drip 3.2s infinite;
-}
-
-@keyframes drip{
-  0%{transform:translateY(0) scaleY(.8); opacity:0;}
-  15%{opacity:1;}
-  40%{transform:translateY(20px) scaleY(1.5);}
-  65%{transform:translateY(42px) scaleY(.9);}
-  80%{transform:translateY(55px) scaleY(1.2);}
-  100%{transform:translateY(65px) scaleY(.5); opacity:0;}
-}
-
-.d1{left:25%;}
-.d2{left:50%; animation-delay:.6s;}
-.d3{left:75%; animation-delay:1.2s;}
-
-/* emoji animation */
-.emoji{
-  display:inline-block;
-  animation:float 2.5s ease-in-out infinite;
-}
-.emoji:nth-child(2){animation-delay:.2s;}
-.emoji:nth-child(3){animation-delay:.4s;}
-
-@keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-4px);}
+.b2{
+  top:640px;
+  left:50%;
+  transform:translateX(-50%) rotate(2deg);
 }
 
 .footer{
-  margin-top:20px;
-  font-size:12px;
+  position:absolute;
+  bottom:20px;
+  width:100%;
+  text-align:center;
   opacity:.5;
 }
 </style>
@@ -210,51 +95,26 @@ h1{
 
 <body>
 
-<div class="container">
-
-<img class="logo" src="logo.png">
-
+<div class="island logo-box">
+<img src="logo.png" class="logo">
 <h1>TurntUpTerpz</h1>
-
-<!-- MOVED TEXT -->
-<div class="top-notice">
-  Press the <span class="emoji">3️⃣</span> dots in the top right corner & press “Оpеn in browsеr"
-  <span class="emoji">💚</span><span class="emoji">💚</span>
 </div>
 
-<!-- TELEGRAM -->
-<a class="button" href="https://t.me/+ipSPiiM8HiUzOWQx" onclick="buzz()">
-  <span class="emoji">✈️</span> Lipbalm inventory list
-  <div class="drip d1"></div>
-  <div class="drip d2"></div>
-  <div class="drip d3"></div>
-  <div class="bubble b1"></div>
-  <div class="bubble b2"></div>
-  <div class="bubble b3"></div>
-</a>
-
-<!-- TEXT -->
-<a class="button" href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page" onclick="buzz()">
-  <span class="emoji">💬</span> iMessage / SMS (click here)
-  <div class="drip d1"></div>
-  <div class="drip d2"></div>
-  <div class="drip d3"></div>
-  <div class="bubble b1"></div>
-  <div class="bubble b2"></div>
-  <div class="bubble b3"></div>
-</a>
-
-<div class="footer">Quality over quantity 🔥</div>
-
+<div class="island notice">
+Press the 3️⃣ dots in the top right corner & press “Оpеn in browsеr" 💚💚
 </div>
 
-<script>
-function buzz(){
-  if (navigator.vibrate){
-    navigator.vibrate([10, 30, 10]);
-  }
-}
-</script>
+<a class="button b1" href="https://t.me/+ipSPiiM8HiUzOWQx">
+✈️ Lipbalm inventory list
+</a>
+
+<a class="button b2" href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">
+💬 iMessage / SMS (click here)
+</a>
+
+<div class="footer">
+Quality over quantity 🔥
+</div>
 
 </body>
 </html>
