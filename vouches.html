@@ -3,135 +3,382 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050510">
-<title>TurntUpTerpz — Vouches</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#020611">
+
+<title>TurntUpTerpz Vouches</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{box-sizing:border-box}
+
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
   font-family:'Inter',sans-serif;
-  color:#fff;
+  color:white;
+  overflow-x:hidden;
+
   background:
-    radial-gradient(circle at 20% 15%, rgba(0,255,190,.24), transparent 26%),
-    radial-gradient(circle at 85% 80%, rgba(175,85,255,.22), transparent 28%),
-    linear-gradient(135deg,#050510,#07141d,#040a0e);
+    radial-gradient(circle at 20% 20%, rgba(0,255,180,.16), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(168,85,247,.18), transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(0,180,255,.12), transparent 35%),
+    linear-gradient(135deg,#020611,#03131a,#041a14);
+
+  min-height:100vh;
 }
-header{
+
+/* FLOATING STARS */
+
+.bg{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+
+.star{
+  position:absolute;
+  color:white;
+  opacity:.75;
+
+  animation:drift linear infinite;
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,.95),
+    0 0 18px rgba(255,255,255,.7),
+    0 0 30px rgba(0,255,200,.45),
+    0 0 50px rgba(168,85,247,.35);
+}
+
+.star:nth-child(1){left:3%;top:105%;font-size:10px;animation-duration:12s;}
+.star:nth-child(2){left:8%;top:100%;font-size:16px;animation-duration:18s;animation-delay:1s;}
+.star:nth-child(3){left:14%;top:104%;font-size:8px;animation-duration:15s;animation-delay:4s;}
+.star:nth-child(4){left:20%;top:102%;font-size:13px;animation-duration:20s;animation-delay:2s;}
+.star:nth-child(5){left:27%;top:108%;font-size:20px;animation-duration:22s;animation-delay:6s;}
+.star:nth-child(6){left:34%;top:101%;font-size:12px;animation-duration:16s;animation-delay:3s;}
+.star:nth-child(7){left:40%;top:106%;font-size:9px;animation-duration:14s;animation-delay:8s;}
+.star:nth-child(8){left:47%;top:103%;font-size:18px;animation-duration:21s;animation-delay:5s;}
+.star:nth-child(9){left:53%;top:109%;font-size:14px;animation-duration:19s;animation-delay:2s;}
+.star:nth-child(10){left:60%;top:104%;font-size:11px;animation-duration:17s;animation-delay:7s;}
+.star:nth-child(11){left:66%;top:107%;font-size:24px;animation-duration:25s;animation-delay:4s;}
+.star:nth-child(12){left:72%;top:102%;font-size:10px;animation-duration:15s;animation-delay:9s;}
+.star:nth-child(13){left:79%;top:106%;font-size:16px;animation-duration:23s;animation-delay:6s;}
+.star:nth-child(14){left:86%;top:103%;font-size:12px;animation-duration:18s;animation-delay:1s;}
+.star:nth-child(15){left:92%;top:109%;font-size:20px;animation-duration:26s;animation-delay:5s;}
+.star:nth-child(16){left:97%;top:101%;font-size:9px;animation-duration:14s;animation-delay:3s;}
+
+@keyframes drift{
+
+  0%{
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(0deg)
+      scale(.7);
+
+    opacity:0;
+  }
+
+  10%{
+    opacity:.85;
+  }
+
+  50%{
+    transform:
+      translateY(-50vh)
+      translateX(20px)
+      rotate(90deg)
+      scale(1.1);
+  }
+
+  100%{
+    transform:
+      translateY(-120vh)
+      translateX(-15px)
+      rotate(180deg)
+      scale(.8);
+
+    opacity:0;
+  }
+}
+
+/* TOPBAR */
+
+.topbar{
   position:sticky;
   top:0;
-  z-index:5;
-  backdrop-filter:blur(18px);
-  background:rgba(0,0,0,.28);
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-.nav{
-  max-width:1100px;
-  margin:auto;
-  padding:16px 18px;
+  z-index:50;
+
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:12px;
+  align-items:center;
+  gap:14px;
+
+  padding:18px;
+
+  background:rgba(0,0,0,.25);
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
+
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
-  font-weight:800;
-  letter-spacing:-.5px;
-}
-.brand img{
-  width:42px;height:42px;border-radius:50%;
-}
-.links{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-.links a{
-  text-decoration:none;
-  color:#fff;
-  font-size:13px;
-  padding:10px 14px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.08);
-}
-.hero{
-  max-width:1100px;
-  margin:auto;
-  padding:26px 18px 10px;
-}
-.hero h1{
-  margin:0;
-  font-size:clamp(32px,5vw,58px);
-  letter-spacing:-2px;
-}
-.hero p{
-  margin:10px 0 0;
-  max-width:680px;
-  color:rgba(255,255,255,.72);
-  line-height:1.5;
-}
-.grid{
-  max-width:1100px;
-  margin:auto;
-  padding:18px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
   gap:14px;
 }
+
+.logo{
+  width:68px;
+  height:68px;
+  border-radius:50%;
+  object-fit:cover;
+
+  box-shadow:
+    0 0 25px rgba(0,255,200,.25),
+    0 0 45px rgba(168,85,247,.15);
+}
+
+.brand-text h2{
+  margin:0;
+  line-height:1;
+  font-size:17px;
+  font-weight:800;
+}
+
+.brand-text span{
+  font-size:14px;
+  opacity:.7;
+}
+
+.nav-buttons{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.nav-buttons a{
+  text-decoration:none;
+  color:white;
+
+  padding:13px 18px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.06);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(10px);
+
+  font-size:14px;
+  font-weight:600;
+
+  transition:.15s ease;
+
+  box-shadow:
+    inset 0 0 12px rgba(255,255,255,.03),
+    0 0 18px rgba(0,0,0,.18);
+}
+
+.nav-buttons a:active{
+  transform:scale(.94);
+}
+
+/* PAGE CONTENT */
+
+.container{
+  position:relative;
+  z-index:2;
+
+  padding:24px 16px 40px;
+}
+
+.hero h1{
+  margin:0 0 10px;
+  font-size:54px;
+  line-height:.95;
+  letter-spacing:-3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #9effff,
+      #d9b3ff,
+      #ffffff
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin:0;
+  color:rgba(255,255,255,.72);
+  line-height:1.6;
+  font-size:18px;
+}
+
+/* GRID */
+
+.grid{
+  margin-top:26px;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
 .card{
   position:relative;
-  aspect-ratio:1/1.2;
-  border-radius:22px;
   overflow:hidden;
-  border:1px solid rgba(255,255,255,.09);
+
+  border-radius:28px;
+
   background:rgba(255,255,255,.05);
-  box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.35),
+    inset 0 0 20px rgba(255,255,255,.03);
+
+  transition:.18s ease;
 }
+
+.card:active{
+  transform:scale(.97);
+}
+
 .card img{
   width:100%;
-  height:100%;
-  object-fit:cover;
   display:block;
-  transition:.25s ease;
+  cursor:pointer;
 }
-.card:hover img{transform:scale(1.04)}
-.badge{
-  position:absolute;
-  left:12px;
-  bottom:12px;
-  padding:7px 10px;
-  border-radius:999px;
-  background:rgba(0,0,0,.48);
-  border:1px solid rgba(255,255,255,.08);
-  font-size:12px;
+
+/* LIGHTBOX */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,.94);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:18px;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:.22s ease;
+
+  z-index:9999;
 }
-.footer{
-  max-width:1100px;
-  margin:8px auto 24px;
-  padding:0 18px 20px;
-  color:rgba(255,255,255,.55);
-  font-size:12px;
+
+.lightbox.active{
+  opacity:1;
+  pointer-events:auto;
 }
+
+.lightbox img{
+  max-width:100%;
+  max-height:92vh;
+
+  border-radius:24px;
+
+  box-shadow:
+    0 0 40px rgba(0,255,200,.15),
+    0 0 90px rgba(168,85,247,.18);
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .nav-buttons{
+    width:100%;
+    justify-content:flex-start;
+  }
+
+  .nav-buttons a{
+    flex:1;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+}
+
 </style>
 </head>
+
 <body>
-<header>
+
+<!-- STARS -->
+
+<div class="bg">
+  <div class="star">✦</div>
+  <div class="star">✧</div>
+  <div class="star">✦</div>
+  <div class="star">✧</div>
+  <div class="star">✦</div>
+  <div class="star">✧</div>
+  <div class="star">✦</div>
+  <div class="star">✧</div>
+  <div class="star">✦</div>
+  <div class="star">✧</div>
+  <div class="star">✦</div>
+  <div class="star">✧</div>
+  <div class="star">✦</div>
+  <div class="star">✧</div>
+  <div class="star">✦</div>
+  <div class="star">✧</div>
+</div>
+
+<!-- TOPBAR -->
+
 <div class="topbar">
 
   <div class="brand">
+
     <img class="logo" src="logo.png">
+
     <div class="brand-text">
       <h2>TurntUpTerpz</h2>
       <span>Vouches</span>
     </div>
+
   </div>
 
   <div class="nav-buttons">
-    <a href="index.html">Home</a>
+
+    <a href="index.html">
+      Home
+    </a>
 
     <a href="https://t.me/+ipSPiiM8HiUzOWQx">
       Telegram
@@ -140,31 +387,80 @@ header{
     <a href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">
       SMS
     </a>
+
   </div>
 
 </div>
-</header>
 
-<section class="hero">
-  <h1>Customer Vouches</h1>
-</section>
+<!-- CONTENT -->
 
-<section class="grid">
-  <div class="card"><img src="1.jpg" alt="Vouch 1"></div>
-  <div class="card"><img src="2.jpg" alt="Vouch 2"></div>
-  <div class="card"><img src="3.jpg" alt="Vouch 3"></div>
-  <div class="card"><img src="4.jpg" alt="Vouch 4"></div>
-  <div class="card"><img src="5.jpg" alt="Vouch 5"></div>
-  <div class="card"><img src="6.jpg" alt="Vouch 6"></div>
-  <div class="card"><img src="7.jpg" alt="Vouch 7"></div>
-  <div class="card"><img src="8.jpg" alt="Vouch 8"></div>
-  <div class="card"><img src="9.jpg" alt="Vouch 9"></div>
-  <div class="card"><img src="10.jpg" alt="Vouch 10"></div>
-  <div class="card"><img src="11.jpeg" alt="Vouch 11"></div>
-  <div class="card"><img src="12.jpeg" alt="Vouch 12"></div>
-  <div class="card"><img src="13.jpeg" alt="Vouch 13"></div>
-</section>
+<div class="container">
 
-<div class="footer">Tap a card to inspect the proof screenshots more clearly.</div>
+  <div class="hero">
+    <h1>Customer Vouches</h1>
+
+    <p>
+      Real customer screenshots displayed in a clean mobile-first gallery.
+    </p>
+  </div>
+
+  <!-- GRID -->
+
+  <section class="grid">
+
+    <div class="card"><img src="1.jpg" onclick="openImage(this.src)"></div>
+    <div class="card"><img src="2.jpg" onclick="openImage(this.src)"></div>
+
+    <div class="card"><img src="3.jpg" onclick="openImage(this.src)"></div>
+    <div class="card"><img src="4.jpg" onclick="openImage(this.src)"></div>
+
+    <div class="card"><img src="5.jpg" onclick="openImage(this.src)"></div>
+    <div class="card"><img src="6.jpg" onclick="openImage(this.src)"></div>
+
+    <div class="card"><img src="7.jpg" onclick="openImage(this.src)"></div>
+    <div class="card"><img src="8.jpg" onclick="openImage(this.src)"></div>
+
+    <div class="card"><img src="9.jpg" onclick="openImage(this.src)"></div>
+    <div class="card"><img src="10.jpg" onclick="openImage(this.src)"></div>
+
+    <div class="card"><img src="11.jpeg" onclick="openImage(this.src)"></div>
+    <div class="card"><img src="12.jpeg" onclick="openImage(this.src)"></div>
+
+    <div class="card"><img src="13.jpeg" onclick="openImage(this.src)"></div>
+
+  </section>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+
+function openImage(src){
+
+  const lightbox =
+    document.getElementById("lightbox");
+
+  const image =
+    document.getElementById("lightbox-img");
+
+  image.src = src;
+
+  lightbox.classList.add("active");
+}
+
+function closeImage(){
+
+  document
+    .getElementById("lightbox")
+    .classList.remove("active");
+}
+
+</script>
+
 </body>
 </html>
