@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MS9WLJWYEQ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'G-MS9WLJWYEQ');
+gtag('config', 'G-MS9WLJWYEQ');
 </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050510">
+
 <title>TurntUpTerpz</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -40,8 +43,6 @@ body{
   align-items:center;
   padding:20px;
 }
-
-/* REPLACE THE ENTIRE .bg + .star SECTION WITH THIS */
 
 /* BACKGROUND */
 .bg{
@@ -247,15 +248,24 @@ h1{
     Press the 3️⃣ dots in the top right corner & press “Оpеn in browsеr” 💚💚
   </div>
 
-  <a class="button secondary" href="https://t.me/+ipSPiiM8HiUzOWQx">
+  <a
+    class="button secondary track-button"
+    data-button="telegram_inventory"
+    href="https://t.me/+ipSPiiM8HiUzOWQx">
     ✈️ Lipbalm inventory list
   </a>
 
-  <a class="button secondary" href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">
+  <a
+    class="button secondary track-button"
+    data-button="sms_imessage"
+    href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">
     💬 iMessage / SMS (click here)
   </a>
 
-  <a class="button secondary" href="vouches.html">
+  <a
+    class="button secondary track-button"
+    data-button="vouches"
+    href="vouches.html">
     ✨ Vouches
   </a>
 
@@ -264,6 +274,35 @@ h1{
   </div>
 
 </div>
+
+<script>
+document.querySelectorAll('.track-button').forEach(button => {
+
+  button.addEventListener('click', function(e) {
+
+    e.preventDefault();
+
+    const destination = this.href;
+    const buttonName = this.dataset.button;
+    const buttonText = this.innerText.trim();
+
+    gtag('event', 'button_click', {
+      event_category: 'engagement',
+      event_label: buttonName,
+      button_name: buttonName,
+      button_text: buttonText,
+      page_location: window.location.href,
+      page_path: window.location.pathname
+    });
+
+    setTimeout(() => {
+      window.location.href = destination;
+    }, 180);
+
+  });
+
+});
+</script>
 
 </body>
 </html>
