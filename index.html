@@ -1,72 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MS9WLJWYEQ"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
 gtag('config', 'G-MS9WLJWYEQ');
 </script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050510">
-
 <title>TurntUpTerpz</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-  box-sizing:border-box;
-  -webkit-tap-highlight-color:transparent;
-}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 
 body{
-  margin:0;
-  min-height:100vh;
-  overflow:hidden;
-  font-family:'Inter',sans-serif;
-  color:white;
-
-  background:
-    radial-gradient(circle at 20% 20%, rgba(0,255,200,.22), transparent 25%),
-    radial-gradient(circle at 80% 80%, rgba(170,80,255,.18), transparent 25%),
-    linear-gradient(135deg,#04040a,#081117,#04120f);
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
+margin:0;
+min-height:100vh;
+overflow-x:hidden;
+overflow-y:auto;
+font-family:'Inter',sans-serif;
+color:white;
+background:
+radial-gradient(circle at 20% 20%, rgba(0,255,200,.22), transparent 25%),
+radial-gradient(circle at 80% 80%, rgba(170,80,255,.18), transparent 25%),
+linear-gradient(135deg,#04040a,#081117,#04120f);
+padding:20px;
 }
 
-/* BACKGROUND */
-.bg{
-  position:fixed;
-  inset:0;
-  overflow:hidden;
-  pointer-events:none;
+.page{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:30px;
 }
 
-/* STARS */
-.star{
-  position:absolute;
-  color:white;
-  opacity:.75;
-  animation:drift linear infinite;
-
-  text-shadow:
-    0 0 8px rgba(255,255,255,.95),
-    0 0 18px rgba(255,255,255,.7),
-    0 0 30px rgba(0,255,200,.45),
-    0 0 50px rgba(168,85,247,.35);
-}
-
-/* INDIVIDUAL STAR POSITIONS */
+.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;}
+.star{position:absolute;color:white;opacity:.75;animation:drift linear infinite;text-shadow:0 0 8px rgba(255,255,255,.95),0 0 18px rgba(255,255,255,.7),0 0 30px rgba(0,255,200,.45),0 0 50px rgba(168,85,247,.35);}
 .star:nth-child(1){left:3%;top:105%;font-size:10px;animation-duration:12s;}
 .star:nth-child(2){left:8%;top:100%;font-size:16px;animation-duration:18s;animation-delay:1s;}
 .star:nth-child(3){left:14%;top:104%;font-size:8px;animation-duration:15s;animation-delay:4s;}
@@ -84,225 +60,104 @@ body{
 .star:nth-child(15){left:92%;top:109%;font-size:20px;animation-duration:26s;animation-delay:5s;}
 .star:nth-child(16){left:97%;top:101%;font-size:9px;animation-duration:14s;animation-delay:3s;}
 
-/* FLOATING ANIMATION */
 @keyframes drift{
-  0%{
-    transform:
-      translateY(0)
-      translateX(0)
-      rotate(0deg)
-      scale(.7);
-
-    opacity:0;
-  }
-
-  10%{
-    opacity:.85;
-  }
-
-  50%{
-    transform:
-      translateY(-50vh)
-      translateX(20px)
-      rotate(90deg)
-      scale(1.1);
-  }
-
-  100%{
-    transform:
-      translateY(-120vh)
-      translateX(-15px)
-      rotate(180deg)
-      scale(.8);
-
-    opacity:0;
-  }
+0%{transform:translateY(0) translateX(0) rotate(0deg) scale(.7);opacity:0;}
+10%{opacity:.85;}
+50%{transform:translateY(-50vh) translateX(20px) rotate(90deg) scale(1.1);}
+100%{transform:translateY(-120vh) translateX(-15px) rotate(180deg) scale(.8);opacity:0;}
 }
 
 .card{
-  width:min(430px,100%);
-  position:relative;
-
-  border-radius:32px;
-  padding:28px 18px 18px;
-
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08);
-
-  backdrop-filter:blur(20px);
-
-  box-shadow:
-    0 20px 70px rgba(0,0,0,.5),
-    inset 0 0 30px rgba(255,255,255,.03);
-
-  text-align:center;
+width:min(430px,100%);
+border-radius:32px;
+padding:28px 18px 18px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+box-shadow:0 20px 70px rgba(0,0,0,.5), inset 0 0 30px rgba(255,255,255,.03);
+text-align:center;
 }
 
-.logo{
-  width:122px;
-  height:122px;
-  object-fit:cover;
-  border-radius:50%;
+.logo{width:122px;height:122px;object-fit:cover;border-radius:50%;}
+h1{margin:18px 0 8px;font-size:42px;letter-spacing:-2px;background:linear-gradient(90deg,#fff,#7cffc4,#d0b3ff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.notice{margin-bottom:18px;padding:16px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);line-height:1.5;font-size:14px;}
+.button{display:flex;justify-content:center;align-items:center;min-height:66px;margin:12px 0;border-radius:22px;text-decoration:none;font-weight:800;font-size:16px;transition:.16s ease;}
+.button:active{transform:scale(.96);}
+.secondary{background:linear-gradient(135deg,#d0b3ff,#7cffc4,#9ee7ff);color:#12081a;}
+.footer{margin-top:16px;font-size:12px;opacity:.55;}
 
-  box-shadow:
-    0 0 40px rgba(0,255,200,.25),
-    0 0 70px rgba(168,85,247,.18);
-}
-
-h1{
-  margin:18px 0 8px;
-  font-size:42px;
-  letter-spacing:-2px;
-
-  background:linear-gradient(90deg,#fff,#7cffc4,#d0b3ff,#fff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.notice{
-  margin-bottom:18px;
-  padding:16px;
-
-  border-radius:20px;
-
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.06);
-
-  line-height:1.5;
-  font-size:14px;
-}
-
-.button{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  min-height:66px;
-  margin:12px 0;
-
-  border-radius:22px;
-
-  text-decoration:none;
-  font-weight:800;
-  font-size:16px;
-
-  transition:.16s ease;
-}
-
-.button:active{
-  transform:scale(.96);
-}
-
-.primary{
-  background:linear-gradient(135deg,#7cffc4,#d6ffb7,#a7ffff);
-  color:#041c16;
-}
-
-.secondary{
-  background:linear-gradient(135deg,#d0b3ff,#7cffc4,#9ee7ff);
-  color:#12081a;
-}
-
-.example{
-  background:rgba(255,255,255,.06);
-  color:white;
-  border:1px dashed rgba(255,255,255,.15);
-}
-
-.footer{
-  margin-top:16px;
-  font-size:12px;
-  opacity:.55;
-}
+.vouches-section{width:min(1200px,95%);}
+.vouches-title{text-align:center;font-size:32px;font-weight:800;margin-bottom:20px;background:linear-gradient(90deg,#fff,#7cffc4,#d0b3ff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.vouch-scroll{display:flex;gap:18px;overflow-x:auto;padding:10px 5px 25px;scroll-snap-type:x mandatory;}
+.vouch-card{flex:0 0 260px;border-radius:24px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);}
+.vouch-card img{width:100%;display:block;cursor:pointer;}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;justify-content:center;align-items:center;z-index:99999;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:95%;max-height:95%;border-radius:16px;}
 </style>
 </head>
-
 <body>
+<div class="bg"><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div></div>
 
-<div class="bg">
-  <div class="star">✦</div>
-  <div class="star">✧</div>
-  <div class="star">✦</div>
-  <div class="star">✧</div>
-  <div class="star">✦</div>
-  <div class="star">✧</div>
-  <div class="star">✦</div>
-  <div class="star">✧</div>
-  <div class="star">✦</div>
-  <div class="star">✧</div>
-  <div class="star">✦</div>
-  <div class="star">✧</div>
-  <div class="star">✦</div>
-  <div class="star">✧</div>
-  <div class="star">✦</div>
-  <div class="star">✧</div>
+<div class="page">
+<div class="card">
+<img class="logo" src="logo.png">
+<h1>TurntUpTerpz</h1>
+<div class="notice">Press the 3️⃣ dots in the top right corner & press “Оpеn in browsеr” 💚💚</div>
+
+<a class="button secondary track-button" data-button="telegram_inventory" href="https://t.me/+ipSPiiM8HiUzOWQx">✈️ Lipbalm inventory list</a>
+<a class="button secondary track-button" data-button="sms_imessage" href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">💬 iMessage / SMS (click here)</a>
+<a class="button secondary" href="#vouches">✨ View Vouches</a>
+
+<div class="footer">Quality over quantity 🔥</div>
 </div>
 
-<div class="card">
+<section id="vouches" class="vouches-section">
+<div class="vouches-title">✨ Customer Vouches</div>
+<div class="vouch-scroll">
+<div class="vouch-card"><img src="1.jpg" onclick="openImage('1.jpg')"></div><div class="vouch-card"><img src="2.jpg" onclick="openImage('2.jpg')"></div><div class="vouch-card"><img src="3.jpg" onclick="openImage('3.jpg')"></div><div class="vouch-card"><img src="4.jpg" onclick="openImage('4.jpg')"></div><div class="vouch-card"><img src="5.jpg" onclick="openImage('5.jpg')"></div><div class="vouch-card"><img src="6.jpg" onclick="openImage('6.jpg')"></div><div class="vouch-card"><img src="7.jpg" onclick="openImage('7.jpg')"></div><div class="vouch-card"><img src="8.jpg" onclick="openImage('8.jpg')"></div><div class="vouch-card"><img src="9.jpg" onclick="openImage('9.jpg')"></div><div class="vouch-card"><img src="10.jpg" onclick="openImage('10.jpg')"></div><div class="vouch-card"><img src="11.jpeg" onclick="openImage('11.jpeg')"></div><div class="vouch-card"><img src="12.jpeg" onclick="openImage('12.jpeg')"></div><div class="vouch-card"><img src="13.jpeg" onclick="openImage('13.jpeg')"></div><div class="vouch-card"><img src="1412.JPEG" onclick="openImage('1412.JPEG')"></div><div class="vouch-card"><img src="151.JPEG" onclick="openImage('151.JPEG')"></div><div class="vouch-card"><img src="16.JPEG" onclick="openImage('16.JPEG')"></div><div class="vouch-card"><img src="1738.JPEG" onclick="openImage('1738.JPEG')"></div><div class="vouch-card"><img src="18.jpg" onclick="openImage('18.jpg')"></div><div class="vouch-card"><img src="IMG_7952.jpeg" onclick="openImage('IMG_7952.jpeg')"></div><div class="vouch-card"><img src="20.jpg" onclick="openImage('20.jpg')"></div><div class="vouch-card"><img src="21.jpg" onclick="openImage('21.jpg')"></div><div class="vouch-card"><img src="22.jpg" onclick="openImage('22.jpg')"></div><div class="vouch-card"><img src="23.jpg" onclick="openImage('23.jpg')"></div><div class="vouch-card"><img src="24.png" onclick="openImage('24.png')"></div>
+</div></section>
+</div>
 
-  <img class="logo" src="logo.png">
-
-  <h1>TurntUpTerpz</h1>
-
-  <div class="notice">
-    Press the 3️⃣ dots in the top right corner & press “Оpеn in browsеr” 💚💚
-  </div>
-
-  <a
-    class="button secondary track-button"
-    data-button="telegram_inventory"
-    href="https://t.me/+ipSPiiM8HiUzOWQx">
-    ✈️ Lipbalm inventory list
-  </a>
-
-  <a
-    class="button secondary track-button"
-    data-button="sms_imessage"
-    href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">
-    💬 iMessage / SMS (click here)
-  </a>
-
-  <a
-    class="button secondary track-button"
-    data-button="vouches"
-    href="vouches.html">
-    ✨ Vouches
-  </a>
-
-  <div class="footer">
-    Quality over quantity 🔥
-  </div>
-
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+<img id="lightboxImage">
 </div>
 
 <script>
-document.querySelectorAll('.track-button').forEach(button => {
-
-  button.addEventListener('click', function(e) {
-
-    e.preventDefault();
-
-    const destination = this.href;
-    const buttonName = this.dataset.button;
-    const buttonText = this.innerText.trim();
-
-    gtag('event', 'button_click', {
-      event_category: 'engagement',
-      event_label: buttonName,
-      button_name: buttonName,
-      button_text: buttonText,
-      page_location: window.location.href,
-      page_path: window.location.pathname
-    });
-
-    setTimeout(() => {
-      window.location.href = destination;
-    }, 180);
-
-  });
-
+document.querySelectorAll('.track-button').forEach(button=>{
+button.addEventListener('click',function(e){
+e.preventDefault();
+const destination=this.href;
+gtag('event','button_click',{event_category:'engagement'});
+setTimeout(()=>{window.location.href=destination;},180);
 });
-</script>
+});
 
+function openImage(src){
+document.getElementById('lightboxImage').src=src;
+document.getElementById('lightbox').classList.add('active');
+}
+function closeImage(){
+document.getElementById('lightbox').classList.remove('active');
+}
+
+const vouchScroll=document.querySelector('.vouch-scroll');
+let autoDirection=1;
+
+function autoScrollVouches(){
+  if(!vouchScroll) return;
+  vouchScroll.scrollLeft += autoDirection*0.5;
+
+  if(vouchScroll.scrollLeft + vouchScroll.clientWidth >= vouchScroll.scrollWidth - 2){
+    autoDirection=-1;
+  }else if(vouchScroll.scrollLeft<=0){
+    autoDirection=1;
+  }
+  requestAnimationFrame(autoScrollVouches);
+}
+
+setTimeout(autoScrollVouches,1000);
+
+</script>
 </body>
 </html>
