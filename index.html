@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MS9WLJWYEQ"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MS9WLJWYEQ">
+const vouchScroll = document.querySelector('.vouch-scroll');
+
+if (vouchScroll) {
+  let speed = 1;
+
+  setInterval(() => {
+    vouchScroll.scrollLeft += speed;
+
+    if (
+      vouchScroll.scrollLeft >=
+      (vouchScroll.scrollWidth - vouchScroll.clientWidth - 5)
+    ) {
+      vouchScroll.scrollLeft = 0;
+    }
+  }, 16);
+}
+
+</script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -141,22 +159,7 @@ function closeImage(){
 document.getElementById('lightbox').classList.remove('active');
 }
 
-const vouchScroll=document.querySelector('.vouch-scroll');
-let autoDirection=1;
 
-function autoScrollVouches(){
-  if(!vouchScroll) return;
-  vouchScroll.scrollLeft += autoDirection*0.5;
-
-  if(vouchScroll.scrollLeft + vouchScroll.clientWidth >= vouchScroll.scrollWidth - 2){
-    autoDirection=-1;
-  }else if(vouchScroll.scrollLeft<=0){
-    autoDirection=1;
-  }
-  requestAnimationFrame(autoScrollVouches);
-}
-
-setTimeout(autoScrollVouches,1000);
 
 </script>
 </body>
