@@ -125,10 +125,24 @@ animation:marquee 150s linear infinite;
 
 <section id="vouches" class="vouches-section">
 <div class="vouches-title">✨ Customer Vouches</div>
-<div style="overflow:hidden;width:100%;"><div class="vouch-scroll">
-<div class="vouch-card"><img src="1.jpg" onclick="openImage('1.jpg')"></div><div class="vouch-card"><img src="2.jpg" onclick="openImage('2.jpg')"></div><div class="vouch-card"><img src="3.jpg" onclick="openImage('3.jpg')"></div><div class="vouch-card"><img src="4.jpg" onclick="openImage('4.jpg')"></div><div class="vouch-card"><img src="5.jpg" onclick="openImage('5.jpg')"></div><div class="vouch-card"><img src="6.jpg" onclick="openImage('6.jpg')"></div><div class="vouch-card"><img src="7.jpg" onclick="openImage('7.jpg')"></div><div class="vouch-card"><img src="8.jpg" onclick="openImage('8.jpg')"></div><div class="vouch-card"><img src="9.jpg" onclick="openImage('9.jpg')"></div><div class="vouch-card"><img src="10.jpg" onclick="openImage('10.jpg')"></div><div class="vouch-card"><img src="11.jpeg" onclick="openImage('11.jpeg')"></div><div class="vouch-card"><img src="12.jpeg" onclick="openImage('12.jpeg')"></div><div class="vouch-card"><img src="13.jpeg" onclick="openImage('13.jpeg')"></div><div class="vouch-card"><img src="1412.JPEG" onclick="openImage('1412.JPEG')"></div><div class="vouch-card"><img src="151.JPEG" onclick="openImage('151.JPEG')"></div><div class="vouch-card"><img src="16.JPEG" onclick="openImage('16.JPEG')"></div><div class="vouch-card"><img src="1738.JPEG" onclick="openImage('1738.JPEG')"></div><div class="vouch-card"><img src="18.jpg" onclick="openImage('18.jpg')"></div><div class="vouch-card"><img src="IMG_7952.jpeg" onclick="openImage('IMG_7952.jpeg')"></div><div class="vouch-card"><img src="20.jpg" onclick="openImage('20.jpg')"></div><div class="vouch-card"><img src="21.jpg" onclick="openImage('21.jpg')"></div><div class="vouch-card"><img src="22.jpg" onclick="openImage('22.jpg')"></div><div class="vouch-card"><img src="23.jpg" onclick="openImage('23.jpg')"></div><div class="vouch-card"><img src="24.png" onclick="openImage('24.png')"></div>
-<div class="vouch-card"><img src="1.jpg" onclick="openImage('1.jpg')"></div><div class="vouch-card"><img src="2.jpg" onclick="openImage('2.jpg')"></div><div class="vouch-card"><img src="3.jpg" onclick="openImage('3.jpg')"></div><div class="vouch-card"><img src="4.jpg" onclick="openImage('4.jpg')"></div><div class="vouch-card"><img src="5.jpg" onclick="openImage('5.jpg')"></div><div class="vouch-card"><img src="6.jpg" onclick="openImage('6.jpg')"></div><div class="vouch-card"><img src="7.jpg" onclick="openImage('7.jpg')"></div><div class="vouch-card"><img src="8.jpg" onclick="openImage('8.jpg')"></div><div class="vouch-card"><img src="9.jpg" onclick="openImage('9.jpg')"></div><div class="vouch-card"><img src="10.jpg" onclick="openImage('10.jpg')"></div><div class="vouch-card"><img src="11.jpeg" onclick="openImage('11.jpeg')"></div><div class="vouch-card"><img src="12.jpeg" onclick="openImage('12.jpeg')"></div><div class="vouch-card"><img src="13.jpeg" onclick="openImage('13.jpeg')"></div><div class="vouch-card"><img src="1412.JPEG" onclick="openImage('1412.JPEG')"></div><div class="vouch-card"><img src="151.JPEG" onclick="openImage('151.JPEG')"></div><div class="vouch-card"><img src="16.JPEG" onclick="openImage('16.JPEG')"></div><div class="vouch-card"><img src="1738.JPEG" onclick="openImage('1738.JPEG')"></div><div class="vouch-card"><img src="18.jpg" onclick="openImage('18.jpg')"></div><div class="vouch-card"><img src="IMG_7952.jpeg" onclick="openImage('IMG_7952.jpeg')"></div><div class="vouch-card"><img src="20.jpg" onclick="openImage('20.jpg')"></div><div class="vouch-card"><img src="21.jpg" onclick="openImage('21.jpg')"></div><div class="vouch-card"><img src="22.jpg" onclick="openImage('22.jpg')"></div><div class="vouch-card"><img src="23.jpg" onclick="openImage('23.jpg')"></div><div class="vouch-card"><img src="24.png" onclick="openImage('24.png')"></div>
-</div></div></section>
+<div style="overflow:hidden;width:100%;">
+<div id="vouchGallery" class="vouch-scroll"></div>
+<script>
+const vouchImages = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpeg', '12.jpeg', '13.jpeg', '1412.JPEG', '151.JPEG', '16.JPEG', '1738.JPEG', '18.jpg', 'IMG_7952.jpeg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.png', '26.jpg', '27.jpg'];
+
+const gallery = document.getElementById('vouchGallery');
+
+function createCard(src){
+  return `<div class="vouch-card">
+    <img src="${src}" onclick="openImage('${src}')">
+  </div>`;
+}
+
+gallery.innerHTML =
+  vouchImages.map(createCard).join('') +
+  vouchImages.map(createCard).join('');
+</script>
+</div></section>
 </div>
 
 <div id="lightbox" class="lightbox" onclick="closeImage()">
