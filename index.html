@@ -2,23 +2,6 @@
 <html lang="en">
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MS9WLJWYEQ">
-const vouchScroll = document.querySelector('.vouch-scroll');
-
-if (vouchScroll) {
-  let speed = 1;
-
-  setInterval(() => {
-    vouchScroll.scrollLeft += speed;
-
-    if (
-      vouchScroll.scrollLeft >=
-      (vouchScroll.scrollWidth - vouchScroll.clientWidth - 5)
-    ) {
-      vouchScroll.scrollLeft = 0;
-    }
-  }, 16);
-}
-
 </script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -106,7 +89,17 @@ h1{margin:18px 0 8px;font-size:42px;letter-spacing:-2px;background:linear-gradie
 
 .vouches-section{width:min(1200px,95%);}
 .vouches-title{text-align:center;font-size:32px;font-weight:800;margin-bottom:20px;background:linear-gradient(90deg,#fff,#7cffc4,#d0b3ff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.vouch-scroll{display:flex;gap:18px;overflow-x:auto;padding:10px 5px 25px;scroll-snap-type:x mandatory;}
+.vouch-scroll{
+display:flex;
+gap:18px;
+padding:10px 5px 25px;
+width:max-content;
+animation:marquee 45s linear infinite;
+}
+@keyframes marquee{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
 .vouch-card{flex:0 0 260px;border-radius:24px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);}
 .vouch-card img{width:100%;display:block;cursor:pointer;}
 .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;justify-content:center;align-items:center;z-index:99999;}
@@ -132,9 +125,10 @@ h1{margin:18px 0 8px;font-size:42px;letter-spacing:-2px;background:linear-gradie
 
 <section id="vouches" class="vouches-section">
 <div class="vouches-title">✨ Customer Vouches</div>
-<div class="vouch-scroll">
+<div style="overflow:hidden;width:100%;"><div class="vouch-scroll">
 <div class="vouch-card"><img src="1.jpg" onclick="openImage('1.jpg')"></div><div class="vouch-card"><img src="2.jpg" onclick="openImage('2.jpg')"></div><div class="vouch-card"><img src="3.jpg" onclick="openImage('3.jpg')"></div><div class="vouch-card"><img src="4.jpg" onclick="openImage('4.jpg')"></div><div class="vouch-card"><img src="5.jpg" onclick="openImage('5.jpg')"></div><div class="vouch-card"><img src="6.jpg" onclick="openImage('6.jpg')"></div><div class="vouch-card"><img src="7.jpg" onclick="openImage('7.jpg')"></div><div class="vouch-card"><img src="8.jpg" onclick="openImage('8.jpg')"></div><div class="vouch-card"><img src="9.jpg" onclick="openImage('9.jpg')"></div><div class="vouch-card"><img src="10.jpg" onclick="openImage('10.jpg')"></div><div class="vouch-card"><img src="11.jpeg" onclick="openImage('11.jpeg')"></div><div class="vouch-card"><img src="12.jpeg" onclick="openImage('12.jpeg')"></div><div class="vouch-card"><img src="13.jpeg" onclick="openImage('13.jpeg')"></div><div class="vouch-card"><img src="1412.JPEG" onclick="openImage('1412.JPEG')"></div><div class="vouch-card"><img src="151.JPEG" onclick="openImage('151.JPEG')"></div><div class="vouch-card"><img src="16.JPEG" onclick="openImage('16.JPEG')"></div><div class="vouch-card"><img src="1738.JPEG" onclick="openImage('1738.JPEG')"></div><div class="vouch-card"><img src="18.jpg" onclick="openImage('18.jpg')"></div><div class="vouch-card"><img src="IMG_7952.jpeg" onclick="openImage('IMG_7952.jpeg')"></div><div class="vouch-card"><img src="20.jpg" onclick="openImage('20.jpg')"></div><div class="vouch-card"><img src="21.jpg" onclick="openImage('21.jpg')"></div><div class="vouch-card"><img src="22.jpg" onclick="openImage('22.jpg')"></div><div class="vouch-card"><img src="23.jpg" onclick="openImage('23.jpg')"></div><div class="vouch-card"><img src="24.png" onclick="openImage('24.png')"></div>
-</div></section>
+<div class="vouch-card"><img src="1.jpg" onclick="openImage('1.jpg')"></div><div class="vouch-card"><img src="2.jpg" onclick="openImage('2.jpg')"></div><div class="vouch-card"><img src="3.jpg" onclick="openImage('3.jpg')"></div><div class="vouch-card"><img src="4.jpg" onclick="openImage('4.jpg')"></div><div class="vouch-card"><img src="5.jpg" onclick="openImage('5.jpg')"></div><div class="vouch-card"><img src="6.jpg" onclick="openImage('6.jpg')"></div><div class="vouch-card"><img src="7.jpg" onclick="openImage('7.jpg')"></div><div class="vouch-card"><img src="8.jpg" onclick="openImage('8.jpg')"></div><div class="vouch-card"><img src="9.jpg" onclick="openImage('9.jpg')"></div><div class="vouch-card"><img src="10.jpg" onclick="openImage('10.jpg')"></div><div class="vouch-card"><img src="11.jpeg" onclick="openImage('11.jpeg')"></div><div class="vouch-card"><img src="12.jpeg" onclick="openImage('12.jpeg')"></div><div class="vouch-card"><img src="13.jpeg" onclick="openImage('13.jpeg')"></div><div class="vouch-card"><img src="1412.JPEG" onclick="openImage('1412.JPEG')"></div><div class="vouch-card"><img src="151.JPEG" onclick="openImage('151.JPEG')"></div><div class="vouch-card"><img src="16.JPEG" onclick="openImage('16.JPEG')"></div><div class="vouch-card"><img src="1738.JPEG" onclick="openImage('1738.JPEG')"></div><div class="vouch-card"><img src="18.jpg" onclick="openImage('18.jpg')"></div><div class="vouch-card"><img src="IMG_7952.jpeg" onclick="openImage('IMG_7952.jpeg')"></div><div class="vouch-card"><img src="20.jpg" onclick="openImage('20.jpg')"></div><div class="vouch-card"><img src="21.jpg" onclick="openImage('21.jpg')"></div><div class="vouch-card"><img src="22.jpg" onclick="openImage('22.jpg')"></div><div class="vouch-card"><img src="23.jpg" onclick="openImage('23.jpg')"></div><div class="vouch-card"><img src="24.png" onclick="openImage('24.png')"></div>
+</div></div></section>
 </div>
 
 <div id="lightbox" class="lightbox" onclick="closeImage()">
@@ -162,5 +156,25 @@ document.getElementById('lightbox').classList.remove('active');
 
 
 </script>
+
+<script>
+window.addEventListener('load',()=>{
+  const scroller=document.querySelector('.vouch-scroll');
+  if(!scroller) return;
+
+  let pos=0;
+
+  setInterval(()=>{
+    pos += 12;   // much faster
+
+    if(pos >= scroller.scrollWidth - scroller.clientWidth){
+      pos = 0;
+    }
+
+    scroller.scrollLeft = pos;
+  },30);
+});
+</script>
+
 </body>
 </html>
