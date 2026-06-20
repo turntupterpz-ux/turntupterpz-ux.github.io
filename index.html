@@ -87,24 +87,20 @@ h1{margin:18px 0 8px;font-size:42px;letter-spacing:-2px;background:linear-gradie
 .secondary{background:linear-gradient(135deg,#d0b3ff,#7cffc4,#9ee7ff);color:#12081a;}
 .footer{margin-top:16px;font-size:12px;opacity:.55;}
 
-.vouches-section{width:min(1200px,95%);}
-.vouches-title{text-align:center;font-size:32px;font-weight:800;margin-bottom:20px;background:linear-gradient(90deg,#fff,#7cffc4,#d0b3ff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.vouch-scroll{
-display:flex;
-gap:18px;
-padding:10px 5px 25px;
-width:max-content;
-animation:marquee 150s linear infinite;
-}
-@keyframes marquee{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-}
-.vouch-card{flex:0 0 260px;border-radius:24px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);}
-.vouch-card img{width:100%;display:block;cursor:pointer;}
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;justify-content:center;align-items:center;z-index:99999;}
+
+.vouches-section{width:min(1400px,95%);}
+.vouches-header{text-align:center;margin-bottom:28px;}
+.vouches-title{font-size:36px;font-weight:800;margin-bottom:8px;background:linear-gradient(90deg,#fff,#7cffc4,#d0b3ff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.vouches-subtitle{opacity:.65;font-size:14px;}
+.vouch-grid{columns:4 260px;column-gap:18px;}
+.vouch-card{break-inside:avoid;margin-bottom:18px;overflow:hidden;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:.25s ease;cursor:pointer;}
+.vouch-card:hover{transform:translateY(-4px);border-color:rgba(124,255,196,.4);box-shadow:0 15px 40px rgba(0,0,0,.45);}
+.vouch-card img{width:100%;display:block;}
+@media(max-width:768px){.vouch-grid{columns:2 160px;}}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);backdrop-filter:blur(8px);display:none;justify-content:center;align-items:center;z-index:99999;padding:20px;}
 .lightbox.active{display:flex;}
-.lightbox img{max-width:95%;max-height:95%;border-radius:16px;}
+.lightbox img{max-width:95%;max-height:92vh;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.8);}
+
 </style>
 </head>
 <body>
@@ -124,9 +120,11 @@ animation:marquee 150s linear infinite;
 </div>
 
 <section id="vouches" class="vouches-section">
+<div class="vouches-header">
 <div class="vouches-title">✨ Customer Vouches</div>
-<div style="overflow:hidden;width:100%;">
-<div id="vouchGallery" class="vouch-scroll"></div>
+<div class="vouches-subtitle">Real customer feedback & experiences</div>
+</div>
+<div id="vouchGallery" class="vouch-grid"></div>
 <script>
 const vouchImages = [
   '1.jpg',
@@ -164,15 +162,11 @@ const vouchImages = [
 
 const gallery = document.getElementById('vouchGallery');
 
-function createCard(src){
-  return `<div class="vouch-card">
-    <img src="${src}" onclick="openImage('${src}')">
-  </div>`;
-}
-
-gallery.innerHTML =
-  vouchImages.map(createCard).join('') +
-  vouchImages.map(createCard).join('');
+gallery.innerHTML = vouchImages.map(src => `
+<div class="vouch-card" onclick="openImage('${src}')">
+<img src="${src}" loading="lazy">
+</div>
+`).join('');
 </script>
 </div></section>
 </div>
@@ -201,25 +195,6 @@ document.getElementById('lightbox').classList.remove('active');
 
 
 
-</script>
-
-<script>
-window.addEventListener('load',()=>{
-  const scroller=document.querySelector('.vouch-scroll');
-  if(!scroller) return;
-
-  let pos=0;
-
-  setInterval(()=>{
-    pos += 12;   // much faster
-
-    if(pos >= scroller.scrollWidth - scroller.clientWidth){
-      pos = 0;
-    }
-
-    scroller.scrollLeft = pos;
-  },30);
-});
 </script>
 
 </body>
