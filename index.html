@@ -14,6 +14,7 @@ gtag('config', 'G-MS9WLJWYEQ');
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050510">
 <title>TurntUpTerpz</title>
+<link rel="icon" type="image/png" href="logo.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -99,7 +100,9 @@ h1{margin:18px 0 8px;font-size:42px;letter-spacing:-2px;background:linear-gradie
 @media(max-width:768px){.vouch-grid{columns:2 160px;}}
 .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);backdrop-filter:blur(8px);display:none;justify-content:center;align-items:center;z-index:99999;padding:20px;}
 .lightbox.active{display:flex;}
-.lightbox img{max-width:95%;max-height:92vh;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.8);}
+.lightbox img{max-height:92vh;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.8);}
+.menu-pair{display:flex;gap:12px;align-items:center;justify-content:center;width:min(96vw,1200px);}
+.menu-pair img{width:calc(50% - 6px);max-height:92vh;object-fit:contain;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.8);}
 
 </style>
 </head>
@@ -112,9 +115,25 @@ h1{margin:18px 0 8px;font-size:42px;letter-spacing:-2px;background:linear-gradie
 <h1>TurntUpTerpz</h1>
 <div class="notice">Press the 3️⃣ dots in the top right corner & press “Оpеn in browsеr” 💚💚</div>
 
-<a class="button secondary track-button" data-button="telegram_inventory" href="https://t.me/+mu_PtvpRM_QwNWEx">✈️ Lipbalm inventory list (New channel , old was banned) </a>
-<a class="button secondary track-button" data-button="sms_imessage" href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">💬 iMessage / SMS (click here)</a>
-<a class="button secondary" href="#vouches">✨ View Vouches</a>
+<a class="button secondary track-button" href="#" id="menuButton">
+    📋 7-18 Inventory (Flower also available)
+</a>
+
+<a class="button secondary track-button"
+   data-button="telegram_channel"
+   href="https://t.me/+mu_PtvpRM_QwNWEx">
+    ✈️ New Telegram Channel
+</a>
+
+<a class="button secondary track-button"
+   data-button="sms_imessage"
+   href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">
+    💬 iMessage / SMS (click here)
+</a>
+
+<a class="button secondary" href="#vouches">
+    ✨ View Vouches
+</a>
 
 <div class="footer">Quality over quantity 🔥</div>
 </div>
@@ -178,6 +197,13 @@ gallery.innerHTML = vouchImages.map(src => `
 </div></section>
 </div>
 
+<div id="menuModal" class="lightbox">
+<div class="menu-pair">
+<img src="menu.png" alt="Menu">
+<img src="order_info.jpg" alt="Order Info">
+</div>
+</div>
+
 <div id="lightbox" class="lightbox" onclick="closeImage()">
 <img id="lightboxImage">
 </div>
@@ -185,6 +211,11 @@ gallery.innerHTML = vouchImages.map(src => `
 <script>
 document.querySelectorAll('.track-button').forEach(button=>{
 button.addEventListener('click',function(e){
+if(this.id==="menuButton"){
+e.preventDefault();
+document.getElementById("menuModal").classList.add("active");
+return;
+}
 e.preventDefault();
 const destination=this.href;
 gtag('event','button_click',{event_category:'engagement'});
@@ -202,6 +233,17 @@ document.getElementById('lightbox').classList.remove('active');
 
 
 
+
+document.getElementById("menuModal").addEventListener("click",function(e){
+if(e.target===this||e.target.classList.contains("menu-pair")){
+this.classList.remove("active");
+}
+});
+document.addEventListener("keydown",function(e){
+if(e.key==="Escape"){
+document.getElementById("menuModal").classList.remove("active");
+}
+});
 </script>
 
 </body>
