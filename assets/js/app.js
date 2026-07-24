@@ -1,4 +1,9 @@
 const vouches = [
+  { full: "46.png", thumb: "46.webp" },
+  { full: "45.png", thumb: "45.webp" },
+  { full: "44.png", thumb: "44.webp" },
+  { full: "43.png", thumb: "43.webp" },
+  { full: "42.png", thumb: "42.webp" },
   { full: "41.png", thumb: "41.webp" },
   { full: "40.png", thumb: "40.webp" },
   { full: "39.png", thumb: "39.webp" },
