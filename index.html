@@ -1,249 +1,420 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MS9WLJWYEQ">
-</script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-MS9WLJWYEQ');
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07110e">
+  <meta name="description" content="TurntUpTerpz small-batch, living-soil, single-source inventory and real customer vouches.">
+  <meta name="color-scheme" content="dark">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050510">
-<title>TurntUpTerpz</title>
-<link rel="icon" type="image/png" href="logo.png">
+  <title>TurntUpTerpz | Menu & Customer Vouches</title>
+  <link rel="canonical" href="https://turntupterpz.com/">
+  <link rel="icon" type="image/png" href="assets/images/brand/logo.png">
+  <link rel="preload" href="assets/images/brand/logo.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260724f">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-<style>
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-
-body{
-margin:0;
-min-height:100vh;
-overflow-x:hidden;
-overflow-y:auto;
-font-family:'Inter',sans-serif;
-color:white;
-background:
-radial-gradient(circle at 20% 20%, rgba(0,255,200,.22), transparent 25%),
-radial-gradient(circle at 80% 80%, rgba(170,80,255,.18), transparent 25%),
-linear-gradient(135deg,#04040a,#081117,#04120f);
-padding:20px;
-}
-
-.page{
-width:100%;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:30px;
-}
-
-.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;}
-.star{position:absolute;color:white;opacity:.75;animation:drift linear infinite;text-shadow:0 0 8px rgba(255,255,255,.95),0 0 18px rgba(255,255,255,.7),0 0 30px rgba(0,255,200,.45),0 0 50px rgba(168,85,247,.35);}
-.star:nth-child(1){left:3%;top:105%;font-size:10px;animation-duration:12s;}
-.star:nth-child(2){left:8%;top:100%;font-size:16px;animation-duration:18s;animation-delay:1s;}
-.star:nth-child(3){left:14%;top:104%;font-size:8px;animation-duration:15s;animation-delay:4s;}
-.star:nth-child(4){left:20%;top:102%;font-size:13px;animation-duration:20s;animation-delay:2s;}
-.star:nth-child(5){left:27%;top:108%;font-size:20px;animation-duration:22s;animation-delay:6s;}
-.star:nth-child(6){left:34%;top:101%;font-size:12px;animation-duration:16s;animation-delay:3s;}
-.star:nth-child(7){left:40%;top:106%;font-size:9px;animation-duration:14s;animation-delay:8s;}
-.star:nth-child(8){left:47%;top:103%;font-size:18px;animation-duration:21s;animation-delay:5s;}
-.star:nth-child(9){left:53%;top:109%;font-size:14px;animation-duration:19s;animation-delay:2s;}
-.star:nth-child(10){left:60%;top:104%;font-size:11px;animation-duration:17s;animation-delay:7s;}
-.star:nth-child(11){left:66%;top:107%;font-size:24px;animation-duration:25s;animation-delay:4s;}
-.star:nth-child(12){left:72%;top:102%;font-size:10px;animation-duration:15s;animation-delay:9s;}
-.star:nth-child(13){left:79%;top:106%;font-size:16px;animation-duration:23s;animation-delay:6s;}
-.star:nth-child(14){left:86%;top:103%;font-size:12px;animation-duration:18s;animation-delay:1s;}
-.star:nth-child(15){left:92%;top:109%;font-size:20px;animation-duration:26s;animation-delay:5s;}
-.star:nth-child(16){left:97%;top:101%;font-size:9px;animation-duration:14s;animation-delay:3s;}
-
-@keyframes drift{
-0%{transform:translateY(0) translateX(0) rotate(0deg) scale(.7);opacity:0;}
-10%{opacity:.85;}
-50%{transform:translateY(-50vh) translateX(20px) rotate(90deg) scale(1.1);}
-100%{transform:translateY(-120vh) translateX(-15px) rotate(180deg) scale(.8);opacity:0;}
-}
-
-.card{
-width:min(430px,100%);
-border-radius:32px;
-padding:28px 18px 18px;
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.08);
-backdrop-filter:blur(20px);
-box-shadow:0 20px 70px rgba(0,0,0,.5), inset 0 0 30px rgba(255,255,255,.03);
-text-align:center;
-}
-
-.logo{width:122px;height:122px;object-fit:cover;border-radius:50%;}
-h1{margin:18px 0 8px;font-size:42px;letter-spacing:-2px;background:linear-gradient(90deg,#fff,#7cffc4,#d0b3ff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.notice{margin-bottom:18px;padding:16px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);line-height:1.5;font-size:14px;}
-.button{display:flex;justify-content:center;align-items:center;min-height:66px;margin:12px 0;border-radius:22px;text-decoration:none;font-weight:800;font-size:16px;transition:.16s ease;}
-.button:active{transform:scale(.96);}
-.secondary{background:linear-gradient(135deg,#d0b3ff,#7cffc4,#9ee7ff);color:#12081a;}
-.footer{margin-top:16px;font-size:12px;opacity:.55;}
-
-
-.vouches-section{width:min(1400px,95%);}
-.vouches-header{text-align:center;margin-bottom:28px;}
-.vouches-title{font-size:36px;font-weight:800;margin-bottom:8px;background:linear-gradient(90deg,#fff,#7cffc4,#d0b3ff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.vouches-subtitle{opacity:.65;font-size:14px;}
-.vouch-grid{columns:4 260px;column-gap:18px;}
-.vouch-card{break-inside:avoid;margin-bottom:18px;overflow:hidden;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:.25s ease;cursor:pointer;}
-.vouch-card:hover{transform:translateY(-4px);border-color:rgba(124,255,196,.4);box-shadow:0 15px 40px rgba(0,0,0,.45);}
-.vouch-card img{width:100%;display:block;}
-@media(max-width:768px){.vouch-grid{columns:2 160px;}}
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);backdrop-filter:blur(8px);display:none;justify-content:center;align-items:center;z-index:99999;padding:20px;}
-.lightbox.active{display:flex;}
-.lightbox img{max-height:92vh;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.8);}
-.menu-pair{display:flex;gap:12px;align-items:center;justify-content:center;width:min(96vw,1200px);}
-.menu-pair img{width:calc(50% - 6px);max-height:92vh;object-fit:contain;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.8);}
-
-</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MS9WLJWYEQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MS9WLJWYEQ');
+  </script>
+  <script defer src="assets/js/app.js?v=20260724d"></script>
 </head>
+
 <body>
-<div class="bg"><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div><div class="star">✦</div><div class="star">✧</div></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="aurora aurora-one" aria-hidden="true"></div>
+  <div class="aurora aurora-two" aria-hidden="true"></div>
 
-<div class="page">
-<div class="card">
-<img class="logo" src="logo.png">
-<h1>TurntUpTerpz</h1>
-<div class="notice">Press the 3️⃣ dots in the top right corner & press “Оpеn in browsеr” 💚💚</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="TurntUpTerpz home">
+        <img src="assets/images/brand/logo.webp" alt="" width="48" height="48">
+        <span>
+          <strong>TurntUpTerpz</strong>
+          <small>Quality over quantity</small>
+        </span>
+      </a>
 
-<a class="button secondary track-button" href="#" id="menuButton">
-    📋 7-18 Inventory (Flour based lipbalm also available)
-</a>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#vouches">Vouches</a>
+        <a class="nav-contact track-link" data-label="header_sms"
+          href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">Message</a>
+      </nav>
+    </div>
+  </header>
 
-<a class="button secondary track-button"
-   data-button="telegram_channel"
-   href="https://t.me/+mu_PtvpRM_QwNWEx">
-    ✈️ New Telegram Channel
-</a>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
 
-<a class="button secondary track-button"
-   data-button="sms_imessage"
-   href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">
-    💬 iMessage / SMS (click here)
-</a>
+      <div class="eyebrow">
+        <span class="status-dot" aria-hidden="true"></span>
+        Current inventory available
+      </div>
 
-<a class="button secondary" href="#vouches">
-    ✨ View Vouches
-</a>
+      <h1>Small batch.<br><span>Living soil.<br>Single source.</span></h1>
+      <div class="browser-alert" role="note" aria-label="TikTok browser instructions">
+        <div class="browser-alert-label">Important for TikTok visitors</div>
+        <p>
+          <strong>Open this page in your browser before tapping iMessage / SMS.</strong>
+          TikTok’s in-app browser cannot open the message button.
+        </p>
+        <ol>
+          <li><span>1</span> Tap the three dots in the top-right corner</li>
+          <li><span>2</span> Press “Open in browser”</li>
+        </ol>
+      </div>
 
-<div class="footer">Quality over quantity 🔥</div>
-</div>
+      <div class="primary-actions" aria-label="Quick actions">
+        <button class="action action-primary" id="menuButton" type="button">
+          <span class="action-icon" aria-hidden="true">01</span>
+          <span class="action-copy">
+            <strong>View current menu</strong>
+            <small>Inventory, ordering & shipping</small>
+          </span>
+          <span class="action-arrow" aria-hidden="true">→</span>
+        </button>
 
-<section id="vouches" class="vouches-section">
-<div class="vouches-header">
-<div class="vouches-title">✨ Customer Vouches</div>
-<div class="vouches-subtitle">Real customer feedback & experiences</div>
-</div>
-<div id="vouchGallery" class="vouch-grid"></div>
-<script>
-const vouchImages = [
-  '1.jpg',
-  '2.jpg',
-  '3.jpg',
-  '4.jpg',
-  '5.jpg',
-  '6.jpg',
-  '7.jpg',
-  '8.jpg',
-  '9.jpg',
-  '10.jpg',
-  '11.jpeg',
-  '12.jpeg',
-  '13.jpeg',
-  '1412.JPEG',
-  '151.JPEG',
-  '16.JPEG',
-  '1738.JPEG',
-  '18.jpg',
-  'IMG_7952.jpeg',
-  '20.jpg',
-  '23.jpg',
-  '24.png',
-  '26.jpg',
-  '27.jpg',
-  '28.jpg',
-  '29.jpg',
-  '30.jpg',
-  '31.jpg',
-  '32.jpg', 
-  '34.png',
-  '35.png',
-  '36.png',
-  '37.png',
-  '38.png',
-  '39.png',
-  '40.png', 
-  '41.png'
-];
+        <a class="action action-bot track-link" data-label="telegram_store_bot"
+          href="https://t.me/TurntUpStoreBot">
+          <span class="action-icon" aria-hidden="true">BOT</span>
+          <span class="action-copy">
+            <span class="action-badge">Self-serve</span>
+            <strong>Order with the Telegram bot</strong>
+            <small>Browse, order, and pay without messaging</small>
+          </span>
+          <span class="action-arrow" aria-hidden="true">↗</span>
+        </a>
 
-const gallery = document.getElementById('vouchGallery');
+        <div class="contact-group">
+          <p class="contact-group-label">Other ways to connect</p>
+          <div class="contact-actions">
+            <a class="action action-secondary track-link" data-label="telegram_channel"
+              href="https://t.me/+mu_PtvpRM_QwNWEx">
+              <span class="action-icon" aria-hidden="true">UPD</span>
+              <span class="action-copy">
+                <strong>Telegram channel</strong>
+                <small>News and direct updates</small>
+              </span>
+              <span class="action-arrow" aria-hidden="true">↗</span>
+            </a>
 
-gallery.innerHTML = vouchImages.map(src => `
-<div class="vouch-card" onclick="openImage('${src}')">
-<img src="${src}" loading="lazy">
-</div>
-`).join('');
-</script>
-</div></section>
-</div>
+            <a class="action action-secondary track-link" data-label="telegram_personal"
+              href="https://t.me/TurntUpTerpzdotCom">
+              <span class="action-icon" aria-hidden="true">TG</span>
+              <span class="action-copy">
+                <strong>Personal Telegram</strong>
+                <small>Questions, concerns, or FaceTime</small>
+              </span>
+              <span class="action-arrow" aria-hidden="true">↗</span>
+            </a>
 
-<div id="menuModal" class="lightbox">
-<div class="menu-pair">
-<img src="menu.png" alt="Menu">
-<img src="order_info.jpg" alt="Order Info">
-</div>
-</div>
+            <a class="action action-secondary track-link" data-label="sms_imessage"
+              href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">
+              <span class="action-icon" aria-hidden="true">SMS</span>
+              <span class="action-copy">
+                <strong>Text / iMessage</strong>
+                <small>Questions or verification</small>
+              </span>
+              <span class="action-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<div id="lightbox" class="lightbox" onclick="closeImage()">
-<img id="lightboxImage">
-</div>
+      <div class="craft-note">
+        <div>
+          <span class="section-kicker">From one source</span>
+          <strong>Small batch. Living soil. Single source.</strong>
+        </div>
+        <p>Every product is made with a focused, quality-first approach from source to finish.</p>
+      </div>
+    </section>
 
-<script>
-document.querySelectorAll('.track-button').forEach(button=>{
-button.addEventListener('click',function(e){
-if(this.id==="menuButton"){
-e.preventDefault();
-document.getElementById("menuModal").classList.add("active");
-return;
-}
-e.preventDefault();
-const destination=this.href;
-gtag('event','button_click',{event_category:'engagement'});
-setTimeout(()=>{window.location.href=destination;},180);
-});
-});
+    <section class="vouches-section" id="vouches" aria-labelledby="vouches-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Community proof</p>
+          <h2 id="vouches-title">Customer vouches</h2>
+        </div>
+        <span class="vouch-total">39 verified conversations</span>
+      </div>
 
-function openImage(src){
-document.getElementById('lightboxImage').src=src;
-document.getElementById('lightbox').classList.add('active');
-}
-function closeImage(){
-document.getElementById('lightbox').classList.remove('active');
-}
+      <p class="section-copy">
+        Tap any vouch to read it full-screen. Swipe left or right to move through the gallery.
+      </p>
 
+      <div class="vouch-grid" id="vouchGallery" aria-live="polite"></div>
 
+      <button class="load-more" id="loadMoreButton" type="button">
+        <span>Show more vouches</span>
+        <small id="remainingCount"></small>
+      </button>
 
+      <noscript>
+        <p class="noscript-message">JavaScript is required to open the customer vouch gallery.</p>
+      </noscript>
+    </section>
+  </main>
 
-document.getElementById("menuModal").addEventListener("click",function(e){
-if(e.target===this||e.target.classList.contains("menu-pair")){
-this.classList.remove("active");
-}
-});
-document.addEventListener("keydown",function(e){
-if(e.key==="Escape"){
-document.getElementById("menuModal").classList.remove("active");
-}
-});
-</script>
+  <footer class="site-footer">
+    <img src="assets/images/brand/logo.webp" alt="" width="42" height="42" loading="lazy">
+    <div>
+      <strong>TurntUpTerpz</strong>
+      <span>Quality over quantity.</span>
+    </div>
+    <a class="track-link" data-label="footer_bot"
+      href="https://t.me/TurntUpStoreBot">Order with bot</a>
+  </footer>
 
+  <dialog class="menu-dialog" id="menuDialog" aria-labelledby="menuTitle">
+    <div class="dialog-header">
+      <div>
+        <p class="section-kicker">Current details</p>
+        <h2 id="menuTitle">Menu & order info</h2>
+      </div>
+      <button class="icon-button" id="closeMenuButton" type="button" aria-label="Close menu">×</button>
+    </div>
+
+    <div class="menu-tabs" role="tablist" aria-label="Menu pages">
+      <button class="menu-tab active" type="button" role="tab" aria-selected="true"
+        aria-controls="inventoryPanel" data-menu-panel="inventory">Inventory</button>
+      <button class="menu-tab" type="button" role="tab" aria-selected="false"
+        aria-controls="menuImagePanel" data-menu-panel="image"
+        data-menu-image="assets/images/menu/order-info.webp"
+        data-menu-full="assets/images/menu/order-info.jpg"
+        data-menu-alt="TurntUpTerpz shipping information">Shipping info</button>
+    </div>
+
+    <div class="inventory-panel" id="inventoryPanel" role="tabpanel">
+      <div class="inventory-meta">
+        <span>Date: 7/24/2026</span>
+      </div>
+
+      <div class="inventory-source">
+        <span>Small batch</span>
+        <span>Living soil</span>
+        <span>Single source</span>
+      </div>
+
+      <p class="inventory-intro">
+        Top-shelf concentrates priced by weight. Classification: H = Hybrid,
+        I-H = Indica Hybrid, S-H = Sativa Hybrid.
+      </p>
+
+      <div class="inventory-categories">
+        <details class="inventory-category" open>
+          <summary>
+            <span><strong>Live Rosin</strong><small>100% solventless</small></span>
+            <span>4 strains</span>
+          </summary>
+          <div class="inventory-products">
+            <article class="inventory-product">
+              <div class="product-heading">
+                <div><strong>Sour Diesel</strong><small>S · 90–120u</small></div>
+              </div>
+              <div class="price-grid">
+                <span>1g <strong>$35</strong></span><span>3.5g <strong>$115</strong></span>
+                <span>7g <strong>$190</strong></span><span>14g <strong>$255</strong></span>
+                <span>28.5g <strong>$445</strong></span>
+              </div>
+            </article>
+            <article class="inventory-product">
+              <div class="product-heading">
+                <div><strong>Honey Banana</strong><small>H · 90–120u</small></div>
+              </div>
+              <div class="price-grid">
+                <span>1g <strong>$30</strong></span><span>3.5g <strong>$105</strong></span>
+                <span>7g <strong>$185</strong></span><span>14g <strong>$250</strong></span>
+                <span>28.5g <strong>$420</strong></span>
+              </div>
+            </article>
+            <article class="inventory-product">
+              <div class="product-heading">
+                <div><strong>Garlic Breath</strong><small>I-H · 90–120u</small></div>
+              </div>
+              <div class="price-grid">
+                <span>1g <strong>$30</strong></span><span>3.5g <strong>$95</strong></span>
+                <span>7g <strong>$165</strong></span><span>14g <strong>$235</strong></span>
+                <span>28.5g <strong>$400</strong></span>
+              </div>
+            </article>
+            <article class="inventory-product">
+              <div class="product-heading">
+                <div><strong>Papaya Punch</strong><small>I-H · 74–150u</small></div>
+              </div>
+              <div class="price-grid">
+                <span>1g <strong>$25</strong></span><span>3.5g <strong>$90</strong></span>
+                <span>7g <strong>$150</strong></span><span>14g <strong>$230</strong></span>
+                <span>28.5g <strong>$385</strong></span>
+              </div>
+            </article>
+          </div>
+        </details>
+
+        <details class="inventory-category">
+          <summary>
+            <span><strong>Bubble Hash</strong><small>100% solventless</small></span>
+            <span>1 strain</span>
+          </summary>
+          <div class="inventory-products">
+            <article class="inventory-product">
+              <div class="product-heading">
+                <div><strong>Honey Banana</strong><small>H · 90–120u</small></div>
+              </div>
+              <div class="price-grid">
+                <span>1g <strong>$25</strong></span><span>3.5g <strong>$90</strong></span>
+                <span>7g <strong>$135</strong></span><span>14g <strong>$215</strong></span>
+                <span>28.5g <strong>$335</strong></span>
+              </div>
+            </article>
+          </div>
+        </details>
+
+        <details class="inventory-category">
+          <summary>
+            <span><strong>Diamonds</strong><small>Priced by weight</small></span>
+            <span>4 strains</span>
+          </summary>
+          <div class="inventory-products">
+            <article class="inventory-product">
+              <ul class="strain-list">
+                <li>Blue Zushi <span>H</span></li>
+                <li>Zkittlez <span>I-H</span></li>
+                <li>Tropicana Cookies <span>S-H</span></li>
+                <li>Oreoz <span>I-H</span></li>
+              </ul>
+              <div class="price-grid">
+                <span>1g <strong>$15</strong></span><span>3.5g <strong>$35</strong></span>
+                <span>7g <strong>$55</strong></span><span>14g <strong>$95</strong></span>
+                <span>28.5g <strong>$135</strong></span>
+              </div>
+            </article>
+          </div>
+        </details>
+
+        <details class="inventory-category">
+          <summary>
+            <span><strong>Cured Badder</strong><small>Priced by weight</small></span>
+            <span>2 strains</span>
+          </summary>
+          <div class="inventory-products">
+            <article class="inventory-product">
+              <ul class="strain-list">
+                <li>Kush Mintz <span>H</span></li>
+                <li>Lemon Cherry Gelato <span>I-H</span></li>
+              </ul>
+              <div class="price-grid">
+                <span>1g <strong>$15</strong></span><span>3.5g <strong>$35</strong></span>
+                <span>7g <strong>$55</strong></span><span>14g <strong>$75</strong></span>
+                <span>28.5g <strong>$100</strong></span>
+              </div>
+            </article>
+          </div>
+        </details>
+
+        <details class="inventory-category">
+          <summary>
+            <span><strong>Live Resin</strong><small>Priced by weight</small></span>
+            <span>2 strains</span>
+          </summary>
+          <div class="inventory-products">
+            <article class="inventory-product">
+              <ul class="strain-list">
+                <li>Lemon Heads <span>S-H</span></li>
+                <li>Clementine <span>S-H</span></li>
+              </ul>
+              <div class="price-grid">
+                <span>1g <strong>$15</strong></span><span>3.5g <strong>$35</strong></span>
+                <span>7g <strong>$80</strong></span><span>14g <strong>$100</strong></span>
+                <span>28.5g <strong>$145</strong></span>
+              </div>
+            </article>
+          </div>
+        </details>
+
+        <details class="inventory-category">
+          <summary>
+            <span><strong>1g Melted Diamonds Disposables (Low Stock)</strong><small>iKrusher TRENO PRO</small></span>
+            <span>1 strain</span>
+          </summary>
+          <div class="inventory-products">
+            <article class="inventory-product">
+              <div class="product-heading">
+                <div>
+                  <strong>Blue Zushi</strong>
+                  <small>H</small>
+                </div>
+              </div>
+              <div class="price-grid price-grid-short">
+                <span>1+ <strong>$20 each</strong></span>
+                <span>10+ <strong>$18 each</strong></span>
+              </div>
+            </article>
+          </div>
+        </details>
+
+        <details class="inventory-category">
+          <summary>
+            <span><strong>2g Melted Diamonds Disposables</strong><small>iKrusher UZO</small></span>
+            <span>3 strains</span>
+          </summary>
+          <div class="inventory-products">
+            <article class="inventory-product">
+              <ul class="strain-list">
+                <li>Tropicana Cookies <span>S-H</span></li>
+                <li>Zkittlez <span>I-H</span></li>
+                <li>Kush Mintz <span>H</span></li>
+              </ul>
+              <div class="price-grid price-grid-short">
+                <span>1+ <strong>$30 each</strong></span>
+                <span>5+ <strong>$25 each</strong></span>
+                <span>10+ <strong>$20 each</strong></span>
+              </div>
+            </article>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="menu-image-panel" id="menuImagePanel" role="tabpanel" hidden>
+      <div class="menu-image-frame">
+        <img id="menuImage" src="assets/images/menu/order-info.webp"
+          alt="TurntUpTerpz shipping information" width="851" height="1280">
+      </div>
+    </div>
+
+    <div class="dialog-actions">
+      <a id="openMenuOriginal" href="assets/images/menu/order-info.jpg" target="_blank" rel="noopener" hidden>
+        Open full-size image
+      </a>
+      <a class="dialog-bot track-link" data-label="menu_bot"
+        href="https://t.me/TurntUpStoreBot">Order with bot</a>
+      <a class="dialog-message track-link" data-label="menu_sms"
+        href="sms:+17079414402?body=Hey%20I%20came%20from%20your%20page">Questions / verification</a>
+    </div>
+  </dialog>
+
+  <dialog class="vouch-dialog" id="vouchDialog" aria-labelledby="vouchDialogTitle">
+    <h2 class="visually-hidden" id="vouchDialogTitle">Customer vouch viewer</h2>
+
+    <div class="viewer-toolbar">
+      <span id="vouchCounter" aria-live="polite">1 of 39</span>
+      <button class="icon-button" id="closeVouchButton" type="button" aria-label="Close vouch viewer">×</button>
+    </div>
+
+    <div class="viewer-stage" id="viewerStage">
+      <button class="viewer-arrow viewer-previous" id="previousVouchButton" type="button"
+        aria-label="Previous vouch">‹</button>
+      <img id="fullVouchImage" alt="">
+      <button class="viewer-arrow viewer-next" id="nextVouchButton" type="button"
+        aria-label="Next vouch">›</button>
+    </div>
+
+    <p class="viewer-hint">Swipe or use the arrows to browse</p>
+  </dialog>
 </body>
 </html>
