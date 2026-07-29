@@ -870,15 +870,137 @@ main,
 }
 
 .menu-dialog,
-.vouch-dialog {
+.vouch-dialog,
+.message-interstitial {
   color: var(--ink);
   background: #08100c;
 }
 
 .menu-dialog::backdrop,
-.vouch-dialog::backdrop {
+.vouch-dialog::backdrop,
+.message-interstitial::backdrop {
   background: rgba(1, 4, 2, 0.86);
   backdrop-filter: blur(10px);
+}
+
+.message-interstitial {
+  width: min(calc(100% - 28px), 480px);
+  margin: auto;
+  padding: 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.message-interstitial-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.message-interstitial-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(159, 255, 199, 0.28);
+  border-radius: 50%;
+  color: var(--mint);
+  background: rgba(159, 255, 199, 0.08);
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.message-interstitial h2 {
+  margin-top: 7px;
+  font-size: clamp(1.7rem, 7vw, 2.35rem);
+  line-height: 1.02;
+}
+
+.message-interstitial-copy {
+  margin-top: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.message-interstitial-copy strong {
+  color: var(--ink);
+}
+
+.message-interstitial-steps {
+  display: grid;
+  gap: 9px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message-interstitial-steps li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.84rem;
+  font-weight: 750;
+}
+
+.message-interstitial-steps span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  color: #07110e;
+  background: var(--mint);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.message-interstitial-actions {
+  display: grid;
+  grid-template-columns: 0.75fr 1.4fr;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.message-interstitial-actions button,
+.message-interstitial-actions a {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.message-interstitial-actions button {
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.message-interstitial-actions a {
+  border-color: rgba(159, 255, 199, 0.38);
+  color: #07110e;
+  background: var(--mint);
+}
+
+@media (max-width: 380px) {
+  .message-interstitial-actions {
+    grid-template-columns: 1fr;
+  }
 }
 
 .menu-dialog {
