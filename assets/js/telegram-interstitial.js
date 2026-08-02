@@ -1,6 +1,6 @@
 (() => {
   const telegramLinks = document.querySelectorAll(
-    'a[href="https://t.me/TurntUpStoreBot"], a[href="https://t.me/+mu_PtvpRM_QwNWEx"]'
+    'a[href="https://t.me/TurntUpStoreBot"], a[href="https://t.me/+mu_PtvpRM_QwNWEx"], a[href="https://t.me/TurntUpTerpzdotCom"]'
   );
 
   if (!telegramLinks.length || typeof HTMLDialogElement === "undefined") {
