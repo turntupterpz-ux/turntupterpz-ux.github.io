@@ -1,5 +1,5 @@
 (() => {
-  const messageLinks = document.querySelectorAll('a[href^="sms:"]');
+  const messageLinks = document.querySelectorAll('a[href^="mailto:"]');
 
   if (!messageLinks.length || typeof HTMLDialogElement === "undefined") {
     return;
@@ -17,7 +17,7 @@
     <h2 id="messageInterstitialTitle">Open this page in your browser</h2>
     <p class="message-interstitial-copy">
       Tap the three dots in the top-right corner, then press <strong>Open in browser</strong>.
-      This lets your phone open Text or iMessage correctly.
+      This lets your phone open iMessage or email correctly.
     </p>
     <ol class="message-interstitial-steps">
       <li><span>1</span> Tap the three dots in the top-right corner</li>
@@ -25,7 +25,7 @@
     </ol>
     <div class="message-interstitial-actions">
       <button type="button" data-message-close>Not now</button>
-      <a href="sms:" data-message-continue>Continue to message</a>
+      <a href="mailto:" data-message-continue>Continue to message</a>
     </div>
   `;
   document.body.append(dialog);
