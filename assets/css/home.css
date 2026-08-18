@@ -51,11 +51,15 @@ header nav a{text-decoration:none;color:var(--ink-dim);font-size:.85rem;}
 .hero-note{margin-top:10px;color:var(--ink-faint);font-size:.86rem;}
 
 .trust-note{
-  margin-top:18px;padding:14px 16px;border:1px solid var(--line-strong);border-radius:10px;
-  background:rgba(60,95,77,.06);
+  margin-top:20px;padding:16px 18px;border-radius:12px;
+  background:rgba(60,95,77,.13);border:1px solid rgba(60,95,77,.35);
+  box-shadow:0 6px 18px -10px rgba(60,95,77,.45);
 }
-.trust-note .label{margin-bottom:6px;}
-.trust-note p:last-child{margin:0;color:var(--ink-dim);font-size:.86rem;line-height:1.55;}
+.trust-note .tn-head{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
+.trust-note .tn-head svg{flex:none;color:var(--accent);}
+.trust-note .label{color:var(--accent);font-weight:700;letter-spacing:.07em;font-size:.76rem;}
+.trust-note p:last-child{margin:0;color:var(--ink);font-size:.88rem;line-height:1.55;}
+.trust-note strong{color:var(--accent);}
 
 .cta-stack{margin-top:32px;display:flex;flex-direction:column;gap:10px;}
 .cta-primary{
