@@ -98,6 +98,23 @@ vouches.forEach((vouch, index) => {
   strip.appendChild(button);
 });
 
+const stripPrev = document.querySelector("#stripPrev");
+const stripNext = document.querySelector("#stripNext");
+
+function scrollStripBy(direction) {
+  strip.scrollBy({ left: strip.clientWidth * 0.8 * direction, behavior: "smooth" });
+}
+
+stripPrev?.addEventListener("click", () => scrollStripBy(-1));
+stripNext?.addEventListener("click", () => scrollStripBy(1));
+
+strip.addEventListener("wheel", (event) => {
+  if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+    event.preventDefault();
+    strip.scrollLeft += event.deltaY;
+  }
+}, { passive: false });
+
 const vouchDialog = document.querySelector("#vouchViewer");
 const vvImg = document.querySelector("#vvImg");
 const vvCount = document.querySelector("#vvCount");
