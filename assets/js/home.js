@@ -70,50 +70,43 @@ document.querySelectorAll(".track-link").forEach((link) => {
   link.addEventListener("click", () => track(link.dataset.label || "link"));
 });
 
-const strip = document.querySelector("#strip");
 const stripCaption = document.querySelector("#stripCaption");
 if (stripCaption) {
   stripCaption.textContent = vouches.length + " verified conversations";
 }
 
-vouches.forEach((vouch, index) => {
-  const button = document.createElement("button");
-  const image = document.createElement("img");
+const vouchGrid = document.querySelector("#vouchGrid");
+const gridMore = document.querySelector("#gridMore");
+const PAGE_SIZE = 12;
+let shown = 0;
 
-  button.type = "button";
-  button.setAttribute("aria-label", "Open customer vouch " + (index + 1) + " of " + vouches.length);
+function renderMore() {
+  const next = Math.min(shown + PAGE_SIZE, vouches.length);
+  for (let i = shown; i < next; i++) {
+    const button = document.createElement("button");
+    const image = document.createElement("img");
 
-  image.src = paths.thumb + vouch.thumb;
-  image.alt = "Customer vouch " + (index + 1);
-  image.width = 220;
-  image.height = 391;
-  image.decoding = "async";
-  image.loading = index < 4 ? "eager" : "lazy";
-  if (index < 2) {
-    image.fetchPriority = "high";
+    button.type = "button";
+    button.setAttribute("aria-label", "Open customer vouch " + (i + 1) + " of " + vouches.length);
+
+    image.src = paths.thumb + vouches[i].thumb;
+    image.alt = "Customer vouch " + (i + 1);
+    image.decoding = "async";
+    image.loading = i < 12 ? "eager" : "lazy";
+    if (i < 2) {
+      image.fetchPriority = "high";
+    }
+
+    button.appendChild(image);
+    button.addEventListener("click", () => openVouch(i));
+    vouchGrid.appendChild(button);
   }
-
-  button.appendChild(image);
-  button.addEventListener("click", () => openVouch(index));
-  strip.appendChild(button);
-});
-
-const stripPrev = document.querySelector("#stripPrev");
-const stripNext = document.querySelector("#stripNext");
-
-function scrollStripBy(direction) {
-  strip.scrollBy({ left: strip.clientWidth * 0.8 * direction, behavior: "smooth" });
+  shown = next;
+  gridMore.hidden = shown >= vouches.length;
 }
 
-stripPrev?.addEventListener("click", () => scrollStripBy(-1));
-stripNext?.addEventListener("click", () => scrollStripBy(1));
-
-strip.addEventListener("wheel", (event) => {
-  if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
-    event.preventDefault();
-    strip.scrollLeft += event.deltaY;
-  }
-}, { passive: false });
+gridMore.addEventListener("click", renderMore);
+renderMore();
 
 const vouchDialog = document.querySelector("#vouchViewer");
 const vvImg = document.querySelector("#vvImg");
