@@ -213,3 +213,15 @@ leaveDialog.addEventListener("click", (event) => {
     leaveDialog.close();
   }
 });
+
+const tgDownDialog = document.querySelector("#tgDownDialog");
+const tgDownClose = document.querySelector("#tgDownClose");
+if (tgDownDialog) {
+  tgDownDialog.showModal();
+  tgDownClose.addEventListener("click", () => tgDownDialog.close());
+  tgDownDialog.addEventListener("click", (event) => {
+    if (event.target === tgDownDialog) {
+      tgDownDialog.close();
+    }
+  });
+}
