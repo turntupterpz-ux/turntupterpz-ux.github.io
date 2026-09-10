@@ -96,11 +96,6 @@ section{padding:46px 0;border-top:1px solid var(--line);}
 .section-head{margin-bottom:20px;}
 .section-head h2{font-size:1.2rem;}
 .section-head p{color:var(--ink-dim);font-size:.9rem;margin:6px 0 0;}
-.section-head .sh-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
-.vouch-badge{
-  font-family:'Fragment Mono',monospace;font-size:.66rem;letter-spacing:.03em;white-space:nowrap;
-  color:var(--trust);border:1px solid var(--trust);border-radius:100px;padding:4px 10px;
-}
 
 /* vouches grid */
 .vouch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
