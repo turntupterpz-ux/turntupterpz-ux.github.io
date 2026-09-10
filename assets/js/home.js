@@ -200,9 +200,23 @@ const leaveDialog = document.querySelector("#leaveDialog");
 const ldContinue = document.querySelector("#ldContinue");
 const ldCancel = document.querySelector("#ldCancel");
 
+const tgDownDialog = document.querySelector("#tgDownDialog");
+const tgDownClose = document.querySelector("#tgDownClose");
+const TG_CHANNEL_HOST_PATH = "t.me/TurntUpBalm";
+
+function isChannelLink(link) {
+  return link.href.indexOf(TG_CHANNEL_HOST_PATH) !== -1;
+}
+
 document.querySelectorAll("a.leaves-site").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
+    // The Telegram channel is down: show the notice instead of leaving the site.
+    if (tgDownDialog && isChannelLink(link)) {
+      track("tg_down_channel_click");
+      if (!tgDownDialog.open) tgDownDialog.showModal();
+      return;
+    }
     ldContinue.href = link.href;
     leaveDialog.showModal();
   });
@@ -214,8 +228,6 @@ leaveDialog.addEventListener("click", (event) => {
   }
 });
 
-const tgDownDialog = document.querySelector("#tgDownDialog");
-const tgDownClose = document.querySelector("#tgDownClose");
 if (tgDownDialog) {
   tgDownDialog.showModal();
   tgDownClose.addEventListener("click", () => tgDownDialog.close());
