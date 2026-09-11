@@ -77,11 +77,6 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="iab-bar" id="iabBar" hidden>
-    <span class="iab-dot" aria-hidden="true"></span>
-    <span><b id="iabApp">TikTok</b>'s browser blocks our links &mdash; tap <span class="iab-chip">&#8943;</span> then <b id="iabLabel">Open in browser</b></span>
-  </div>
-
   <header>
     <div class="header-row">
       <a class="brand" href="#top">
@@ -194,21 +189,24 @@
   </footer>
 
   <dialog id="leaveDialog">
-    <div class="bs-sheet">
-      <div class="bs-grab" aria-hidden="true"></div>
-      <h3>Telegram won't open in here</h3>
-      <p class="bs-sub" id="ldSub">TikTok's browser blocks it. Two taps in the corner fixes it for good.</p>
-      <div class="bs-route" aria-hidden="true">
-        <span class="bs-glyph">&#8943;</span>
-        <span class="bs-sep">&rarr;</span>
-        <span class="bs-label" id="ldMenuLabel">Open in browser</span>
+    <div class="tt-wrap">
+      <div class="tt-pointer" aria-hidden="true">
+        <span class="tt-dots">&#8943;</span>
+        <svg class="tt-arrow" width="26" height="44" viewBox="0 0 26 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 42V6"></path><path d="M4 15 13 5l9 10"></path></svg>
       </div>
-      <div class="bs-actions">
-        <button class="bs-primary" type="button" id="ldCopy">
+      <div class="tt-card">
+        <p class="tt-kicker">Link won't open here</p>
+        <h3>Two taps and you're in</h3>
+        <ol class="tt-steps">
+          <li><span class="tt-n">1</span> Tap up there <span class="tt-chip">&#8943;</span></li>
+          <li><span class="tt-n">2</span> Hit <span class="tt-chip" id="ldMenuLabel">Open in browser</span></li>
+        </ol>
+        <p class="tt-why" id="ldSub">TikTok's built-in browser blocks Telegram from opening. Your real browser works fine.</p>
+        <button class="tt-copy" type="button" id="ldCopy">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-          <span id="ldCopyText">Copy link &amp; paste in Safari</span>
+          <span id="ldCopyText">Copy my link instead</span>
         </button>
-        <button class="bs-secondary" type="button" id="ldCancel">Try it here anyway</button>
+        <button class="tt-skip" type="button" id="ldCancel">Continue anyway</button>
       </div>
     </div>
   </dialog>

@@ -16,12 +16,7 @@ const leaveDialog = document.querySelector("#leaveDialog");
 const ldCopy = document.querySelector("#ldCopy");
 const ldCopyText = document.querySelector("#ldCopyText");
 const ldCancel = document.querySelector("#ldCancel");
-const iabBar = document.querySelector("#iabBar");
 let pendingHref = "";
-
-function copyPrompt() {
-  return "Copy link & paste in " + browserName;
-}
 
 // Android can still hand a tg:// intent to the native app from inside a webview,
 // which skips the dialog entirely. Every iOS equivalent is blocked.
@@ -55,17 +50,10 @@ async function copyLink(text) {
   }
 }
 
-if (inAppBrowser && iabBar) {
-  iabBar.hidden = false;
-  document.querySelector("#iabApp").textContent = appName;
-  document.querySelector("#iabLabel").textContent = menuLabel;
-}
-
 if (leaveDialog) {
   document.querySelector("#ldSub").textContent =
-    appName + "'s browser blocks it. Two taps in the corner fixes it for good.";
+    appName + "'s built-in browser blocks Telegram from opening. Your real browser works fine.";
   document.querySelector("#ldMenuLabel").textContent = menuLabel;
-  ldCopyText.textContent = copyPrompt();
 
   document.querySelectorAll("a.leaves-site").forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -80,7 +68,7 @@ if (leaveDialog) {
       }
 
       ldCopy.dataset.done = "0";
-      ldCopyText.textContent = copyPrompt();
+      ldCopyText.textContent = "Copy my link instead";
       leaveDialog.showModal();
     });
   });
@@ -89,7 +77,7 @@ if (leaveDialog) {
     const copied = await copyLink(pendingHref || location.href);
     ldCopy.dataset.done = copied ? "1" : "0";
     ldCopyText.textContent = copied
-      ? "Copied — paste in " + browserName
+      ? "Copied — paste it in " + browserName
       : "Press and hold the link to copy";
   });
 
