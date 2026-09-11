@@ -32,6 +32,22 @@
     return link.href.indexOf(TG_CHANNEL_HOST_PATH) !== -1;
   }
 
+  // An sms: URL is meaningless pasted into a browser, so hand over the bare
+  // number instead and point people at Messages rather than Safari.
+  function isTextLink(href) {
+    return href.indexOf("sms:") === 0;
+  }
+
+  function copyTarget(href) {
+    return isTextLink(href) ? decodeURIComponent(href.slice(4).split("?")[0]) : href;
+  }
+
+  function describe(href) {
+    return isTextLink(href)
+      ? { app: "Messages", button: "Copy my number", pasteInto: "Messages" }
+      : { app: "Telegram", button: "Copy my Telegram link", pasteInto: browserName };
+  }
+
   // Android can still hand a tg:// intent to the native app from inside a
   // webview. Every iOS equivalent is blocked, so there is no iOS counterpart.
   function telegramIntent(href) {
@@ -73,16 +89,15 @@
   }
 
   if (leaveDialog) {
-    document.querySelector("#ldSub").textContent =
-      appName + "'s built-in browser blocks Telegram from opening. Your real browser works fine.";
     document.querySelector("#ldMenuLabel").textContent = menuLabel;
 
     ldCopy.addEventListener("click", async () => {
-      const copied = await copyLink(pendingHref || location.href);
+      const target = copyTarget(pendingHref || location.href);
+      const copied = await copyLink(target);
       ldCopy.dataset.done = copied ? "1" : "0";
       ldCopyText.textContent = copied
-        ? "Copied — paste it in " + browserName
-        : "Press and hold the link to copy";
+        ? "Copied — paste it in " + describe(pendingHref).pasteInto
+        : "Press and hold to copy it";
       report(copied ? "leave_copy_ok" : "leave_copy_failed");
     });
 
@@ -120,8 +135,12 @@
         return;
       }
 
+      const wording = describe(pendingHref);
+      document.querySelector("#ldSub").textContent = appName
+        + "'s built-in browser blocks " + wording.app
+        + " from opening. Your real browser works fine.";
       ldCopy.dataset.done = "0";
-      ldCopyText.textContent = "Copy my link instead";
+      ldCopyText.textContent = wording.button;
       leaveDialog.showModal();
       report("leave_prompt_shown");
     });
