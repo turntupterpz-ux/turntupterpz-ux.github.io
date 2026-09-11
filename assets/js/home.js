@@ -196,24 +196,6 @@ vouchDialog.addEventListener("touchend", (event) => {
   touchStartX = null;
 }, { passive: true });
 
-const leaveDialog = document.querySelector("#leaveDialog");
-const ldContinue = document.querySelector("#ldContinue");
-const ldCancel = document.querySelector("#ldCancel");
-
-document.querySelectorAll("a.leaves-site").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    ldContinue.href = link.href;
-    leaveDialog.showModal();
-  });
-});
-ldCancel.addEventListener("click", () => leaveDialog.close());
-leaveDialog.addEventListener("click", (event) => {
-  if (event.target === leaveDialog) {
-    leaveDialog.close();
-  }
-});
-
 const tgDownDialog = document.querySelector("#tgDownDialog");
 const tgDownClose = document.querySelector("#tgDownClose");
 if (tgDownDialog) {
