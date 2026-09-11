@@ -18,18 +18,10 @@
   const ldCopyText = document.querySelector("#ldCopyText");
   const ldCancel = document.querySelector("#ldCancel");
 
-  const tgDownDialog = document.querySelector("#tgDownDialog");
-  const tgDownClose = document.querySelector("#tgDownClose");
-  const TG_CHANNEL_HOST_PATH = "t.me/TurntUpBalm";
-
   let pendingHref = "";
 
   function report(label) {
     if (typeof track === "function") track(label);
-  }
-
-  function isChannelLink(link) {
-    return link.href.indexOf(TG_CHANNEL_HOST_PATH) !== -1;
   }
 
   // An sms: URL is meaningless pasted into a browser, so hand over the bare
@@ -80,14 +72,6 @@
     }
   }
 
-  if (tgDownDialog) {
-    tgDownDialog.showModal();
-    tgDownClose.addEventListener("click", () => tgDownDialog.close());
-    tgDownDialog.addEventListener("click", (event) => {
-      if (event.target === tgDownDialog) tgDownDialog.close();
-    });
-  }
-
   function openPrompt(wording) {
     if (!leaveDialog || leaveDialog.open) return;
     document.querySelector("#ldSub").textContent = appName
@@ -125,14 +109,6 @@
 
   document.querySelectorAll("a.leaves-site").forEach((link) => {
     link.addEventListener("click", (event) => {
-      // The Telegram channel is down: show the notice instead of leaving.
-      if (tgDownDialog && isChannelLink(link)) {
-        event.preventDefault();
-        report("tg_down_channel_click");
-        if (!tgDownDialog.open) tgDownDialog.showModal();
-        return;
-      }
-
       // Outside an in-app browser the link works, so stay out of the way.
       if (!inAppBrowser || !leaveDialog) return;
 
