@@ -88,6 +88,17 @@
     });
   }
 
+  function openPrompt(wording) {
+    if (!leaveDialog || leaveDialog.open) return;
+    document.querySelector("#ldSub").textContent = appName
+      + "'s built-in browser blocks " + wording.app
+      + " from opening. Your real browser works fine.";
+    ldCopy.dataset.done = "0";
+    ldCopyText.textContent = wording.button;
+    leaveDialog.showModal();
+    report("leave_prompt_shown");
+  }
+
   if (leaveDialog) {
     document.querySelector("#ldMenuLabel").textContent = menuLabel;
 
@@ -128,21 +139,22 @@
       event.preventDefault();
       pendingHref = link.href;
 
+      const wording = describe(pendingHref);
+
       const intent = telegramIntent(pendingHref);
       if (intent) {
         report("leave_android_intent");
+        // If the app handoff does not take, the visitor would otherwise be left
+        // with nothing, so fall back to the prompt when we are still here.
+        const fallback = setTimeout(() => openPrompt(wording), 1200);
+        window.addEventListener("pagehide", () => clearTimeout(fallback), { once: true });
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) clearTimeout(fallback);
+        }, { once: true });
         window.location.href = intent;
         return;
       }
-
-      const wording = describe(pendingHref);
-      document.querySelector("#ldSub").textContent = appName
-        + "'s built-in browser blocks " + wording.app
-        + " from opening. Your real browser works fine.";
-      ldCopy.dataset.done = "0";
-      ldCopyText.textContent = wording.button;
-      leaveDialog.showModal();
-      report("leave_prompt_shown");
+      openPrompt(wording);
     });
   });
 })();
