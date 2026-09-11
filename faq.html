@@ -189,7 +189,8 @@
   <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5048003&101" alt="myspace tracker" border="0"></a></noscript>
   <!-- Histats.com  END  -->
 
-  <script defer src="assets/js/faq.js?v=20260910b"></script>
+  <script defer src="assets/js/faq.js?v=20260911a"></script>
+  <script defer src="assets/js/leave.js?v=20260911a"></script>
 </head>
 
 <body>
@@ -450,17 +451,24 @@
   </footer>
 
   <dialog id="leaveDialog">
-    <div class="ld-body">
-      <p class="label">Before you go</p>
-      <h3>Open this page in your browser</h3>
-      <ol class="ld-steps">
-        <li><span>1</span> Tap the three dots in the top-right corner</li>
-        <li><span>2</span> Press "Open in browser"</li>
-      </ol>
-      <p class="ld-note">TikTok and Instagram's in-app browser can block Telegram and iMessage links from opening correctly.</p>
-      <div class="ld-actions">
-        <button type="button" id="ldCancel">Not now</button>
-        <a href="#" id="ldContinue">Continue</a>
+    <div class="tt-wrap">
+      <div class="tt-pointer" aria-hidden="true">
+        <span class="tt-dots">&#8943;</span>
+        <svg class="tt-arrow" width="26" height="44" viewBox="0 0 26 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 42V6"></path><path d="M4 15 13 5l9 10"></path></svg>
+      </div>
+      <div class="tt-card">
+        <p class="tt-kicker">Link won't open here</p>
+        <h3>Two taps and you're in</h3>
+        <ol class="tt-steps">
+          <li><span class="tt-n">1</span> Tap up there <span class="tt-chip">&#8943;</span></li>
+          <li><span class="tt-n">2</span> Hit <span class="tt-chip" id="ldMenuLabel">Open in browser</span></li>
+        </ol>
+        <p class="tt-why" id="ldSub">This app's built-in browser blocks Telegram from opening. Your real browser works fine.</p>
+        <button class="tt-copy" type="button" id="ldCopy">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span id="ldCopyText">Copy my link instead</span>
+        </button>
+        <button class="tt-skip" type="button" id="ldCancel">Continue anyway</button>
       </div>
     </div>
   </dialog>
