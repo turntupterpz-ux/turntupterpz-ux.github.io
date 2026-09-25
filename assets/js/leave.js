@@ -30,24 +30,45 @@
     return href.indexOf("sms:") === 0;
   }
 
+  function isWhatsAppLink(href) {
+    return href.indexOf("chat.whatsapp.com") !== -1 || href.indexOf("wa.me") !== -1;
+  }
+
   function copyTarget(href) {
     return isTextLink(href) ? decodeURIComponent(href.slice(4).split("?")[0]) : href;
   }
 
   function describe(href) {
-    return isTextLink(href)
-      ? { app: "Messages", button: "Copy my number", pasteInto: "Messages" }
-      : { app: "Telegram", button: "Copy my Telegram link", pasteInto: browserName };
+    if (isTextLink(href)) {
+      return { app: "Messages", button: "Copy my number", pasteInto: "Messages" };
+    }
+    if (isWhatsAppLink(href)) {
+      return { app: "WhatsApp", button: "Copy my WhatsApp link", pasteInto: browserName };
+    }
+    return { app: "Telegram", button: "Copy my Telegram link", pasteInto: browserName };
   }
 
-  // Android can still hand a tg:// intent to the native app from inside a
-  // webview. Every iOS equivalent is blocked, so there is no iOS counterpart.
-  function telegramIntent(href) {
-    const match = href.match(/^https:\/\/t\.me\/(\+?)([^?#]+)/);
-    if (!match || !isAndroid) return null;
-    const target = match[1] === "+" ? "join?invite=" + match[2] : "resolve?domain=" + match[2];
-    return "intent://" + target + "#Intent;scheme=tg;package=org.telegram.messenger;"
-      + "S.browser_fallback_url=" + encodeURIComponent(href) + ";end";
+  // Android can still hand an intent to a native app from inside a webview.
+  // Every iOS equivalent is blocked, so there is no iOS counterpart.
+  function appIntent(href) {
+    if (!isAndroid) return null;
+
+    const telegram = href.match(/^https:\/\/t\.me\/(\+?)([^?#]+)/);
+    if (telegram) {
+      const target = telegram[1] === "+"
+        ? "join?invite=" + telegram[2]
+        : "resolve?domain=" + telegram[2];
+      return "intent://" + target + "#Intent;scheme=tg;package=org.telegram.messenger;"
+        + "S.browser_fallback_url=" + encodeURIComponent(href) + ";end";
+    }
+
+    const whatsapp = href.match(/^https:\/\/(chat\.whatsapp\.com|wa\.me)\/(.+)$/);
+    if (whatsapp) {
+      return "intent://" + whatsapp[1] + "/" + whatsapp[2] + "#Intent;scheme=https;"
+        + "package=com.whatsapp;S.browser_fallback_url=" + encodeURIComponent(href) + ";end";
+    }
+
+    return null;
   }
 
   async function copyLink(text) {
@@ -117,7 +138,7 @@
 
       const wording = describe(pendingHref);
 
-      const intent = telegramIntent(pendingHref);
+      const intent = appIntent(pendingHref);
       if (intent) {
         report("leave_android_intent");
         // If the app handoff does not take, the visitor would otherwise be left
