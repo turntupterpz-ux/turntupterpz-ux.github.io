@@ -136,10 +136,10 @@
       const h = Math.floor(left / 60);
       const m = left % 60;
       const clock = (h ? h + "h " : "") + m + "m";
-      return { today: true, clock, text: "Order in the next " + clock + " and it ships today" };
+      return { today: true, clock, next: "today", text: "Order in the next " + clock + " and it ships today" };
     }
     const next = day === "Sat" || day === "Sun" ? "Monday" : "tomorrow";
-    return { today: false, clock: "", text: "Order now and it ships " + next };
+    return { today: false, clock: "", next, text: "Order now and it ships " + next };
   }
 
   function el(tag, attrs, children) {
@@ -250,7 +250,7 @@
       const status = shipStatus();
       targets.forEach((node) => {
         const mode = node.dataset.shipStatus;
-        node.textContent = mode === "clock" ? (status.today ? status.clock : "Closed") : status.text;
+        node.textContent = mode === "clock" ? (status.today ? status.clock : "Ships " + status.next) : status.text;
         node.dataset.today = status.today ? "1" : "0";
       });
     };
