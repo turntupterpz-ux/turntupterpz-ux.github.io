@@ -22,10 +22,12 @@ bottom sheets, a live same-day-shipping countdown, and light / dark mode that fo
 │       ├── brand/                Logo files
 │       ├── icons.svg             Icon sprite
 │       ├── menu/                 Menu image
+│       ├── products/             Disposable studio shots
 │       └── vouches/
 │           ├── full/             Original full-size vouch screenshots
 │           └── thumbs/           Lightweight WebP gallery thumbnails
 ├── redesign/                     The five redesign drafts (not linked, noindex)
+├── tools/render/                 Blender scripts that make the product renders
 └── CNAME                         Custom-domain configuration
 ```
 
@@ -39,7 +41,14 @@ Search for `t.me/` to change them everywhere.
 
 Prices and strains live in the `menu` object near the top of `assets/js/site.js`. Update the
 date (`updated`) and the prices together whenever the menu changes. The full menu image is
-`assets/images/menu/menu-r2.webp`.
+`assets/images/menu/menu-r3.webp` (linked from `index.html` and `links.menuImage` in `site.js`).
+
+## Product renders
+
+The product animations in `assets/motion/` and the disposable studio shots in
+`assets/images/products/` are made in Blender from the scripts in `tools/render/` (one script per
+product, plus `common.py` for the shared studio, camera and materials). See
+`tools/render/README.md` to re-render one.
 
 ## Adding a customer vouch
 

@@ -33,13 +33,13 @@
     menu: "https://t.me/addlist/u3J2k7PsK3w5MzQx",
     telegram: "https://t.me/TurntUpTerp",
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
-    menuImage: ASSETS + "images/menu/menu-r2.webp",
+    menuImage: ASSETS + "images/menu/menu-r3.webp",
     ask: (product) => "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'm interested in the " + product + ". What's available right now?")
   };
 
-  // Copied from the 10/3/26 menu image. Update here and every draft follows.
+  // Copied from the 10/8/26 menu image (menu-r3). Update here and every draft follows.
   const menu = {
-    updated: "Oct 3",
+    updated: "Oct 8",
     weights: ["1g", "3.5g", "7g", "14g", "28.5g"],
     categories: [
       {
@@ -47,8 +47,7 @@
         blurb: "Pressed from fresh-frozen ice water hash. No solvents, ever.",
         from: 30, unit: "g",
         strains: [
-          { name: "Banana Cake", type: "I-H", micron: "90–120µ", prices: [45, 130, 230, 380, 650] },
-          { name: "Sour Diesel", type: "S", micron: "90–120µ", prices: [35, 95, 165, 270, 460] },
+          { name: "Banana Cake", type: "I-H", micron: "90–120µ", tag: "Pink rosin", prices: [45, 130, 230, 380, 650] },
           { name: "Trop Cherry", type: "S-H", micron: "90–120µ", prices: [30, 85, 160, 260, 445] },
           { name: "Papaya", type: "I", micron: "90–120µ", prices: [30, 85, 150, 245, 420] },
           { name: "White Truffle", type: "I-H", micron: "73–90µ", prices: [30, 80, 145, 235, 400] }
@@ -60,7 +59,6 @@
         from: 15, unit: "g",
         strains: [
           { name: "Purple Punch", type: "I" },
-          { name: "Trop Cherry", type: "S-H" },
           { name: "Slurricane", type: "I" }
         ],
         prices: [15, 35, 50, 85, 140]
@@ -72,7 +70,6 @@
         strains: [
           { name: "Oreoz", type: "I-H" },
           { name: "Kush Mints", type: "H" },
-          { name: "Sour Apple", type: "S-H" },
           { name: "White Truffle", type: "I-H" }
         ],
         prices: [30, 115, 185, 250, 450]
@@ -99,7 +96,7 @@
         tiers: [["1/2 zip", 65], ["1 zip", 85], ["2 zip", 145]]
       },
       {
-        id: "disposable", name: "Disposables", note: "2g melted diamond", render: null,
+        id: "disposable", name: "Disposables", note: "2g melted diamond", render: "disposable",
         blurb: "Melted-diamond 2g disposables. Cheaper the more you grab.",
         from: 20, unit: "ea",
         strains: [
@@ -271,7 +268,9 @@
     if (link) window.track(link.dataset.label || "link");
   });
 
-  window.TT = { vouches, links, menu, shipping, shipStatus, el, vouchButton, openViewer, motionBox };
+  const asset = (path) => ASSETS + path;
+
+  window.TT = { vouches, links, menu, shipping, shipStatus, el, vouchButton, openViewer, motionBox, asset };
 
   document.addEventListener("DOMContentLoaded", () => {
     wireViewer();
