@@ -18,9 +18,12 @@
   }
 
   function openSheet(c) {
-    art.replaceChildren(c.render
-      ? TT.motionBox(c.render, "play", c.name + ", studio render", "sheet-motion")
-      : el("span", { text: "2g" }));
+    // a studio photo (when there is one) fills the sheet; otherwise the render plays in
+    art.replaceChildren(c.photo
+      ? el("img", { class: "sheet-photo", src: TT.asset(c.photo), alt: c.name + ", studio shot", decoding: "async" })
+      : c.render
+        ? TT.motionBox(c.render, "play", c.name + ", studio render", "sheet-motion")
+        : el("span", { text: "2g" }));
     document.querySelector("#sheetTitle").textContent = c.name;
     document.querySelector("#sheetNote").textContent = c.note;
     document.querySelector("#sheetBlurb").textContent = c.blurb;
@@ -31,7 +34,7 @@
     if (c.id === "rosin") {
       prices.appendChild(el("div", { class: "rosin-rows" }, c.strains.map((s) =>
         el("div", {}, [
-          el("span", { html: "<b>" + s.name + "</b><small>" + s.type + " · " + s.micron + "</small>" }),
+          el("span", { html: "<b>" + s.name + "</b><small>" + s.type + " · " + s.micron + (s.tag ? " · " + s.tag : "") + "</small>" }),
           el("em", { text: "$" + s.prices[0] + " – $" + s.prices[4] })
         ]))));
       prices.appendChild(el("p", { class: "fine", text: "1g to 28.5g. Full price ladder in the menu." }));

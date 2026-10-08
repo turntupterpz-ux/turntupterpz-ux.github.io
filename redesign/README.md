@@ -23,7 +23,7 @@ Five complete homepage redesigns. Draft 05 (Pocket) is now the live homepage. Th
 
 ## Shared pieces
 
-- `../assets/js/site.js` — vouch list, links, the menu (prices from the 10/3 menu image), shipping
+- `../assets/js/site.js` — vouch list, links, the menu (prices from the 10/8 menu image), shipping
   countdown, vouch viewer. Shared with the live homepage: update the menu there and everything follows.
 - `../assets/js/motion.js` — plays the product animations as you scroll. Visitors with "reduce motion"
   turned on see the still final frame.
@@ -32,6 +32,6 @@ Five complete homepage redesigns. Draft 05 (Pocket) is now the live homepage. Th
 
 ## Before promoting one to the real homepage
 
-- Check the product blurbs and prices in `assets/js/site.js` — they're copied from the 10/3 menu.
+- Check the product blurbs and prices in `assets/js/site.js` — they're copied from the 10/8 menu.
 - Add back the analytics snippets from `index.html`.
 - Remove `noindex` and the "Draft" tag at the bottom.
