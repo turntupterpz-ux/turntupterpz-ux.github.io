@@ -32,5 +32,5 @@ blender -b -P tools/render/disposable.py -- --out /tmp/still --still --aspect 1.
 
 Preview one frame quickly with `--frames 31 --samples 16`.
 
-The sauce, rosin and sift frames get a light colour grade when encoded, to warm them up:
-`python3 tools/render/encode.py /tmp/sauce sauce 100,130,103` (needs ImageMagick). Rosin uses `102,145,97`, sift `110,150,99`.
+The sauce, rosin, sift and crumble frames get a light colour grade when encoded, to warm them up:
+`python3 tools/render/encode.py /tmp/sauce sauce 100,130,103` (needs ImageMagick). Rosin uses `102,145,97`, sift `110,150,99`, crumble `106,160,101`.
