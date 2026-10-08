@@ -1,10 +1,12 @@
 # Turn a folder of rendered PNG frames (00.png … 31.png) into the site's motion assets:
 #   assets/motion/<name>/640/NN.webp, 360/NN.webp and poster.webp (the settled last frame).
-# Usage: python3 tools/render/encode.py <png-folder> <name>
-import os, sys
+# Usage: python3 tools/render/encode.py <png-folder> <name> [modulate]
+#   modulate: optional ImageMagick colour grade "brightness,saturation,hue", e.g. sauce uses 100,130,103
+import os, sys, subprocess, tempfile
 from PIL import Image
 
 src, name = sys.argv[1], sys.argv[2]
+grade = sys.argv[3] if len(sys.argv) > 3 else None
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "assets", "motion", name)
 for size in (640, 360):
     os.makedirs(os.path.join(root, str(size)), exist_ok=True)
@@ -12,7 +14,12 @@ for size in (640, 360):
 frames = sorted(f for f in os.listdir(src) if f.endswith(".png") and f[:2].isdigit())
 assert len(frames) == 32, "expected 32 frames, found %d" % len(frames)
 for f in frames:
-    im = Image.open(os.path.join(src, f)).convert("RGBA")
+    path = os.path.join(src, f)
+    if grade:
+        tmp = os.path.join(tempfile.gettempdir(), "tt-grade-" + f)
+        subprocess.run(["convert", path, "-channel", "RGB", "-modulate", grade, "+channel", tmp], check=True)
+        path = tmp
+    im = Image.open(path).convert("RGBA")
     if im.width != 640:
         im = im.resize((640, 640), Image.LANCZOS)
     stem = f[:2]
