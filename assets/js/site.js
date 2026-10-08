@@ -112,7 +112,7 @@
   };
 
   const shipping = {
-    cutoff: "2 PM PT",
+    cutoff: "2:30 PM PST",
     rows: [
       ["Standard (US)", "2–5 business days", "$15"],
       ["Overnight (US)", "Next day", "$50"],
@@ -120,7 +120,7 @@
     ]
   };
 
-  // Same-day cutoff: Monday–Saturday before 2 PM Pacific.
+  // Same-day cutoff: Monday–Saturday before 2:30 PM Pacific.
   function shipStatus(now) {
     const parts = new Intl.DateTimeFormat("en-US", {
       timeZone: "America/Los_Angeles", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23"
@@ -128,7 +128,7 @@
     const get = (type) => (parts.find((p) => p.type === type) || {}).value;
     const day = get("weekday");
     const minutes = (Number(get("hour")) % 24) * 60 + Number(get("minute"));
-    const cutoff = 14 * 60;
+    const cutoff = 14 * 60 + 30;
 
     if (day !== "Sun" && minutes < cutoff) {
       const left = cutoff - minutes;
