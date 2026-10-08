@@ -33,11 +33,11 @@
     menu: "https://t.me/addlist/u3J2k7PsK3w5MzQx",
     telegram: "https://t.me/TurntUpTerp",
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
-    menuImage: ASSETS + "images/menu/menu-r4.webp",
+    menuImage: ASSETS + "images/menu/menu-r5.webp",
     ask: (product) => "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'm interested in the " + product + ". What's available right now?")
   };
 
-  // Copied from the 10/8/26 menu image (menu-r4). Update here and every draft follows.
+  // Copied from the 10/8/26 menu image (menu-r5). Update here and every draft follows.
   const menu = {
     updated: "Oct 8",
     weights: ["1g", "3.5g", "7g", "14g", "28.5g"],
@@ -60,7 +60,7 @@
           { name: "Purple Punch", type: "I" },
           { name: "Slurricane", type: "I" }
         ],
-        prices: [15, 35, 50, 85, 140]
+        prices: [15, 30, 45, 75, 120]
       },
       {
         id: "sift", name: "Static Sift", note: "Dry sift hash", render: "sift",
