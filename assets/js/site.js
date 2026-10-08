@@ -97,6 +97,7 @@
       },
       {
         id: "disposable", name: "Disposables", note: "2g melted diamond", render: "disposable",
+        photo: "images/products/disposable-2g-wide.webp",
         blurb: "Melted-diamond 2g disposables. Cheaper the more you grab.",
         from: 20, unit: "ea",
         strains: [
