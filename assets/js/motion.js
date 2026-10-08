@@ -9,7 +9,7 @@
 //   x     – plays in as a card snaps to the centre of a horizontal scroller (falls back to view)
 //   play  – time-based; call el.motion.play() (tabs, sheets)
 (function () {
-  const ROOT = "../motion/";
+  const ROOT = new URL("../motion/", document.currentScript.src).href;
   const FRAMES = 32;
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const players = new Set();

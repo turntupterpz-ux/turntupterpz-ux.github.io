@@ -1,7 +1,8 @@
-// Shared data and behaviour for every redesign draft.
-// Each draft only decides how things look; the facts live here once.
+// Shared data and behaviour for the site (and the /redesign drafts).
+// Pages only decide how things look; the facts live here once.
 (function () {
-  const ASSETS = "../../assets/";
+  // Resolve asset paths from this script's own location, so any page depth works.
+  const ASSETS = new URL("../", document.currentScript.src).href;
 
   const vouchFiles = [
     ["1738.JPEG", "1738.webp"], ["1412.JPEG", "1412.webp"], ["151.JPEG", "151.webp"],
@@ -29,7 +30,7 @@
   }));
 
   const links = {
-    menu: "https://chat.whatsapp.com/EFWxsFvZWVY8gKT7GFppgF",
+    menu: "https://t.me/addlist/u3J2k7PsK3w5MzQx",
     telegram: "https://t.me/TurntUpTerp",
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
     menuImage: ASSETS + "images/menu/menu-r2.webp",
@@ -169,7 +170,7 @@
   // A scroll-driven product animation (motion.js) with the settled frame as its poster.
   function motionBox(name, mode, alt, className) {
     const img = el("img", {
-      src: "../motion/" + name + "/poster.webp", alt: alt || "", width: "640", height: "640", loading: "lazy", decoding: "async"
+      src: ASSETS + "motion/" + name + "/poster.webp", alt: alt || "", width: "640", height: "640", loading: "lazy", decoding: "async"
     });
     return el("div", { class: "motion" + (className ? " " + className : ""), "data-seq": name, "data-mode": mode || "view" }, [img]);
   }
@@ -259,7 +260,16 @@
   }
 
   // Drafts never report analytics; leave.js still calls track() if it exists.
-  window.track = function () {};
+  // Analytics: only pages that load Google Analytics report anything (the drafts don't).
+  window.track = function (label) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "button_click", { event_category: "engagement", event_label: label });
+    }
+  };
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest && event.target.closest(".track-link");
+    if (link) window.track(link.dataset.label || "link");
+  });
 
   window.TT = { vouches, links, menu, shipping, shipStatus, el, vouchButton, openViewer, motionBox };
 

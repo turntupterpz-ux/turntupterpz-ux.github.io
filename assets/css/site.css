@@ -1,4 +1,82 @@
-/* Draft 05 · Pocket — behaves like a native phone app. System fonts, grouped lists,
+/* Dialogs shared by every draft. Each draft sets the --dlg-* tokens. */
+
+dialog{border:none;padding:0;background:transparent;color:inherit;max-width:100vw;}
+
+/* full-screen vouch viewer */
+#vouchViewer{margin:0;width:100vw;height:100vh;height:100dvh;max-width:100vw;max-height:100vh;}
+#vouchViewer::backdrop{background:#000;}
+.vv-inner{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#000;}
+.vv-inner img{max-width:100%;max-height:100%;object-fit:contain;}
+.vv-close{
+  position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;z-index:2;
+  width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.14);border:none;
+  color:#fff;font-size:1.3rem;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
+.vv-count{
+  position:absolute;top:calc(24px + env(safe-area-inset-top));left:18px;z-index:2;
+  font:500 .78rem/1 var(--dlg-mono, ui-monospace, monospace);color:rgba(255,255,255,.8);letter-spacing:.04em;
+}
+.vv-nav{position:absolute;top:0;bottom:0;width:35%;background:transparent;border:none;cursor:pointer;}
+.vv-prev{left:0;}
+.vv-next{right:0;}
+
+/* "open in your real browser" escape for TikTok / Instagram / Facebook */
+#leaveDialog{margin:0;padding:0;width:100vw;max-width:100vw;height:100vh;height:100dvh;max-height:100vh;}
+#leaveDialog::backdrop{background:rgba(10,10,10,.7);}
+.tt-wrap{
+  position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;
+  justify-content:flex-end;padding:0 16px calc(24px + env(safe-area-inset-bottom));
+}
+.tt-pointer{position:absolute;top:calc(6px + env(safe-area-inset-top));right:10px;display:flex;flex-direction:column;align-items:center;gap:2px;color:#fff;}
+.tt-dots{
+  width:52px;height:52px;border-radius:50%;border:2px dashed rgba(255,255,255,.9);
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;line-height:1;
+  animation:ttHalo 1.6s ease-in-out infinite;
+}
+.tt-arrow{animation:ttBob 1.6s ease-in-out infinite;}
+@keyframes ttHalo{0%,100%{transform:scale(1);opacity:.95;}50%{transform:scale(1.12);opacity:.6;}}
+@keyframes ttBob{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+@media (prefers-reduced-motion:reduce){.tt-dots,.tt-arrow{animation:none;}}
+
+.tt-card{
+  width:100%;max-width:420px;background:var(--dlg-bg,#fff);color:var(--dlg-ink,#111);
+  border-radius:var(--dlg-radius,18px);padding:22px 20px 16px;font-family:var(--dlg-font,inherit);
+}
+.tt-kicker{margin:0 0 6px;font:600 .72rem/1.2 var(--dlg-mono, ui-monospace, monospace);letter-spacing:.08em;text-transform:uppercase;color:var(--dlg-alert,#c23b2e);}
+.tt-card h3{margin:0 0 16px;font-size:1.4rem;line-height:1.15;font-weight:700;letter-spacing:-.015em;}
+.tt-steps{margin:0 0 14px;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;}
+.tt-steps li{
+  display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:calc(var(--dlg-radius,18px) * .65);
+  background:var(--dlg-soft,rgba(0,0,0,.05));font-weight:600;font-size:1rem;
+}
+.tt-n{
+  flex:none;width:26px;height:26px;border-radius:50%;background:var(--dlg-ink,#111);color:var(--dlg-bg,#fff);
+  display:flex;align-items:center;justify-content:center;font:600 .78rem/1 var(--dlg-mono, ui-monospace, monospace);
+}
+.tt-chip{
+  margin-left:auto;flex:none;padding:3px 9px;border-radius:7px;background:var(--dlg-ink,#111);color:var(--dlg-bg,#fff);
+  font:500 .9rem/1.3 var(--dlg-mono, ui-monospace, monospace);
+}
+.tt-why{margin:0 0 14px;font-size:.85rem;line-height:1.5;color:var(--dlg-dim,#666);}
+.tt-copy{
+  display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:54px;border:none;
+  border-radius:calc(var(--dlg-radius,18px) * .7);background:var(--dlg-accent,#1f4d3a);color:var(--dlg-accent-ink,#fff);
+  font:700 1rem/1 var(--dlg-font,inherit);cursor:pointer;
+}
+.tt-copy[data-done="1"]{filter:brightness(1.12);}
+.tt-skip{
+  display:block;width:100%;margin-top:8px;padding:10px;background:none;border:none;cursor:pointer;
+  font:500 .86rem/1 var(--dlg-font,inherit);color:var(--dlg-dim,#666);text-decoration:underline;text-underline-offset:3px;
+}
+
+
+/* scroll-driven product motion (see motion.js) */
+.motion{position:relative;}
+.motion > img{display:block;width:100%;height:100%;object-fit:contain;}
+.motion > canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.motion.is-live > img{visibility:hidden;}
+
+/* TurntUpTerpz — behaves like a native phone app. System fonts, grouped lists,
    bottom sheet, tab bar. Follows the phone's light / dark setting. */
 
 :root{
@@ -12,6 +90,7 @@
   --accent:#0f6b4b;
   --accent-ink:#ffffff;
   --amber:#c98a1b;
+  --tg:#2aabee;
   --tab:rgba(250,250,248,.86);
   --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",sans-serif;
   --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",sans-serif;
@@ -50,7 +129,7 @@ h1,h2,h3{margin:0;font-family:var(--display);letter-spacing:-.02em;}
 .skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--accent-ink);padding:8px 12px;border-radius:10px;z-index:100;}
 .skip:focus{left:8px;}
 
-.app{max-width:var(--max);margin:0 auto;padding:calc(18px + env(safe-area-inset-top)) 16px 20px;}
+.app{max-width:var(--max);margin:0 auto;padding:calc(18px + env(safe-area-inset-top)) 16px calc(96px + env(safe-area-inset-bottom));}
 .screen{scroll-margin-top:12px;padding-bottom:28px;}
 .screen-head{display:flex;align-items:baseline;justify-content:space-between;padding:14px 4px 12px;}
 .screen-head h2{font-size:1.9rem;font-weight:700;}
@@ -72,7 +151,7 @@ h1,h2,h3{margin:0;font-family:var(--display);letter-spacing:-.02em;}
 /* banner */
 .banner{display:flex;align-items:flex-start;gap:12px;margin-top:10px;padding:14px;border-radius:var(--r);background:var(--card);}
 .banner[hidden]{display:none;}
-.banner-icon{flex:none;width:36px;height:36px;border-radius:10px;background:#2aabee;color:#fff;display:flex;align-items:center;justify-content:center;}
+.banner-icon{flex:none;width:36px;height:36px;border-radius:10px;background:var(--tg);color:#fff;display:flex;align-items:center;justify-content:center;}
 .banner p{flex:1;font-size:.88rem;color:var(--dim);line-height:1.35;}
 .banner b{display:block;color:var(--ink);font-size:.95rem;margin-bottom:2px;}
 .banner button{flex:none;width:26px;height:26px;border-radius:50%;border:none;background:var(--card-2);color:var(--dim);cursor:pointer;display:flex;align-items:center;justify-content:center;}
@@ -85,7 +164,7 @@ h1,h2,h3{margin:0;font-family:var(--display);letter-spacing:-.02em;}
 .action b{font-size:1.15rem;font-family:var(--display);}
 .action small{color:var(--dim);font-size:.84rem;}
 .action-main{background:var(--ink);color:var(--bg);}
-.action-main svg{color:#2aabee;}
+.action-main svg{color:var(--tg);}
 .action-main small{color:var(--faint);}
 
 /* grouped list */
@@ -180,9 +259,42 @@ h1,h2,h3{margin:0;font-family:var(--display);letter-spacing:-.02em;}
 .btn-main{background:var(--accent);color:var(--accent-ink);}
 .btn-soft{background:var(--bg);color:var(--ink);}
 
-.draft-tab{margin-bottom:calc(96px + env(safe-area-inset-bottom));}
 
 @media (min-width:760px){
   .app{padding-top:40px;}
 }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} #sheet[open]{animation:none;} }
+
+/* in-app browser heads-up (TikTok / Instagram / Facebook). leave.js un-hides it. */
+.inapp{position:relative;display:flex;gap:12px;align-items:flex-start;margin:0 0 14px;padding:16px 46px 16px 16px;border-radius:var(--r);background:#111;color:#fff;}
+.inapp[hidden]{display:none;}
+.inapp-arrow{position:absolute;top:8px;right:16px;color:#fff;animation:inappBob 1.4s ease-in-out infinite;}
+@keyframes inappBob{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+.inapp b{display:block;font-size:1rem;margin-bottom:6px;}
+.inapp ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:.92rem;}
+.inapp li{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.inapp .n{flex:none;width:20px;height:20px;border-radius:50%;background:#fff;color:#111;font:700 .72rem/20px var(--sans);text-align:center;}
+.inapp .chip{padding:2px 8px;border-radius:6px;background:rgba(255,255,255,.16);font-weight:600;}
+.inapp .why{margin-top:8px;font-size:.8rem;color:rgba(255,255,255,.7);}
+.inapp-close{position:absolute;top:10px;right:10px;width:28px;height:28px;border:none;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+@media (prefers-reduced-motion:reduce){ .inapp-arrow{animation:none;} }
+
+/* FAQ page */
+.back{display:inline-flex;align-items:center;gap:6px;padding:6px 4px;color:var(--accent);font-weight:600;font-size:.98rem;}
+.back .chev{transform:rotate(135deg);border-color:var(--accent);margin:0 2px 0 4px;}
+.page-title{font-size:2rem;font-weight:700;padding:8px 4px 4px;}
+.page-lead{padding:0 4px;color:var(--dim);font-size:.95rem;}
+.faq details summary{line-height:1.3;}
+.faq details p a{color:var(--accent);font-weight:600;}
+.cta-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;}
+.cta-pair a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:14px;font-weight:600;background:var(--card);color:var(--ink);}
+.cta-pair a.primary{background:var(--accent);color:var(--accent-ink);}
+
+/* small phones */
+@media (max-width:350px){
+  .profile h1{font-size:1.4rem;}
+  .ship-v{font-size:.96rem;}
+  .action{min-height:108px;padding:14px;}
+  .seg b{font-size:.88rem;}
+}
+.banner a{color:var(--tg);font-weight:600;}

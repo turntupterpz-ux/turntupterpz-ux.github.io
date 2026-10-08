@@ -1,7 +1,7 @@
 # Redesign drafts
 
-Five complete homepage redesigns. They are live at `/redesign/` but not linked from the
-real homepage, and every page is `noindex` so search engines skip them.
+Five complete homepage redesigns. Draft 05 (Pocket) is now the live homepage. The drafts stay at
+`/redesign/` for reference: not linked from the site, and `noindex` so search engines skip them.
 
 | Folder | Direction |
 | --- | --- |
@@ -23,15 +23,15 @@ real homepage, and every page is `noindex` so search engines skip them.
 
 ## Shared pieces
 
-- `shared/core.js` — vouch list, links, the menu (prices from the 10/3 menu image), shipping
-  countdown, vouch viewer. Update the menu here and every draft follows.
-- `shared/motion.js` — plays the product animations as you scroll. Visitors with "reduce motion"
+- `../assets/js/site.js` — vouch list, links, the menu (prices from the 10/3 menu image), shipping
+  countdown, vouch viewer. Shared with the live homepage: update the menu there and everything follows.
+- `../assets/js/motion.js` — plays the product animations as you scroll. Visitors with "reduce motion"
   turned on see the still final frame.
-- `motion/<product>/` — the animation frames, rendered in Blender (32 frames, 640px and 360px)
+- `../assets/motion/<product>/` — the animation frames, rendered in Blender (32 frames, 640px and 360px)
   plus `poster.webp`, the final settled frame.
 
 ## Before promoting one to the real homepage
 
-- Check the product blurbs and prices in `shared/core.js` — they're copied from the 10/3 menu.
+- Check the product blurbs and prices in `assets/js/site.js` — they're copied from the 10/3 menu.
 - Add back the analytics snippets from `index.html`.
 - Remove `noindex` and the "Draft" tag at the bottom.

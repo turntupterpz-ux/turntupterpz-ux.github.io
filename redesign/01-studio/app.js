@@ -8,7 +8,7 @@
     const img = TT.motionBox(c.render, "x", c.name + ", studio render");
     const strains = el("ul", { class: "strains" }, c.strains.map((s) =>
       el("li", { html: s.name + "<b>" + s.type + "</b>" })));
-    const ask = el("a", { class: "ask leaves-site", href: links.ask(c.name) , html: "Ask about " + c.name.toLowerCase() + ' <svg width="15" height="15" aria-hidden="true"><use href="../shared/icons.svg#arrow"/></svg>' });
+    const ask = el("a", { class: "ask leaves-site", href: links.ask(c.name) , html: "Ask about " + c.name.toLowerCase() + ' <svg width="15" height="15" aria-hidden="true"><use href="../../assets/images/icons.svg#arrow"/></svg>' });
     rail.appendChild(el("article", { class: "prod" }, [
       el("div", { class: "prod-img" }, [img]),
       el("div", { class: "prod-body" }, [

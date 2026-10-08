@@ -54,7 +54,7 @@
     }
     info.appendChild(el("a", {
       class: "order-this leaves-site", href: links.ask(c.name),
-      html: "Order " + c.name.toLowerCase() + ' on Telegram <svg width="16" height="16" aria-hidden="true"><use href="../shared/icons.svg#arrow"/></svg>'
+      html: "Order " + c.name.toLowerCase() + ' on Telegram <svg width="16" height="16" aria-hidden="true"><use href="../../assets/images/icons.svg#arrow"/></svg>'
     }));
 
     const panel = el("div", { class: "panel", role: "tabpanel", id: panelId, "aria-labelledby": tabId }, [art, info]);

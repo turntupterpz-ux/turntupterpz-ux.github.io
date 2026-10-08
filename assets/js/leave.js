@@ -1,7 +1,7 @@
 (function () {
   const UA = navigator.userAgent || "";
   const simulated = new URLSearchParams(location.search).get("sim");
-  const inTikTok = simulated === "tiktok" || /BytedanceWebview|musical_ly|Trill/i.test(UA);
+  const inTikTok = simulated === "tiktok" || /BytedanceWebview|musical_ly|Trill|TikTok|ByteLocale/i.test(UA);
   const inInstagram = simulated === "instagram" || /Instagram/i.test(UA);
   const inFacebook = simulated === "facebook" || /FBAN|FBAV|FB_IAB/i.test(UA);
   const inAppBrowser = inTikTok || inInstagram || inFacebook;
@@ -53,6 +53,13 @@
   function appIntent(href) {
     if (!isAndroid) return null;
 
+    // Telegram folder links (t.me/addlist/<slug>) use their own deep link.
+    const folder = href.match(/^https:\/\/t\.me\/addlist\/([^?#/]+)/);
+    if (folder) {
+      return "intent://addlist?slug=" + folder[1] + "#Intent;scheme=tg;package=org.telegram.messenger;"
+        + "S.browser_fallback_url=" + encodeURIComponent(href) + ";end";
+    }
+
     const telegram = href.match(/^https:\/\/t\.me\/(\+?)([^?#]+)/);
     if (telegram) {
       const target = telegram[1] === "+"
@@ -102,6 +109,18 @@
     ldCopyText.textContent = wording.button;
     leaveDialog.showModal();
     report("leave_prompt_shown");
+  }
+
+  // A heads-up on the page itself, before anyone taps a button that won't open here.
+  if (inAppBrowser) {
+    document.documentElement.classList.add("in-app");
+    document.querySelectorAll("[data-inapp-notice]").forEach((notice) => {
+      notice.hidden = false;
+      notice.querySelectorAll("[data-inapp-app]").forEach((n) => { n.textContent = appName; });
+      notice.querySelectorAll("[data-inapp-menu]").forEach((n) => { n.textContent = menuLabel; });
+      notice.querySelectorAll("[data-inapp-close]").forEach((b) => b.addEventListener("click", () => { notice.hidden = true; }));
+    });
+    report("inapp_notice_shown");
   }
 
   if (leaveDialog) {

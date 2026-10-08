@@ -6,7 +6,7 @@
   const bill = document.querySelector("#bill");
   menu.categories.forEach((c) => {
     const thumb = c.render
-      ? el("div", { class: "thumb" }, [el("img", { src: "../motion/" + c.render + "/360/31.webp", alt: "", loading: "lazy", decoding: "async", width: "360", height: "360" })])
+      ? el("div", { class: "thumb" }, [el("img", { src: "../../assets/motion/" + c.render + "/360/31.webp", alt: "", loading: "lazy", decoding: "async", width: "360", height: "360" })])
       : el("div", { class: "thumb empty", text: "2g" });
     const price = "from $" + c.from + "/" + c.unit;
     bill.appendChild(el("li", {}, [
