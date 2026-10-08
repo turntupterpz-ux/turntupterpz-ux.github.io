@@ -41,7 +41,7 @@ Search for `t.me/` to change them everywhere.
 
 Prices and strains live in the `menu` object near the top of `assets/js/site.js`. Update the
 date (`updated`) and the prices together whenever the menu changes. The full menu image is
-`assets/images/menu/menu-r3.webp` (linked from `index.html` and `links.menuImage` in `site.js`).
+`assets/images/menu/menu-r4.webp` (linked from `index.html` and `links.menuImage` in `site.js`).
 
 ## Product renders
 

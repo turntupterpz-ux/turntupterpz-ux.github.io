@@ -33,11 +33,11 @@
     menu: "https://t.me/addlist/u3J2k7PsK3w5MzQx",
     telegram: "https://t.me/TurntUpTerp",
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
-    menuImage: ASSETS + "images/menu/menu-r3.webp",
+    menuImage: ASSETS + "images/menu/menu-r4.webp",
     ask: (product) => "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'm interested in the " + product + ". What's available right now?")
   };
 
-  // Copied from the 10/8/26 menu image (menu-r3). Update here and every draft follows.
+  // Copied from the 10/8/26 menu image (menu-r4). Update here and every draft follows.
   const menu = {
     updated: "Oct 8",
     weights: ["1g", "3.5g", "7g", "14g", "28.5g"],
@@ -47,10 +47,9 @@
         blurb: "Pressed from fresh-frozen ice water hash. No solvents, ever.",
         from: 30, unit: "g",
         strains: [
-          { name: "Banana Cake", type: "I-H", micron: "90–120µ", tag: "Pink rosin", prices: [45, 130, 230, 380, 650] },
+          { name: "Banana Cake", type: "I-H", micron: "90–120µ", tag: "Pink rosin · Top shelf", prices: [45, 130, 230, 380, 650] },
           { name: "Trop Cherry", type: "S-H", micron: "90–120µ", prices: [30, 85, 160, 260, 445] },
-          { name: "Papaya", type: "I", micron: "90–120µ", prices: [30, 85, 150, 245, 420] },
-          { name: "White Truffle", type: "I-H", micron: "73–90µ", prices: [30, 80, 145, 235, 400] }
+          { name: "Papaya", type: "I", micron: "90–120µ", prices: [30, 85, 150, 245, 415] }
         ]
       },
       {
@@ -80,8 +79,7 @@
         from: 20, unit: "g",
         strains: [
           { name: "Mimosa", type: "S-H" },
-          { name: "Chemdawg", type: "H" },
-          { name: "Zoap", type: "H" }
+          { name: "Chemdawg", type: "H" }
         ],
         prices: [20, 40, 55, 80, 145]
       },
@@ -90,8 +88,7 @@
         blurb: "Dry, easy-to-handle crumble priced by the half and full zip.",
         from: 65, unit: "½ zip",
         strains: [
-          { name: "Northern Lights", type: "I" },
-          { name: "Oreoz", type: "I-H" }
+          { name: "Northern Lights", type: "I" }
         ],
         tiers: [["1/2 zip", 65], ["1 zip", 85], ["2 zip", 145]]
       },
