@@ -33,23 +33,24 @@
     menu: "https://t.me/addlist/u3J2k7PsK3w5MzQx",
     telegram: "https://t.me/TurntUpTerp",
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
-    menuImage: ASSETS + "images/menu/menu-r5.webp",
+    menuImage: ASSETS + "images/menu/menu-r6.webp",
     ask: (product) => "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'm interested in the " + product + ". What's available right now?")
   };
 
-  // Copied from the 10/8/26 menu image (menu-r5). Update here and every draft follows.
+  // Copied from the 10/13/26 menu image (menu-r6). Update here and every draft follows.
   const menu = {
-    updated: "Oct 8",
+    updated: "Oct 13",
     weights: ["1g", "3.5g", "7g", "14g", "28.5g"],
     categories: [
       {
         id: "rosin", name: "Live Rosin", note: "100% solventless", render: "rosin",
         blurb: "Pressed from fresh-frozen ice water hash. No solvents, ever.",
-        from: 30, unit: "g",
+        from: 25, unit: "g",
         strains: [
           { name: "Banana Cake", type: "I-H", micron: "90–120µ", tag: "Pink rosin · Top shelf", prices: [45, 130, 230, 380, 650] },
-          { name: "Trop Cherry", type: "S-H", micron: "90–120µ", prices: [30, 85, 160, 260, 445] },
-          { name: "Papaya", type: "I", micron: "90–120µ", prices: [30, 85, 150, 245, 415] }
+          { name: "Trop Cherry", type: "S-H", micron: "90–120µ", prices: [30, 85, 150, 260, 445] },
+          { name: "Wilson Zero", type: "H", micron: "90–120µ", prices: [30, 85, 145, 250, 420] },
+          { name: "Papaya", type: "I", micron: "90–120µ", prices: [25, 80, 140, 245, 415] }
         ]
       },
       {
@@ -58,7 +59,7 @@
         from: 15, unit: "g",
         strains: [
           { name: "Purple Punch", type: "I" },
-          { name: "Slurricane", type: "I" }
+          { name: "Chem Dawg", type: "H" }
         ],
         prices: [15, 30, 45, 75, 120]
       },
@@ -69,7 +70,8 @@
         strains: [
           { name: "Oreoz", type: "I-H" },
           { name: "Kush Mints", type: "H" },
-          { name: "White Truffle", type: "I-H" }
+          { name: "White Truffle", type: "I-H" },
+          { name: "Honey Banana", type: "H" }
         ],
         prices: [30, 115, 185, 250, 450]
       },
@@ -78,8 +80,8 @@
         blurb: "Fresh-frozen extract with the terps left in. Budget pick.",
         from: 20, unit: "g",
         strains: [
-          { name: "Mimosa", type: "S-H" },
-          { name: "Chemdawg", type: "H" }
+          { name: "Chemdawg", type: "H" },
+          { name: "Cereal Milk", type: "H" }
         ],
         prices: [20, 40, 55, 80, 145]
       },
@@ -88,7 +90,8 @@
         blurb: "Dry, easy-to-handle crumble priced by the half and full zip.",
         from: 65, unit: "½ zip",
         strains: [
-          { name: "Northern Lights", type: "I" }
+          { name: "Northern Lights", type: "I" },
+          { name: "Mango Mintz", type: "H" }
         ],
         tiers: [["1/2 zip", 65], ["1 zip", 85], ["2 zip", 145]]
       },
