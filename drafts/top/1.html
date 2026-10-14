@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffb627">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="TurntUpTerpz — small-batch, living-soil concentrates grown in California's Emerald Triangle. Real customer vouches, same-day shipping, ordering on Telegram.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Draft 1 · Panel under the header | TurntUpTerpz</title>
+  <link rel="canonical" href="https://turntupterpz.com/">
+  <link rel="icon" type="image/png" href="../../assets/images/brand/logo.png">
+  <link rel="apple-touch-icon" href="../../assets/images/brand/logo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TurntUpTerpz">
+  <meta property="og:title" content="TurntUpTerpz | Small-Batch Emerald Triangle Concentrates">
+  <meta property="og:description" content="Small-batch, living-soil concentrates grown in California's Emerald Triangle. Real customer vouches, same-day shipping, ordering on Telegram.">
+  <meta property="og:url" content="https://turntupterpz.com/">
+  <meta property="og:image" content="https://turntupterpz.com/assets/images/brand/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TurntUpTerpz | Small-Batch Emerald Triangle Concentrates">
+  <meta name="twitter:description" content="Small-batch, living-soil concentrates grown in California's Emerald Triangle. Real customer vouches, same-day shipping, ordering on Telegram.">
+  <meta name="twitter:image" content="https://turntupterpz.com/assets/images/brand/logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://turntupterpz.com/#website",
+    "url": "https://turntupterpz.com/",
+    "name": "TurntUpTerpz"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TurntUpTerpz",
+    "url": "https://turntupterpz.com/",
+    "logo": "https://turntupterpz.com/assets/images/brand/logo.png",
+    "description": "Small-batch, living-soil concentrates grown in California's Emerald Triangle, ordered direct.",
+    "sameAs": [
+      "https://t.me/TurntUpTerp"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="../../assets/css/dialogs.css?v=20261014a">
+  <link rel="stylesheet" href="../../assets/css/drip.css?v=20261014d">
+  <style>
+    /* Draft 1 · the quick links in a panel right under the header: Join full width, the other four in one row.
+       The panel fades out with the first bit of scrolling, like the line under the title. */
+    .top-panel{position:absolute;left:12px;right:12px;top:calc(72px + env(safe-area-inset-top));z-index:6;max-width:640px;margin:0 auto;
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 6px;padding:8px;border-radius:26px;
+      background:var(--paper);border:3px solid var(--ink);box-shadow:0 5px 0 var(--ink);
+      opacity:calc(1 - var(--s0) * 2.5);transform:translateY(calc(var(--s0) * -4svh));}
+    .hero:not([data-step="0"]) .top-panel{visibility:hidden;}
+    .top-panel .hl{min-height:44px;padding:0 4px;border-width:2px;border-radius:16px;box-shadow:0 3px 0 var(--ink);font-size:.78rem;}
+    .top-panel .hl-join{min-height:56px;padding:6px 14px;border-width:3px;border-radius:999px;box-shadow:0 4px 0 var(--ink);font-size:1rem;}
+    @media (min-width:600px){.top-panel .hl{font-size:.88rem;}}
+    @media (max-width:359px){.top-panel{left:8px;right:8px;}.top-panel .hl{font-size:.7rem;}.top-panel .hl-join{font-size:.9rem;}}
+    /* the title and the line under it move down to make room */
+    .hero-title{top:calc(224px + env(safe-area-inset-top));}
+    .hero-copy{top:calc(224px + env(safe-area-inset-top) + clamp(3.6rem,19vw,10rem) * 1.85);}
+    /* reduce motion: the panel stays visible, the title doesn't slide up into it,
+       and the hero grows by as much as the title moved, so the jar keeps its distance */
+    .rm .hero .top-panel{opacity:1;visibility:visible;transform:none;}
+    .rm .hero .hero-title{top:calc(224px + 6svh + env(safe-area-inset-top));}
+    .rm .hero-stage{height:calc(100vh + 106px);height:calc(100svh + 106px);min-height:calc(760px + 106px);}
+  </style>
+
+  <script defer src="../../assets/js/site.js?v=20261014c"></script>
+  <script defer src="../../assets/js/scroll.js?v=20261014a"></script>
+  <script defer src="../../assets/js/motion.js?v=20261008c"></script>
+  <script defer src="../../assets/js/drip.js?v=20261014c"></script>
+  <script defer src="../../assets/js/leave.js?v=20261008c"></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to the menu</a>
+
+  <!-- the page's scroll progress is a drip running down the left edge -->
+  <div class="dripbar" aria-hidden="true"><span class="dripbar-stem"></span><span class="dripbar-drop"></span></div>
+
+  <div class="inapp" data-inapp-notice hidden>
+    <b>Open this page in your browser</b>
+    <span>Tap <span class="chip">&#8943;</span> then <span class="chip" data-inapp-menu>Open in browser</span>. <span data-inapp-app>This app</span> blocks Telegram links.</span>
+  </div>
+
+  <header class="bar">
+    <a class="brand" href="#top"><img src="../../assets/images/brand/logo.webp" alt="" width="36" height="36"><span>TurntUpTerpz</span></a>
+    <span class="bar-right">
+      <a class="bar-dm leaves-site track-link" data-label="home_bar_dm" href="https://t.me/TurntUpTerp">DM me</a>
+      <a class="bar-cta track-link" data-label="home_bar_menu" href="#menu">Menu</a>
+    </span>
+  </header>
+
+  <main id="top">
+    <!-- 1 · HERO: honey drips stretch, one drop falls into the jar, the jar fills -->
+    <section class="hero" id="hero" data-scene="pin" data-steps="0,.42,.62,1" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="honey" aria-hidden="true">
+          <span class="d" style="--x:8%;--w:22px;--len:30px;--grow:90"></span>
+          <span class="d" style="--x:21%;--w:14px;--len:18px;--grow:150"></span>
+          <span class="d" style="--x:37%;--w:30px;--len:44px;--grow:60"></span>
+          <span class="d d-main" style="--x:62%;--w:34px;--len:40px;--grow:200"></span>
+          <span class="d" style="--x:79%;--w:16px;--len:24px;--grow:120"></span>
+          <span class="d" style="--x:93%;--w:24px;--len:36px;--grow:80"></span>
+        </div>
+
+        <div class="stickers" aria-hidden="true">
+          <svg class="stk" data-rise="1.1" data-turn="40" style="left:4%;top:30%;width:74px"><use href="#dabber"/></svg>
+          <svg class="stk" data-rise="-.8" data-turn="-30" style="left:76%;top:24%;width:70px"><use href="#carbcap"/></svg>
+          <svg class="stk" data-rise="1.6" data-turn="25" style="left:70%;top:62%;width:84px"><use href="#banger"/></svg>
+          <svg class="stk" data-rise="-1.3" data-turn="60" style="left:6%;top:70%;width:58px"><use href="#diamond"/></svg>
+          <svg class="stk" data-rise=".7" data-turn="-50" style="left:44%;top:84%;width:46px"><use href="#pearl"/></svg>
+          <svg class="stk" data-rise="2" data-turn="20" style="left:84%;top:90%;width:64px"><use href="#torch"/></svg>
+          <svg class="stk" data-rise="-.5" data-turn="15" style="left:26%;top:52%;width:40px"><use href="#drop"/></svg>
+          <svg class="stk" data-rise="1.4" data-turn="-20" style="left:16%;top:104%;width:66px"><use href="#pen"/></svg>
+          <svg class="stk" data-rise="-1.6" data-turn="35" style="left:58%;top:-6%;width:50px"><use href="#leaf"/></svg>
+          <svg class="stk" data-rise=".9" data-turn="-40" style="left:90%;top:46%;width:44px"><use href="#pearl"/></svg>
+        </div>
+
+        <!-- quick links: a panel right under the header -->
+        <nav class="top-panel" aria-label="Quick links">
+          <a class="hl hl-join leaves-site track-link" data-label="home_hero_join" href="https://t.me/addlist/u3J2k7PsK3w5MzQx">Join channel to keep updated with ongoing sales and promotions</a>
+          <a class="hl track-link" data-label="home_hero_menu" href="#menu">Menu</a>
+          <a class="hl track-link" data-label="home_hero_vouches" href="#vouches">See vouches</a>
+          <a class="hl leaves-site track-link" data-label="home_hero_facetime" href="https://t.me/TurntUpTerp?text=Hey%2C%20I%27d%20like%20to%20schedule%20a%20quick%20FaceTime%20to%20see%20my%20order%20before%20I%20buy">Schedule FaceTime</a>
+          <a class="hl leaves-site track-link" data-label="home_hero_dm" href="https://t.me/TurntUpTerp">DM me directly</a>
+        </nav>
+
+        <h1 class="hero-title" id="hero-title">
+          <span class="l1" data-split>Turn</span>
+          <span class="l2" data-split>That Up</span>
+        </h1>
+        <div class="hero-copy">
+          <p class="hero-sub">Small-batch rosin, sift &amp; diamonds from Mendocino County.</p>
+        </div>
+
+        <span class="falling" aria-hidden="true"></span>
+        <span class="splash" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+
+        <div class="jar">
+          <svg viewBox="0 0 200 220" aria-hidden="true">
+            <defs><clipPath id="jarIn"><rect x="22" y="58" width="156" height="150" rx="26"/></clipPath></defs>
+            <rect class="jar-lid" x="34" y="14" width="132" height="40" rx="12"/>
+            <rect class="jar-glass" x="18" y="52" width="164" height="160" rx="30"/>
+            <g clip-path="url(#jarIn)">
+              <g class="jar-level"><path class="jar-fill" d="M-90 0q22.5-10 45 0t45 0t45 0t45 0t45 0t45 0t45 0t45 0V220H-90Z"/></g>
+            </g>
+            <rect class="jar-shine" x="34" y="78" width="12" height="96" rx="6"/>
+          </svg>
+          <div class="jar-label">
+            <b>Live rosin</b>
+            <span>from $<span data-from-rosin>25</span>/g</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2 · two marquee bands that cross and slide with the scroll -->
+    <section class="bands" data-scene="view" aria-label="Why order here">
+      <div class="band band-a"><p>Same-day shipping ✦ FaceTime before you pay ✦ 100% solventless rosin ✦ Real vouches ✦ Same-day shipping ✦ FaceTime before you pay ✦ 100% solventless rosin ✦ Real vouches ✦</p></div>
+      <div class="band band-b" aria-hidden="true"><p>Mendocino County ✦ Small batch ✦ Low temp ✦ Big terps ✦ Mendocino County ✦ Small batch ✦ Low temp ✦ Big terps ✦ Mendocino County ✦ Small batch ✦</p></div>
+    </section>
+
+    <!-- 3 · MENU: cards stack on top of each other -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="menu-head">
+        <p class="label">The menu · <span data-menu-date>Oct 14</span></p>
+        <h2 id="menu-title" data-split>Pick your poison.</h2>
+      </div>
+      <div class="stack" id="stack"></div>
+      <div class="menu-foot">
+        <a class="btn btn-line" href="../../menu.html">Full menu card</a>
+        <p>Flower too — message me for what's in right now.</p>
+      </div>
+    </section>
+
+    <!-- 4 · TEMP DIAL: the needle follows the scroll -->
+    <section class="temp" id="temp" data-scene="pin" data-steps="0,.229,.429,.714,1" aria-labelledby="temp-title">
+      <div class="temp-stage">
+        <p class="label">Dab school</p>
+        <h2 id="temp-title">Hotter isn't better.</h2>
+        <div class="dial">
+          <svg viewBox="0 0 300 170" aria-hidden="true">
+            <defs>
+              <linearGradient id="dialG" x1="0" x2="1">
+                <stop offset="0" stop-color="#58b9ff"/><stop offset=".4" stop-color="#ffc23d"/><stop offset=".7" stop-color="#ff8a2a"/><stop offset="1" stop-color="#ff3d2e"/>
+              </linearGradient>
+            </defs>
+            <path d="M30 150a120 120 0 0 1 240 0" fill="none" stroke="#2a1709" stroke-width="30" stroke-linecap="round"/>
+            <path d="M30 150a120 120 0 0 1 240 0" fill="none" stroke="url(#dialG)" stroke-width="22" stroke-linecap="round"/>
+            <g class="ticks" stroke="#2a1709" stroke-width="3" stroke-linecap="round">
+              <path d="M150 52v14" transform="rotate(-90 150 150)"/><path d="M150 52v14" transform="rotate(-45 150 150)"/>
+              <path d="M150 52v14"/><path d="M150 52v14" transform="rotate(45 150 150)"/><path d="M150 52v14" transform="rotate(90 150 150)"/>
+            </g>
+            <g class="needle"><path d="M146 150 150 48l4 102Z" fill="#2a1709"/><circle cx="150" cy="150" r="13" fill="#2a1709"/><circle cx="150" cy="150" r="5" fill="#ffc23d"/></g>
+          </svg>
+          <p class="dial-read"><b data-temp>400</b>°F</p>
+        </div>
+        <div class="zones">
+          <div class="zone z0"><span class="zone-k">400–480°</span><b>Max flavor</b><p>Low and slow. Every terp, zero harshness.</p></div>
+          <div class="zone z1"><span class="zone-k">480–550°</span><b>The sweet spot</b><p>Full flavor plus a solid cloud. This is where rosin shines.</p></div>
+          <div class="zone z2"><span class="zone-k">550–650°</span><b>Big clouds</b><p>More vapor, less taste. Fine for crumble.</p></div>
+          <div class="zone z3"><span class="zone-k">650°+</span><b>Too hot!</b><p>You're burning the terps. Let the banger cool first.</p></div>
+        </div>
+        <div class="wisps" aria-hidden="true">
+          <svg style="--x:20%;--k:1"><use href="#cloud"/></svg>
+          <svg style="--x:70%;--k:1.4"><use href="#cloud"/></svg>
+          <svg style="--x:45%;--k:.8"><use href="#cloud"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · VOUCHES: columns drift at different speeds -->
+    <section class="wall" id="vouches" aria-labelledby="wall-title">
+      <div class="wall-head">
+        <p class="label">Receipts</p>
+        <h2 id="wall-title"><span data-count="64" data-vouch-count>64</span> happy people</h2>
+        <p>Real, unedited conversations. Tap one to read it.</p>
+      </div>
+      <div class="wall-cols" id="wallCols"></div>
+      <button class="btn btn-main wall-more" type="button" id="wallMore">See all of them</button>
+    </section>
+
+    <!-- 6 · FACETIME + SHIPPING -->
+    <section class="trust" aria-label="FaceTime and shipping">
+      <div class="tcard tcard-ft" data-reveal>
+        <svg class="tcard-stk" aria-hidden="true"><use href="#jar"/></svg>
+        <p class="label">See it before you pay</p>
+        <h3>FaceTime me and watch your order get packed.</h3>
+        <a class="btn btn-go leaves-site track-link" data-label="home_facetime" href="https://t.me/TurntUpTerp?text=Hey%2C%20I%27d%20like%20to%20schedule%20a%20quick%20FaceTime%20to%20see%20my%20order%20before%20I%20buy"><span class="ring" aria-hidden="true"></span>Book a FaceTime</a>
+      </div>
+      <div class="tcard tcard-ship" data-reveal>
+        <svg class="tcard-stk bob" aria-hidden="true"><use href="#box"/></svg>
+        <p class="label">Same day · Mon–Sat · 2:30 PM PST</p>
+        <h3 class="clock" data-ship-status="clock">--</h3>
+        <p data-ship-status>Order before 2:30 PM PST and it ships today</p>
+      </div>
+    </section>
+
+    <!-- 7 · HELP -->
+    <section class="help" id="help" aria-labelledby="help-title">
+      <h2 id="help-title" data-split>Good to know</h2>
+      <div class="help-grid">
+        <div class="hcard" data-reveal>
+          <h3>Shipping</h3>
+          <p><span>Standard · US <small>2–5 business days</small></span><b>$15</b></p>
+          <p><span>Overnight · US <small>Next day</small></span><b>$50</b></p>
+          <p><span>Worldwide <small>7–21 days</small></span><b>$25–35</b></p>
+        </div>
+        <div class="hcard" data-reveal>
+          <h3>Minimums</h3>
+          <p><span>Shipped orders <small>Order total</small></span><b>$80</b></p>
+          <p><span>Local in-store <small>Any amount</small></span><b>$0</b></p>
+        </div>
+        <div class="hcard" data-reveal>
+          <h3>Insurance</h3>
+          <p><span>Domestic <small>Free reship if never delivered</small></span><b>100%</b></p>
+          <p><span>International <small>Free reship if never delivered</small></span><b>50%</b></p>
+        </div>
+      </div>
+      <a class="ask-me leaves-site track-link" data-label="home_help_message" href="https://t.me/TurntUpTerp" data-reveal>
+        <svg aria-hidden="true"><use href="#carbcap"/></svg>
+        <span><b>Questions, concerns or complaints?</b><small>Message me on Telegram. Always happy to help.</small></span>
+        <span class="order-go" aria-hidden="true">&rarr;</span>
+      </a>
+      <div class="faq">
+        <details><summary>How do I order?</summary><p>Tap <b>Order on Telegram</b> to join the TurntUpTerpz channels. Stock, prices and ordering are all there. Orders before 2:30 PM PST ship same day, Mon–Sat.</p></details>
+        <details><summary>Can I see it before I pay?</summary><p>Yes. Ask for a FaceTime and I'll show you the product going in your package.</p></details>
+        <details><summary>How do I know you're legit?</summary><p>FaceTime, the vouches, and answers to anything you ask before you pay.</p></details>
+        <details><summary>What do I-H, S-H, H, S and I mean?</summary><p>Indica hybrid, sativa hybrid, hybrid, sativa and indica.</p></details>
+        <details><summary>Links won't open in TikTok</summary><p>TikTok's and Instagram's built-in browsers block Telegram. Tap ••• at the top right, choose Open in browser, then tap the button again.</p></details>
+        <a class="faq-all" href="../../faq.html">All questions &rarr;</a>
+      </div>
+    </section>
+
+    <!-- 8 · FOOTER: one last drip lands on the button -->
+    <footer class="foot">
+      <div class="foot-drip" aria-hidden="true"><i></i></div>
+      <a class="order order-big leaves-site track-link" data-label="home_footer_order" href="https://t.me/addlist/u3J2k7PsK3w5MzQx">
+        <span class="order-plane" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21.4 4.1 2.9 11.3c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.3-1.4ZM8.4 14.1l9.4-6c.4-.3.8-.1.5.2l-7.8 7-.3 3.3Z"/></svg></span>
+        <span class="order-txt"><b>Order on Telegram</b><small data-order-sub>Tap in · new drops daily</small></span>
+        <span class="order-go" aria-hidden="true">&rarr;</span>
+        <i class="spark s1" aria-hidden="true">&#10022;</i><i class="spark s2" aria-hidden="true">&#10022;</i><i class="spark s3" aria-hidden="true">&#10022;</i>
+      </a>
+      <a class="foot-join leaves-site track-link" data-label="home_footer_message" href="https://t.me/TurntUpTerp">Questions about an order? Message me &rarr;</a>
+      <p class="fine">Adults only. You're responsible for knowing and following the laws where you live. Not legal or medical advice.</p>
+    </footer>
+  </main>
+
+  <div class="dock" id="dock">
+      <a class="order leaves-site track-link" data-label="home_dock_order" href="https://t.me/addlist/u3J2k7PsK3w5MzQx">
+        <span class="order-plane" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21.4 4.1 2.9 11.3c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.3-1.4ZM8.4 14.1l9.4-6c.4-.3.8-.1.5.2l-7.8 7-.3 3.3Z"/></svg></span>
+        <span class="order-txt"><b>Order on Telegram</b><small data-order-sub>Tap in · new drops daily</small></span>
+        <span class="order-go" aria-hidden="true">&rarr;</span>
+        <i class="spark s1" aria-hidden="true">&#10022;</i><i class="spark s2" aria-hidden="true">&#10022;</i><i class="spark s3" aria-hidden="true">&#10022;</i>
+      </a>
+  </div>
+
+  <dialog id="leaveDialog">
+    <div class="tt-wrap">
+      <div class="tt-pointer" aria-hidden="true">
+        <span class="tt-dots">&#8943;</span>
+        <svg class="tt-arrow" width="26" height="44" viewBox="0 0 26 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 42V6"></path><path d="M4 15 13 5l9 10"></path></svg>
+      </div>
+      <div class="tt-card">
+        <p class="tt-kicker">Link won't open here</p>
+        <h3>Two taps and you're in</h3>
+        <ol class="tt-steps">
+          <li><span class="tt-n">1</span> Tap up there <span class="tt-chip">&#8943;</span></li>
+          <li><span class="tt-n">2</span> Hit <span class="tt-chip" id="ldMenuLabel">Open in browser</span></li>
+        </ol>
+        <p class="tt-why" id="ldSub">This app's built-in browser blocks Telegram from opening. Your real browser works fine.</p>
+        <button class="tt-copy" type="button" id="ldCopy"><span id="ldCopyText">Copy my link instead</span></button>
+        <button class="tt-skip" type="button" id="ldCancel">Continue anyway</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="vouchViewer">
+    <div class="vv-inner">
+      <span class="vv-count" id="vvCount"></span>
+      <button class="vv-close" id="vvClose" aria-label="Close">&times;</button>
+      <button class="vv-nav vv-prev" id="vvPrev" aria-label="Previous"></button>
+      <img id="vvImg" alt="Customer vouch">
+      <button class="vv-nav vv-next" id="vvNext" aria-label="Next"></button>
+    </div>
+  </dialog>
+</body>
+</html>
