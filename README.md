@@ -1,26 +1,33 @@
 # TurntUpTerpz website
 
 A mobile-first static website hosted with GitHub Pages at
-[turntupterpz.com](https://turntupterpz.com). It behaves like a phone app: tab bar, product
-bottom sheets, a live same-day-shipping countdown, and light / dark mode that follows the phone.
+[turntupterpz.com](https://turntupterpz.com). The homepage ("Drip") is built around scroll motion:
+honey drips that fall into a filling jar, floating dab stickers, stacking menu cards, a temperature
+dial, and a sticky "Order on Telegram" button with a live same-day-shipping countdown.
 
 ## Project structure
 
 ```text
 .
-├── index.html                    Homepage (Home, Shop, Vouches, Help)
+├── index.html                    Homepage (Drip)
 ├── faq.html                      Full FAQ
+├── menu.html                     Full menu image
 ├── vouches.html                  Redirect for old vouch-page links
 ├── assets/
-│   ├── css/site.css              Site design (homepage + FAQ)
+│   ├── css/drip.css              Homepage design
+│   ├── css/site.css              FAQ and menu page design
+│   ├── css/dialogs.css           Vouch viewer and "open in browser" popups (homepage and drafts)
 │   ├── js/site.js                Shared data: links, menu, vouch list, shipping countdown, viewer
-│   ├── js/app.js                 Homepage: product cards and sheet, vouch grid, tab bar
+│   ├── js/scroll.js              Scroll-motion engine (pinned scenes, parallax, reveals)
+│   ├── js/drip.js                Homepage: hero drip, menu cards, temperature dial, vouch wall, order dock
+│   ├── js/app.js                 Previous homepage script (still used by /facetime/)
 │   ├── js/motion.js              Scroll-driven product animations
 │   ├── js/leave.js               TikTok / Instagram / Facebook in-app browser warnings
 │   ├── motion/<product>/         Animation frames (Blender renders), 640px and 360px
 │   └── images/
 │       ├── brand/                Logo files
 │       ├── icons.svg             Icon sprite
+│       ├── dab-icons.svg         Dab stickers (rig, banger, carb cap, dabber, torch, jar…)
 │       ├── menu/                 Menu image
 │       ├── products/             Disposable studio shots
 │       └── vouches/
@@ -34,9 +41,10 @@ bottom sheets, a live same-day-shipping countdown, and light / dark mode that fo
 
 ## Links
 
-The Telegram folder (menu and drops) and the personal Telegram account are set in
-`assets/js/site.js` (`links`) and written directly into `index.html` and `faq.html`.
-Search for `t.me/` to change them everywhere.
+Every **Order** button goes to the Telegram channels folder (`t.me/addlist/u3J2k7PsK3w5MzQx`).
+The personal account (`t.me/TurntUpTerp`) is only for questions, FaceTime requests and the
+"Ask about this" buttons on the menu cards. Both are set in `assets/js/site.js` (`links`) and written
+directly into `index.html`, `menu.html` and `faq.html`. Search for `t.me/` to change them everywhere.
 
 ## Updating the menu
 
