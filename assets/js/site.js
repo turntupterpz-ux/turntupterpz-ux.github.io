@@ -32,10 +32,10 @@
   const links = {
     menu: "https://t.me/addlist/u3J2k7PsK3w5MzQx",
     order: "https://t.me/addlist/u3J2k7PsK3w5MzQx", // every "Order" button goes to the channels
-    telegram: "https://t.me/TurntUpTerp", // personal account: questions, FaceTime, "ask about this"
+    telegram: "https://t.me/TurntUpTerp", // personal account: questions and FaceTime
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
     menuImage: ASSETS + "images/menu/menu-r6.webp",
-    ask: (product) => "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'm interested in the " + product + ". What's available right now?")
+    ask: () => "https://t.me/addlist/u3J2k7PsK3w5MzQx", // "Ask about this" on product cards goes to the channels too
   };
 
   // Copied from the 10/13/26 menu image (menu-r6). Update here and every draft follows.
