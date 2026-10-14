@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Dab icons shared by the motion drafts. Colours come from the page:
+       --c1 main colour, --c2 second colour, --c3 glass / highlight, --ol outline, --sw outline width. -->
+  <defs>
+    <style>
+      .o{stroke:var(--ol,#2a1709);stroke-width:var(--sw,4);stroke-linejoin:round;stroke-linecap:round;}
+      .f1{fill:var(--c1,#f5a524);}
+      .f2{fill:var(--c2,#2a1709);}
+      .f3{fill:var(--c3,#fff7e6);}
+      .nf{fill:none;}
+    </style>
+  </defs>
+
+  <symbol id="drop" viewBox="0 0 100 100">
+    <path class="o f1" d="M50 6C50 6 21 45 21 64a29 29 0 0 0 58 0C79 45 50 6 50 6Z"/>
+    <ellipse class="f3" cx="39" cy="62" rx="6" ry="11" opacity=".75"/>
+  </symbol>
+
+  <symbol id="diamond" viewBox="0 0 100 100">
+    <path class="o f3" d="M50 5 77 24v50L50 95 23 74V24Z"/>
+    <path class="o f1" d="M23 24 50 40v55L23 74Z" opacity=".55"/>
+    <path class="o nf" d="M23 24 50 40 77 24M50 40v55"/>
+  </symbol>
+
+  <symbol id="pearl" viewBox="0 0 100 100">
+    <circle class="o f1" cx="50" cy="50" r="32"/>
+    <circle class="f3" cx="39" cy="38" r="10" opacity=".85"/>
+    <circle class="f3" cx="63" cy="64" r="4" opacity=".5"/>
+  </symbol>
+
+  <symbol id="jar" viewBox="0 0 100 100">
+    <rect class="o f2" x="22" y="10" width="56" height="17" rx="5"/>
+    <rect class="o f3" x="18" y="27" width="64" height="63" rx="12"/>
+    <path class="f1" d="M23 55c9-5 18 4 27 0s18-5 27 0v22a8 8 0 0 1-8 8H31a8 8 0 0 1-8-8Z"/>
+    <path class="o nf" d="M18 39h64"/>
+    <path class="f3" d="M27 60h5v18h-5Z" opacity=".6"/>
+  </symbol>
+
+  <symbol id="dabber" viewBox="0 0 100 100">
+    <g transform="rotate(38 50 50)">
+      <rect class="o f2" x="43" y="4" width="14" height="40" rx="7"/>
+      <path class="o f3" d="M47 44h6v40l-3 12-3-12Z"/>
+      <circle class="o f1" cx="50" cy="86" r="8"/>
+    </g>
+  </symbol>
+
+  <symbol id="carbcap" viewBox="0 0 100 100">
+    <rect class="o f3" x="45" y="16" width="10" height="34" rx="5"/>
+    <circle class="o f1" cx="50" cy="16" r="9"/>
+    <path class="o f3" d="M20 76a30 30 0 0 1 60 0Z"/>
+    <ellipse class="o f3" cx="50" cy="77" rx="32" ry="7"/>
+    <path class="f3" d="M34 60a18 18 0 0 1 10-10" stroke="var(--c1,#f5a524)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="banger" viewBox="0 0 100 100">
+    <rect class="o f2" x="6" y="58" width="12" height="24" rx="3"/>
+    <rect class="o f3" x="16" y="62" width="44" height="16" rx="4"/>
+    <path class="o f3" d="M52 22h34v50a6 6 0 0 1-6 6H58a6 6 0 0 1-6-6Z"/>
+    <ellipse class="o f3" cx="69" cy="22" rx="17" ry="5"/>
+    <rect class="f1" x="57" y="58" width="24" height="14" rx="4" opacity=".9"/>
+  </symbol>
+
+  <symbol id="torch" viewBox="0 0 100 100">
+    <path class="f1" d="M58 4c8 8 12 14 10 22a8 8 0 0 1-16 0c-2-7 2-14 6-22Z" opacity=".95"/>
+    <rect class="o f3" x="53" y="26" width="12" height="16" rx="2"/>
+    <rect class="o f2" x="44" y="40" width="30" height="20" rx="5"/>
+    <rect class="o f1" x="40" y="56" width="38" height="40" rx="10"/>
+    <rect class="o f2" x="26" y="46" width="18" height="9" rx="4"/>
+  </symbol>
+
+  <symbol id="flame" viewBox="0 0 100 100">
+    <path class="o f1" d="M50 5c14 24 30 38 26 62a26 26 0 0 1-52 0C20 45 40 32 50 5Z"/>
+    <path class="f3" d="M50 42c8 13 14 20 12 30a12 12 0 0 1-24 0c-2-10 6-18 12-30Z"/>
+  </symbol>
+
+  <symbol id="cloud" viewBox="0 0 100 100">
+    <path class="o f3" d="M24 78a16 16 0 0 1-2-32 22 22 0 0 1 42-10 18 18 0 0 1 18 30 12 12 0 0 1-6 12Z"/>
+  </symbol>
+
+  <symbol id="pen" viewBox="0 0 100 100">
+    <g transform="rotate(-24 50 50)">
+      <rect class="o f3" x="41" y="2" width="18" height="14" rx="6"/>
+      <rect class="o f2" x="36" y="14" width="28" height="82" rx="12"/>
+      <rect class="o f1" x="43" y="30" width="14" height="32" rx="7"/>
+      <circle class="f3" cx="50" cy="80" r="3"/>
+    </g>
+  </symbol>
+
+  <symbol id="rig" viewBox="0 0 100 100">
+    <path class="o f3" d="M40 6h14v8l-2 2v30h-10V16l-2-2Z"/>
+    <circle class="o f3" cx="47" cy="68" r="26"/>
+    <path class="f1" d="M23 72a24 24 0 0 0 48 0Z" opacity=".55"/>
+    <path class="o f3" d="M68 58l14-12"/>
+    <path class="o f3" d="M76 32h16v18a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4Z"/>
+  </symbol>
+
+  <symbol id="leaf" viewBox="0 0 100 100">
+    <g class="o f1">
+      <path d="M50 84C40 58 42 30 50 6c8 24 10 52 0 78Z"/>
+      <path d="M50 84C40 58 42 30 50 6c8 24 10 52 0 78Z" transform="rotate(-34 50 84) scale(.9) translate(5.5 9)"/>
+      <path d="M50 84C40 58 42 30 50 6c8 24 10 52 0 78Z" transform="rotate(34 50 84) scale(.9) translate(5.5 9)"/>
+      <path d="M50 84C40 58 42 30 50 6c8 24 10 52 0 78Z" transform="rotate(-68 50 84) scale(.68) translate(23.5 39.5)"/>
+      <path d="M50 84C40 58 42 30 50 6c8 24 10 52 0 78Z" transform="rotate(68 50 84) scale(.68) translate(23.5 39.5)"/>
+    </g>
+    <path class="o nf" d="M50 84v12"/>
+  </symbol>
+
+  <symbol id="box" viewBox="0 0 100 100">
+    <path class="o f1" d="M14 30 50 14l36 16v42L50 88 14 72Z"/>
+    <path class="o f2" d="M14 30l36 16 36-16" fill="none"/>
+    <path class="o nf" d="M50 46v42"/>
+    <path class="f3" d="M30 24l36 16v10l-8 4V43L22 27Z" opacity=".7"/>
+  </symbol>
+</svg>

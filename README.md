@@ -27,6 +27,7 @@ bottom sheets, a live same-day-shipping countdown, and light / dark mode that fo
 │           ├── full/             Original full-size vouch screenshots
 │           └── thumbs/           Lightweight WebP gallery thumbnails
 ├── redesign/                     The five redesign drafts (not linked, noindex)
+├── drafts/                       More drafts, incl. the scroll-motion ones (6-heat, 7-drip) · /drafts/
 ├── tools/render/                 Blender scripts that make the product renders
 └── CNAME                         Custom-domain configuration
 ```
