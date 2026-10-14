@@ -13,6 +13,14 @@ current with the live site. Telegram links go through `../assets/js/leave.js` li
 | `6-heat/` | Dark, cinematic. A pinned scene where scrolling takes a dab (torch → cool down → drop → cap → vapor), then a sideways product run, vouch rails, a FaceTime phone and a falling shipping box. |
 | `7-drip/` | **Now the live homepage** (`/index.html`, `assets/css/drip.css`, `assets/js/drip.js`); the folder redirects to `/`. Bright, sticker style. Honey drips that stretch and fall into a filling jar, floating dab stickers, stacking menu cards, a temperature dial, a drifting vouch wall. |
 
+## Top-button drafts (`top/`)
+
+`top/1.html` … `top/5.html` are copies of the live homepage with the quick links (Join channel, Menu,
+See vouches, Schedule FaceTime, DM me directly) moved up near the header. Each keeps its layout CSS in
+a `<style>` block; the shared CSS is untouched. 1: panel under the header · 2: sticky header with a
+Join strip and tabs · 3: chips under the header · 4: Join pill in the header · 5: icon tiles and a
+Join banner.
+
 ## How the motion works
 
 - `../assets/js/scroll.js` — a small engine (no libraries). Sections marked `data-scene="pin"` stay on screen
