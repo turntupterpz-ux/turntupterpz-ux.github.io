@@ -34,13 +34,13 @@
     order: "https://t.me/addlist/u3J2k7PsK3w5MzQx", // every "Order" button goes to the channels
     telegram: "https://t.me/TurntUpTerp", // personal account: questions and FaceTime
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
-    menuImage: ASSETS + "images/menu/menu-r6.webp",
+    menuImage: ASSETS + "images/menu/menu-r7.webp",
     ask: () => "https://t.me/addlist/u3J2k7PsK3w5MzQx", // "Ask about this" on product cards goes to the channels too
   };
 
-  // Copied from the 10/13/26 menu image (menu-r6). Update here and every draft follows.
+  // Copied from the 10/14/26 menu image (menu-r7). Update here and every draft follows.
   const menu = {
-    updated: "Oct 13",
+    updated: "Oct 14",
     weights: ["1g", "3.5g", "7g", "14g", "28.5g"],
     categories: [
       {
@@ -48,9 +48,9 @@
         blurb: "Pressed from fresh-frozen ice water hash. No solvents, ever.",
         from: 25, unit: "g",
         strains: [
-          { name: "Banana Cake", type: "I-H", micron: "90–120µ", tag: "Pink rosin · Top shelf", prices: [45, 130, 230, 380, 650] },
-          { name: "Trop Cherry", type: "S-H", micron: "90–120µ", prices: [30, 85, 150, 260, 445] },
+          { name: "Banana Cake", type: "I-H", micron: "90–120µ", tag: "Pink rosin · Top shelf", prices: [30, 85, 150, 260, 445] },
           { name: "Wilson Zero", type: "H", micron: "90–120µ", prices: [30, 85, 145, 250, 420] },
+          { name: "Grape Gas", type: "H", micron: "90–120µ", prices: [30, 85, 145, 250, 420] },
           { name: "Papaya", type: "I", micron: "90–120µ", prices: [25, 80, 140, 245, 415] }
         ]
       },
@@ -59,8 +59,7 @@
         blurb: "Clear THCa crystal. The strongest value per gram on the menu.",
         from: 15, unit: "g",
         strains: [
-          { name: "Purple Punch", type: "I" },
-          { name: "Chem Dawg", type: "H" }
+          { name: "Purple Punch", type: "I" }
         ],
         prices: [15, 30, 45, 75, 120]
       },
@@ -69,8 +68,6 @@
         blurb: "Trichome heads separated dry, then cleaned up with static.",
         from: 30, unit: "g",
         strains: [
-          { name: "Oreoz", type: "I-H" },
-          { name: "Kush Mints", type: "H" },
           { name: "White Truffle", type: "I-H" },
           { name: "Honey Banana", type: "H" }
         ],
@@ -91,22 +88,29 @@
         blurb: "Dry, easy-to-handle crumble priced by the half and full zip.",
         from: 65, unit: "½ zip",
         strains: [
-          { name: "Northern Lights", type: "I" },
           { name: "Mango Mintz", type: "H" }
         ],
         tiers: [["1/2 zip", 65], ["1 zip", 85], ["2 zip", 145]]
       },
       {
+        id: "sugar", name: "BHO Sugar", note: "Budget friendly", render: "crumble",
+        blurb: "Wet, sugary BHO priced by the half and full zip.",
+        from: 75, unit: "½ zip",
+        strains: [
+          { name: "MAC 1", type: "H" }
+        ],
+        tiers: [["1/2 zip", 75], ["1 zip", 95], ["2 zip", 160]]
+      },
+      {
         id: "disposable", name: "Disposables", note: "2g melted diamond", render: "disposable",
         photo: "images/products/disposable-2g-wide.webp",
         blurb: "Melted-diamond 2g disposables. Cheaper the more you grab.",
-        from: 20, unit: "ea",
+        from: "17.50", unit: "ea",
         strains: [
           { name: "Blue Zushi", type: "I-H" },
-          { name: "Trop Cherry", type: "S-H" },
-          { name: "Zkittlez", type: "I-H" }
+          { name: "Trop Cherry", type: "S-H" }
         ],
-        tiers: [["1+ each", 30], ["5+ each", 25], ["10+ each", 20]]
+        tiers: [["1+ each", 25], ["5+ each", 20], ["10+ each", "17.50"]]
       }
     ],
     types: { "I": "Indica", "I-H": "Indica hybrid", "H": "Hybrid", "S-H": "Sativa hybrid", "S": "Sativa" }
