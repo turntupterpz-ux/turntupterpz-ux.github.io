@@ -43,8 +43,8 @@
 
   // ------------------------------------------------------------------ 3 · stacking menu cards
   const stack = $("#stack");
-  const colors = { rosin: "#ffd166", diamonds: "#cfe7ff", sift: "#f2d0a9", resin: "#ffbf80", crumble: "#f6e7a8", disposable: "#d4f59a" };
-  const icons = { rosin: "drop", diamonds: "diamond", sift: "leaf", resin: "jar", crumble: "dabber", disposable: "pen" };
+  const colors = { rosin: "#ffd166", diamonds: "#cfe7ff", sift: "#f2d0a9", resin: "#ffbf80", crumble: "#f6e7a8", sugar: "#f9dc8c", disposable: "#d4f59a" };
+  const icons = { rosin: "drop", diamonds: "diamond", sift: "leaf", resin: "jar", crumble: "dabber", sugar: "jar", disposable: "pen" };
   const svgUse = (id, cls) => {
     const ns = "http://www.w3.org/2000/svg";
     const svg = document.createElementNS(ns, "svg");
