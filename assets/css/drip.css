@@ -101,9 +101,16 @@ h2[data-split]{overflow:hidden;padding-bottom:.08em;}
 .hero-title .ch{animation:pop .9s cubic-bezier(.2,1.5,.4,1) both;animation-delay:calc(var(--i) * 50ms + 200ms);}
 @keyframes pop{from{transform:translateY(60%) scale(.4) rotate(-14deg);opacity:0;}}
 .hero-title{transform:translateY(calc(var(--s2) * -6svh)) scale(calc(1 - var(--s2) * .12));}
-.hero-sub{position:absolute;left:24px;right:24px;z-index:1;top:calc(118px + env(safe-area-inset-top) + clamp(3.6rem,19vw,10rem) * 1.85);
-  text-align:center;color:var(--dim);font-size:1rem;line-height:1.5;opacity:calc(1 - var(--s1) * 2);}
-.hero-sub b{color:var(--ink);}
+.hero-copy{position:absolute;left:24px;right:24px;z-index:5;top:calc(118px + env(safe-area-inset-top) + clamp(3.6rem,19vw,10rem) * 1.85);
+  max-width:440px;margin:0 auto;opacity:calc(1 - var(--s0) * 2.5);transform:translateY(calc(var(--s0) * -8svh));}
+.hero:not([data-step="0"]) .hero-copy{visibility:hidden;}
+.hero-sub{text-align:center;color:var(--dim);font-size:1rem;line-height:1.5;}
+/* quick links: join the channel, then menu · vouches · FaceTime · DM in a 2×2 grid */
+.hero-links{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;}
+.hl{display:flex;align-items:center;justify-content:center;min-height:46px;padding:0 10px;border-radius:999px;background:var(--paper);color:var(--ink);
+  font:700 .95rem/1.1 var(--body);text-align:center;text-decoration:none;border:3px solid var(--ink);box-shadow:0 4px 0 var(--ink);transition:transform .15s,box-shadow .15s;}
+.hl:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink);}
+.hl-join{grid-column:1 / -1;min-height:52px;background:var(--mint);font-size:1.05rem;}
 
 .jar{position:absolute;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));width:min(52vw,30svh,300px);z-index:3;
   transform:translateX(-50%) translateY(calc((1 - var(--s0)) * 30svh)) rotate(calc((1 - var(--s0)) * -10deg));}
@@ -306,6 +313,7 @@ main{padding-bottom:96px;}
 .rm .hero{height:auto;}
 .rm .honey .d{height:var(--len);}
 .rm .hero-stage{position:relative;min-height:760px;}
+.rm .hero .hero-copy{opacity:1;transform:none;visibility:visible;}
 .rm .temp{height:auto;}
 .rm .temp-stage{position:relative;min-height:100svh;}
 .rm .zones{gap:10px;}
