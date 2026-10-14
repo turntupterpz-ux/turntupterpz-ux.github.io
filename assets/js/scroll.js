@@ -1,4 +1,4 @@
-// Tiny scroll-motion engine for the /drafts motion pages. No libraries, works in every browser.
+// Tiny scroll-motion engine (homepage and the /drafts motion pages). No libraries, works in every browser.
 //
 //   <section data-scene="pin" data-steps="0,.3,.6,1">   tall section with a sticky stage inside.
 //        Sets --p (0→1 while pinned), --s0, --s1… (progress inside each step) and data-step.
@@ -195,9 +195,8 @@
   window.addEventListener("resize", () => { vh = window.innerHeight; schedule(); });
   window.addEventListener("load", schedule);
 
-  // The dab icon sprite is pulled into the page so <use href="#drop"> works and picks up page colours.
-  const KIT = new URL("./", document.currentScript.src).href;
-  fetch(KIT + "dab-icons.svg").then((r) => r.text()).then((svg) => {
+  // The dab icon sprite (assets/images/dab-icons.svg) is pulled into the page so <use href="#drop"> works and picks up page colours.
+  fetch(new URL("../images/dab-icons.svg", document.currentScript.src).href).then((r) => r.text()).then((svg) => {
     const holder = document.createElement("div");
     holder.setAttribute("aria-hidden", "true");
     holder.style.cssText = "position:absolute;width:0;height:0;overflow:hidden";

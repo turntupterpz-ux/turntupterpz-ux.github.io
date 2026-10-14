@@ -1,4 +1,4 @@
-// Draft 7 · Drip — scroll choreography.
+// Homepage · Drip — scroll choreography (started as /drafts/7-drip).
 (function () {
   const { on, span, mix, ease, clamp } = window.TTScroll;
   const T = window.TT;
@@ -75,7 +75,7 @@
         el("small", { text: st.prices ? "$" + st.prices[0] + "/g" : st.type })
       ]))),
       priceRow(c),
-      el("a", { class: "btn btn-line leaves-site track-link", "data-label": "d7_ask_" + c.id, href: T.links.ask(c.name) }, [document.createTextNode("Ask about this")])
+      el("a", { class: "btn btn-line leaves-site track-link", "data-label": "home_ask_" + c.id, href: T.links.ask(c.name) }, [document.createTextNode("Ask about this")])
     ]);
     stack.appendChild(card);
     return card;
@@ -111,6 +111,33 @@
     cols[i % cols.length].appendChild(b);
   }
   $("#wallMore").addEventListener("click", () => T.openViewer(12));
+
+  // ------------------------------------------------------------------ order dock
+  // Slides up once the page settles, steps aside while the big footer button is on screen,
+  // and its small line counts down to the same-day cutoff.
+  const dock = $("#dock");
+  const footOrder = $(".foot .order");
+  if (dock) {
+    let ready = false;
+    let footVisible = false;
+    const place = () => dock.classList.toggle("away", !ready || footVisible);
+    place();
+    setTimeout(() => { ready = true; place(); }, 700);
+    if (footOrder && "IntersectionObserver" in window) {
+      new IntersectionObserver(([e]) => { footVisible = e.isIntersecting; place(); }).observe(footOrder);
+    }
+  }
+  const subs = $$("[data-order-sub]");
+  const tickSub = () => {
+    const st = T.shipStatus();
+    subs.forEach((node) => {
+      node.innerHTML = st.today
+        ? '<i class="live"></i>' + st.clock + " left · ships today"
+        : "Tap in · ships " + st.next;
+    });
+  };
+  tickSub();
+  setInterval(tickSub, 30000);
 
   // ------------------------------------------------------------------ shared numbers
   const n = T.vouches.length;

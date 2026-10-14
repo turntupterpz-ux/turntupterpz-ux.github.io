@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-  <!-- Dab icons shared by the motion drafts. Colours come from the page:
+  <!-- Dab icons for the homepage and motion drafts (loaded by assets/js/scroll.js). Colours come from the page:
        --c1 main colour, --c2 second colour, --c3 glass / highlight, --ol outline, --sw outline width. -->
   <defs>
     <style>

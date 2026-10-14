@@ -31,7 +31,8 @@
 
   const links = {
     menu: "https://t.me/addlist/u3J2k7PsK3w5MzQx",
-    telegram: "https://t.me/TurntUpTerp",
+    order: "https://t.me/addlist/u3J2k7PsK3w5MzQx", // every "Order" button goes to the channels
+    telegram: "https://t.me/TurntUpTerp", // personal account: questions, FaceTime, "ask about this"
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
     menuImage: ASSETS + "images/menu/menu-r6.webp",
     ask: (product) => "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'm interested in the " + product + ". What's available right now?")
