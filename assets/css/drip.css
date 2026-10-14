@@ -110,7 +110,7 @@ h2[data-split]{overflow:hidden;padding-bottom:.08em;}
 .hl{display:flex;align-items:center;justify-content:center;min-height:46px;padding:0 10px;border-radius:999px;background:var(--paper);color:var(--ink);
   font:700 .95rem/1.1 var(--body);text-align:center;text-decoration:none;border:3px solid var(--ink);box-shadow:0 4px 0 var(--ink);transition:transform .15s,box-shadow .15s;}
 .hl:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink);}
-.hl-join{grid-column:1 / -1;min-height:52px;background:var(--mint);font-size:1.05rem;}
+.hl-join{grid-column:1 / -1;min-height:52px;padding:8px 18px;background:var(--mint);font-size:1rem;line-height:1.25;}
 
 .jar{position:absolute;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));width:min(52vw,30svh,300px);z-index:3;
   transform:translateX(-50%) translateY(calc((1 - var(--s0)) * 30svh)) rotate(calc((1 - var(--s0)) * -10deg));}
