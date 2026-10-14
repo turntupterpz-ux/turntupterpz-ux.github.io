@@ -75,7 +75,10 @@
         el("small", { text: st.prices ? "$" + st.prices[0] + "/g" : st.type })
       ]))),
       priceRow(c),
-      el("a", { class: "btn btn-line leaves-site track-link", "data-label": "home_ask_" + c.id, href: T.links.ask(c.name) }, [document.createTextNode("Ask about this")])
+      el("div", { class: "card-acts" }, [
+        el("a", { class: "btn btn-line leaves-site track-link", "data-label": "home_ask_" + c.id, href: T.links.ask(c.name) }, [document.createTextNode("Ask about this")]),
+        el("a", { class: "card-dm leaves-site track-link", "data-label": "home_dm_" + c.id, href: T.links.telegram, text: "or DM me directly →" })
+      ])
     ]);
     stack.appendChild(card);
     return card;

@@ -41,10 +41,11 @@ dial, and a sticky "Order on Telegram" button with a live same-day-shipping coun
 
 ## Links
 
-Every **Order** button goes to the Telegram channels folder (`t.me/addlist/u3J2k7PsK3w5MzQx`).
-The personal account (`t.me/TurntUpTerp`) is only for questions, FaceTime requests and the
-"Ask about this" buttons on the menu cards. Both are set in `assets/js/site.js` (`links`) and written
-directly into `index.html`, `menu.html` and `faq.html`. Search for `t.me/` to change them everywhere.
+Every **Order** button and every product "Ask about this" button goes to the Telegram channels folder
+(`t.me/addlist/u3J2k7PsK3w5MzQx`). The personal account (`t.me/TurntUpTerp`) is only for questions
+("DM me" in the top bar and on each product card, "Message me" in Good to know and the footer)
+and FaceTime requests. Both are set in `assets/js/site.js` (`links`) and written directly
+into `index.html`, `menu.html` and `faq.html`. Search for `t.me/` to change them everywhere.
 
 ## Updating the menu
 

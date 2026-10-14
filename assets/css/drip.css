@@ -61,6 +61,8 @@ h2[data-split]{overflow:hidden;padding-bottom:.08em;}
 .brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;font-size:1.02rem;}
 .brand{background:var(--paper);padding:3px 14px 3px 3px;border-radius:999px;border:2px solid var(--ink);}
 .brand img{border-radius:50%;width:32px;height:32px;}
+.bar-right{display:flex;align-items:center;gap:8px;}
+.bar-dm{padding:7px 14px;border-radius:999px;background:var(--paper);color:var(--ink);font-weight:700;font-size:.9rem;text-decoration:none;border:2px solid var(--ink);}
 .bar-cta{padding:9px 18px;border-radius:999px;background:var(--ink);color:var(--honey);font-weight:700;font-size:.9rem;text-decoration:none;border:2px solid var(--ink);}
 
 /* ------------------------------------------------------------------ 1 · hero */
@@ -152,7 +154,9 @@ h2[data-split]{overflow:hidden;padding-bottom:.08em;}
 .prices span:first-child{border-left:none;}
 .prices small{font:500 .64rem/1 var(--mono);color:var(--dim);}
 .prices b{font-size:.95rem;}
-.card .btn{justify-self:start;min-height:46px;margin-top:4px;}
+.card-acts{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:4px;}
+.card .btn{min-height:46px;}
+.card-dm{font-weight:700;font-size:.9rem;text-underline-offset:3px;}
 .menu-foot{display:grid;justify-items:center;gap:10px;padding-top:40px;text-align:center;color:var(--dim);}
 @media (max-height:740px){
   .card .blurb{display:none;}
