@@ -22,7 +22,8 @@ dial, and a sticky "Order on Telegram" button with a live same-day-shipping coun
 │   ├── js/drip.js                Homepage: hero drip, menu cards, temperature dial, vouch wall, order dock
 │   ├── js/app.js                 Previous homepage script (still used by /facetime/)
 │   ├── js/motion.js              Scroll-driven product animations
-│   ├── js/leave.js               TikTok / Instagram / Facebook in-app browser warnings
+│   ├── js/coach.js               TikTok / Instagram / Facebook in-app browser escape (live pages)
+│   ├── js/leave.js               Older in-app browser popup (drafts and redesigns)
 │   ├── motion/<product>/         Animation frames (Blender renders), 640px and 360px
 │   └── images/
 │       ├── brand/                Logo files
