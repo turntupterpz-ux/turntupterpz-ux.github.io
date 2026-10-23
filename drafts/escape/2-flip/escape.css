@@ -1,0 +1,41 @@
+/* Escape 2 · Flip */
+
+/* lock sticker on every Telegram button while inside TikTok */
+.c2-locked{position:relative;}
+.c2-tag{position:absolute;right:-6px;top:-12px;z-index:2;padding:3px 8px;border-radius:999px;
+  background:var(--ink);color:var(--honey);font:500 10px/1.3 var(--mono);white-space:nowrap;transform:rotate(4deg);pointer-events:none;
+  box-shadow:0 0 0 2px #fff;}
+.bar .c2-tag,.card-dm .c2-tag,.foot-join .c2-tag{padding:2px 4px;font-size:9px;top:-10px;right:-10px;}
+
+/* the flipping card */
+.c2{position:fixed;z-index:85;perspective:1200px;
+  transition:left .5s cubic-bezier(.2,1.1,.3,1),top .5s cubic-bezier(.2,1.1,.3,1),width .5s cubic-bezier(.2,1.1,.3,1),height .5s cubic-bezier(.2,1.1,.3,1);}
+.c2-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.3,1.3,.4,1);}
+.c2.on .c2-in{transform:rotateY(180deg);}
+.c2-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:3px solid var(--ink);border-radius:var(--front-radius,24px);}
+.c2-front{display:grid;place-items:center;background:var(--front-bg,var(--honey));font:700 1rem/1.1 var(--body);color:var(--ink);text-align:center;padding:4px 10px;overflow:hidden;}
+.c2-back{transform:rotateY(180deg);border-radius:26px;background:var(--paper);color:var(--ink);padding:16px 16px 14px;box-shadow:0 8px 0 var(--ink),0 30px 60px -20px rgba(42,23,9,.5);
+  display:flex;flex-direction:column;gap:8px;overflow:hidden;}
+.c2-back .esc-k{color:#c2410c;}
+.c2-back h3{font-family:var(--display);font-weight:400;font-size:1.55rem;line-height:1;}
+.c2-back ol{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:6px;}
+.c2-back li{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;}
+.c2-back li > b{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--honey);border:2px solid var(--ink);font:500 .72rem/1 var(--mono);}
+.c2-arrow{font-size:1.3rem;font-weight:800;color:#c2410c;animation:c2nudge 1s ease-in-out infinite;}
+@keyframes c2nudge{50%{transform:translate(3px,-3px);}}
+.c2-then{font-size:.84rem;color:var(--dim);}
+.c2-btns{display:flex;gap:8px;margin-top:auto;}
+.c2-btns button{flex:1;min-height:42px;border-radius:999px;border:2.5px solid var(--ink);font:700 .9rem/1 var(--body);cursor:pointer;color:var(--ink);}
+.c2-copy{background:var(--honey);box-shadow:0 3px 0 var(--ink);}
+.c2-close{background:var(--paper);}
+
+/* dotted line from the card up to ••• */
+.c2-line{position:fixed;inset:0;width:100%;height:100%;z-index:91;pointer-events:none;overflow:visible;}
+.c2-line path{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-dasharray:var(--len) var(--len);stroke-dashoffset:var(--len);}
+.c2-line circle{fill:none;stroke:var(--honey);stroke-width:4;opacity:0;}
+.c2-line.draw path{stroke-dasharray:2 9;stroke-dashoffset:0;animation:c2march .6s linear infinite;}
+.c2-line.draw circle{opacity:1;animation:c2pulse 1.2s ease-out infinite;transform-box:fill-box;transform-origin:center;}
+@keyframes c2march{to{stroke-dashoffset:-11;}}
+@keyframes c2pulse{from{transform:scale(1);opacity:1;}to{transform:scale(2.6);opacity:0;}}
+.rm .c2,.rm .c2-in{transition:none;}
+.rm .c2-arrow,.rm .c2-line.draw path,.rm .c2-line.draw circle{animation:none;}
