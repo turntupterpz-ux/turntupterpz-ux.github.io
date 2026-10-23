@@ -21,6 +21,23 @@ a `<style>` block; the shared CSS is untouched. 1: panel under the header · 2: 
 Join strip and tabs · 3: chips under the header · 4: Join pill in the header · 5: icon tiles and a
 Join banner.
 
+## Escape drafts (`escape/`)
+
+Four ideas for telling TikTok / Instagram visitors that Telegram buttons won't open in the app's
+browser, and getting them out. Each is the live homepage (built by `escape/build.py`) with
+`leave.js` swapped for one idea in `escape.js` + `escape.css`.
+
+| Folder | Idea |
+| --- | --- |
+| `1-coach/` | Animated mini phone acts out the taps; rings on •••; hint chip all visit. |
+| `2-flip/` | Lock stickers on Telegram buttons; the tapped button flips into the steps with a line to •••. |
+| `3-gate/` | Full-screen heads-up on arrival, then "ordering locked" strip and "Unlock ordering" buttons. |
+| `4-plan-b/` | Telegram-style chat with three ways out: open in browser, copy link, search @TurntUpTerp. |
+
+`escape/shared.js` detects the app (or pretends to: `?sim=tiktok|instagram|facebook|none`,
+`?os=ios|android`), draws a fake TikTok bar with a working ••• menu for previews, and adds the DRAFT
+tab. Run `python3 drafts/escape/build.py` after homepage changes to refresh the four pages.
+
 ## How the motion works
 
 - `../assets/js/scroll.js` — a small engine (no libraries). Sections marked `data-scene="pin"` stay on screen
