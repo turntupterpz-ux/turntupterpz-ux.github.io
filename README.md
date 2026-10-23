@@ -70,11 +70,13 @@ Keep personal information covered before publishing screenshots.
 
 ## In-app browsers
 
-TikTok, Instagram and Facebook open links in their own browser, which blocks Telegram. `leave.js`
-shows a "tap ••• → Open in browser" card at the top of the page for those visitors, and the same
-two-step prompt (with a copy-link fallback) when they tap any Telegram button. On Android it tries
-to hand the link straight to the Telegram app first. Test it with `?sim=tiktok`,
-`?sim=instagram` or `?sim=facebook` on the end of the URL.
+TikTok, Instagram and Facebook open links in their own browser, which blocks Telegram. On the
+homepage, menu and FAQ, `assets/js/coach.js` (+ `assets/css/coach.css`) handles those visitors:
+a hint chip points at the app's ••• button, and tapping any Telegram button opens a coach card with a
+looping mini phone that acts out the taps (••• → Open in browser → Order) plus a Copy link fallback.
+On Android it first hands the link straight to the Telegram app. Everyone else never sees it.
+Test with `?sim=tiktok`, `?sim=instagram` or `?sim=facebook` (add `&os=android` for Android wording).
+The older `leave.js` popup is still used by the drafts and redesigns.
 
 ## Statistics
 

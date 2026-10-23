@@ -73,23 +73,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@500&display=swap">
   <link rel="stylesheet" href="assets/css/dialogs.css?v=20261014a">
   <link rel="stylesheet" href="assets/css/drip.css?v=20261014d">
+  <link rel="stylesheet" href="assets/css/coach.css?v=20261023a">
 
   <script defer src="assets/js/site.js?v=20261014c"></script>
   <script defer src="assets/js/scroll.js?v=20261014a"></script>
   <script defer src="assets/js/motion.js?v=20261008c"></script>
   <script defer src="assets/js/drip.js?v=20261014c"></script>
-  <script defer src="assets/js/leave.js?v=20261008c"></script>
+  <script defer src="assets/js/coach.js?v=20261023a"></script>
 </head>
 <body>
   <a class="skip" href="#menu">Skip to the menu</a>
 
   <!-- the page's scroll progress is a drip running down the left edge -->
   <div class="dripbar" aria-hidden="true"><span class="dripbar-stem"></span><span class="dripbar-drop"></span></div>
-
-  <div class="inapp" data-inapp-notice hidden>
-    <b>Open this page in your browser</b>
-    <span>Tap <span class="chip">&#8943;</span> then <span class="chip" data-inapp-menu>Open in browser</span>. <span data-inapp-app>This app</span> blocks Telegram links.</span>
-  </div>
 
   <header class="bar">
     <a class="brand" href="#top"><img src="assets/images/brand/logo.webp" alt="" width="36" height="36"><span>TurntUpTerpz</span></a>
@@ -303,25 +299,6 @@
       </a>
   </div>
 
-  <dialog id="leaveDialog">
-    <div class="tt-wrap">
-      <div class="tt-pointer" aria-hidden="true">
-        <span class="tt-dots">&#8943;</span>
-        <svg class="tt-arrow" width="26" height="44" viewBox="0 0 26 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 42V6"></path><path d="M4 15 13 5l9 10"></path></svg>
-      </div>
-      <div class="tt-card">
-        <p class="tt-kicker">Link won't open here</p>
-        <h3>Two taps and you're in</h3>
-        <ol class="tt-steps">
-          <li><span class="tt-n">1</span> Tap up there <span class="tt-chip">&#8943;</span></li>
-          <li><span class="tt-n">2</span> Hit <span class="tt-chip" id="ldMenuLabel">Open in browser</span></li>
-        </ol>
-        <p class="tt-why" id="ldSub">This app's built-in browser blocks Telegram from opening. Your real browser works fine.</p>
-        <button class="tt-copy" type="button" id="ldCopy"><span id="ldCopyText">Copy my link instead</span></button>
-        <button class="tt-skip" type="button" id="ldCancel">Continue anyway</button>
-      </div>
-    </div>
-  </dialog>
 
   <dialog id="vouchViewer">
     <div class="vv-inner">
