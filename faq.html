@@ -13,6 +13,7 @@
   <link rel="icon" type="image/png" href="assets/images/brand/logo.png">
   <link rel="apple-touch-icon" href="assets/images/brand/logo.png">
   <link rel="stylesheet" href="assets/css/site.css?v=20261008c">
+  <link rel="stylesheet" href="assets/css/coach.css?v=20261023a">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TurntUpTerpz">
@@ -141,23 +142,12 @@
   <!-- Histats.com  END  -->
 
   <script defer src="assets/js/site.js?v=20261014c"></script>
-  <script defer src="assets/js/leave.js?v=20261008c"></script>
+  <script defer src="assets/js/coach.js?v=20261023a"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <main class="app" id="main">
-    <div class="inapp" data-inapp-notice hidden>
-      <svg class="inapp-arrow" width="22" height="30" viewBox="0 0 26 44" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 42V6"></path><path d="M4 15 13 5l9 10"></path></svg>
-      <div>
-        <b>Open this page in your browser</b>
-        <ol>
-          <li><span class="n">1</span> Tap <span class="chip">&#8943;</span> at the top right</li>
-          <li><span class="n">2</span> Choose <span class="chip" data-inapp-menu>Open in browser</span></li>
-        </ol>
-        <p class="why"><span data-inapp-app>This app</span>'s built-in browser blocks Telegram links. Safari or Chrome opens them fine.</p>
-      </div>
-    </div>
 
     <nav aria-label="Breadcrumb"><a class="back" href="index.html"><span class="chev" aria-hidden="true"></span>TurntUpTerpz</a></nav>
     <h1 class="page-title">Questions</h1>
@@ -220,27 +210,5 @@
     </a>
   </nav>
 
-  <dialog id="leaveDialog">
-    <div class="tt-wrap">
-      <div class="tt-pointer" aria-hidden="true">
-        <span class="tt-dots">&#8943;</span>
-        <svg class="tt-arrow" width="26" height="44" viewBox="0 0 26 44" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 42V6"></path><path d="M4 15 13 5l9 10"></path></svg>
-      </div>
-      <div class="tt-card">
-        <p class="tt-kicker">Link won't open here</p>
-        <h3>Two taps and you're in</h3>
-        <ol class="tt-steps">
-          <li><span class="tt-n">1</span> Tap up there <span class="tt-chip">&#8943;</span></li>
-          <li><span class="tt-n">2</span> Hit <span class="tt-chip" id="ldMenuLabel">Open in browser</span></li>
-        </ol>
-        <p class="tt-why" id="ldSub">This app's built-in browser blocks Telegram from opening. Your real browser works fine.</p>
-        <button class="tt-copy" type="button" id="ldCopy">
-          <svg width="18" height="18" aria-hidden="true"><use href="assets/images/icons.svg#copy"/></svg>
-          <span id="ldCopyText">Copy my link instead</span>
-        </button>
-        <button class="tt-skip" type="button" id="ldCancel">Continue anyway</button>
-      </div>
-    </div>
-  </dialog>
 </body>
 </html>
