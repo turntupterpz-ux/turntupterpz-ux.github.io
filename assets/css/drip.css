@@ -322,3 +322,6 @@ main{padding-bottom:96px;}
 .rm [data-reveal],.rm .pol[data-reveal]{opacity:1;transform:none;}
 .rm .order,.rm .order::after,.rm .order-plane svg,.rm .spark,.rm .live,.rm .hero-title .ch,.rm .jar-fill,.rm .card-art .motion,.rm .bob,.rm .ring,.rm .foot-drip i,.rm .splash i{animation:none !important;}
 .rm .band-a,.rm .band-b{transform:none;}
+
+/* visually hidden, still read by screen readers and search engines */
+.vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}

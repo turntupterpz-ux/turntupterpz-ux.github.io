@@ -26,7 +26,7 @@ dial, and a sticky "Order on Telegram" button with a live same-day-shipping coun
 │   ├── js/leave.js               Older in-app browser popup (drafts and redesigns)
 │   ├── motion/<product>/         Animation frames (Blender renders), 640px and 360px
 │   └── images/
-│       ├── brand/                Logo files
+│       ├── brand/                Logo files and share.jpg (link-preview image)
 │       ├── icons.svg             Icon sprite
 │       ├── dab-icons.svg         Dab stickers (rig, banger, carb cap, dabber, torch, jar…)
 │       ├── menu/                 Menu image
