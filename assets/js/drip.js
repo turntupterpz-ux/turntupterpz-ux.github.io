@@ -136,7 +136,7 @@
     subs.forEach((node) => {
       node.innerHTML = st.today
         ? '<i class="live"></i>' + st.clock + " left · ships today"
-        : "Tap in · ships " + st.next;
+        : "Ships " + st.next;
     });
   };
   tickSub();
