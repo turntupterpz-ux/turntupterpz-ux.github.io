@@ -21,6 +21,23 @@ a `<style>` block; the shared CSS is untouched. 1: panel under the header · 2: 
 Join strip and tabs · 3: chips under the header · 4: Join pill in the header · 5: icon tiles and a
 Join banner.
 
+## TikTok conversion drafts (`tiktok/`)
+
+Five homepage ideas for turning TikTok visitors into channel joins, each built around one
+research-backed principle. `tiktok/index.html` has the side-by-side measurements, the evidence and
+sources. Every page pulls data from `../assets/js/site.js`, keeps the live TikTok escape
+(`coach.js`), adds a one-tap 21+ check (once per visit; `?gate=1` shows it again) and a
+"WHY THIS DRAFT?" tab with that draft's evidence. Shared look and helpers: `tiktok/shared.css`,
+`tiktok/shared.js`.
+
+| Folder | Idea |
+| --- | --- |
+| `1-hook/` | First screen answers what, how much, why trust you, with one button. |
+| `2-proof/` | Opens with real vouch quotes, plus a "Been burned before?" section on scams. |
+| `3-one-tap/` | Two things to tap on screen one; the order button stays in the thumb zone. |
+| `4-feed/` | TikTok-style full-screen swipe cards with progress dots. |
+| `5-lite/` | No web fonts or animation frames; full menu with prices on screen one (~0.1 MB). |
+
 ## Escape drafts (`escape/`)
 
 Four ideas for telling TikTok / Instagram visitors that Telegram buttons won't open in the app's

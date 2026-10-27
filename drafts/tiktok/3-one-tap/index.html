@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#fff4e0">
+  <title>TikTok 3 · One tap · TurntUpTerpz draft</title>
+  <link rel="icon" type="image/png" href="../../../assets/images/brand/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="../../../assets/css/dialogs.css?v=20261014a">
+  <link rel="stylesheet" href="../../../assets/css/coach.css?v=20261023a">
+  <link rel="stylesheet" href="../shared.css">
+  <style>
+    .hero{min-height:calc(100svh - 60px - 104px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:8px 16px 18px;text-align:center;}
+    .orb{width:min(250px,64vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ffe2a3,var(--honey) 70%);border:3px solid var(--ink);display:grid;place-items:center;box-shadow:0 8px 0 var(--ink);}
+    .orb img{width:88%;}
+    .hero h1{font:400 clamp(2.3rem,10.5vw,3.1rem)/.98 var(--display);margin-top:8px;}
+    .hero p{color:var(--dim);font-size:1.05rem;}
+    .hero p b{color:var(--ink);}
+    .soft{font-weight:700;text-decoration:underline;text-underline-offset:4px;padding:8px;}
+    /* the button lives in the thumb zone for the whole visit */
+    .dock{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:22px 16px calc(14px + env(safe-area-inset-bottom));
+      background:linear-gradient(rgba(255,244,224,0),var(--cream) 40%);}
+    .dock .cta{max-width:520px;margin:0 auto;min-height:74px;}
+    .dock .cta-txt b{font-size:1.4rem;}
+    .alt{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .alt .btn{min-height:56px;padding:0 10px;}
+    .alt-note{color:var(--dim);margin:-6px 0 14px;}
+    .end{display:grid;gap:12px;}
+    .fine{padding-bottom:calc(150px + env(safe-area-inset-bottom));}
+  </style>
+  <script>
+    window.DRAFT = {
+      n: 3, title: "One tap",
+      idea: "Today's first screen has 9 things to tap: Join, Menu (twice), See vouches, FaceTime, DM (twice), the logo and the order button. Here it has 2. The order button sits at the bottom where your thumb already is, the whole visit. DM and FaceTime are still there, further down for people who need them.",
+      points: [
+        ["More choices, slower decisions", "The time it takes to decide goes up with every option you add. 9 options → 2.", "Hick–Hyman law, 1952 (Laws of UX: Hick's Law)"],
+        ["Fewer options, more buying", "A store display with 24 jams got 3% of shoppers to buy. The one with 6 jams got 30%.", "Iyengar & Lepper, Journal of Personality and Social Psychology, 2000"],
+        ["Thumbs live at the bottom", "49% of people hold their phone in one hand and tap with their thumb. The bottom middle is the easiest spot to reach, so the button stays there.", "Steven Hoober, \"How Do Users Really Hold Mobile Devices?\", UXmatters, 2013"],
+        ["Big and close = easy to hit", "The bigger and closer a button is, the faster and more accurately people tap it. This one is full width and 74px tall.", "Fitts's law, 1954 (Laws of UX: Fitts's Law)"]
+      ]
+    };
+  </script>
+  <script defer src="../../../assets/js/site.js?v=20261014c"></script>
+  <script defer src="../shared.js"></script>
+  <script defer src="../../../assets/js/coach.js?v=20261023a"></script>
+</head>
+<body>
+  <header class="bar">
+    <span class="brand"><img src="../../../assets/images/brand/logo.webp" alt="" width="32" height="32">TurntUpTerpz</span>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="orb"><img src="../../../assets/motion/rosin/poster.webp" alt="A jar of live rosin" width="640" height="640"></div>
+      <h1 id="hero-title">Small-batch rosin &amp; diamonds</h1>
+      <p>From <b>$15/g</b> · <b><span data-td="vcount">64</span></b> real vouches · <span data-ship>ships today</span></p>
+      <a class="soft" href="#menu">See the menu</a>
+    </section>
+
+    <section class="sec" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <p class="sec-k">The menu · tap for prices</p>
+        <h2 id="menu-title">What's in</h2>
+        <div class="mlist" data-td="menu"></div>
+      </div>
+    </section>
+
+    <section class="sec" aria-labelledby="v-title">
+      <div class="wrap">
+        <p class="sec-k">Receipts</p>
+        <h2 id="v-title"><span data-td="vcount">64</span> real chats</h2>
+        <div class="quotes" data-td="quotes" data-count="6"></div>
+        <div class="vgrid" data-td="vgrid" data-count="8"></div>
+      </div>
+    </section>
+
+    <section class="sec" aria-labelledby="a-title">
+      <div class="wrap">
+        <p class="sec-k">Still deciding?</p>
+        <h2 id="a-title">Talk to me first</h2>
+        <p class="alt-note">See your order get packed on FaceTime, or ask anything.</p>
+        <div class="alt">
+          <a class="btn leaves-site track-link" data-label="draft_onetap_facetime" href="https://t.me/TurntUpTerp?text=Hey%2C%20I%27d%20like%20to%20schedule%20a%20quick%20FaceTime%20to%20see%20my%20order%20before%20I%20buy">📹 FaceTime</a>
+          <a class="btn leaves-site track-link" data-label="draft_onetap_dm" href="https://t.me/TurntUpTerp">💬 DM me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" aria-labelledby="s-title">
+      <div class="wrap end">
+        <p class="sec-k">Shipping</p>
+        <h2 id="s-title">Fast &amp; insured</h2>
+        <div class="ship-rows" data-td="shipping"></div>
+        <div class="faq" data-td="faq"></div>
+      </div>
+    </section>
+  </main>
+  <p class="fine">Adults only (21+). You're responsible for knowing and following the laws where you live.</p>
+
+  <div class="dock">
+    <a class="cta leaves-site track-link" data-label="draft_onetap_cta" href="https://t.me/addlist/u3J2k7PsK3w5MzQx">
+      <span class="cta-plane" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21.4 4.1 2.9 11.3c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.3-1.4ZM8.4 14.1l9.4-6c.4-.3.8-.1.5.2l-7.8 7-.3 3.3Z"/></svg></span>
+      <span class="cta-txt"><b>Public Telegram channel</b><small>Stock, prices &amp; ordering</small></span>
+      <span class="cta-go" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</body>
+</html>

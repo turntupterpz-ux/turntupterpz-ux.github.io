@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ffb627">
+  <title>TikTok 4 · Feed · TurntUpTerpz draft</title>
+  <link rel="icon" type="image/png" href="../../../assets/images/brand/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="../../../assets/css/dialogs.css?v=20261014a">
+  <link rel="stylesheet" href="../../../assets/css/coach.css?v=20261023a">
+  <link rel="stylesheet" href="../shared.css">
+  <style>
+    html{scroll-snap-type:y mandatory;}
+    .bar{position:fixed;left:0;right:0;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;}
+    .bar .brand{padding:3px 12px 3px 3px;border-radius:999px;background:var(--paper);border:2px solid var(--ink);color:var(--ink);}
+    #s1{padding-bottom:calc(140px + env(safe-area-inset-bottom));}
+    .card{position:relative;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;
+      padding:calc(70px + env(safe-area-inset-top)) 44px calc(112px + env(safe-area-inset-bottom)) 18px;background:var(--bg,var(--honey));}
+    .card > *{position:relative;}
+    .card .art{position:absolute;left:50%;top:calc(52px + env(safe-area-inset-top));width:min(320px,80vw);transform:translateX(-50%) rotate(var(--r,-4deg));pointer-events:none;}
+    .card .ship{align-self:flex-start;}
+    .card h1,.card h2{font:400 clamp(2.4rem,11vw,3.3rem)/.95 var(--display);}
+    .card .k{font:500 .78rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;}
+    .card p.lead{font-size:1.08rem;max-width:30ch;}
+    .price{display:inline-flex;align-self:flex-start;padding:6px 14px;border-radius:999px;background:var(--ink);color:var(--honey);font:400 1.3rem/1.2 var(--display);}
+    .chips{display:flex;flex-wrap:wrap;gap:6px;}
+    .chips span{padding:5px 10px;border-radius:999px;background:var(--paper);border:2px solid var(--ink);font:500 .78rem/1.2 var(--mono);}
+    .rows{display:grid;gap:6px;}
+    .rows p{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;border-radius:14px;background:var(--paper);border:2px solid var(--ink);font-weight:700;}
+    .rows p small{display:block;font-weight:400;color:var(--dim);font-size:.8rem;}
+    .rows p em{font:400 1.1rem/1 var(--display);font-style:normal;align-self:center;white-space:nowrap;}
+    .hint{position:absolute;left:0;right:0;bottom:calc(92px + env(safe-area-inset-bottom));text-align:center;font:500 .8rem/1 var(--mono);animation:bob 1.6s ease-in-out infinite;}
+    @keyframes bob{50%{transform:translateY(-6px);}}
+    .card-dark{color:var(--cream);}
+    .card-dark .k{color:var(--honey);}
+    .card-dark .quote{background:var(--cream);color:var(--ink);box-shadow:0 4px 0 var(--honey);}
+    .card .quotes{margin:0 -44px 0 -18px;padding-left:18px;padding-right:18px;}
+    .ticks{display:grid;gap:8px;}
+    .ticks p{display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:16px;background:var(--paper);border:2px solid var(--ink);}
+    .ticks p b{display:block;}
+    .ticks p span{font-size:.88rem;color:var(--dim);}
+    .ticks i{font-style:normal;font-size:1.3rem;}
+    .last .btn{align-self:flex-start;}
+    /* progress dots, like a story */
+    .dots{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:30;display:grid;gap:7px;}
+    .dots a{width:9px;height:9px;border-radius:50%;background:rgba(42,23,9,.25);border:1.5px solid var(--ink);transition:height .2s,background .2s;}
+    .dots a[aria-current]{height:22px;border-radius:6px;background:var(--ink);}
+    .dock{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:0 16px calc(14px + env(safe-area-inset-bottom));}
+    .dock .cta{max-width:520px;margin:0 auto;}
+    .why-tab{top:auto;bottom:calc(120px + env(safe-area-inset-bottom));}
+  </style>
+  <script>
+    window.DRAFT = {
+      n: 4, title: "Feed",
+      idea: "Visitors arrive straight from swiping TikTok, so the site works the same way: one full screen per swipe, one idea per screen, progress dots on the side and the button always at the bottom. The risk: people who want to skim fast can find snapping slow. Worth testing before going all in.",
+      points: [
+        ["Work like the app they just left", "People spend most of their time on other sites and apps, so they expect yours to work the same way. A swipe-up feed is what TikTok users already know.", "Jakob's Law, Nielsen Norman Group (Laws of UX)"],
+        ["One idea per screen", "Splitting content into small, separate chunks makes it easier to scan and remember on a phone.", "Nielsen Norman Group, \"How Chunking Helps Content Processing\""],
+        ["Show how close the end is", "People speed up as they get closer to a goal. The dots show \"3 of 8\" so the end feels near.", "Kivetz, Urminsky & Zheng, Journal of Marketing Research, 2006 (goal-gradient effect)"],
+        ["The button never leaves", "Whatever screen they're on, ordering is one tap away in the thumb zone.", "Steven Hoober, UXmatters, 2013"]
+      ]
+    };
+  </script>
+  <script defer src="../../../assets/js/site.js?v=20261014c"></script>
+  <script defer src="../shared.js"></script>
+  <script defer src="../../../assets/js/coach.js?v=20261023a"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const { el, menu } = TT;
+      const cat = (id) => menu.categories.find((c) => c.id === id);
+      const W = menu.weights;
+      const slot = document.querySelector("#products");
+      const receipts = document.querySelector(".card-dark");
+      const made = [];
+      const looks = [["var(--pink)", "-5deg"], ["var(--sky, #9fd4ff)", "4deg"], ["#c39bff", "-3deg"], ["var(--mint)", "5deg"]];
+
+      // one big product per screen, then the budget picks share a screen
+      [["rosin"], ["diamonds"], ["sift", "resin"], ["crumble", "sugar", "disposable"]].forEach((ids, k) => {
+        const first = cat(ids[0]);
+        const card = el("section", { class: "card", style: "--bg:" + looks[k][0] + ";--r:" + looks[k][1] });
+        card.appendChild(el("img", { class: "art", src: TD.picture(first), alt: "", loading: "lazy", decoding: "async" }));
+        if (ids.length === 1) {
+          const prices = first.strains[0].prices || first.prices;
+          card.append(
+            el("p", { class: "k", text: first.note }),
+            el("h2", { text: first.name }),
+            el("span", { class: "price", text: "from " + TD.fromLabel(first) }),
+            el("p", { class: "lead", text: first.blurb }),
+            el("div", { class: "chips" }, first.strains.map((s) => el("span", { text: s.name }))),
+            el("div", { class: "chips" }, [0, 1, 4].map((j) => el("span", { text: W[j] + " $" + prices[j] })))
+          );
+        } else {
+          card.append(
+            el("p", { class: "k", text: k === 2 ? "Hash & resin" : "Budget picks" }),
+            el("h2", { text: k === 2 ? "Sift & resin" : "Easy on the wallet" }),
+            el("div", { class: "rows" }, ids.map((id) => {
+              const c = cat(id);
+              return el("p", {}, [el("span", { html: c.name + "<small>" + c.strains.map((s) => s.name).join(", ") + "</small>" }), el("em", { text: TD.fromLabel(c) })]);
+            }))
+          );
+        }
+        made.push(card);
+      });
+      // rosin, then the receipts (proof on screen 3), then the rest of the menu
+      slot.before(made[0]);
+      receipts.after(...made.slice(1));
+      slot.remove();
+
+      // progress dots follow the screen you're on
+      const cards = Array.from(document.querySelectorAll(".card"));
+      const dots = document.querySelector(".dots");
+      cards.forEach((c, i) => {
+        c.id = c.id || "s" + (i + 1);
+        dots.appendChild(el("a", { href: "#" + c.id, "aria-label": "Screen " + (i + 1) + " of " + cards.length }));
+      });
+      const links = Array.from(dots.children);
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          links.forEach((a) => a.removeAttribute("aria-current"));
+          links[cards.indexOf(e.target)].setAttribute("aria-current", "true");
+        });
+      }, { threshold: 0.6 });
+      cards.forEach((c) => io.observe(c));
+    });
+  </script>
+</head>
+<body>
+  <header class="bar">
+    <span class="brand"><img src="../../../assets/images/brand/logo.webp" alt="" width="32" height="32">TurntUpTerpz</span>
+  </header>
+  <nav class="dots" aria-label="Screens"></nav>
+
+  <main>
+    <section class="card" id="s1" style="--r:6deg">
+      <img class="art" src="../../../assets/motion/rosin/poster.webp" alt="" width="640" height="640">
+      <span class="ship"><i></i><span data-ship>Ships today</span></span>
+      <h1>Small-batch rosin, sift &amp; diamonds</h1>
+      <p class="lead">From Mendocino County. FaceTime before you pay.</p>
+      <p class="hint" aria-hidden="true">Swipe up &uarr;</p>
+    </section>
+
+    <div id="products"></div>
+    <section class="card card-dark" style="--bg:var(--ink)">
+      <p class="k">Receipts · <span data-td="vcount">64</span> real chats</p>
+      <h2>Don't take my word for it</h2>
+      <div class="quotes" data-td="quotes" data-count="6"></div>
+      <button class="btn" type="button" onclick="TT.openViewer(0)" style="align-self:flex-start">Read every chat</button>
+    </section>
+
+
+    <section class="card" style="--bg:var(--cream)">
+      <p class="k">How it works</p>
+      <h2>Safe &amp; fast</h2>
+      <div class="ticks">
+        <p><i aria-hidden="true">📹</i><span><b>FaceTime before you pay</b>Watch your order get packed</span></p>
+        <p><i aria-hidden="true">📦</i><span><b>$15 US shipping · 2–5 days</b>Same day before 2:30 PM PST</span></p>
+        <p><i aria-hidden="true">🔁</i><span><b>Free reship if it never shows</b>100% US · 50% worldwide</span></p>
+      </div>
+    </section>
+
+    <section class="card last" style="--bg:var(--honey)">
+      <img class="art" src="../../../assets/motion/diamonds/poster.webp" alt="" width="640" height="640" loading="lazy">
+      <p class="k">That's the whole menu</p>
+      <h2>Join the channel &darr;</h2>
+      <p class="lead">Stock, prices and ordering are all in the channel. Questions first? DM me.</p>
+      <a class="btn leaves-site track-link" data-label="draft_feed_dm" href="https://t.me/TurntUpTerp">💬 DM me</a>
+    </section>
+  </main>
+
+  <div class="dock">
+    <a class="cta leaves-site track-link" data-label="draft_feed_cta" href="https://t.me/addlist/u3J2k7PsK3w5MzQx">
+      <span class="cta-plane" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21.4 4.1 2.9 11.3c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.3-1.4ZM8.4 14.1l9.4-6c.4-.3.8-.1.5.2l-7.8 7-.3 3.3Z"/></svg></span>
+      <span class="cta-txt"><b>Public Telegram channel</b><small data-ship>Ships today</small></span>
+      <span class="cta-go" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</body>
+</html>
