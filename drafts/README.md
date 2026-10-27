@@ -23,7 +23,7 @@ Join banner.
 
 ## TikTok conversion drafts (`tiktok/`)
 
-Five homepage ideas for turning TikTok visitors into channel joins, each built around one
+Six homepage ideas for turning TikTok visitors into channel joins, each built around one
 research-backed principle. `tiktok/index.html` has the side-by-side measurements, the evidence and
 sources. Every page pulls data from `../assets/js/site.js`, keeps the live TikTok escape
 (`coach.js`), adds a one-tap 21+ check (once per visit; `?gate=1` shows it again) and a
@@ -37,6 +37,7 @@ sources. Every page pulls data from `../assets/js/site.js`, keeps the live TikTo
 | `3-one-tap/` | Two things to tap on screen one; the order button stays in the thumb zone. |
 | `4-feed/` | TikTok-style full-screen swipe cards with progress dots. |
 | `5-lite/` | No web fonts or animation frames; full menu with prices on screen one (~0.1 MB). |
+| `6-proof-price/` | Proof first (2) with the "as low as $5/g" headline from Hook (1) on top. |
 
 ## Escape drafts (`escape/`)
 
