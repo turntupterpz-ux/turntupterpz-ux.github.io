@@ -14,7 +14,7 @@
   const el = T.el;
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
 
-  const DRAFTS = [["1-hook", "Hook"], ["2-proof", "Proof"], ["3-one-tap", "One tap"], ["4-feed", "Feed"], ["5-lite", "Lite"]];
+  const DRAFTS = [["1-hook", "Hook"], ["2-proof", "Proof"], ["3-one-tap", "One tap"], ["4-feed", "Feed"], ["5-lite", "Lite"], ["6-proof-price", "Proof + price"]];
 
   // Short lines copied from real vouch screenshots; i is the screenshot's place in TT.vouches.
   const QUOTES = [
@@ -144,7 +144,7 @@
       list.appendChild(el("li", {}, [el("b", { text: claim }), el("span", { text: detail }), el("cite", { text: source })]));
     });
     const nav = el("div", { class: "why-nav" });
-    nav.appendChild(el("a", { href: "../", text: "All 5 + evidence" }));
+    nav.appendChild(el("a", { href: "../", text: "All drafts + evidence" }));
     DRAFTS.forEach(([slug, name], k) => {
       const a = el("a", { href: "../" + slug + "/", text: k + 1 + " · " + name });
       if (k + 1 === D.n) a.setAttribute("aria-current", "page");
@@ -153,7 +153,7 @@
     const close = el("button", { type: "button", class: "btn", text: "Back to the draft" });
     const sheet = el("div", { class: "why", hidden: "" }, [
       el("div", { class: "why-card", role: "dialog", "aria-modal": "true", "aria-labelledby": "whyTitle" }, [
-        el("p", { class: "sec-k", text: "Draft " + D.n + " of 5" }),
+        el("p", { class: "sec-k", text: "Draft " + D.n + " of " + DRAFTS.length }),
         el("h2", { id: "whyTitle", text: D.title }),
         el("p", { text: D.idea }), list, nav, close
       ])
