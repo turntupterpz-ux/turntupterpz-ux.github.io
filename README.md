@@ -13,10 +13,12 @@ dial, and a sticky "Order on Telegram" button with a live same-day-shipping coun
 ├── faq.html                      Full FAQ
 ├── menu.html                     Full menu image
 ├── vouches.html                  Redirect for old vouch-page links
+├── 404.html                      "Page not found" page (GitHub Pages serves it for any missing URL)
 ├── assets/
 │   ├── css/drip.css              Homepage design
 │   ├── css/site.css              FAQ and menu page design
 │   ├── css/dialogs.css           Vouch viewer and "open in browser" popups (homepage and drafts)
+│   ├── css/fonts.css             Self-hosted Bagel Fat One, DM Sans and DM Mono (files in assets/fonts/)
 │   ├── js/site.js                Shared data: links, menu, vouch list, shipping countdown, viewer
 │   ├── js/scroll.js              Scroll-motion engine (pinned scenes, parallax, reveals)
 │   ├── js/drip.js                Homepage: hero drip, menu cards, temperature dial, vouch wall, order dock
@@ -26,7 +28,7 @@ dial, and a sticky "Order on Telegram" button with a live same-day-shipping coun
 │   ├── js/leave.js               Older in-app browser popup (drafts and redesigns)
 │   ├── motion/<product>/         Animation frames (Blender renders), 640px and 360px
 │   └── images/
-│       ├── brand/                Logo files and share.jpg (link-preview image)
+│       ├── brand/                Logo (full size + small favicon/touch/header sizes) and share.jpg (link preview)
 │       ├── icons.svg             Icon sprite
 │       ├── dab-icons.svg         Dab stickers (rig, banger, carb cap, dabber, torch, jar…)
 │       ├── menu/                 Menu image
