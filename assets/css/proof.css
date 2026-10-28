@@ -117,6 +117,23 @@ button{font:inherit;color:inherit;}
 .more{display:flex;justify-content:center;margin-top:16px;}
 .end{display:grid;gap:12px;}
 
+/* Telegram + WhatsApp, side by side */
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media (max-width:359px){.ctas{grid-template-columns:1fr;}}
+.cta2{display:flex;align-items:center;gap:10px;min-height:66px;padding:8px 12px 8px 8px;border:3px solid var(--ink);border-radius:24px;
+  color:var(--ink);text-decoration:none;box-shadow:0 5px 0 var(--ink);transition:transform .15s,box-shadow .15s;}
+.cta2:active{transform:translateY(4px);box-shadow:0 1px 0 var(--ink);}
+.cta2-tg{background:linear-gradient(105deg,#ffb627,#ff8fb1,#c39bff,#7cc8ff,#5fe39b,#ffb627) 0 50%/300% 100%;animation:holo 5s linear infinite;}
+.cta2-wa{background:#25d366;}
+.cta2-ic{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ink);}
+.cta2-tg .cta2-ic{color:#5fd0ff;}
+.cta2-wa .cta2-ic{color:#25d366;}
+.cta2-txt{display:grid;gap:3px;min-width:0;}
+.cta2-txt b{font:400 1.18rem/1 var(--display);}
+.cta2-txt small{font:500 .7rem/1.2 var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ship-line{display:flex;align-items:center;justify-content:center;gap:8px;font:500 .8rem/1.2 var(--mono);color:var(--dim);}
+.ship-line i{width:8px;height:8px;border-radius:50%;background:var(--mint);}
+
 /* homepage extras */
 .skip{position:absolute;left:-999px;top:8px;z-index:100;padding:8px 12px;border-radius:10px;background:var(--ink);color:var(--honey);}
 .skip:focus{left:8px;}
