@@ -11,7 +11,7 @@ current with the live site. Telegram links go through `../assets/js/leave.js` li
 | Folder | Direction |
 | --- | --- |
 | `6-heat/` | Dark, cinematic. A pinned scene where scrolling takes a dab (torch → cool down → drop → cap → vapor), then a sideways product run, vouch rails, a FaceTime phone and a falling shipping box. |
-| `7-drip/` | **Now the live homepage** (`/index.html`, `assets/css/drip.css`, `assets/js/drip.js`); the folder redirects to `/`. Bright, sticker style. Honey drips that stretch and fall into a filling jar, floating dab stickers, stacking menu cards, a temperature dial, a drifting vouch wall. |
+| `7-drip/` | **Former live homepage** (until Oct 28, 2026), saved here with paths adjusted and analytics removed. Uses `assets/css/drip.css` and `assets/js/drip.js`. Bright, sticker style. Honey drips that stretch and fall into a filling jar, floating dab stickers, stacking menu cards, a temperature dial, a drifting vouch wall. |
 
 ## Top-button drafts (`top/`)
 
@@ -37,7 +37,7 @@ sources. Every page pulls data from `../assets/js/site.js`, keeps the live TikTo
 | `3-one-tap/` | Two things to tap on screen one; the order button stays in the thumb zone. |
 | `4-feed/` | TikTok-style full-screen swipe cards with progress dots. |
 | `5-lite/` | No web fonts or animation frames; full menu with prices on screen one (~0.1 MB). |
-| `6-proof-price/` | Proof first (2) with the "as low as $5/g" headline from Hook (1) on top. |
+| `6-proof-price/` | Proof first (2) with the "as low as $5/g" headline from Hook (1) on top. **Now the live homepage** (`/index.html`, `assets/css/proof.css`, `assets/js/proof.js`). |
 
 ## Escape drafts (`escape/`)
 
