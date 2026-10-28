@@ -93,3 +93,8 @@
   .cc-hint,.cc-up span{animation:none;}
   .cc-card{transition:none;}
 }
+/* WhatsApp links get a green app icon in the mini phone */
+.cc-phone .m-tg .m-wa{display:none;}
+.cc[data-target="whatsapp"] .m-tg{background:#25d366;}
+.cc[data-target="whatsapp"] .m-tg .m-wa{display:block;}
+.cc[data-target="whatsapp"] .m-tg .m-tgi{display:none;}

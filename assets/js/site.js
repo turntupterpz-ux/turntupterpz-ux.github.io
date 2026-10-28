@@ -33,6 +33,7 @@
     menu: "https://t.me/addlist/u3J2k7PsK3w5MzQx",
     order: "https://t.me/addlist/u3J2k7PsK3w5MzQx", // every "Order" button goes to the channels
     telegram: "https://t.me/TurntUpTerp", // personal account: questions and FaceTime
+    whatsapp: "https://chat.whatsapp.com/EFWxsFvZWVY8gKT7GFppgF", // WhatsApp group, next to every channel button
     facetime: "https://t.me/TurntUpTerp?text=" + encodeURIComponent("Hey, I'd like to schedule a quick FaceTime to see my order before I buy"),
     menuImage: ASSETS + "images/menu/menu-r7.webp",
     ask: () => "https://t.me/addlist/u3J2k7PsK3w5MzQx", // "Ask about this" on product cards goes to the channels too

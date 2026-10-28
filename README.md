@@ -54,6 +54,10 @@ Every **Order** button and every product "Ask about this" button goes to the Tel
 and FaceTime requests. Both are set in `assets/js/site.js` (`links`) and written directly
 into `index.html`, `menu.html` and `faq.html`. Search for `t.me/` to change them everywhere.
 
+The WhatsApp group (`chat.whatsapp.com/EFWxsFvZWVY8gKT7GFppgF`) sits next to every Telegram channel
+button on the homepage and menu page (`links.whatsapp` in `site.js`). Search for `chat.whatsapp.com`
+to change it. The TikTok escape coach handles WhatsApp links too.
+
 ## Updating the menu
 
 Prices and strains live in the `menu` object near the top of `assets/js/site.js`. Update the
