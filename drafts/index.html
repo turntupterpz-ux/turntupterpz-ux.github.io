@@ -6,111 +6,148 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="light dark">
   <title>Drafts · TurntUpTerpz</title>
-  <link rel="icon" type="image/png" href="../assets/images/brand/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/brand/favicon-32.png">
   <style>
-    :root{--bg:#f4f1ec;--card:#fff;--ink:#1b1410;--dim:#6b6058;--line:rgba(0,0,0,.1);--accent:#e2771b;}
-    @media (prefers-color-scheme:dark){:root{--bg:#0e0b09;--card:#1a1512;--ink:#f4ede4;--dim:#a2968b;--line:rgba(255,255,255,.1);--accent:#f2a33a;}}
+    :root{--bg:#fff4e0;--card:#fffaf1;--ink:#2a1709;--dim:#6f5640;--line:rgba(42,23,9,.15);--accent:#b3400a;}
+    @media (prefers-color-scheme:dark){:root{--bg:#120c08;--card:#1d1611;--ink:#f6efe6;--dim:#b3a493;--line:rgba(255,255,255,.12);--accent:#ffb627;}}
     *{box-sizing:border-box;}
     body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif;}
-    main{max-width:760px;margin:0 auto;padding:40px 16px 60px;}
-    h1{font-size:2rem;margin:0 0 6px;letter-spacing:-.02em;}
-    .sub{color:var(--dim);margin:0 0 28px;}
-    h2{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:34px 0 12px;}
-    .grid{display:grid;gap:14px;}
-    @media (min-width:640px){.grid.two{grid-template-columns:1fr 1fr;}}
-    a.card{display:grid;gap:8px;padding:20px;border-radius:20px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;color:inherit;transition:transform .2s;}
-    a.card:hover{transform:translateY(-3px);}
-    .swatch{height:120px;border-radius:12px;display:flex;align-items:flex-end;padding:12px;font-weight:800;font-size:1.6rem;letter-spacing:-.01em;}
-    .heat{background:radial-gradient(60% 70% at 70% 60%,rgba(255,74,18,.55),transparent 70%),#0a0706;color:#f2a33a;font-family:Impact,sans-serif;font-weight:400;letter-spacing:.02em;}
-    .drip{background:linear-gradient(180deg,#ffb627 0 26px,#fff4e0 26px);color:#2a1709;position:relative;overflow:hidden;}
-    .drip::before,.drip::after{content:"";position:absolute;top:20px;width:16px;border-radius:0 0 99px 99px;background:#ffb627;}
-    .drip::before{left:30%;height:56px;}.drip::after{left:72%;height:38px;width:22px;}
-    .card b{font-size:1.15rem;}
-    .card p{margin:0;color:var(--dim);font-size:.94rem;}
-    .old{display:flex;flex-wrap:wrap;gap:8px;}
-    .old a{padding:8px 14px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;color:inherit;font-size:.92rem;}
-    .note{margin-top:30px;color:var(--dim);font-size:.85rem;}
-    .note a{color:var(--accent);}
+    main{max-width:960px;margin:0 auto;padding:32px 16px 60px;}
+    h1{font-size:2rem;line-height:1.1;margin:0 0 6px;letter-spacing:-.02em;}
+    .sub{color:var(--dim);margin:0 0 6px;}
+    .now{display:flex;gap:14px;align-items:center;margin:18px 0 6px;padding:14px;border-radius:20px;background:var(--card);box-shadow:inset 0 0 0 2px var(--accent);text-decoration:none;color:inherit;}
+    .now img{width:72px;height:auto;border-radius:10px;}
+    .now small{display:block;color:var(--dim);}
+    .g{margin-top:30px;}
+    .gh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:6px;}
+    .gh h2{margin:0;font-size:1.2rem;}
+    .date{font:600 .78rem/1 ui-monospace,monospace;color:var(--accent);white-space:nowrap;}
+    .g > p{margin:8px 0 10px;color:var(--dim);font-size:.92rem;}
+    .row{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;}
+    .d{flex:0 0 132px;display:grid;gap:6px;align-content:start;scroll-snap-align:start;text-decoration:none;color:inherit;}
+    .d img{width:132px;height:auto;aspect-ratio:180/390;object-fit:cover;object-position:top;border-radius:12px;box-shadow:0 0 0 1px var(--line),0 6px 16px -10px rgba(0,0,0,.5);}
+    .d b{font-size:.86rem;line-height:1.2;}
+    .tag{justify-self:start;padding:3px 8px;border-radius:999px;font:600 .66rem/1.2 ui-monospace,monospace;}
+    .tag.live{background:#15803d;color:#fff;}
+    .tag.new{background:var(--accent);color:var(--bg);}
+    a{color:var(--accent);}
+    .note{margin-top:30px;font-size:.85rem;color:var(--dim);}
   </style>
 </head>
 <body>
   <main>
-    <h1>Website drafts</h1>
-    <p class="sub">Not linked from the live site. Open these on your phone and scroll slowly.</p>
-
-    <h2>Motion drafts · Oct 14</h2>
-    <div class="grid two">
-      <a class="card" href="6-heat/">
-        <span class="swatch heat">HEAT</span>
-        <b>6 · Heat</b>
-        <p>Dark and cinematic. Scrolling takes a dab: torch the quartz, let it cool, drop the rosin, cap it, vapor fills the screen. Then the jars slide in sideways.</p>
-      </a>
-      <a class="card" href="7-drip/">
-        <span class="swatch drip">Drip</span>
-        <b>7 · Drip · former homepage</b>
-        <p>Bright and playful. Honey drips stretch down and a drop falls into the jar, dab stickers float up and down, menu cards stack, a dial teaches low-temp dabs.</p>
-      </a>
-    </div>
-
-    <h2>Full styles · Oct 28</h2>
-    <div class="old">
-      <a href="styles/">Overview + previews</a>
-      <a href="styles/1-comic/">1 · Comic Pop</a>
-      <a href="styles/2-groovy/">2 · Groovy 70s</a>
-      <a href="styles/3-chrome/">3 · Y2K Chrome</a>
-      <a href="styles/4-street/">4 · Street Sticker</a>
-      <a href="styles/5-arcade/">5 · Arcade</a>
-      <a href="styles/6-halloween/">6 · Halloween '89</a>
-    </div>
-
-    <h2>Color schemes · Oct 28</h2>
-    <div class="old">
-      <a href="colors/">Overview + evidence</a>
-      <a href="colors/1-spotlight/">1 · Spotlight</a>
-      <a href="colors/2-night/">2 · Night</a>
-      <a href="colors/3-red-hot/">3 · Red hot</a>
-    </div>
-
-    <h2>Turning TikTok visits into channel joins · Oct 27</h2>
-    <div class="old">
-      <a href="tiktok/">Overview + evidence</a>
-      <a href="tiktok/1-hook/">1 · Hook</a>
-      <a href="tiktok/2-proof/">2 · Proof first</a>
-      <a href="tiktok/3-one-tap/">3 · One tap</a>
-      <a href="tiktok/4-feed/">4 · Feed</a>
-      <a href="tiktok/5-lite/">5 · Lite</a>
-      <a href="tiktok/6-proof-price/">6 · Proof + price (now the homepage)</a>
-    </div>
-
-    <h2>Getting out of TikTok's browser · Oct 23</h2>
-    <div class="old">
-      <a href="escape/">Overview</a>
-      <a href="escape/1-coach/">1 · Coach</a>
-      <a href="escape/2-flip/">2 · Flip</a>
-      <a href="escape/3-gate/">3 · Gate</a>
-      <a href="escape/4-plan-b/">4 · Plan B</a>
-    </div>
-
-    <h2>Top buttons · Oct 14</h2>
-    <div class="old">
-      <a href="top/1.html">1 · Panel under the header</a>
-      <a href="top/2.html">2 · Sticky header with tabs</a>
-      <a href="top/3.html">3 · Chips under the header</a>
-      <a href="top/4.html">4 · Join pill in the header</a>
-      <a href="top/5.html">5 · Icon tiles and Join banner</a>
-    </div>
-
-    <h2>Earlier drafts</h2>
-    <div class="old">
-      <a href="1-cure.html">1 · Cure</a>
-      <a href="2-sift.html">2 · Sift</a>
-      <a href="3-batch.html">3 · Batch</a>
-      <a href="4-bloom.html">4 · Bloom</a>
-      <a href="5-trim.html">5 · Trim</a>
-      <a href="../redesign/">Redesign set (01–05)</a>
-    </div>
-
-    <p class="note">Live site: <a href="/">turntupterpz.com</a></p>
+    <h1>All drafts</h1>
+    <p class="sub">42 drafts in 11 groups, newest first. Swipe each row sideways. None are linked from the live site or shown to search engines.</p>
+    <a class="now" href="/"><img src="thumbs/live-home.webp" alt="" width="180" height="390"><span><b>Live homepage: Proof + price</b><small>From the TikTok layouts (draft 6) · live since Oct 28 · with the WhatsApp button and 72 vouches</small></span></a>
+    <section class="g">
+      <div class="gh"><h2>Full styles</h2><span class="date">Oct 28</span></div>
+      <p>Six full restyles of the homepage: colors, fonts, cartoon stickers and section designs. 6 drafts · <a href="styles/">Overview</a></p>
+      <div class="row">
+        <a class="d" href="styles/1-comic/"><img src="thumbs/styles_1-comic.webp" alt="" width="180" height="390" loading="lazy"><b>1 · Comic Pop</b></a>
+        <a class="d" href="styles/2-groovy/"><img src="thumbs/styles_2-groovy.webp" alt="" width="180" height="390" loading="lazy"><b>2 · Groovy 70s</b></a>
+        <a class="d" href="styles/3-chrome/"><img src="thumbs/styles_3-chrome.webp" alt="" width="180" height="390" loading="lazy"><b>3 · Y2K Chrome</b></a>
+        <a class="d" href="styles/4-street/"><img src="thumbs/styles_4-street.webp" alt="" width="180" height="390" loading="lazy"><b>4 · Street Sticker</b></a>
+        <a class="d" href="styles/5-arcade/"><img src="thumbs/styles_5-arcade.webp" alt="" width="180" height="390" loading="lazy"><b>5 · Arcade</b></a>
+        <a class="d" href="styles/6-halloween/"><img src="thumbs/styles_6-halloween.webp" alt="" width="180" height="390" loading="lazy"><b>6 · Halloween &#x27;89</b><span class="tag new">New</span></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>Color schemes</h2><span class="date">Oct 28</span></div>
+      <p>The live homepage in three research-backed color schemes. Only the colors change. 3 drafts · <a href="colors/">Overview</a></p>
+      <div class="row">
+        <a class="d" href="colors/1-spotlight/"><img src="thumbs/colors_1-spotlight.webp" alt="" width="180" height="390" loading="lazy"><b>1 · Spotlight</b></a>
+        <a class="d" href="colors/2-night/"><img src="thumbs/colors_2-night.webp" alt="" width="180" height="390" loading="lazy"><b>2 · Night</b></a>
+        <a class="d" href="colors/3-red-hot/"><img src="thumbs/colors_3-red-hot.webp" alt="" width="180" height="390" loading="lazy"><b>3 · Red hot</b></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>TikTok conversion layouts</h2><span class="date">Oct 27–28</span></div>
+      <p>Six layouts for turning TikTok visitors into channel joins, each with its evidence. 6 drafts · <a href="tiktok/">Overview</a></p>
+      <div class="row">
+        <a class="d" href="tiktok/1-hook/"><img src="thumbs/tiktok_1-hook.webp" alt="" width="180" height="390" loading="lazy"><b>1 · Hook</b></a>
+        <a class="d" href="tiktok/2-proof/"><img src="thumbs/tiktok_2-proof.webp" alt="" width="180" height="390" loading="lazy"><b>2 · Proof first</b></a>
+        <a class="d" href="tiktok/3-one-tap/"><img src="thumbs/tiktok_3-one-tap.webp" alt="" width="180" height="390" loading="lazy"><b>3 · One tap</b></a>
+        <a class="d" href="tiktok/4-feed/"><img src="thumbs/tiktok_4-feed.webp" alt="" width="180" height="390" loading="lazy"><b>4 · Feed</b></a>
+        <a class="d" href="tiktok/5-lite/"><img src="thumbs/tiktok_5-lite.webp" alt="" width="180" height="390" loading="lazy"><b>5 · Lite</b></a>
+        <a class="d" href="tiktok/6-proof-price/"><img src="thumbs/tiktok_6-proof-price.webp" alt="" width="180" height="390" loading="lazy"><b>6 · Proof + price</b><span class="tag live">Live on the site</span></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>Former homepage</h2><span class="date">Oct 14–28</span></div>
+      <p>Drip, the scroll-motion homepage that was live before Proof + price. 1 draft</p>
+      <div class="row">
+        <a class="d" href="7-drip/"><img src="thumbs/7-drip.webp" alt="" width="180" height="390" loading="lazy"><b>7 · Drip</b></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>Getting out of TikTok&#x27;s browser</h2><span class="date">Oct 23</span></div>
+      <p>Four ways to tell TikTok visitors that Telegram won&#x27;t open inside the app. 4 drafts · <a href="escape/">Overview</a></p>
+      <div class="row">
+        <a class="d" href="escape/1-coach/"><img src="thumbs/escape_1-coach.webp" alt="" width="180" height="390" loading="lazy"><b>1 · Coach</b><span class="tag live">Live on the site</span></a>
+        <a class="d" href="escape/2-flip/"><img src="thumbs/escape_2-flip.webp" alt="" width="180" height="390" loading="lazy"><b>2 · Flip</b></a>
+        <a class="d" href="escape/3-gate/"><img src="thumbs/escape_3-gate.webp" alt="" width="180" height="390" loading="lazy"><b>3 · Gate</b></a>
+        <a class="d" href="escape/4-plan-b/"><img src="thumbs/escape_4-plan-b.webp" alt="" width="180" height="390" loading="lazy"><b>4 · Plan B</b></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>Top buttons</h2><span class="date">Oct 14</span></div>
+      <p>The quick links moved up near the header, five ways. 5 drafts</p>
+      <div class="row">
+        <a class="d" href="top/1.html"><img src="thumbs/top_1.webp" alt="" width="180" height="390" loading="lazy"><b>1 · Panel under header</b></a>
+        <a class="d" href="top/2.html"><img src="thumbs/top_2.webp" alt="" width="180" height="390" loading="lazy"><b>2 · Sticky tabs</b></a>
+        <a class="d" href="top/3.html"><img src="thumbs/top_3.webp" alt="" width="180" height="390" loading="lazy"><b>3 · Chips</b></a>
+        <a class="d" href="top/4.html"><img src="thumbs/top_4.webp" alt="" width="180" height="390" loading="lazy"><b>4 · Join pill</b></a>
+        <a class="d" href="top/5.html"><img src="thumbs/top_5.webp" alt="" width="180" height="390" loading="lazy"><b>5 · Icon tiles</b></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>Motion</h2><span class="date">Oct 14</span></div>
+      <p>Dark, cinematic scroll animation: the page takes a dab. 1 draft</p>
+      <div class="row">
+        <a class="d" href="6-heat/"><img src="thumbs/6-heat.webp" alt="" width="180" height="390" loading="lazy"><b>6 · Heat</b></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>FaceTime</h2><span class="date">Oct 8</span></div>
+      <p>FaceTime button idea styled like an incoming call. 1 draft</p>
+      <div class="row">
+        <a class="d" href="../facetime/2-incoming-call.html"><img src="thumbs/facetime_2-incoming-call.webp" alt="" width="180" height="390" loading="lazy"><b>Incoming call</b></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>Redesign set</h2><span class="date">Oct 7</span></div>
+      <p>Five early full redesigns. 5 drafts · <a href="../redesign/">Overview</a></p>
+      <div class="row">
+        <a class="d" href="../redesign/01-studio/"><img src="thumbs/redesign_01-studio.webp" alt="" width="180" height="390" loading="lazy"><b>01 · Studio</b></a>
+        <a class="d" href="../redesign/02-almanac/"><img src="thumbs/redesign_02-almanac.webp" alt="" width="180" height="390" loading="lazy"><b>02 · Almanac</b></a>
+        <a class="d" href="../redesign/03-night-menu/"><img src="thumbs/redesign_03-night-menu.webp" alt="" width="180" height="390" loading="lazy"><b>03 · Night Menu</b></a>
+        <a class="d" href="../redesign/04-grid/"><img src="thumbs/redesign_04-grid.webp" alt="" width="180" height="390" loading="lazy"><b>04 · Grid</b></a>
+        <a class="d" href="../redesign/05-pocket/"><img src="thumbs/redesign_05-pocket.webp" alt="" width="180" height="390" loading="lazy"><b>05 · Pocket</b></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>Vouch layouts</h2><span class="date">Aug 29</span></div>
+      <p>Five ways to lay out the vouch screenshots. 5 drafts</p>
+      <div class="row">
+        <a class="d" href="../vouches-drafts/1-grid-paginated.html"><img src="thumbs/vouches-drafts_1-grid-paginated.webp" alt="" width="180" height="390" loading="lazy"><b>1 · Grid, paginated</b></a>
+        <a class="d" href="../vouches-drafts/2-dense-strip.html"><img src="thumbs/vouches-drafts_2-dense-strip.webp" alt="" width="180" height="390" loading="lazy"><b>2 · Dense strip</b></a>
+        <a class="d" href="../vouches-drafts/3-square-grid.html"><img src="thumbs/vouches-drafts_3-square-grid.webp" alt="" width="180" height="390" loading="lazy"><b>3 · Square grid</b></a>
+        <a class="d" href="../vouches-drafts/4-two-row-strip.html"><img src="thumbs/vouches-drafts_4-two-row-strip.webp" alt="" width="180" height="390" loading="lazy"><b>4 · Two-row strip</b></a>
+        <a class="d" href="../vouches-drafts/5-full-wall.html"><img src="thumbs/vouches-drafts_5-full-wall.webp" alt="" width="180" height="390" loading="lazy"><b>5 · Full wall</b></a>
+      </div>
+    </section>
+    <section class="g">
+      <div class="gh"><h2>Earliest drafts</h2><span class="date">Aug 29</span></div>
+      <p>The first five homepage ideas. 5 drafts</p>
+      <div class="row">
+        <a class="d" href="1-cure.html"><img src="thumbs/1-cure.webp" alt="" width="180" height="390" loading="lazy"><b>1 · Cure</b></a>
+        <a class="d" href="2-sift.html"><img src="thumbs/2-sift.webp" alt="" width="180" height="390" loading="lazy"><b>2 · Sift</b></a>
+        <a class="d" href="3-batch.html"><img src="thumbs/3-batch.webp" alt="" width="180" height="390" loading="lazy"><b>3 · Batch</b></a>
+        <a class="d" href="4-bloom.html"><img src="thumbs/4-bloom.webp" alt="" width="180" height="390" loading="lazy"><b>4 · Bloom</b></a>
+        <a class="d" href="5-trim.html"><img src="thumbs/5-trim.webp" alt="" width="180" height="390" loading="lazy"><b>5 · Trim</b></a>
+      </div>
+    </section>
+    <p class="note">Previews captured Oct 28 on an iPhone-sized screen. <a href="/">Live site</a></p>
   </main>
 </body>
 </html>
