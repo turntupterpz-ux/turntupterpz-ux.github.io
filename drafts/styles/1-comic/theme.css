@@ -1,0 +1,73 @@
+/* Style 1 · Comic Pop: halftone paper, thick black ink, primary colors, speech-bubble vouches, burst badges. */
+:root{--cream:#fff6d5;--paper:#ffffff;--ink:#111111;--dim:#3d3d3d;--honey:#ffd400;--honey-2:#e8261d;--line:rgba(0,0,0,.2);--mint:#1fbf4a;
+  --display:'Bangers',system-ui,sans-serif;--c1:#ffd400;--c2:#e8261d;--c3:#ffffff;--ol:#111;--sw:5;}
+body{background:radial-gradient(rgba(232,38,29,.16) 1.4px,transparent 1.6px) 0 0/12px 12px,#fff6d5;}
+.bar{background:#ffd400;border-bottom:4px solid #111;}
+.brand{font-size:1.35rem;letter-spacing:.04em;}
+.pill{border-width:3px;box-shadow:3px 3px 0 #111;}
+
+/* hero */
+.top h1{font-size:clamp(3rem,15vw,4.4rem);line-height:.9;letter-spacing:.02em;text-transform:uppercase;text-shadow:3px 3px 0 #ffd400;}
+.top h1 em{position:relative;display:inline-block;color:#fff;padding:0 .2em;text-shadow:3px 3px 0 #111;z-index:0;transform:rotate(-4deg);}
+.top h1 em::before{content:"";position:absolute;inset:-.35em -.3em;z-index:-1;background:#e8261d;border:0;
+  clip-path:polygon(50% 0,61% 22%,85% 8%,78% 34%,100% 40%,80% 56%,96% 80%,70% 74%,60% 100%,48% 78%,26% 96%,28% 70%,0 74%,18% 52%,2% 30%,28% 30%,22% 6%,42% 22%);}
+.proofline{background:#111;color:#ffd400;border:3px solid #111;box-shadow:3px 3px 0 #e8261d;font-family:'Comic Neue',var(--mono);font-weight:700;}
+.proofline b{color:#fff;font-size:1.2rem;}
+.top .top-art{filter:drop-shadow(5px 5px 0 #111);}
+.stk-top{width:70px;height:70px;filter:drop-shadow(3px 3px 0 #111);}
+.stk-t1{left:10px;top:30px;transform:rotate(-14deg);}
+.stk-t2{right:14px;top:170px;transform:rotate(12deg);}
+.stk-t3{right:22px;top:96px;width:50px;height:50px;transform:rotate(18deg);}
+
+/* vouch quotes = speech bubbles */
+.quote{position:relative;border:3px solid #111;border-radius:22px;background:#fff;box-shadow:5px 5px 0 #111;margin-bottom:14px;}
+.quote::after{content:"";position:absolute;left:34px;bottom:-17px;width:24px;height:18px;background:#fff;border:3px solid #111;border-top:0;
+  clip-path:polygon(0 0,100% 0,0 100%);border-left-width:3px;}
+.quote q{font:700 1.08rem/1.2 'Comic Neue',var(--body);}
+.quote small{color:#3d3d3d;}
+.quote img{border:2px solid #111;}
+.stack img{border-color:#111;}
+
+/* buttons */
+.cta2{border-width:4px;box-shadow:5px 5px 0 #111;border-radius:16px;}
+.cta2-tg{background:#00b3e6;animation:none;}
+.cta2-wa{background:#1fbf4a;}
+.cta2-txt b{font-size:1.5rem;letter-spacing:.03em;}
+.cta2-txt small{font-family:'Comic Neue',var(--mono);font-weight:700;font-size:.78rem;}
+
+/* section headers: caption boxes + burst badges */
+.sec-k{display:inline-block;background:#ffd400;color:#111;border:3px solid #111;padding:6px 10px;font:700 .82rem/1 'Comic Neue',var(--mono);box-shadow:3px 3px 0 #111;}
+.sec h2{font-size:2.8rem;letter-spacing:.03em;text-transform:uppercase;}
+.badge{position:absolute;right:6px;top:-6px;z-index:2;padding:16px 18px;background:#e8261d;color:#fff;font:400 1.5rem/1 'Bangers',sans-serif;letter-spacing:.05em;
+  text-shadow:2px 2px 0 #111;transform:rotate(10deg);
+  clip-path:polygon(50% 0,61% 22%,85% 8%,78% 34%,100% 40%,80% 56%,96% 80%,70% 74%,60% 100%,48% 78%,26% 96%,28% 70%,0 74%,18% 52%,2% 30%,28% 30%,22% 6%,42% 22%);}
+.stk-sec{width:76px;height:76px;filter:drop-shadow(3px 3px 0 #111);}
+.stk-burned{right:12px;bottom:14px;transform:rotate(-10deg);}
+.stk-menu,.stk-vouches,.stk-ship{right:14px;top:84px;transform:rotate(12deg);}
+
+/* been burned: red action panel */
+.scam{background:radial-gradient(rgba(0,0,0,.18) 1.6px,transparent 1.8px) 0 0/10px 10px,#e8261d;color:#fff;border-top:5px solid #111;border-bottom:5px solid #111;}
+.scam .sec-k{background:#111;color:#ffd400;}
+.scam h2{color:#fff;text-shadow:3px 3px 0 #111;}
+.scam > .wrap > p{color:#fff;}
+.scam .quote{background:#fff;color:#111;}
+.how p{background:#fff;border:3px solid #111;box-shadow:4px 4px 0 #111;}
+.how b{color:#c41a12;}
+.how span{color:#111;}
+.scam .badge{background:#ffd400;color:#111;text-shadow:none;}
+
+/* menu: comic panels with price bursts */
+.mitem{border:3px solid #111;border-radius:6px;box-shadow:4px 4px 0 #111;}
+.mitem summary b{font:400 1.4rem/1 'Bangers',sans-serif;letter-spacing:.04em;}
+.mitem summary em{background:#ffd400;padding:8px 10px;border:3px solid #111;border-radius:50%;transform:rotate(-6deg);font-size:1.1rem;}
+.mprices .p{background:#fff6d5;border:2px solid #111;}
+
+/* vouch grid: tilted comic panels */
+.vgrid{gap:10px;}
+.vgrid button{border:3px solid #111;border-radius:4px;box-shadow:3px 3px 0 #111;}
+.vgrid button:nth-child(odd){transform:rotate(-2deg);}
+.vgrid button:nth-child(even){transform:rotate(2deg);}
+.btn{border-width:3px;box-shadow:4px 4px 0 #111;background:#ffd400;font-family:'Bangers',sans-serif;font-size:1.3rem;letter-spacing:.05em;}
+
+.ship-rows p,.faq details{border:3px solid #111;border-radius:6px;box-shadow:3px 3px 0 #111;}
+.faq summary{font-family:'Comic Neue',var(--body);font-size:1.05rem;}

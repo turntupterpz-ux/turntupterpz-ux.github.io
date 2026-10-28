@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <title>Style drafts · TurntUpTerpz</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/brand/favicon-32.png">
+  <style>
+    :root{--bg:#fff4e0;--card:#fffaf1;--ink:#2a1709;--dim:#6f5640;--line:rgba(42,23,9,.15);--accent:#b3400a;}
+    @media (prefers-color-scheme:dark){:root{--bg:#120c08;--card:#1d1611;--ink:#f6efe6;--dim:#b3a493;--line:rgba(255,255,255,.12);--accent:#ffb627;}}
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif;}
+    main{max-width:820px;margin:0 auto;padding:36px 16px 60px;}
+    h1{font-size:1.9rem;line-height:1.1;margin:0 0 8px;letter-spacing:-.02em;}
+    h2{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:34px 0 12px;}
+    .sub{color:var(--dim);margin:0;}
+    .grid{display:grid;gap:14px;}
+    .card{display:grid;gap:10px;padding:16px;border-radius:22px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);scroll-margin-top:16px;}
+    .card:target{box-shadow:inset 0 0 0 2px var(--accent);}
+    .card img{width:100%;height:auto;border-radius:14px;display:block;}
+    .n{font:600 .75rem/1 ui-monospace,monospace;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;}
+    .card b.t{font-size:1.3rem;}
+    .card p{margin:0;color:var(--dim);font-size:.95rem;}
+    .card ul{margin:0;padding-left:18px;font-size:.92rem;}
+    .card li{margin:3px 0;}
+    .open{justify-self:start;padding:11px 18px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:700;text-decoration:none;}
+    .box{padding:16px 18px;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);}
+    .box p{margin:0 0 10px;}
+    .box p:last-child{margin:0;}
+    .src li{font-size:.86rem;color:var(--dim);margin:6px 0;}
+    a{color:var(--accent);}
+    .note{margin-top:22px;font-size:.88rem;color:var(--dim);}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Five looks for the homepage</h1>
+    <p class="sub">Same words, vouches, menu and buttons as the live site. Each one changes the colors, fonts, graphics and how every section is dressed, so the vouches, the "Been burned before?" section and the menu each stand out. Previews show the first screen, the scam section and the vouch grid.</p>
+
+    <h2>The five styles</h2>
+    <div class="grid">
+      <section class="card" id="d1">
+        <span class="n">Style 1</span><b class="t">Comic Pop</b>
+        <img src="previews/1-comic.webp" alt="Comic Pop preview" width="900" height="649" loading="lazy">
+        <ul>
+          <li><b>Fonts:</b> Bangers headlines, Comic Neue quotes</li>
+          <li><b>Vouches:</b> speech bubbles with tails; screenshot grid as tilted comic panels</li>
+          <li><b>Sections:</b> yellow caption boxes and BAM! / WOW! / POW! / ZOOM! bursts; "Been burned" is a red halftone action panel</li>
+          <li><b>Menu:</b> comic panels with price bursts</li>
+        </ul>
+        <a class="open" href="1-comic/">Open Style 1 →</a>
+      </section>
+
+      <section class="card" id="d2">
+        <span class="n">Style 2</span><b class="t">Groovy 70s</b>
+        <img src="previews/2-groovy.webp" alt="Groovy 70s preview" width="900" height="649" loading="lazy">
+        <ul>
+          <li><b>Fonts:</b> chunky Shrikhand script with a stacked retro shadow</li>
+          <li><b>Vouches:</b> rounded cards with big quote marks; grid as 70s photo prints</li>
+          <li><b>Sections:</b> sunburst hero, rainbow stripes between sections, "far out / dig it / good vibes" tags</li>
+          <li><b>Menu:</b> mustard price tags</li>
+        </ul>
+        <a class="open" href="2-groovy/">Open Style 2 →</a>
+      </section>
+
+      <section class="card" id="d3">
+        <span class="n">Style 3</span><b class="t">Y2K Chrome</b>
+        <img src="previews/3-chrome.webp" alt="Y2K Chrome preview" width="900" height="649" loading="lazy">
+        <ul>
+          <li><b>Fonts:</b> Unbounded (wide, chunky) + Space Grotesk</li>
+          <li><b>Vouches:</b> glass cards with a holographic ring; grid framed in holo</li>
+          <li><b>Sections:</b> iridescent background, holo "✦ 100% real" tags, a deep-space "Been burned" panel</li>
+          <li><b>Menu:</b> frosted glass rows, purple prices</li>
+        </ul>
+        <a class="open" href="3-chrome/">Open Style 3 →</a>
+      </section>
+
+      <section class="card" id="d4">
+        <span class="n">Style 4</span><b class="t">Street Sticker</b>
+        <img src="previews/4-street.webp" alt="Street Sticker preview" width="900" height="649" loading="lazy">
+        <ul>
+          <li><b>Fonts:</b> Permanent Marker + Rubik</li>
+          <li><b>Vouches:</b> notes taped to a wall; grid as taped-up polaroids</li>
+          <li><b>Sections:</b> black tape labels, neon "LEGIT / REAL ONES" stickers, a spray-paint "Been burned" wall</li>
+          <li><b>Menu:</b> sticker labels with pink price tags</li>
+        </ul>
+        <a class="open" href="4-street/">Open Style 4 →</a>
+      </section>
+
+      <section class="card" id="d5">
+        <span class="n">Style 5</span><b class="t">Arcade</b>
+        <img src="previews/5-arcade.webp" alt="Arcade preview" width="900" height="649" loading="lazy">
+        <ul>
+          <li><b>Fonts:</b> Press Start 2P pixel headlines, VT323 quotes</li>
+          <li><b>Vouches:</b> glowing CRT screens; grid as neon "high score" screens</li>
+          <li><b>Sections:</b> scanlines, hopping pixel stickers, "BOSS LEVEL / HIGH SCORES / SPEED RUN" tags</li>
+          <li><b>Menu:</b> "select item" rows that glow when opened</li>
+        </ul>
+        <a class="open" href="5-arcade/">Open Style 5 →</a>
+      </section>
+    </div>
+
+    <h2>Why these grab attention</h2>
+    <div class="box">
+      <p><b>Each section looks different from the one before it.</b> People notice and remember the thing that breaks a pattern (the isolation effect). So the vouches, the scam section and the menu each get their own treatment (bubbles, a colored panel, price tags) instead of matching cards.</p>
+      <p><b>The order buttons stay the boldest thing on every screen,</b> and all text passes the WCAG contrast check, so the style never costs readability.</p>
+      <p><b>Honest note:</b> there's no study showing "comic" or "arcade" sells more. Style is about fitting your audience and standing out. Pick the one that feels most like your brand, then check Telegram + WhatsApp taps in Google Analytics over 2 weeks.</p>
+    </div>
+
+    <h2>Double-checked</h2>
+    <div class="box">
+      <p>All 5 load with no errors and no sideways scrolling on an iPhone-sized screen. Every sticker and badge shows up. Every visible text passes WCAG 2 contrast (4.5:1 normal, 3:1 large). Comic's white "$5/g" on the red burst was checked by hand: 4.4:1, which passes for large text.</p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="src">
+      <li>Laws of UX, <a href="https://lawsofux.com/von-restorff-effect/">Von Restorff (isolation) effect</a>.</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 2.1 Contrast (Minimum)</a>.</li>
+      <li>Nielsen Norman Group, <a href="https://www.nngroup.com/articles/low-contrast/">"Low-Contrast Text Is Not the Answer"</a>.</li>
+    </ul>
+
+    <p class="note"><a href="../">All drafts</a> · <a href="../colors/">Color drafts</a> · <a href="/">Live site</a></p>
+  </main>
+</body>
+</html>

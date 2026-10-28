@@ -1,0 +1,65 @@
+/* Style 3 · Y2K Chrome: iridescent blobs, chrome headline, glass cards, holo borders on the vouches. */
+:root{--cream:#eeecff;--paper:rgba(255,255,255,.72);--ink:#16123a;--dim:#4a4570;--honey:#7b3dff;--honey-2:#7b3dff;--line:rgba(22,18,58,.14);--mint:#00b894;
+  --display:'Unbounded',system-ui,sans-serif;--body:'Space Grotesk',system-ui,sans-serif;
+  --c1:#c9b8ff;--c2:#7b3dff;--c3:#ffffff;--ol:#16123a;--sw:3;--holo:linear-gradient(120deg,#ff9de2,#a28bff,#7ee8fa,#80ffb4,#ffe57f,#ff9de2);}
+body{background:radial-gradient(40vmax 40vmax at 90% 0%,#ffd6f5 0,transparent 60%),radial-gradient(40vmax 40vmax at 0% 30%,#cdf6ff 0,transparent 60%),
+  radial-gradient(40vmax 40vmax at 80% 70%,#e2d6ff 0,transparent 60%),#eeecff;background-attachment:fixed;}
+.bar{background:rgba(238,236,255,.75);border-bottom:1px solid rgba(255,255,255,.9);}
+.brand{font-weight:800;font-size:1rem;letter-spacing:-.02em;}
+.pill{border:1px solid rgba(22,18,58,.25);background:rgba(255,255,255,.7);}
+
+/* hero: chrome headline */
+.top h1{font:800 clamp(2.2rem,10vw,3.1rem)/1 var(--display);letter-spacing:-.03em;
+  background:linear-gradient(180deg,#16123a 0 45%,#4a4570 52%,#16123a 60%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.top h1 em{background:linear-gradient(90deg,#d6219b,#7b3dff,#008fb3);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.top h1 .vh{color:#16123a;}
+.proofline{background:var(--holo);color:#16123a;border:1px solid #fff;box-shadow:0 6px 20px -6px rgba(123,61,255,.5);}
+.proofline b{color:#16123a;font-family:var(--display);}
+.top .top-art{filter:drop-shadow(0 12px 24px rgba(123,61,255,.35));}
+.stk-top{width:58px;height:58px;filter:drop-shadow(0 6px 10px rgba(123,61,255,.35));}
+.stk-t1{left:14px;top:40px;transform:rotate(-12deg);}
+.stk-t2{right:16px;top:150px;}
+.stk-t3{left:30px;top:190px;width:40px;height:40px;}
+.top::after{content:"✦  ✧   ✦";position:absolute;right:30px;top:40px;color:#7b3dff;font-size:1.4rem;letter-spacing:.2em;}
+
+/* glass cards everywhere */
+.quote,.mitem,.ship-rows p,.faq details,.how p{background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);
+  box-shadow:0 10px 30px -12px rgba(22,18,58,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+.quote{border-radius:26px;position:relative;}
+/* holo ring on the vouch quotes */
+.quote::before{content:"";position:absolute;inset:-2px;border-radius:28px;padding:2px;background:var(--holo);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
+.quote q{font-weight:700;}
+.quote img{border-radius:14px;}
+
+.sec-k{font:600 .72rem/1 var(--display);letter-spacing:.12em;color:#7b3dff;}
+.sec h2{font:800 2.1rem/1 var(--display);letter-spacing:-.03em;}
+.badge{position:relative;margin-bottom:10px;padding:6px 12px;border-radius:999px;background:var(--holo);color:#16123a;font:600 .78rem/1 var(--display);
+  border:1px solid #fff;box-shadow:0 4px 14px -4px rgba(123,61,255,.5);}
+.stk-sec{width:64px;height:64px;filter:drop-shadow(0 8px 14px rgba(123,61,255,.3));}
+.stk-burned{right:14px;top:30px;}
+.stk-menu,.stk-vouches,.stk-ship{right:16px;top:24px;transform:rotate(14deg);}
+
+/* been burned: deep space panel */
+.scam{background:radial-gradient(60vmax 40vmax at 100% 0,rgba(214,33,155,.35),transparent 60%),#1b1145;color:#f1eeff;}
+.scam .sec-k{color:#7ee8fa;}
+.scam h2{color:#fff;}
+.scam > .wrap > p,.how span{color:#d9d4ff;}
+.how p{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);}
+.how b{color:#7ee8fa;}
+.scam .quote{background:rgba(255,255,255,.92);color:#16123a;box-shadow:0 0 30px -6px rgba(126,232,250,.6);}
+
+.mitem{border-radius:24px;}
+.mitem summary b{font:600 1rem/1.1 var(--display);}
+.mitem summary em{font-family:var(--display);font-weight:800;color:#7b3dff;}
+.mprices .p{background:rgba(123,61,255,.08);}
+.vgrid button{border-radius:16px;padding:2px;background:var(--holo);}
+.vgrid img{border-radius:14px;}
+
+.cta2{border:1px solid #fff;border-radius:22px;box-shadow:0 12px 26px -10px rgba(22,18,58,.55);}
+.cta2-tg{background:linear-gradient(120deg,#7ee8fa,#a28bff,#ff9de2,#7ee8fa) 0 50%/300% 100%;}
+.cta2-wa{background:linear-gradient(120deg,#80ffb4,#7ee8fa,#80ffb4) 0 50%/300% 100%;animation:holo 5s linear infinite;}
+.cta2-ic{background:#16123a;}
+.cta2-txt b{font:800 1rem/1 var(--display);}
+.btn{border:1px solid #fff;background:var(--holo);box-shadow:0 10px 24px -10px rgba(123,61,255,.6);}
+.ship-rows p,.faq details{border-radius:20px;}

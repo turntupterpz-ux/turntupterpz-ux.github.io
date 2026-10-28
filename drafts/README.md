@@ -21,6 +21,22 @@ a `<style>` block; the shared CSS is untouched. 1: panel under the header · 2: 
 Join strip and tabs · 3: chips under the header · 4: Join pill in the header · 5: icon tiles and a
 Join banner.
 
+## Style drafts (`styles/`)
+
+Five full restyles of the live homepage (colors, Google Fonts, dab stickers, section treatments), built
+by `styles/build.py`: it copies `/index.html`, removes analytics, adds `noindex`, the style's fonts,
+`styles/draft.css`, its `theme.css`, and `styles/decor.js` (pulls in `assets/images/dab-icons.svg` and
+places the stickers and section badges set in `window.DECOR`). Run `python3 drafts/styles/build.py`
+after homepage changes. `styles/index.html` has previews (`styles/previews/`).
+
+| Folder | Look |
+| --- | --- |
+| `1-comic/` | Halftone, Bangers, speech-bubble vouches, POW bursts. |
+| `2-groovy/` | 70s sunburst, rainbow stripes, Shrikhand, photo-print vouches. |
+| `3-chrome/` | Y2K iridescent, glass cards, holo rings, Unbounded. |
+| `4-street/` | Concrete wall, Permanent Marker, taped polaroid vouches, neon stickers. |
+| `5-arcade/` | Navy + scanlines, Press Start 2P, CRT-screen vouches, arcade buttons. |
+
 ## Color drafts (`colors/`)
 
 Three color schemes on the live homepage, built by `colors/build.py` (copies `/index.html`, removes

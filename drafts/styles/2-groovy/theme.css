@@ -1,0 +1,63 @@
+/* Style 2 · Groovy 70s: warm sunburst, rainbow stripes, chunky Shrikhand, photo-print vouches. */
+:root{--cream:#f6e7c8;--paper:#fff7e6;--ink:#4a2511;--dim:#6e4a2f;--honey:#e8702a;--honey-2:#b8410d;--line:rgba(74,37,17,.18);--mint:#226b5c;
+  --display:'Shrikhand',Georgia,serif;--c1:#f2b134;--c2:#c1440e;--c3:#fff7e6;--ol:#4a2511;--sw:4;}
+body{background:#f6e7c8;}
+.bar{background:rgba(246,231,200,.95);border-bottom:6px solid transparent;border-image:linear-gradient(90deg,#c1440e 0 25%,#e8702a 25% 50%,#f2b134 50% 75%,#226b5c 75%) 1;}
+.pill{border-radius:999px;border-width:3px;}
+
+/* hero: sunburst behind the jar */
+.top{background:repeating-conic-gradient(from 0deg at 50% 22%,#f6e7c8 0 9deg,#f3d9a8 9deg 18deg);}
+.top h1{font-size:clamp(2.5rem,11.5vw,3.4rem);line-height:1;color:#4a2511;text-shadow:3px 3px 0 #f2b134,6px 6px 0 #e8702a;}
+.top h1 em{color:#b8410d;text-shadow:3px 3px 0 #f2b134;}
+.proofline{background:#4a2511;color:#f2b134;border-radius:999px;}
+.proofline b{color:#fff7e6;}
+.stk-top{width:84px;height:84px;}
+.stk-t1{left:6px;top:24px;transform:rotate(-12deg);}
+.stk-t2{right:6px;top:150px;transform:rotate(14deg);}
+
+/* rainbow stripes between sections */
+.scam::before,[aria-labelledby="s-title"]::before{content:"";position:absolute;left:0;right:0;top:-1px;height:28px;
+  background:linear-gradient(#c1440e 0 25%,#e8702a 25% 50%,#f2b134 50% 75%,#226b5c 75%);}
+.scam{padding-top:56px;background:#4a2511;color:#fff7e6;}
+[aria-labelledby="s-title"]{padding-top:56px;}
+
+/* section headers */
+.sec-k{font:700 .8rem/1 var(--body);letter-spacing:.14em;color:#b8410d;}
+.sec h2{font-size:2.4rem;line-height:1.05;}
+.badge{position:relative;margin:0 0 8px;padding:6px 14px;border-radius:999px;background:#226b5c;color:#fff7e6;font:400 1rem/1.2 'Shrikhand',serif;transform:rotate(-3deg);}
+.stk-sec{width:80px;height:80px;opacity:.95;}
+.stk-burned{right:10px;top:60px;transform:rotate(12deg);}
+.stk-menu,.stk-vouches{right:10px;top:18px;transform:rotate(-10deg);}
+.stk-ship{right:12px;top:58px;}
+
+/* vouch quotes: rounded cards with a big Shrikhand quote mark */
+.quote{position:relative;border:3px solid #4a2511;border-radius:28px;background:#fff7e6;box-shadow:0 6px 0 #e8702a;padding-top:26px;}
+.quote::before{content:"\201C";position:absolute;left:84px;top:-4px;font:400 2.6rem/1 'Shrikhand',serif;color:#e8702a;}
+.quote q{quotes:none;font-size:1.02rem;}
+.quote img{border-radius:14px;border:3px solid #fff7e6;box-shadow:0 0 0 2px #4a2511;}
+
+.scam .sec-k{color:#f2b134;}
+.scam h2{color:#f2b134;text-shadow:3px 3px 0 #c1440e;}
+.scam > .wrap > p,.how span{color:#f3e2c4;}
+.scam .quote{color:#4a2511;}
+.how p{background:rgba(255,247,230,.1);border-radius:22px;}
+.how b{color:#f2b134;}
+.scam .badge{background:#f2b134;color:#4a2511;}
+
+/* menu: retro price tags */
+.mitem{border:3px solid #4a2511;border-radius:26px;}
+.mitem summary b{font:400 1.15rem/1.1 'Shrikhand',serif;}
+.mitem summary em{background:#f2b134;color:#4a2511;padding:8px 12px;border-radius:999px;border:2px solid #4a2511;}
+.mprices .p{background:#f6e7c8;}
+
+/* vouch grid: 70s photo prints */
+.vgrid{gap:10px;}
+.vgrid button{border-radius:16px;border:5px solid #fff7e6;box-shadow:0 0 0 2px #4a2511,0 5px 0 2px #c1440e;}
+
+/* buttons */
+.cta2{border-radius:999px;border-color:#4a2511;box-shadow:0 5px 0 #4a2511;}
+.cta2-tg{background:linear-gradient(90deg,#f2b134,#e8702a);animation:none;}
+.cta2-wa{background:#226b5c;color:#fff7e6;}
+.cta2-wa .cta2-ic{background:#fff7e6;color:#226b5c;}
+.btn{background:#e8702a;color:#2b1206;border-color:#4a2511;box-shadow:0 5px 0 #4a2511;font-family:'Shrikhand',serif;font-weight:400;}
+.ship-rows p,.faq details{border:3px solid #4a2511;border-radius:22px;}

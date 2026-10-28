@@ -1,0 +1,66 @@
+/* Style 4 · Street Sticker: concrete wall, marker type, taped-up polaroid vouches, neon sticker labels. */
+:root{--cream:#d9d6cf;--paper:#ffffff;--ink:#111111;--dim:#3b3b3b;--honey:#d6005f;--honey-2:#d4006a;--line:rgba(0,0,0,.18);--mint:#16a34a;
+  --display:'Permanent Marker',system-ui,sans-serif;--body:'Rubik',system-ui,sans-serif;
+  --c1:#39ff14;--c2:#d6005f;--c3:#ffffff;--ol:#111;--sw:5;}
+body{background:repeating-linear-gradient(0deg,rgba(0,0,0,.025) 0 2px,transparent 2px 5px),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 7px),#d9d6cf;}
+.bar{background:#111;color:#fff;}
+.bar .brand{color:#fff;}
+.pill{background:#ffe600;border:2px solid #111;color:#111;transform:rotate(-2deg);}
+
+/* hero */
+.top h1{font-size:clamp(2.5rem,12vw,3.5rem);line-height:1.02;transform:rotate(-2deg);}
+.top h1 em{color:#111;background:linear-gradient(transparent 12%,#ffe600 12% 88%,transparent 88%);padding:0 .12em;display:inline-block;transform:rotate(3deg);}
+.proofline{background:#d6005f;color:#fff;border:3px solid #111;border-radius:6px;transform:rotate(-3deg);font-family:var(--body);font-weight:700;}
+.proofline b{color:#fff;font-family:var(--display);}
+.stk-top{width:76px;height:76px;filter:drop-shadow(0 0 0 #fff) drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(4px 6px 0 rgba(0,0,0,.35));}
+.stk-t1{left:8px;top:26px;transform:rotate(-18deg);}
+.stk-t2{right:10px;top:160px;transform:rotate(16deg);}
+.stk-t3{left:16px;top:180px;width:60px;height:60px;transform:rotate(9deg);}
+
+/* vouch quotes = notes taped to the wall */
+.quote{position:relative;border:0;border-radius:2px;background:#fffef6;box-shadow:3px 5px 0 rgba(0,0,0,.25);transform:rotate(-1.5deg);margin-top:12px;}
+.quote:nth-child(even){transform:rotate(1.5deg);}
+.quote::before{content:"";position:absolute;left:50%;top:-12px;width:70px;height:22px;margin-left:-35px;background:rgba(255,230,0,.75);transform:rotate(-4deg);}
+.quote q{font:400 1.12rem/1.25 'Permanent Marker',var(--body);}
+.quote small{color:#3b3b3b;}
+
+/* section labels: black tape */
+.sec-k{display:inline-block;background:#111;color:#fff;padding:7px 12px;transform:rotate(-2deg);font:700 .8rem/1 var(--body);letter-spacing:.1em;}
+.sec h2{font-size:2.6rem;line-height:1.05;}
+.badge{position:absolute;right:10px;top:-8px;z-index:2;padding:10px 12px;background:#39ff14;color:#111;border:3px solid #111;border-radius:50%;
+  font:400 .95rem/1 'Permanent Marker',sans-serif;transform:rotate(12deg);box-shadow:3px 3px 0 #111;}
+.stk-sec{width:80px;height:80px;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(4px 6px 0 rgba(0,0,0,.35));}
+.stk-burned{right:12px;top:24px;transform:rotate(-12deg);}
+.stk-menu,.stk-vouches,.stk-ship{right:12px;top:72px;transform:rotate(10deg);}
+
+/* been burned: black wall, spray-paint pink */
+.scam{background:#141414;color:#fff;}
+.scam .sec-k{background:#b0004e;}
+.scam h2{color:#d6005f;text-shadow:0 0 18px rgba(214,0,95,.7);}
+.scam > .wrap > p,.how span{color:#e6e6e6;}
+.how p{background:#222;border-left:6px solid #39ff14;border-radius:0;}
+.how b{color:#39ff14;}
+.scam .quote{color:#111;}
+
+/* menu: sticker labels */
+.mitem{border:3px solid #111;border-radius:10px;box-shadow:4px 4px 0 #111;}
+.mitem summary b{font:400 1.2rem/1.1 'Permanent Marker',sans-serif;}
+.mitem summary em{background:#d6005f;color:#fff;padding:8px 10px;border:2px solid #111;border-radius:8px;transform:rotate(-5deg);}
+.mprices .p{background:#ffe600;color:#111;}
+
+/* vouch grid: polaroids with tape */
+.vgrid{gap:12px;}
+.vgrid button{position:relative;overflow:visible;padding:5px 5px 16px;background:#fff;border-radius:2px;box-shadow:2px 4px 0 rgba(0,0,0,.25);aspect-ratio:9/17;}
+.vgrid button:nth-child(3n+1){transform:rotate(-3deg);}
+.vgrid button:nth-child(3n+2){transform:rotate(2deg);}
+.vgrid button:nth-child(3n){transform:rotate(-1deg);}
+.vgrid button::before{content:"";position:absolute;left:50%;top:-8px;width:34px;height:14px;margin-left:-17px;background:rgba(255,230,0,.75);transform:rotate(5deg);z-index:1;}
+
+/* buttons */
+.cta2{border:3px solid #111;border-radius:10px;box-shadow:5px 5px 0 #111;}
+.cta2-tg{background:#00e5ff;animation:none;}
+.cta2-wa{background:#39ff14;}
+.cta2-txt b{font-size:1.25rem;}
+.btn{background:#ffe600;border-radius:10px;font-family:'Permanent Marker',sans-serif;font-weight:400;}
+.ship-rows p,.faq details{border:3px solid #111;border-radius:10px;}

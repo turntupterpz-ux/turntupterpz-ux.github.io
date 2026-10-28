@@ -1,0 +1,7 @@
+/* Style drafts: shared bits. Sections hold their own stickers; the "why?" pill sits under the header. */
+.sec{position:relative;}
+.stk{position:absolute;pointer-events:none;z-index:0;}
+.sec > .wrap{position:relative;z-index:1;}
+.badge{display:inline-block;}
+.draft-pill{position:fixed;right:10px;top:calc(64px + env(safe-area-inset-top));z-index:60;padding:8px 12px;border-radius:999px;
+  background:#111;color:#fff;font:600 .74rem/1 ui-monospace,Menlo,monospace;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3);}
