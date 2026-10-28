@@ -1,0 +1,61 @@
+/* Halloween 4 · Grimoire: a witch's spellbook. Deep forest green, aged parchment pages, blackletter titles,
+   candle-gold accents, vouches as handwritten scrolls, menu as a potion list. */
+:root{--cream:#13261c;--paper:#f1e2bf;--ink:#2a1a0c;--dim:#5a4428;--honey:#d9a53f;--honey-2:#d9a53f;--line:rgba(42,26,12,.25);--mint:#7bd389;
+  --display:'UnifrakturMaguntia',Georgia,serif;--body:'IM Fell English',Georgia,serif;--c1:#d9a53f;--c2:#4e8a5b;--c3:#f1e2bf;--ol:#0b1710;--sw:4;}
+body{background:radial-gradient(circle at 50% 0,#1f3b2b,#13261c 60%) #13261c;color:#f1e2bf;font-size:17px;}
+.bar{background:#0b1710;border-bottom:2px solid #d9a53f;}
+.brand{color:#d9a53f;font-size:1.3rem;}
+.pill{background:#f1e2bf;border:2px solid #d9a53f;color:#2a1a0c;font-family:'IM Fell English',serif;}
+.top{color:#f1e2bf;}
+.top::before{content:"";position:absolute;left:50%;top:10px;width:260px;height:260px;margin-left:-130px;border-radius:50%;border:2px solid rgba(217,165,63,.5);
+  background:radial-gradient(circle,transparent 58%,rgba(217,165,63,.25) 59% 60%,transparent 61%);}
+.top .top-art{filter:sepia(.35) drop-shadow(0 0 24px rgba(217,165,63,.5));}
+.top h1{font-size:clamp(2.6rem,12.5vw,3.5rem);line-height:1;color:#f1e2bf;text-shadow:0 0 18px rgba(217,165,63,.4);}
+.top h1 em{color:#d9a53f;}
+.proofline{background:#d9a53f;color:#13261c;border-radius:2px;font-family:'IM Fell English',serif;font-style:italic;font-size:.95rem;}
+.proofline b{color:#13261c;font-family:'UnifrakturMaguntia',serif;}
+.stack small{color:#e6d8b5;}
+.stack small b{color:#f1e2bf;}
+.ship-line{color:#e6d8b5;font-family:'IM Fell English',serif;font-style:italic;}
+.stk-top{width:56px;height:56px;filter:drop-shadow(0 0 10px rgba(217,165,63,.6));}
+.stk-t1{left:14px;top:40px;}
+.stk-t2{right:16px;top:60px;}
+.stk-t3{left:22px;top:200px;width:42px;height:42px;}
+/* parchment scrolls */
+.quote{border:0;border-radius:4px;background:linear-gradient(90deg,#d8c393,#f1e2bf 12%,#f1e2bf 88%,#d8c393);color:#2a1a0c;box-shadow:0 8px 18px -8px rgba(0,0,0,.7);}
+.quote q{font:italic 400 1.15rem/1.25 'IM Fell English',serif;}
+.quote small{color:#5a4428;font-family:'IM Fell English',serif;}
+.cta2{border:2px solid #d9a53f;border-radius:6px;box-shadow:0 0 22px -6px rgba(217,165,63,.7);}
+.cta2-tg{background:#d9a53f;color:#13261c;animation:none;}
+.cta2-wa{background:#7bd389;color:#0b1710;}
+.cta2-ic{background:#13261c;}
+.cta2-txt b{font-size:1.45rem;font-weight:400;}
+.cta2-txt small{font-family:'IM Fell English',serif;font-style:italic;font-size:.85rem;}
+.sec{color:#f1e2bf;}
+.sec-k{color:#d9a53f;font:italic 400 1rem/1 'IM Fell English',serif;letter-spacing:.04em;text-transform:none;}
+.sec h2{font-size:2.7rem;color:#f1e2bf;}
+.badge{position:relative;margin-bottom:6px;padding:4px 12px;border:1px solid #d9a53f;color:#d9a53f;font:italic 400 1rem/1.2 'IM Fell English',serif;border-radius:2px;}
+.badge::before,.badge::after{content:" ✦ ";}
+.stk-sec{width:56px;height:56px;filter:drop-shadow(0 0 10px rgba(217,165,63,.5));}
+.stk-burned,.stk-menu,.stk-vouches,.stk-ship{right:12px;top:28px;}
+.scam{background:#0b1710;border-top:1px solid #d9a53f;border-bottom:1px solid #d9a53f;}
+.scam h2{color:#d9a53f;}
+.scam > .wrap > p,.how span{color:#e6d8b5;}
+.how p{background:rgba(241,226,191,.06);border:1px solid rgba(217,165,63,.5);border-radius:4px;}
+.how b{color:#d9a53f;font-family:'UnifrakturMaguntia',serif;font-weight:400;font-size:1.15rem;}
+.scam .quote{color:#2a1a0c;}
+/* potion list on a parchment page */
+.mitem{border:0;border-radius:2px;background:#f1e2bf;color:#2a1a0c;box-shadow:0 6px 14px -8px rgba(0,0,0,.7);}
+.mitem summary b{font:400 1.35rem/1 'UnifrakturMaguntia',serif;}
+.mitem summary small{color:#5a4428;}
+.mitem summary em{font-family:'IM Fell English',serif;font-style:italic;color:#7a1f1f;}
+.mitem summary img{border-radius:50%;background:#e2cf9f;}
+.mprices .p{background:#e2cf9f;color:#2a1a0c;}
+.vgrid button{border:2px solid #d9a53f;border-radius:4px;box-shadow:0 0 14px -4px rgba(217,165,63,.6);}
+.btn{background:#d9a53f;color:#13261c;border:0;box-shadow:0 0 20px -6px rgba(217,165,63,.8);font-family:'UnifrakturMaguntia',serif;font-weight:400;font-size:1.3rem;}
+.ship-rows p,.faq details{border:0;border-radius:2px;background:#f1e2bf;color:#2a1a0c;}
+.ship-rows small,.faq p{color:#5a4428;}
+.links a{color:#d9a53f;}
+.fine{color:#e6d8b5;}
+.scam .quote{background:linear-gradient(90deg,#d8c393,#f1e2bf 12%,#f1e2bf 88%,#d8c393);color:#2a1a0c;}
+.top h1 .vh{color:#f1e2bf;}

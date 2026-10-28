@@ -1,0 +1,51 @@
+/* Halloween 3 · Pumpkin Patch: cozy trick-or-treat. Warm cream, pumpkin orange, candy purple, gingham,
+   Lilita One + Nunito, vouches as candy-wrapper notes, menu as treat bags. Friendly, not scary. */
+:root{--cream:#fff0dc;--paper:#ffffff;--ink:#3a1d0b;--dim:#6b4a33;--honey:#c4500a;--honey-2:#b84a00;--line:rgba(58,29,11,.16);--mint:#2f7325;
+  --display:'Lilita One',system-ui,sans-serif;--body:'Nunito',system-ui,sans-serif;--c1:#c4500a;--c2:#6b2fa0;--c3:#fff7ea;--ol:#3a1d0b;--sw:4;}
+body{background:#fff0dc;font-weight:600;}
+.bar{background:#c4500a;color:#fff;border-bottom:4px solid #3a1d0b;}
+.bar .brand{color:#fff;text-shadow:2px 2px 0 #3a1d0b;}
+.pill{background:#fff;border:3px solid #3a1d0b;}
+.top{background:repeating-linear-gradient(90deg,rgba(242,107,15,.08) 0 18px,transparent 18px 36px),repeating-linear-gradient(0deg,rgba(242,107,15,.08) 0 18px,transparent 18px 36px);}
+.top h1{font-size:clamp(2.6rem,12.5vw,3.6rem);line-height:1;color:#3a1d0b;}
+.top h1 em{color:#fff;background:#c4500a;padding:0 .18em;border-radius:.35em;border:3px solid #3a1d0b;box-shadow:0 4px 0 #3a1d0b;display:inline-block;}
+.proofline{background:#6b2fa0;color:#fff;border-radius:999px;font-weight:800;}
+.proofline b{color:#ffd23a;}
+.stk-top{width:72px;height:72px;}
+.stk-t1{left:10px;top:30px;transform:rotate(-14deg);}
+.stk-t2{right:10px;top:150px;transform:rotate(10deg);}
+.stk-t3{left:24px;top:190px;width:50px;height:50px;}
+/* candy-wrapper notes */
+.quote{position:relative;border:3px solid #3a1d0b;border-radius:18px;background:#fff;box-shadow:0 5px 0 #6b2fa0;margin:0 14px;}
+.quote::before,.quote::after{content:"";position:absolute;top:50%;width:16px;height:34px;margin-top:-17px;background:#ffd23a;border:3px solid #3a1d0b;}
+.quote::before{left:-17px;clip-path:polygon(0 0,100% 30%,100% 70%,0 100%,30% 50%);}
+.quote::after{right:-17px;clip-path:polygon(100% 0,0 30%,0 70%,100% 100%,70% 50%);}
+.quote q{font-weight:800;}
+.cta2{border:3px solid #3a1d0b;border-radius:20px;box-shadow:0 5px 0 #3a1d0b;}
+.cta2-tg{background:#c4500a;color:#fff;animation:none;}
+.cta2-wa{background:#2f7325;color:#fff;}
+.cta2-ic{background:#3a1d0b;}
+.cta2-tg .cta2-ic{color:#ffd23a;}
+.sec-k{color:#b84a00;font-weight:800;letter-spacing:.12em;}
+.sec h2{font-size:2.6rem;color:#3a1d0b;}
+.badge{position:relative;margin-bottom:8px;padding:6px 14px;background:#6b2fa0;color:#fff;border-radius:999px;font:400 1rem/1.1 'Lilita One',sans-serif;letter-spacing:.04em;}
+.stk-sec{width:70px;height:70px;}
+.stk-burned,.stk-menu,.stk-vouches,.stk-ship{right:12px;top:26px;transform:rotate(10deg);}
+.scam{background:#6b2fa0;color:#fff;}
+.scam .sec-k{color:#ffd23a;}
+.scam h2{color:#fff;}
+.scam > .wrap > p,.how span{color:#f3e6ff;}
+.scam .badge{background:#c4500a;}
+.how p{background:rgba(255,255,255,.1);border-radius:18px;}
+.how b{color:#ffd23a;}
+.scam .quote{background:#fff;color:#3a1d0b;box-shadow:0 5px 0 #c4500a;}
+/* treat bags */
+.mitem{border:3px solid #3a1d0b;border-radius:6px 6px 22px 22px;background:#fff;box-shadow:0 5px 0 #c4500a;}
+.mitem::before{content:"";display:block;height:10px;background:repeating-linear-gradient(90deg,#c4500a 0 12px,#3a1d0b 12px 24px);}
+.mitem summary b{font:400 1.2rem/1 'Lilita One',sans-serif;}
+.mitem summary em{color:#b84a00;}
+.mprices .p{background:#fff0dc;}
+.vgrid button{border:4px solid #fff;border-radius:16px;box-shadow:0 0 0 3px #3a1d0b,0 6px 0 3px #c4500a;}
+.btn{background:#c4500a;color:#fff;border:3px solid #3a1d0b;box-shadow:0 5px 0 #3a1d0b;font-family:'Lilita One',sans-serif;font-weight:400;font-size:1.15rem;}
+.ship-rows p,.faq details{border:3px solid #3a1d0b;border-radius:18px;}
+.bar .pill{color:#3a1d0b;}

@@ -21,6 +21,21 @@ a `<style>` block; the shared CSS is untouched. 1: panel under the header · 2: 
 Join strip and tabs · 3: chips under the header · 4: Join pill in the header · 5: icon tiles and a
 Join banner.
 
+## Halloween drafts (`halloween/`)
+
+Five full Halloween restyles of the live homepage that keep every approved idea (proof first, "$5/g",
+Telegram + WhatsApp, scam section, menu, grouped vouches, no 21+ check). Built by `halloween/build.py`
+with the same pieces as `styles/` (`styles/draft.css`, `styles/decor.js`). Run
+`python3 drafts/halloween/build.py` after homepage changes.
+
+| Folder | Look |
+| --- | --- |
+| `1-mystery/` | 70s cartoon ghost hunt: purple, lime, orange, Luckiest Guy, case-file vouches. |
+| `2-creature/` | 50s monster-movie poster: black/red/bone, Nosifer, critics'-quote vouches. |
+| `3-pumpkin/` | Cozy trick-or-treat: gingham, Lilita One, candy-wrapper vouches, treat-bag menu. |
+| `4-grimoire/` | Witch's spellbook: green/parchment/gold, blackletter, scroll vouches, potion menu. |
+| `5-glow/` | Glow-in-the-dark graveyard: toxic green, Eater, tombstone vouches, fog. |
+
 ## Style drafts (`styles/`)
 
 Six full restyles of the live homepage (colors, Google Fonts, dab stickers, section treatments), built

@@ -1,0 +1,61 @@
+/* Halloween 2 · Creature Feature: 1950s monster-movie poster. Black + blood red + bone, dripping Nosifer
+   titles, film grain, poster tilts, vouches as critics' quotes with star ratings. */
+:root{--cream:#0e0e0e;--paper:#f2e8d5;--ink:#f2e8d5;--dim:#cfc4b0;--honey:#e2231a;--honey-2:#ff3b30;--line:rgba(242,232,213,.18);--mint:#e2231a;
+  --display:'Oswald',system-ui,sans-serif;--c1:#e2231a;--c2:#f2e8d5;--c3:#ffffff;--ol:#0e0e0e;--sw:5;--dlg-bg:#1a1a1a;--dlg-ink:#f2e8d5;--dlg-dim:#cfc4b0;}
+body{background:#0e0e0e;}
+body::after{content:"";position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.08;
+  background:radial-gradient(#fff 1px,transparent 1.2px) 0 0/5px 5px,radial-gradient(#fff 1px,transparent 1.2px) 2px 3px/7px 7px;}
+.bar{background:#0e0e0e;border-bottom:4px solid #e2231a;}
+.brand{font-weight:700;text-transform:uppercase;letter-spacing:.06em;}
+.pill{background:#e2231a;color:#fff;border:0;border-radius:2px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;}
+.top{background:radial-gradient(70% 50% at 50% 18%,rgba(226,35,26,.35),transparent 70%);}
+.top .top-art{filter:grayscale(1) contrast(1.2) drop-shadow(0 0 20px rgba(226,35,26,.55));}
+.top h1{font:400 clamp(2.1rem,10vw,2.9rem)/1.15 'Nosifer',sans-serif;color:#f2e8d5;text-transform:uppercase;transform:rotate(-3deg);}
+.top h1 em{color:#ff3b30;display:block;font-size:1.25em;}
+.proofline{background:#f2e8d5;color:#0e0e0e;border-radius:0;font:700 .9rem/1 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;}
+.proofline b{color:#e2231a;}
+.stk-top{width:58px;height:58px;filter:grayscale(.2) drop-shadow(0 0 10px rgba(226,35,26,.7));}
+.stk-t1{left:12px;top:40px;}
+.stk-t2{right:14px;top:170px;}
+/* critics' quotes */
+.quote{border:0;border-radius:0;background:#f2e8d5;color:#0e0e0e;box-shadow:6px 6px 0 #e2231a;position:relative;padding-top:30px;}
+.quote::before{content:"★★★★★";position:absolute;left:12px;top:8px;color:#e2231a;letter-spacing:.15em;font-size:.95rem;}
+.quote q{font:700 1.15rem/1.15 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em;}
+.quote small{color:#4a4339;}
+.quote img{filter:grayscale(.3);}
+.cta2{border:3px solid #f2e8d5;border-radius:2px;box-shadow:0 0 0 3px #0e0e0e,0 0 24px -4px rgba(226,35,26,.8);}
+.cta2-tg{background:#e2231a;color:#fff;animation:none;}
+.cta2-wa{background:#f2e8d5;color:#0e0e0e;}
+.cta2-ic{background:#0e0e0e;}
+.cta2-tg .cta2-ic{color:#ff8f88;}
+.cta2-txt b{font:700 1.2rem/1 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;}
+.sec-k{color:#ff3b30;font:700 .85rem/1 'Oswald',sans-serif;letter-spacing:.2em;}
+.sec h2{font:400 1.75rem/1.2 'Nosifer',sans-serif;text-transform:uppercase;color:#f2e8d5;}
+.badge{position:relative;margin-bottom:10px;padding:6px 12px;background:#e2231a;color:#fff;font:700 .95rem/1 'Oswald',sans-serif;letter-spacing:.14em;transform:rotate(-2deg);}
+.stk-sec{width:60px;height:60px;filter:drop-shadow(0 0 10px rgba(226,35,26,.6));}
+.stk-burned,.stk-menu,.stk-vouches,.stk-ship{right:12px;top:24px;}
+.scam{background:#e2231a;color:#fff;}
+.scam .sec-k{color:#0e0e0e;}
+.scam h2{color:#0e0e0e;}
+.scam > .wrap > p{color:#fff;}
+.scam .badge{background:#0e0e0e;}
+.how p{background:#0e0e0e;border-radius:0;}
+.how b{color:#ff8f88;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;}
+.how span{color:#f2e8d5;}
+.scam .quote{box-shadow:6px 6px 0 #0e0e0e;}
+.mitem{border:2px solid #f2e8d5;border-radius:0;background:#161616;}
+.mitem summary b{font:700 1.15rem/1 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;}
+.mitem summary small{color:#cfc4b0;}
+.mitem summary em{font:700 1.15rem/1 'Oswald',sans-serif;color:#ff3b30;}
+.mitem summary img{filter:grayscale(.5);}
+.mprices .p{background:#0e0e0e;border:1px solid #cfc4b0;}
+.vgrid button{border:3px solid #f2e8d5;border-radius:0;}
+.vgrid button:nth-child(odd){transform:rotate(-1.5deg);}
+.vgrid button:nth-child(even){transform:rotate(1.5deg);}
+.btn{background:#e2231a;color:#fff;border:0;border-radius:2px;box-shadow:4px 4px 0 #f2e8d5;font:700 1.05rem/1 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;}
+.ship-rows p,.faq details{border:2px solid #f2e8d5;border-radius:0;background:#161616;}
+.ship-rows small,.faq p{color:#cfc4b0;}
+.links a{color:#ff6a62;}
+.proofline b{color:#b3120b;}
+.scam .quote{background:#f2e8d5;color:#0e0e0e;}
+.quote small,.scam .quote small{color:#4a4339;}

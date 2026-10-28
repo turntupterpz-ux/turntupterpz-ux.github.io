@@ -1,0 +1,56 @@
+/* Halloween 5 · Glow Graveyard: glow-in-the-dark toys on black. Toxic green glow, ghost-white type,
+   tombstone vouch cards ("R.I.P. scammers"), drifting fog, Eater titles + Rubik body. */
+:root{--cream:#050806;--paper:#101a12;--ink:#eaffe6;--dim:#b9d6b5;--honey:#9dff4f;--honey-2:#9dff4f;--line:rgba(157,255,79,.25);--mint:#9dff4f;
+  --display:'Eater',system-ui,sans-serif;--body:'Rubik',system-ui,sans-serif;--c1:#9dff4f;--c2:#e8fff0;--c3:#e8fff0;--ol:#050806;--sw:5;
+  --dlg-bg:#101a12;--dlg-ink:#eaffe6;--dlg-dim:#b9d6b5;}
+body{background:#050806;}
+body::before{content:"";position:fixed;left:-20%;right:-20%;bottom:0;height:40vh;z-index:0;pointer-events:none;opacity:.35;
+  background:radial-gradient(40% 60% at 30% 100%,#3a5a40,transparent),radial-gradient(40% 60% at 75% 100%,#2c4a33,transparent);animation:fog 14s ease-in-out infinite alternate;}
+@keyframes fog{to{transform:translateX(8%);}}
+main{position:relative;z-index:1;}
+.bar{z-index:40;}
+.bar{position:sticky;background:rgba(5,8,6,.9);border-bottom:2px solid #9dff4f;box-shadow:0 0 18px rgba(157,255,79,.35);}
+.brand{color:#9dff4f;text-shadow:0 0 10px rgba(157,255,79,.6);}
+.pill{background:#050806;color:#9dff4f;border:2px solid #9dff4f;}
+.top .top-art{filter:drop-shadow(0 0 26px rgba(157,255,79,.55));}
+.top h1{font-size:clamp(2.4rem,11.5vw,3.3rem);line-height:1.05;color:#eaffe6;text-shadow:0 0 16px rgba(234,255,230,.55);}
+.top h1 em{color:#9dff4f;text-shadow:0 0 20px rgba(157,255,79,.9);}
+.proofline{background:#9dff4f;color:#050806;font-weight:800;box-shadow:0 0 18px rgba(157,255,79,.7);}
+.proofline b{color:#050806;}
+.stk-top{width:60px;height:60px;filter:drop-shadow(0 0 12px rgba(157,255,79,.8));animation:float 3s ease-in-out infinite;}
+.stk-t1{left:10px;top:40px;}
+.stk-t2{right:14px;top:150px;animation-delay:1s;}
+.stk-t3{left:30px;top:200px;width:42px;height:42px;animation-delay:2s;}
+@keyframes float{50%{transform:translateY(-10px);}}
+/* tombstone vouch cards */
+.quote{border:2px solid #9dff4f;border-radius:90px 90px 10px 10px;background:#101a12;color:#eaffe6;box-shadow:0 0 22px -4px rgba(157,255,79,.55);padding-top:26px;}
+.quote q{font-weight:600;}
+.quote small{color:#b9d6b5;}
+.cta2{border:2px solid #050806;border-radius:16px;color:#050806;}
+.cta2-tg{background:#9dff4f;animation:none;box-shadow:0 0 26px -2px rgba(157,255,79,.85);}
+.cta2-wa{background:#e8fff0;box-shadow:0 0 26px -2px rgba(232,255,240,.7);}
+.cta2-ic{background:#050806;}
+.cta2-tg .cta2-ic{color:#9dff4f;}
+.cta2-txt b{font-family:'Rubik',sans-serif;font-weight:800;font-size:1.15rem;}
+.sec-k{color:#9dff4f;font-weight:600;letter-spacing:.14em;}
+.sec h2{font-size:2.5rem;color:#eaffe6;text-shadow:0 0 14px rgba(234,255,230,.5);}
+.badge{position:relative;margin-bottom:10px;padding:8px 14px 6px;background:#1c2a1e;color:#eaffe6;border:2px solid #9dff4f;border-radius:40px 40px 4px 4px;font:800 .8rem/1 'Rubik',sans-serif;letter-spacing:.14em;}
+.stk-sec{width:60px;height:60px;filter:drop-shadow(0 0 12px rgba(157,255,79,.7));animation:float 3s ease-in-out infinite;}
+.stk-burned,.stk-menu,.stk-vouches,.stk-ship{right:12px;top:26px;}
+.scam{background:linear-gradient(180deg,#050806,#0e1a10);border-top:2px solid #9dff4f;border-bottom:2px solid #9dff4f;}
+.scam h2{color:#9dff4f;text-shadow:0 0 18px rgba(157,255,79,.8);}
+.scam > .wrap > p,.how span{color:#cfe8cb;}
+.how p{background:#101a12;border:1px solid rgba(157,255,79,.5);}
+.how b{color:#9dff4f;}
+.scam .quote{background:#101a12;color:#eaffe6;}
+.mitem{border:2px solid rgba(157,255,79,.6);border-radius:14px;background:#101a12;}
+.mitem[open]{box-shadow:0 0 20px -4px rgba(157,255,79,.6);}
+.mitem summary small{color:#b9d6b5;}
+.mitem summary em{color:#9dff4f;text-shadow:0 0 10px rgba(157,255,79,.6);}
+.mprices .p{background:#050806;border:1px solid rgba(157,255,79,.5);}
+.vgrid button{border:2px solid #9dff4f;border-radius:40px 40px 8px 8px;box-shadow:0 0 14px -2px rgba(157,255,79,.5);}
+.btn{background:#9dff4f;color:#050806;border:0;box-shadow:0 0 22px rgba(157,255,79,.7);}
+.ship-rows p,.faq details{border:1px solid rgba(157,255,79,.5);background:#101a12;}
+.ship-rows small,.faq p{color:#b9d6b5;}
+.links a{color:#9dff4f;}
+.fine{color:#b9d6b5;}
