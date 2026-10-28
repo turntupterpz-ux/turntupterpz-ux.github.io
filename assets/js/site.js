@@ -5,6 +5,8 @@
   const ASSETS = new URL("../", document.currentScript.src).href;
 
   const vouchFiles = [
+    ["68.png", "68.webp"], ["69.png", "69.webp"], ["70.png", "70.webp"], ["71.png", "71.webp"],
+    ["72.png", "72.webp"], ["73.png", "73.webp"], ["74.png", "74.webp"], ["75.png", "75.webp"],
     ["1738.JPEG", "1738.webp"], ["1412.JPEG", "1412.webp"], ["151.JPEG", "151.webp"],
     ["67.jpg", "67.webp"], ["64.png", "64.webp"], ["65.png", "65.webp"], ["66.png", "66.webp"],
     ["61.png", "61.webp"], ["62.png", "62.webp"], ["63.png", "63.webp"], ["59.png", "59.webp"],
