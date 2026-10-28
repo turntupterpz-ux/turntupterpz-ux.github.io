@@ -1,27 +1,31 @@
 # TurntUpTerpz website
 
 A mobile-first static website hosted with GitHub Pages at
-[turntupterpz.com](https://turntupterpz.com). The homepage ("Drip") is built around scroll motion:
-honey drips that fall into a filling jar, floating dab stickers, stacking menu cards, a temperature
-dial, and a sticky "Order on Telegram" button with a live same-day-shipping countdown.
+[turntupterpz.com](https://turntupterpz.com). The homepage ("Proof + price") is built for visitors
+arriving from TikTok: the first screen pairs the price hook ("Concentrates as low as $5/g") with real
+customer quotes and one big "Public Telegram channel" button, then a "Been burned before?" section,
+the menu, every vouch, shipping and FAQ. It started as `/drafts/tiktok/6-proof-price/`. The previous
+scroll-motion homepage ("Drip") is kept at `/drafts/7-drip/`.
 
 ## Project structure
 
 ```text
 .
-├── index.html                    Homepage (Drip)
+├── index.html                    Homepage (Proof + price)
 ├── faq.html                      Full FAQ
 ├── menu.html                     Full menu image
 ├── vouches.html                  Redirect for old vouch-page links
 ├── 404.html                      "Page not found" page (GitHub Pages serves it for any missing URL)
 ├── assets/
-│   ├── css/drip.css              Homepage design
+│   ├── css/proof.css             Homepage design
+│   ├── css/drip.css              Former Drip homepage design (drafts/7-drip, drafts/top, escape drafts)
 │   ├── css/site.css              FAQ and menu page design
 │   ├── css/dialogs.css           Vouch viewer and "open in browser" popups (homepage and drafts)
 │   ├── css/fonts.css             Self-hosted Bagel Fat One, DM Sans and DM Mono (files in assets/fonts/)
 │   ├── js/site.js                Shared data: links, menu, vouch list, shipping countdown, viewer
 │   ├── js/scroll.js              Scroll-motion engine (pinned scenes, parallax, reveals)
-│   ├── js/drip.js                Homepage: hero drip, menu cards, temperature dial, vouch wall, order dock
+│   ├── js/proof.js               Homepage: menu, quote cards, vouch grid, shipping, live ship-today countdown
+│   ├── js/drip.js                Former Drip homepage script (drafts only)
 │   ├── js/app.js                 Previous homepage script (still used by /facetime/)
 │   ├── js/motion.js              Scroll-driven product animations
 │   ├── js/coach.js               TikTok / Instagram / Facebook in-app browser escape (live pages)
@@ -37,7 +41,7 @@ dial, and a sticky "Order on Telegram" button with a live same-day-shipping coun
 │           ├── full/             Original full-size vouch screenshots
 │           └── thumbs/           Lightweight WebP gallery thumbnails
 ├── redesign/                     The five redesign drafts (not linked, noindex)
-├── drafts/                       More drafts, incl. the scroll-motion ones (6-heat, 7-drip) · /drafts/
+├── drafts/                       More drafts, incl. the scroll-motion ones (6-heat, 7-drip = former homepage) and tiktok/ · /drafts/
 ├── tools/render/                 Blender scripts that make the product renders
 └── CNAME                         Custom-domain configuration
 ```
