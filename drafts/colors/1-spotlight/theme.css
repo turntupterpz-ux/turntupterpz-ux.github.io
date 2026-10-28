@@ -1,0 +1,21 @@
+/* Colors 1 · Spotlight: a calm neutral page where the two order buttons are the only saturated color.
+   Isolation (von Restorff) effect + high-contrast light mode. */
+:root{--cream:#f6f6f3;--paper:#ffffff;--ink:#141414;--dim:#4b4b4b;--honey:#141414;--honey-2:#141414;--line:rgba(0,0,0,.12);--mint:#15803d;}
+.bar{background:rgba(246,246,243,.94);}
+.pill,.btn,.mitem,.quote,.faq details,.ship-rows p{border:1.5px solid #d9d9d4;box-shadow:none;}
+.quote{box-shadow:0 1px 4px rgba(0,0,0,.08);}
+.btn:active{box-shadow:none;}
+.proofline{background:#141414;color:#fff;}
+.proofline b{color:#fff;}
+.top h1 em{color:#141414;background:linear-gradient(transparent 58%,#ffe14d 58%);padding:0 .06em;}
+.scam{background:#141414;color:#f6f6f3;}
+.scam .sec-k,.scam h2,.how b{color:#fff;}
+.scam > .wrap > p,.how span{color:#d4d4d4;}
+.scam .quote{background:#fff;color:#141414;border-color:#fff;box-shadow:none;}
+/* the only color on the page */
+.cta2{border:0;color:#fff;box-shadow:0 8px 20px -8px rgba(0,0,0,.45);}
+.cta2:active{box-shadow:0 2px 6px -2px rgba(0,0,0,.4);}
+.cta2-tg{background:#0062d6;animation:none;}
+.cta2-wa{background:#0a7a3a;}
+.cta2-ic{background:rgba(255,255,255,.18);}
+.cta2-tg .cta2-ic,.cta2-wa .cta2-ic{color:#fff;}

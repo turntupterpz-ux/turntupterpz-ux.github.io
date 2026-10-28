@@ -21,6 +21,19 @@ a `<style>` block; the shared CSS is untouched. 1: panel under the header · 2: 
 Join strip and tabs · 3: chips under the header · 4: Join pill in the header · 5: icon tiles and a
 Join banner.
 
+## Color drafts (`colors/`)
+
+Three color schemes on the live homepage, built by `colors/build.py` (copies `/index.html`, removes
+analytics, adds `noindex`, `colors/draft.css` and the draft's own `theme.css`). Only colors change.
+Run `python3 drafts/colors/build.py` after homepage changes. `colors/index.html` has the evidence,
+the WCAG contrast audit and sources.
+
+| Folder | Idea |
+| --- | --- |
+| `1-spotlight/` | Neutral off-white/black page; the order buttons are the only saturated color. |
+| `2-night/` | Near-black like TikTok, neon honey accents, all text 10:1+ contrast. |
+| `3-red-hot/` | Warm cream with deep red on the price, buyers tag, scam section and main button. |
+
 ## TikTok conversion drafts (`tiktok/`)
 
 Six homepage ideas for turning TikTok visitors into channel joins, each built around one

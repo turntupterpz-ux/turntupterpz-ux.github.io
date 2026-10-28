@@ -1,0 +1,15 @@
+/* Colors 3 · Red hot: red reads as "exciting" and raises arousal; used for the price and the main button.
+   Labrecque & Milne 2012; Bagchi & Cheema 2013. Red can also read as "danger", so it stays on the actions only. */
+:root{--cream:#fff3ee;--paper:#ffffff;--ink:#2b0b07;--dim:#6b3a33;--honey:#c81e0c;--honey-2:#c81e0c;--line:rgba(43,11,7,.14);}
+.bar{background:rgba(255,243,238,.94);}
+.proofline{background:#c81e0c;color:#fff;}
+.proofline b{color:#fff;}
+.top h1 em{color:#c81e0c;}
+.scam{background:#5c0d06;color:#fff3ee;}
+.scam .sec-k,.scam h2,.how b{color:#ffd0c4;}
+.scam > .wrap > p,.how span{color:#f6d9d2;}
+.scam .quote{background:#fff3ee;color:#2b0b07;box-shadow:0 4px 0 #ff5a3c;}
+.cta2-tg{background:#d4200c;animation:none;color:#fff;}
+.cta2-tg .cta2-ic{background:#2b0b07;color:#fff;}
+.cta2-wa{background:#2b0b07;color:#fff;}
+.cta2-wa .cta2-ic{background:#25d366;color:#2b0b07;}

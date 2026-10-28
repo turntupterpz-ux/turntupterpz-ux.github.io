@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <title>Color drafts · TurntUpTerpz</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/brand/favicon-32.png">
+  <style>
+    :root{--bg:#fff4e0;--card:#fffaf1;--ink:#2a1709;--dim:#6f5640;--line:rgba(42,23,9,.15);--accent:#b3400a;--good:#15803d;--bad:#b91c1c;}
+    @media (prefers-color-scheme:dark){:root{--bg:#120c08;--card:#1d1611;--ink:#f6efe6;--dim:#b3a493;--line:rgba(255,255,255,.12);--accent:#ffb627;--good:#4ade80;--bad:#f87171;}}
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif;}
+    main{max-width:780px;margin:0 auto;padding:36px 16px 60px;}
+    h1{font-size:1.9rem;line-height:1.1;margin:0 0 8px;letter-spacing:-.02em;}
+    h2{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:34px 0 12px;}
+    .sub{color:var(--dim);margin:0;}
+    .grid{display:grid;gap:12px;}
+    .card{display:grid;gap:8px;padding:18px;border-radius:20px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);scroll-margin-top:16px;}
+    .card:target{box-shadow:inset 0 0 0 2px var(--accent);}
+    .top{display:flex;align-items:center;gap:12px;}
+    .sw{display:flex;gap:4px;}
+    .sw i{width:22px;height:22px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);}
+    .n{font:600 .75rem/1 ui-monospace,monospace;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;}
+    .card b.t{font-size:1.25rem;}
+    .card p{margin:0;color:var(--dim);font-size:.94rem;}
+    .card ul{margin:0;padding-left:18px;font-size:.92rem;}
+    .card li{margin:4px 0;}
+    .card .open{justify-self:start;padding:10px 16px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:700;text-decoration:none;}
+    .risk{color:var(--bad) !important;}
+    .tbl{overflow-x:auto;border-radius:16px;box-shadow:inset 0 0 0 1px var(--line);background:var(--card);}
+    table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:520px;}
+    th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);}
+    thead th{font:600 .72rem/1.2 ui-monospace,monospace;letter-spacing:.05em;color:var(--dim);text-transform:uppercase;}
+    .ok{color:var(--good);font-weight:700;}
+    .no{color:var(--bad);font-weight:700;}
+    .box{padding:16px 18px;border-radius:18px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);}
+    .box p{margin:0 0 10px;}
+    .box p:last-child{margin:0;}
+    ol{margin:0;padding-left:20px;}
+    .src li{font-size:.86rem;color:var(--dim);margin:6px 0;}
+    a{color:var(--accent);}
+    .note{margin-top:22px;font-size:.88rem;color:var(--dim);}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Three color schemes for TikTok shoppers</h1>
+    <p class="sub">Each is your live homepage with only the colors changed: same words, layout, vouches and buttons. Open them on your phone.</p>
+
+    <h2>The drafts</h2>
+    <div class="grid">
+      <section class="card" id="d1">
+        <div class="top"><span class="sw"><i style="background:#f6f6f3"></i><i style="background:#141414"></i><i style="background:#0062d6"></i><i style="background:#0a7a3a"></i><i style="background:#ffe14d"></i></span><span class="n">Draft 1</span></div>
+        <b class="t">Spotlight: only the buttons get color</b>
+        <p>A calm off-white and black page. The Telegram and WhatsApp buttons are the only saturated color, so the eye lands on them. The price gets a yellow highlighter.</p>
+        <ul>
+          <li><b>Isolation effect:</b> when everything looks alike, the one thing that's different gets noticed and remembered. The order buttons become that one thing.</li>
+          <li><b>Contrast:</b> dark text on a light background is easiest to read for people with normal vision. Every text on this page passes WCAG contrast.</li>
+        </ul>
+        <p class="risk">Risk: loses some of the brand's fun, sticker-book feel.</p>
+        <a class="open" href="1-spotlight/">Open Draft 1 →</a>
+      </section>
+
+      <section class="card" id="d2">
+        <div class="top"><span class="sw"><i style="background:#0b0b0d"></i><i style="background:#18181c"></i><i style="background:#ffc83d"></i><i style="background:#25d366"></i><i style="background:#7cc8ff"></i></span><span class="n">Draft 2</span></div>
+        <b class="t">Night: dark like TikTok</b>
+        <p>Near-black background like the TikTok app, with neon honey for the price and glowing buttons.</p>
+        <ul>
+          <li><b>Jakob's law:</b> people expect your site to look and behave like the apps they already use. Visitors arrive straight from TikTok's dark screen, so there's no jarring flash of white.</li>
+          <li><b>Contrast kept extra high:</b> research finds light mode reads better for most people, so all text here is 10:1 or higher (the minimum is 4.5:1) to make up for it.</li>
+        </ul>
+        <p class="risk">Risk: research favors light mode for reading. Best suited to quick glances, which is how TikTok visitors browse.</p>
+        <a class="open" href="2-night/">Open Draft 2 →</a>
+      </section>
+
+      <section class="card" id="d3">
+        <div class="top"><span class="sw"><i style="background:#fff3ee"></i><i style="background:#2b0b07"></i><i style="background:#c81e0c"></i><i style="background:#5c0d06"></i><i style="background:#25d366"></i></span><span class="n">Draft 3</span></div>
+        <b class="t">Red hot: excitement on the actions</b>
+        <p>Warm cream page, with deep red on the price, the "72 buyers" tag, the scam section and the main button.</p>
+        <ul>
+          <li><b>Red reads as "exciting":</b> in Labrecque &amp; Milne's studies, red raised how exciting a brand seemed (blue raised how competent it seemed).</li>
+          <li><b>Red raises arousal:</b> Bagchi &amp; Cheema found red backgrounds made people bid more aggressively in auctions.</li>
+        </ul>
+        <p class="risk">Risk: the same study found red <i>lowered</i> offers when people haggled, and red can signal "danger". Your prices are fixed, so this is the boldest bet of the three.</p>
+        <a class="open" href="3-red-hot/">Open Draft 3 →</a>
+      </section>
+    </div>
+
+    <h2>Double-checked</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Page</th><th>Texts checked</th><th>Fail WCAG contrast</th><th>Page errors</th></tr></thead>
+        <tbody>
+          <tr><td>Live homepage today</td><td>153</td><td class="no">1 (orange "$5/g": 2.3:1, needs 3:1)</td><td class="ok">0</td></tr>
+          <tr><td>Draft 1 · Spotlight</td><td>157</td><td class="ok">0</td><td class="ok">0</td></tr>
+          <tr><td>Draft 2 · Night</td><td>154</td><td class="ok">0</td><td class="ok">0</td></tr>
+          <tr><td>Draft 3 · Red hot</td><td>158</td><td class="ok">0</td><td class="ok">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Every visible text was measured against its real background with the WCAG 2 formula on an iPhone-sized screen (4.5:1 for normal text, 3:1 for large text). Text on the rainbow Telegram button was checked by hand: dark text on light pastels, well above 4.5:1.</p>
+
+    <h2>Honest take</h2>
+    <div class="box">
+      <p><b>No single color "makes people buy".</b> The research review by Elliot &amp; Maier (Annual Review of Psychology, 2014) says color effects are real but depend heavily on context. Claims like "orange buttons convert best" don't hold up as general rules.</p>
+      <p><b>What does hold up:</b> contrast (people can read it fast) and isolation (the action stands out). <b>Spotlight</b> leans on those most, so it's my pick for the safest gain. <b>Night</b> is the best fit for where your visitors come from. <b>Red hot</b> is the riskiest.</p>
+      <p><b>How to know for sure:</b> run one for 2 weeks and compare Telegram + WhatsApp taps ÷ visits in Google Analytics against the 2 weeks before. The button labels are already tracked (<code>home_top_order</code>, <code>home_top_whatsapp</code>).</p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="src">
+      <li>Laws of UX, <a href="https://lawsofux.com/von-restorff-effect/">Von Restorff (isolation) effect</a>: when multiple similar objects are present, the one that differs is most likely to be remembered.</li>
+      <li>Nielsen Norman Group, <a href="https://www.nngroup.com/articles/dark-mode/">"Dark Mode vs. Light Mode: Which Is Better?"</a>: people with normal vision perform better with light mode.</li>
+      <li>Nielsen Norman Group, <a href="https://www.nngroup.com/articles/low-contrast/">"Low-Contrast Text Is Not the Answer"</a>.</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 2.1 Contrast (Minimum)</a>: 4.5:1 normal text, 3:1 large text.</li>
+      <li>Laws of UX, <a href="https://lawsofux.com/jakobs-law/">Jakob's law</a>.</li>
+      <li>Labrecque &amp; Milne, <a href="https://doi.org/10.1007/s11747-010-0245-y">"Exciting red and competent blue: the importance of color in marketing"</a>, Journal of the Academy of Marketing Science (2012).</li>
+      <li>Bagchi &amp; Cheema, <a href="https://doi.org/10.1086/666466">"The Effect of Red Background Color on Willingness-to-Pay: The Moderating Role of Selling Mechanism"</a>, Journal of Consumer Research (2013).</li>
+      <li>Elliot &amp; Maier, <a href="https://doi.org/10.1146/annurev-psych-010213-115035">"Color Psychology: Effects of Perceiving Color on Psychological Functioning in Humans"</a>, Annual Review of Psychology (2014).</li>
+    </ul>
+
+    <p class="note"><a href="../">All drafts</a> · <a href="../tiktok/">TikTok layout drafts</a> · <a href="/">Live site</a></p>
+  </main>
+</body>
+</html>
