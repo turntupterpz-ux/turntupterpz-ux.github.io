@@ -60,15 +60,15 @@
     document.addEventListener("DOMContentLoaded", () => {
       // first-screen stack: five real screenshots, tap opens the viewer
       const stack = document.querySelector("#stack span");
-      [22, 58, 28, 11, 49].forEach((i) => stack.appendChild(TT.el("img", { src: TT.vouches[i].thumb, alt: "" })));
+      [30, 66, 36, 19, 57].forEach((i) => stack.appendChild(TT.el("img", { src: TT.vouches[i].thumb, alt: "" })));
       document.querySelector("#stack").addEventListener("click", () => TT.openViewer(0));
       // scam section quotes
       const box = document.querySelector("#scamQuotes");
       [
-        { i: 18, t: "I have been scammed before by people on TikTok… you seem very genuine" },
-        { i: 61, t: "I've been scammed before and I'm so glad I got in touch with you" },
-        { i: 11, t: "It's a breath of fresh air to find someone legit" },
-        { i: 60, t: "It hasn't been easy finding someone legit out here" }
+        { i: 26, t: "I have been scammed before by people on TikTok… you seem very genuine" },
+        { i: 69, t: "I've been scammed before and I'm so glad I got in touch with you" },
+        { i: 19, t: "It's a breath of fresh air to find someone legit" },
+        { i: 68, t: "It hasn't been easy finding someone legit out here" }
       ].forEach((q) => box.appendChild(TD.quoteCard(q)));
     });
   </script>

@@ -15,24 +15,24 @@
 
   // Short lines copied from real vouch screenshots; i is the screenshot's place in TT.vouches.
   const QUOTES = [
-    { i: 22, t: "It just landed after only two damn days" },
-    { i: 58, t: "Hands down one of the best rosins I've ever tried" },
-    { i: 28, t: "Smell, taste, high are like nothing I've ever had before" },
-    { i: 11, t: "It's a breath of fresh air to find someone legit" },
-    { i: 49, t: "Great terps, great high, and a clean melt" },
-    { i: 37, t: "Wilson Zero, top 5 strains" },
-    { i: 32, t: "Damn bruh that was quick, 2 day delivery" },
-    { i: 61, t: "I've been scammed before and I'm so glad I got in touch with you" },
-    { i: 55, t: "The banana aroma, taste, and high are amazing" },
-    { i: 19, t: "You always come thru" }
+    { i: 30, t: "It just landed after only two damn days" },
+    { i: 66, t: "Hands down one of the best rosins I've ever tried" },
+    { i: 36, t: "Smell, taste, high are like nothing I've ever had before" },
+    { i: 19, t: "It's a breath of fresh air to find someone legit" },
+    { i: 57, t: "Great terps, great high, and a clean melt" },
+    { i: 45, t: "Wilson Zero, top 5 strains" },
+    { i: 40, t: "Damn bruh that was quick, 2 day delivery" },
+    { i: 69, t: "I've been scammed before and I'm so glad I got in touch with you" },
+    { i: 63, t: "The banana aroma, taste, and high are amazing" },
+    { i: 27, t: "You always come thru" }
   ];
   const SCAM_QUOTES = [
-    { i: 18, t: "I have been scammed before by people on TikTok… you seem very genuine" },
-    { i: 61, t: "I've been scammed before and I'm so glad I got in touch with you" },
-    { i: 11, t: "It's a breath of fresh air to find someone legit" },
-    { i: 60, t: "It hasn't been easy finding someone legit out here" }
+    { i: 26, t: "I have been scammed before by people on TikTok… you seem very genuine" },
+    { i: 69, t: "I've been scammed before and I'm so glad I got in touch with you" },
+    { i: 19, t: "It's a breath of fresh air to find someone legit" },
+    { i: 68, t: "It hasn't been easy finding someone legit out here" }
   ];
-  const STACK = [22, 58, 28, 11, 49];
+  const STACK = [30, 66, 36, 19, 57];
 
   const money = (v) => "$" + v;
   function fromLabel(c) {
