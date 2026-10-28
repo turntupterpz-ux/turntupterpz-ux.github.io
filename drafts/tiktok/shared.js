@@ -121,7 +121,7 @@
     if (ok && !/[?&]gate=1/.test(location.search)) return;
     const gate = el("div", { class: "age", role: "dialog", "aria-modal": "true", "aria-labelledby": "ageTitle" }, [
       el("div", { class: "age-card" }, [
-        el("img", { src: T.asset("images/brand/logo.webp"), alt: "", width: "64", height: "64" }),
+        el("img", { src: T.asset("images/brand/logo-192.webp"), alt: "", width: "64", height: "64" }),
         el("h2", { id: "ageTitle", text: "Are you 21 or older?" }),
         el("p", { text: "You have to be 21+ to view this site." }),
         el("button", { type: "button", class: "btn", text: "Yes, I'm 21+" }),
