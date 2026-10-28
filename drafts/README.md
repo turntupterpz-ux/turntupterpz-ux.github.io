@@ -21,6 +21,21 @@ a `<style>` block; the shared CSS is untouched. 1: panel under the header · 2: 
 Join strip and tabs · 3: chips under the header · 4: Join pill in the header · 5: icon tiles and a
 Join banner.
 
+## Glow Graveyard variations (`glow/`)
+
+Five takes on `halloween/5-glow` with different fonts, fewer "AI" tells (no emoji icons, no sticker/badge
+clutter, glow only on prices and buttons) and iPhone fixes shared in `glow/ux.css` + `glow/ux.js`:
+a thumb-zone Telegram/WhatsApp dock, a first screen that fits an iPhone SE, 44pt tap targets, safe areas,
+reduced-motion support. Built by `glow/build.py`.
+
+| Folder | Fonts | Idea |
+| --- | --- | --- |
+| `1-night-shift/` | Archivo Black + Archivo | Night watchman's clipboard, flashlight beam, ruled lists. |
+| `2-cemetery-gates/` | Cinzel + EB Garamond | Engraved granite plaques, wrought-iron dividers. |
+| `3-chalk/` | Rock Salt + Work Sans | Chalkboard graveyard, dashed chalk outlines. |
+| `4-toy-box/` | Bungee + Barlow | 90s glow toy packaging, blister-pack vouches. |
+| `5-mausoleum/` | DM Serif Display + IBM Plex Sans | Quiet editorial, hairlines, one green accent. |
+
 ## Halloween drafts (`halloween/`)
 
 Five full Halloween restyles of the live homepage that keep every approved idea (proof first, "$5/g",

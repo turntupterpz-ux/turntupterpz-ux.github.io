@@ -1,0 +1,41 @@
+/* Glow drafts: iPhone-first fixes shared by all five. Themes only change the look. */
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;}
+body{font-size:17px;line-height:1.5;}
+section[id],[aria-labelledby]{scroll-margin-top:72px;}
+
+/* first screen fits an iPhone SE (667pt): headline, one vouch and the buttons, no giant art */
+.top{min-height:0;padding:18px 16px 20px;gap:14px;justify-content:flex-start;}
+.top .top-art{position:static;transform:none;width:118px;margin:0 0 -48px auto;}
+
+/* swipe rows show the next card peeking, and snap cleanly */
+.quotes{scroll-padding-left:16px;}
+.quote{flex-basis:84%;}
+
+/* tap targets: 44pt minimum */
+.pill,.links a,.btn{min-height:44px;}
+.faq summary{padding:4px 0;min-height:44px;display:flex;align-items:center;}
+/* small links keep their look but get a 44pt invisible hit area */
+.brand,.proofline{position:relative;}
+.brand::after,.proofline::after{content:"";position:absolute;left:-6px;right:-6px;top:50%;height:44px;margin-top:-22px;}
+.links{gap:8px 20px;}
+.links a{display:inline-flex;align-items:center;}
+
+/* no emoji icons: numbered steps instead */
+.how{counter-reset:step;}
+.how i{font-size:0;width:auto;}
+.how i::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-size:.85rem;font-weight:700;letter-spacing:.05em;}
+
+/* thumb-zone dock (filled by ux.js), hidden while the page's own buttons are on screen */
+.dock-glow{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  transform:translateY(110%);transition:transform .25s ease;}
+.dock-glow.on{transform:none;}
+.dock-glow .ctas{max-width:520px;margin:0 auto;gap:8px;}
+.dock-glow .cta2{min-height:54px;padding:6px 10px 6px 6px;}
+.dock-glow .cta2-ic{width:38px;height:38px;}
+.dock-glow .cta2-txt small{display:none;}
+.fine{padding-bottom:calc(96px + env(safe-area-inset-bottom));}
+
+.draft-note{margin:0;padding:0 16px calc(100px + env(safe-area-inset-bottom));text-align:center;font-size:.85rem;}
+.draft-note a{opacity:.7;}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important;}}

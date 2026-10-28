@@ -1,0 +1,54 @@
+/* Glow 2 · Cemetery Gates: engraved granite and wrought iron. Cinzel caps carved into stone, EB Garamond text,
+   bevelled stone plaques for the vouches, an iron-fence divider, a faint green glow only where you tap. */
+:root{--cream:#0b0c0b;--paper:#2a2c2a;--ink:#ecebe4;--dim:#bdbbb0;--honey:#8fe36a;--honey-2:#8fe36a;--line:rgba(236,235,228,.14);--mint:#8fe36a;
+  --display:'Cinzel',Georgia,serif;--body:'EB Garamond',Georgia,serif;--mono:'EB Garamond',Georgia,serif;
+  --dlg-bg:#1c1d1c;--dlg-ink:#ecebe4;--dlg-dim:#bdbbb0;
+  --fence:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 40'%3E%3Cpath fill='%23353835' d='M10 40V10l2-8 2 8v30Z'/%3E%3Cpath fill='%23353835' d='M0 30h24v3H0z'/%3E%3C/svg%3E");}
+body{background:#0b0c0b;font-size:18px;}
+.bar{background:#0b0c0b;border-bottom:1px solid var(--line);}
+.brand{font-weight:800;font-size:1rem;letter-spacing:.08em;}
+.pill{background:transparent;border:1px solid var(--dim);color:#ecebe4;font-family:'Cinzel',serif;font-weight:600;letter-spacing:.1em;font-size:.78rem;}
+.top{background:radial-gradient(90% 50% at 50% 0,#1d201d,transparent 70%);}
+.top .top-art{filter:grayscale(.6);}
+.top h1{font-weight:800;font-size:clamp(2.1rem,10vw,2.9rem);line-height:1.05;letter-spacing:.02em;text-transform:uppercase;color:#ecebe4;
+  text-shadow:0 1px 0 #000,0 -1px 0 rgba(255,255,255,.18);}
+.top h1 em{color:#8fe36a;text-shadow:0 0 18px rgba(143,227,106,.35);}
+.proofline{background:#2a2c2a;color:#ecebe4;border-radius:2px;font:600 .9rem/1 var(--body);font-style:italic;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 #000;}
+.proofline b{color:#8fe36a;font-family:var(--display);font-style:normal;}
+.stack small{font-size:.95rem;}
+/* stone plaques */
+.quote{border:0;border-radius:3px;background:linear-gradient(180deg,#363936,#2a2c2a);color:#ecebe4;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -2px 0 #000,0 6px 14px -8px #000;}
+.quote q{font:italic 400 1.15rem/1.3 var(--body);}
+.quote small{color:#bdbbb0;font:600 .72rem/1.2 'Cinzel',serif;letter-spacing:.1em;}
+.quote img{border-radius:2px;filter:grayscale(.25);}
+.cta2{border:0;border-radius:4px;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 0 22px -8px rgba(143,227,106,.8);}
+.cta2-tg{background:#8fe36a;color:#0b0c0b;animation:none;}
+.cta2-wa{background:#ecebe4;color:#0b0c0b;}
+.cta2-ic{background:#0b0c0b;}
+.cta2-tg .cta2-ic{color:#8fe36a;}
+.cta2-txt b{font:800 .95rem/1 'Cinzel',serif;letter-spacing:.06em;}
+.cta2-txt small{font:italic 400 .85rem/1.2 var(--body);}
+.ship-line{font-style:italic;color:#bdbbb0;}
+.sec::before{content:"";display:block;height:40px;margin:-36px 0 16px;background:var(--fence) 0 0/24px 40px repeat-x;}
+.sec-k{font:600 .76rem/1 'Cinzel',serif;letter-spacing:.2em;color:#8fe36a;}
+.sec h2{font-weight:800;font-size:2rem;letter-spacing:.04em;text-transform:uppercase;}
+.scam{background:#141514;}
+.scam h2{color:#ecebe4;}
+.scam > .wrap > p,.how span{color:#cfcdc4;}
+.how p{background:#1c1d1c;border-radius:3px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08);}
+.how i::before{font-family:'Cinzel',serif;color:#8fe36a;}
+.how b{color:#ecebe4;font-family:'Cinzel',serif;font-weight:600;font-size:.95rem;letter-spacing:.04em;}
+.scam .quote{background:linear-gradient(180deg,#363936,#2a2c2a);color:#ecebe4;}
+.mitem{border:0;border-radius:3px;background:#1c1d1c;box-shadow:inset 0 1px 0 rgba(255,255,255,.08);}
+.mitem summary b{font:600 1rem/1.1 'Cinzel',serif;letter-spacing:.04em;}
+.mitem summary small{color:#bdbbb0;}
+.mitem summary em{font:600 1.05rem/1 'Cinzel',serif;color:#8fe36a;}
+.mitem summary img{filter:grayscale(.4);border-radius:2px;}
+.mprices .p{background:#0b0c0b;font-family:var(--body);}
+.vgrid button{border-radius:2px;filter:grayscale(.2);}
+.btn{background:#2a2c2a;color:#ecebe4;border:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -2px 0 #000;font:600 .85rem/1 'Cinzel',serif;letter-spacing:.1em;}
+.ship-rows p,.faq details{border:0;border-radius:3px;background:#1c1d1c;}
+.ship-rows small,.faq p{color:#bdbbb0;}
+.links a{color:#8fe36a;}
+.fine,.draft-note a{color:#bdbbb0;}
+.dock-glow{background:linear-gradient(rgba(11,12,11,0),#0b0c0b 40%);}

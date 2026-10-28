@@ -1,0 +1,51 @@
+/* Glow 3 · Chalk: a graveyard drawn on a chalkboard. Rock Salt for a few handwritten headings, Work Sans for
+   everything you read, dashed chalk outlines, smudged slate, glow-chalk green. Hand-made, not polished. */
+:root{--cream:#121412;--paper:#1b1e1b;--ink:#f2f1ea;--dim:#c4c3b8;--honey:#9cff70;--honey-2:#9cff70;--line:rgba(242,241,234,.25);--mint:#9cff70;
+  --display:'Rock Salt',cursive;--body:'Work Sans',system-ui,sans-serif;--mono:'Work Sans',system-ui,sans-serif;
+  --dlg-bg:#1b1e1b;--dlg-ink:#f2f1ea;--dlg-dim:#c4c3b8;
+  --scribble:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8c30-6 60 2 90-2s70-4 106 1' fill='none' stroke='%239cff70' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");}
+body{background:radial-gradient(60% 40% at 20% 20%,rgba(255,255,255,.04),transparent),radial-gradient(50% 30% at 80% 70%,rgba(255,255,255,.035),transparent) #121412;}
+.bar{background:#121412;border-bottom:2px dashed var(--line);}
+.brand{font:400 .85rem/1 'Rock Salt',cursive;}
+.pill{background:transparent;border:2px dashed #f2f1ea;color:#f2f1ea;font-family:var(--body);}
+.top h1{font:400 clamp(1.8rem,8.4vw,2.4rem)/1.35 'Rock Salt',cursive;color:#f2f1ea;}
+.top h1 em{color:#9cff70;background:var(--scribble) 0 100%/100% 12px no-repeat;padding-bottom:8px;}
+.proofline{background:transparent;color:#f2f1ea;border:2px dashed #9cff70;border-radius:8px;font:600 .82rem/1 var(--body);}
+.proofline b{color:#9cff70;font-family:var(--body);font-weight:700;}
+.quote{border:2px dashed rgba(242,241,234,.55);border-radius:10px;background:transparent;box-shadow:none;}
+.quote:nth-child(even){transform:rotate(.8deg);}
+.quote:nth-child(odd){transform:rotate(-.6deg);}
+.quote q{font-weight:500;font-size:1.05rem;}
+.quote small{color:#c4c3b8;font-family:var(--body);}
+.stack img{border-color:#121412;box-shadow:none;}
+.cta2{border:2px solid #f2f1ea;border-radius:12px;box-shadow:3px 4px 0 rgba(242,241,234,.35);}
+.cta2-tg{background:#9cff70;color:#121412;animation:none;}
+.cta2-wa{background:#f2f1ea;color:#121412;}
+.cta2-ic{background:#121412;}
+.cta2-tg .cta2-ic{color:#9cff70;}
+.cta2-txt b{font:700 1.08rem/1 var(--body);}
+.cta2-txt small{font-family:var(--body);}
+.ship-line{font-family:var(--body);color:#c4c3b8;font-size:.88rem;}
+.sec-k{font:600 .78rem/1 var(--body);letter-spacing:.12em;color:#9cff70;}
+.sec h2{font:400 1.55rem/1.4 'Rock Salt',cursive;padding-bottom:10px;background:var(--scribble) 0 100%/170px 12px no-repeat;}
+.scam{background:#171a17;border-top:2px dashed var(--line);border-bottom:2px dashed var(--line);}
+.scam h2{color:#f2f1ea;}
+.scam > .wrap > p,.how span{color:#d6d5cb;}
+.how p{background:transparent;border:2px dashed var(--line);border-radius:10px;}
+.how i::before{color:#9cff70;font-family:'Rock Salt',cursive;font-size:.8rem;}
+.how b{color:#f2f1ea;}
+.scam .quote{background:transparent;color:#f2f1ea;}
+.mitem{border:2px dashed var(--line);border-radius:12px;background:transparent;}
+.mitem[open]{border-color:#9cff70;}
+.mitem summary b{font:700 1.02rem/1.1 var(--body);}
+.mitem summary small{color:#c4c3b8;}
+.mitem summary em{font:700 1rem/1 var(--body);color:#9cff70;}
+.mitem summary img{background:#1b1e1b;}
+.mprices .p{background:#1b1e1b;font-family:var(--body);}
+.vgrid button{border:2px solid rgba(242,241,234,.6);border-radius:6px;}
+.btn{background:transparent;color:#f2f1ea;border:2px dashed #f2f1ea;box-shadow:none;font-family:var(--body);}
+.ship-rows p,.faq details{border:2px dashed var(--line);border-radius:10px;background:transparent;}
+.ship-rows small,.faq p{color:#c4c3b8;}
+.links a{color:#9cff70;}
+.fine,.draft-note a{color:#c4c3b8;}
+.dock-glow{background:linear-gradient(rgba(18,20,18,0),#121412 40%);}

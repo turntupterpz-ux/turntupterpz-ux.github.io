@@ -1,0 +1,53 @@
+/* Glow 4 · Toy Box: 90s glow-in-the-dark toy packaging. Bungee + Barlow, card-backed purple, flat neon green,
+   hard offset shadows instead of blur, vouches in clear blister packs, one "glows in the dark" starburst. */
+:root{--cream:#1b0b2e;--paper:#2a1446;--ink:#f6f0ff;--dim:#d4c6ec;--honey:#8dff2d;--honey-2:#8dff2d;--line:rgba(246,240,255,.2);--mint:#8dff2d;
+  --display:'Bungee',system-ui,sans-serif;--body:'Barlow',system-ui,sans-serif;--mono:'Barlow',system-ui,sans-serif;
+  --dlg-bg:#2a1446;--dlg-ink:#f6f0ff;--dlg-dim:#d4c6ec;}
+body{background:#1b0b2e;font-weight:500;}
+.bar{background:#8dff2d;color:#1b0b2e;}
+.bar .brand{color:#1b0b2e;font-size:.95rem;}
+.pill{background:#1b0b2e;color:#8dff2d;border:0;border-radius:6px;font-family:'Bungee',sans-serif;font-size:.72rem;}
+.top{position:relative;}
+.top::before{content:"GLOWS IN THE DARK!";position:absolute;left:8px;top:-6px;width:84px;height:84px;display:grid;place-items:center;text-align:center;padding:16px;
+  background:#ff3fa4;color:#1b0b2e;font:400 .6rem/1.15 'Bungee',sans-serif;transform:rotate(-12deg);
+  clip-path:polygon(50% 0,61% 18%,82% 10%,80% 32%,100% 40%,84% 56%,96% 78%,72% 76%,62% 100%,48% 82%,28% 96%,26% 74%,2% 72%,16% 52%,0 32%,22% 30%,20% 8%,40% 18%);}
+.top h1{font-size:clamp(2rem,9.6vw,2.7rem);line-height:1.02;color:#f6f0ff;text-shadow:4px 4px 0 #000;}
+.top h1 em{color:#8dff2d;}
+.proofline{background:#ff3fa4;color:#1b0b2e;border-radius:6px;font:800 .82rem/1 var(--body);text-transform:uppercase;letter-spacing:.04em;box-shadow:3px 3px 0 #000;}
+.proofline b{color:#1b0b2e;font-family:'Bungee',sans-serif;}
+/* blister packs */
+.quote{border:2px solid rgba(255,255,255,.55);border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.04) 45%,rgba(255,255,255,.1));
+  color:#f6f0ff;box-shadow:4px 4px 0 #000;}
+.quote q{font-weight:700;font-size:1.06rem;}
+.quote small{color:#e2d6f6;font-family:var(--body);font-weight:600;}
+.cta2{border:3px solid #000;border-radius:10px;box-shadow:4px 4px 0 #000;}
+.cta2-tg{background:#8dff2d;color:#1b0b2e;animation:none;}
+.cta2-wa{background:#f6f0ff;color:#1b0b2e;}
+.cta2-ic{background:#1b0b2e;}
+.cta2-tg .cta2-ic{color:#8dff2d;}
+.cta2-txt b{font-size:.95rem;}
+.cta2-txt small{font-family:var(--body);font-weight:700;}
+.ship-line{font-family:var(--body);font-weight:600;color:#d4c6ec;}
+.sec-k{font:800 .8rem/1 var(--body);letter-spacing:.12em;color:#8dff2d;}
+.sec h2{font-size:1.9rem;line-height:1.05;text-shadow:3px 3px 0 #000;}
+.scam{background:#8dff2d;color:#1b0b2e;}
+.scam .sec-k{color:#1b0b2e;}
+.scam h2{color:#1b0b2e;text-shadow:3px 3px 0 #fff;}
+.scam > .wrap > p{color:#1b0b2e;font-weight:600;}
+.how p{background:#1b0b2e;border-radius:10px;box-shadow:4px 4px 0 #000;}
+.how i::before{color:#8dff2d;font-family:'Bungee',sans-serif;font-size:.8rem;}
+.how b{color:#8dff2d;}
+.how span{color:#e2d6f6;}
+.scam .quote{background:#1b0b2e;color:#f6f0ff;border-color:#1b0b2e;}
+.mitem{border:3px solid #000;border-radius:12px;background:#2a1446;box-shadow:4px 4px 0 #000;}
+.mitem summary b{font:400 .95rem/1.1 'Bungee',sans-serif;}
+.mitem summary small{color:#d4c6ec;}
+.mitem summary em{background:#8dff2d;color:#1b0b2e;padding:6px 8px;border-radius:6px;font-size:.95rem;}
+.mprices .p{background:#1b0b2e;font-family:var(--body);font-weight:700;}
+.vgrid button{border:3px solid #000;border-radius:10px;box-shadow:3px 3px 0 #000;}
+.btn{background:#ff3fa4;color:#1b0b2e;border:3px solid #000;box-shadow:4px 4px 0 #000;font-family:'Bungee',sans-serif;font-weight:400;font-size:.85rem;}
+.ship-rows p,.faq details{border:3px solid #000;border-radius:12px;background:#2a1446;}
+.ship-rows small,.faq p{color:#d4c6ec;}
+.links a{color:#8dff2d;}
+.fine,.draft-note a{color:#d4c6ec;}
+.dock-glow{background:linear-gradient(rgba(27,11,46,0),#1b0b2e 40%);}

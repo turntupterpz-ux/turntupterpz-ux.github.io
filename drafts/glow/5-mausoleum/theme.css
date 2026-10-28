@@ -1,0 +1,54 @@
+/* Glow 5 · Mausoleum: quiet and editorial. DM Serif Display + IBM Plex Sans, near-monochrome, hairline rules,
+   big type and empty space, the only color is one glow-green for prices and the buttons. */
+:root{--cream:#0a0a0a;--paper:#141414;--ink:#f1efe9;--dim:#a9a69e;--honey:#7dff9b;--honey-2:#7dff9b;--line:rgba(241,239,233,.14);--mint:#7dff9b;
+  --display:'DM Serif Display',Georgia,serif;--body:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Sans',system-ui,sans-serif;
+  --dlg-bg:#141414;--dlg-ink:#f1efe9;--dlg-dim:#a9a69e;}
+body{background:#0a0a0a;}
+.bar{background:rgba(10,10,10,.92);border-bottom:1px solid var(--line);}
+.brand{font-size:1.15rem;}
+.pill{background:transparent;border:1px solid var(--line);color:#f1efe9;font-weight:500;}
+.top .top-art{filter:grayscale(1) contrast(1.1);opacity:.85;}
+.top h1{font-size:clamp(2.6rem,12.4vw,3.6rem);line-height:1;font-weight:400;letter-spacing:-.01em;}
+.top h1 em{color:#7dff9b;font-style:italic;}
+.proofline{background:transparent;color:#a9a69e;border:0;padding:0;border-radius:0;font:500 .82rem/1 var(--body);letter-spacing:.06em;text-transform:uppercase;}
+.proofline b{color:#f1efe9;font-family:var(--body);font-weight:600;}
+.quote{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;padding:14px 0 6px;grid-template-columns:56px 1fr;}
+.quote img{width:56px;height:84px;border-radius:2px;filter:grayscale(.5);}
+.quote q{font:400 1.2rem/1.25 'DM Serif Display',serif;}
+.quote small{color:#a9a69e;font-family:var(--body);}
+.stack img{border-color:#0a0a0a;box-shadow:none;filter:grayscale(.4);}
+.cta2{border:0;border-radius:999px;box-shadow:none;}
+.cta2-tg{background:#7dff9b;color:#0a0a0a;animation:none;}
+.cta2-wa{background:#f1efe9;color:#0a0a0a;}
+.cta2-ic{background:#0a0a0a;}
+.cta2-tg .cta2-ic{color:#7dff9b;}
+.cta2-txt b{font:600 1.02rem/1 var(--body);}
+.cta2-txt small{font-family:var(--body);}
+.ship-line{font-family:var(--body);color:#a9a69e;font-size:.85rem;}
+.sec{padding-top:48px;padding-bottom:48px;}
+.sec-k{font:500 .74rem/1 var(--body);letter-spacing:.18em;color:#a9a69e;}
+.sec h2{font-size:2.6rem;font-weight:400;}
+.scam{background:#0a0a0a;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.scam h2{color:#f1efe9;}
+.scam h2::after{content:".";color:#7dff9b;}
+.scam > .wrap > p,.how span{color:#c9c6be;}
+.how p{background:transparent;border-top:1px solid var(--line);border-radius:0;padding:14px 0;}
+.how i::before{color:#7dff9b;font-family:var(--body);}
+.how b{color:#f1efe9;font-weight:600;}
+.scam .quote{background:transparent;color:#f1efe9;}
+.mitem{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;}
+.mitem summary{padding:14px 0;}
+.mitem summary b{font:400 1.25rem/1.1 'DM Serif Display',serif;}
+.mitem summary small{color:#a9a69e;}
+.mitem summary em{font:500 1rem/1 var(--body);color:#7dff9b;}
+.mitem summary img{filter:grayscale(1);border-radius:2px;background:#141414;}
+.mprices .p{background:#141414;font-family:var(--body);}
+.vgrid{gap:4px;}
+.vgrid button{border-radius:0;filter:grayscale(.3);}
+.btn{background:transparent;color:#f1efe9;border:1px solid var(--line);border-radius:999px;box-shadow:none;font-weight:500;}
+.ship-rows p,.faq details{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:14px 0;}
+.ship-rows small,.faq p{color:#a9a69e;}
+.faq summary{font-weight:500;}
+.links a{color:#7dff9b;}
+.fine,.draft-note a{color:#a9a69e;}
+.dock-glow{background:linear-gradient(rgba(10,10,10,0),#0a0a0a 40%);}

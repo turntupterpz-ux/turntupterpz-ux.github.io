@@ -1,0 +1,55 @@
+/* Glow 1 · Night Shift: a graveyard night watchman's clipboard. Archivo Black stencil-ish caps, flat glow-green,
+   a flashlight beam on the hero, tombstone horizon, thin ruled lists instead of bubbly cards. */
+:root{--cream:#070907;--paper:#0f1310;--ink:#eef3ea;--dim:#b4bdaf;--honey:#b6ff3b;--honey-2:#b6ff3b;--line:rgba(238,243,234,.16);--mint:#b6ff3b;
+  --display:'Archivo Black',system-ui,sans-serif;--body:'Archivo',system-ui,sans-serif;--mono:'Archivo',system-ui,sans-serif;
+  --dlg-bg:#0f1310;--dlg-ink:#eef3ea;--dlg-dim:#b4bdaf;}
+body{background:#070907;}
+.bar{background:#070907;border-bottom:1px solid var(--line);}
+.brand{text-transform:uppercase;font-size:.95rem;letter-spacing:.02em;}
+.pill{background:transparent;border:1px solid #eef3ea;color:#eef3ea;border-radius:4px;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;}
+.top{background:radial-gradient(120% 60% at 85% 0%,rgba(182,255,59,.16),transparent 55%);position:relative;padding-bottom:64px;}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'%3E%3Cpath fill='%231a2117' d='M0 60V48h20V30a12 12 0 0 1 24 0v18h30V36h6v-8h-6v-4h6v-6h4v6h6v4h-6v8h6v12h40V26a16 16 0 0 1 32 0v22h44V34a10 10 0 0 1 20 0v14h36V20h6v-6h-6v-4h6V4h4v6h6v4h-6v6h6v28h42V30a14 14 0 0 1 28 0v18h28V38a9 9 0 0 1 18 0v10h12v12Z'/%3E%3C/svg%3E") 0 100%/400px 46px repeat-x;pointer-events:none;}
+.top .top-art{filter:grayscale(.4) brightness(.95);}
+.top h1{font-size:clamp(2rem,9.4vw,3rem);line-height:.98;text-transform:uppercase;letter-spacing:-.01em;}
+.top h1 em{color:#b6ff3b;}
+.proofline{background:transparent;color:#b6ff3b;border:1px solid #b6ff3b;border-radius:4px;font:700 .78rem/1 var(--body);text-transform:uppercase;letter-spacing:.1em;}
+.proofline b{color:#b6ff3b;font-family:var(--display);}
+.quote{border:0;border-left:3px solid #b6ff3b;border-radius:0;background:#0f1310;box-shadow:none;}
+.quote q{font-weight:500;font-size:1.05rem;}
+.quote small{color:#b4bdaf;font-family:var(--body);letter-spacing:.04em;text-transform:uppercase;font-size:.7rem;}
+.quote img{border-radius:3px;}
+.stack img{border-color:#070907;box-shadow:none;}
+.cta2{border:0;border-radius:6px;box-shadow:none;}
+.cta2-tg{background:#b6ff3b;color:#070907;animation:none;}
+.cta2-wa{background:#eef3ea;color:#070907;}
+.cta2-ic{background:#070907;}
+.cta2-tg .cta2-ic{color:#b6ff3b;}
+.cta2-txt b{font-size:1.05rem;text-transform:uppercase;}
+.cta2-txt small{font-family:var(--body);font-weight:500;}
+.ship-line{font-family:var(--body);font-size:.85rem;color:#b4bdaf;}
+.sec{border-top:1px solid var(--line);}
+.sec-k{font:700 .74rem/1 var(--body);letter-spacing:.16em;color:#b6ff3b;}
+.sec h2{font-size:2.1rem;text-transform:uppercase;line-height:1;}
+.scam{background:#0f1310;}
+.scam h2{color:#eef3ea;}
+.scam > .wrap > p,.how span{color:#c9d1c4;}
+.how p{background:transparent;border-top:1px solid var(--line);border-radius:0;padding:14px 2px;}
+.how i::before{color:#b6ff3b;}
+.how b{color:#eef3ea;}
+.scam .quote{background:#070907;color:#eef3ea;box-shadow:none;}
+.mitem{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;}
+.mitem summary{padding:12px 0;}
+.mitem summary b{text-transform:uppercase;font-size:.98rem;letter-spacing:.02em;}
+.mitem summary small{color:#b4bdaf;}
+.mitem summary em{font-family:var(--display);color:#b6ff3b;}
+.mitem summary img{border-radius:4px;background:#0f1310;}
+.mprices .p{background:#0f1310;border-radius:4px;font-family:var(--body);}
+.vgrid button{border-radius:3px;}
+.btn{background:transparent;color:#eef3ea;border:1px solid #eef3ea;border-radius:4px;box-shadow:none;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;}
+.ship-rows p{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:12px 0;}
+.ship-rows small{color:#b4bdaf;}
+.faq details{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:10px 0;}
+.faq p{color:#b4bdaf;}
+.links a{color:#b6ff3b;}
+.fine,.draft-note a{color:#b4bdaf;}
+.dock-glow{background:linear-gradient(rgba(7,9,7,0),#070907 40%);}
