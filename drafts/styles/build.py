@@ -29,6 +29,9 @@ DRAFTS = [
     ("5-arcade", "Arcade", "#0d0b2b", "Press+Start+2P&family=VT323",
      {"top": ["diamond", "flame", "pearl"], "sec": {"burned": "flame", "menu": "jar", "vouches": "pearl", "ship": "box"},
       "badges": {"burned": "BOSS LEVEL", "menu": "SELECT ITEM", "vouches": "HIGH SCORES", "ship": "SPEED RUN"}}),
+    ("6-halloween", "Halloween '89", "#120a1f", "Creepster&family=VT323",
+     {"top": ["flame", "jar", "drop"], "sec": {"burned": "torch", "menu": "jar", "vouches": "cloud", "ship": "box"},
+      "badges": {"burned": "ARE YOU AFRAID OF SCAMS?", "menu": "TRICK OR TREAT", "vouches": "▶ PLAY · REAL TAPES", "ship": "SPOOKY FAST"}}),
 ]
 
 home = (ROOT / "index.html").read_text()

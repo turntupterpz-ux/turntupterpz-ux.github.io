@@ -23,7 +23,7 @@ Join banner.
 
 ## Style drafts (`styles/`)
 
-Five full restyles of the live homepage (colors, Google Fonts, dab stickers, section treatments), built
+Six full restyles of the live homepage (colors, Google Fonts, dab stickers, section treatments), built
 by `styles/build.py`: it copies `/index.html`, removes analytics, adds `noindex`, the style's fonts,
 `styles/draft.css`, its `theme.css`, and `styles/decor.js` (pulls in `assets/images/dab-icons.svg` and
 places the stickers and section badges set in `window.DECOR`). Run `python3 drafts/styles/build.py`
@@ -36,6 +36,7 @@ after homepage changes. `styles/index.html` has previews (`styles/previews/`).
 | `3-chrome/` | Y2K iridescent, glass cards, holo rings, Unbounded. |
 | `4-street/` | Concrete wall, Permanent Marker, taped polaroid vouches, neon stickers. |
 | `5-arcade/` | Navy + scanlines, Press Start 2P, CRT-screen vouches, arcade buttons. |
+| `6-halloween/` | 80s/90s Halloween: Goosebumps slime type (Creepster), moon and bats, VHS-tape vouches, candy-corn prices. |
 
 ## Color drafts (`colors/`)
 

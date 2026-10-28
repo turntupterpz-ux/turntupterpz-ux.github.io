@@ -1,0 +1,78 @@
+/* Style 6 · Halloween '89: 80s/90s Halloween. Goosebumps slime type, Beistle orange/black cutouts,
+   VHS horror-rental tapes for the vouches, a full moon and bats over the hero. */
+:root{--cream:#120a1f;--paper:#1d1230;--ink:#f4ecd8;--dim:#d2c6b0;--honey:#ff7a00;--honey-2:#ff8c1a;--line:rgba(255,122,0,.3);--mint:#8cff2e;
+  --display:'Creepster',system-ui,sans-serif;--mono:'VT323',ui-monospace,monospace;
+  --c1:#ff7a00;--c2:#8cff2e;--c3:#f4ecd8;--ol:#0a0612;--sw:5;--dlg-bg:#1d1230;--dlg-ink:#f4ecd8;--dlg-dim:#d2c6b0;
+  --slime:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24'%3E%3Cpath fill='%238cff2e' d='M0 0h120v6c-6 0-7 14-12 14s-5-10-10-10-5 16-11 16-6-12-11-12-4 6-9 6-6-14-12-14-5 10-10 10-6-8-11-8-4 12-10 12S8 6 0 6Z'/%3E%3C/svg%3E");}
+body{background:radial-gradient(70vmax 50vmax at 50% -10%,#3a1652 0,transparent 60%) #120a1f;}
+body::after{content:"";position:fixed;inset:0;z-index:70;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 4px);}
+.bar{background:#0a0612;border-bottom:3px solid #ff7a00;}
+.brand{font-size:1.3rem;letter-spacing:.04em;color:#ff7a00;}
+.pill{background:#ff7a00;color:#0a0612;border:2px solid #0a0612;}
+
+/* hero: full moon + bats */
+.top::before{content:"";position:absolute;left:50%;top:6px;width:min(250px,64vw);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(circle at 38% 35%,#fff6d8,#ffd98a 55%,#f0a43c);box-shadow:0 0 60px 10px rgba(255,190,90,.35);}
+.top::after{content:"🦇   🦇      🦇";position:absolute;left:18px;top:40px;font-size:1.5rem;letter-spacing:.1em;filter:brightness(0);opacity:.85;}
+.top .top-art{filter:drop-shadow(0 10px 18px rgba(0,0,0,.6));}
+.top h1{font-size:clamp(2.9rem,14vw,4rem);line-height:.95;color:#8cff2e;letter-spacing:.03em;text-shadow:0 0 14px rgba(140,255,46,.45),3px 3px 0 #0a0612;}
+.top h1 em{color:#ff7a00;text-shadow:0 0 16px rgba(255,122,0,.6),3px 3px 0 #0a0612;}
+.proofline{background:#ff7a00;color:#0a0612;font:400 1.25rem/1 var(--mono);border-radius:4px;}
+.proofline b{color:#0a0612;font-family:var(--display);font-size:1.2rem;}
+.stk-top{width:60px;height:60px;filter:drop-shadow(0 0 10px rgba(255,122,0,.6));}
+.stk-t1{left:12px;top:150px;transform:rotate(-12deg);}
+.stk-t2{right:12px;top:160px;transform:rotate(10deg);}
+.stk-t3{right:40px;top:30px;width:40px;height:40px;}
+
+/* section titles drip slime */
+.sec h2{position:relative;font-size:2.8rem;letter-spacing:.03em;color:#8cff2e;text-shadow:3px 3px 0 #0a0612;padding-bottom:18px;}
+.sec h2::after{content:"";position:absolute;left:0;bottom:0;width:min(260px,80%);height:22px;background:var(--slime) 0 0/120px 22px repeat-x;}
+.sec-k{font:400 1.3rem/1 var(--mono);letter-spacing:.06em;color:#ff7a00;}
+.badge{position:relative;margin-bottom:10px;padding:6px 10px;background:#ff7a00;color:#0a0612;font:400 1.15rem/1 var(--mono);
+  clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%);}
+.stk-sec{width:66px;height:66px;filter:drop-shadow(0 0 10px rgba(140,255,46,.5));}
+.stk-burned,.stk-menu,.stk-vouches,.stk-ship{right:12px;top:26px;transform:rotate(10deg);}
+
+/* vouches = VHS horror-rental tapes */
+.quote{position:relative;border:0;border-radius:6px;background:#1b1b1f;color:#f4ecd8;box-shadow:0 6px 0 #0a0612;padding-top:30px;
+  background-image:linear-gradient(#ff7a00 0 22px,transparent 22px);}
+.quote::before{content:"▶ PLAY";position:absolute;left:12px;top:3px;font:400 1.1rem/1 var(--mono);color:#0a0612;}
+.quote::after{content:"● REC";position:absolute;right:12px;top:3px;font:400 1.1rem/1 var(--mono);color:#b3001b;}
+.quote q{font:400 1.45rem/1.05 var(--mono);}
+.quote small{color:#d2c6b0;font:400 1rem/1 var(--mono);}
+.quote img{border-radius:2px;filter:contrast(1.05) saturate(1.1);}
+
+/* scam section: campfire-story panel */
+.scam{background:linear-gradient(180deg,#0a0612,#2a0f0f);border-top:4px solid #ff7a00;border-bottom:4px solid #ff7a00;}
+.scam h2{color:#ff7a00;}
+.scam > .wrap > p,.how span{color:#e6dcc6;}
+.how p{background:rgba(255,122,0,.08);border:2px dashed rgba(255,122,0,.55);border-radius:6px;}
+.how b{color:#8cff2e;font:400 1.35rem/1 var(--mono);}
+.scam .badge{background:#8cff2e;}
+
+/* menu: trick-or-treat candy bags */
+.mitem{border:3px solid #ff7a00;border-radius:12px;background:#1d1230;}
+.mitem summary b{font:400 1.45rem/1 'Creepster',sans-serif;letter-spacing:.04em;color:#ff7a00;}
+.mitem summary em{background:linear-gradient(#ffd23a 0 33%,#ff7a00 33% 66%,#f4ecd8 66%);color:#0a0612;padding:7px 10px;border-radius:8px;font-family:var(--display);letter-spacing:.03em;}
+.mprices .p{background:#120a1f;border:1px solid #ff7a00;font:400 1.05rem/1 var(--mono);}
+
+/* vouch grid: tracking-noise TV screens */
+.vgrid{gap:8px;}
+.vgrid button{position:relative;border:3px solid #2b2b33;border-radius:10px;box-shadow:0 0 14px rgba(140,255,46,.25);}
+.vgrid button::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 2px,transparent 2px 5px);pointer-events:none;}
+
+/* buttons */
+.cta2{border:3px solid #0a0612;border-radius:12px;color:#0a0612;box-shadow:0 5px 0 #0a0612;}
+.cta2-tg{background:#ff7a00;animation:none;}
+.cta2-wa{background:#8cff2e;}
+.cta2-ic{background:#0a0612;}
+.cta2-tg .cta2-ic{color:#ff7a00;}
+.cta2-txt b{font-size:1.35rem;letter-spacing:.04em;}
+.cta2-txt small{font:400 1rem/1 var(--mono);}
+.ship-line{font:400 1.2rem/1 var(--mono);color:#d2c6b0;}
+.btn{background:#8cff2e;color:#0a0612;border-color:#0a0612;font-family:var(--display);font-weight:400;font-size:1.25rem;letter-spacing:.05em;}
+.ship-rows p,.faq details{border:2px solid rgba(255,122,0,.6);background:#1d1230;}
+.ship-rows small{color:#d2c6b0;}
+.links a{color:#ff7a00;}
+.fine{color:#d2c6b0;}
+.scam .quote{background:linear-gradient(#ff7a00 0 22px,transparent 22px),#1b1b1f;color:#f4ecd8;box-shadow:0 6px 0 #0a0612;}
