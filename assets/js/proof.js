@@ -27,10 +27,10 @@
     { i: 27, t: "You always come thru" }
   ];
   const SCAM_QUOTES = [
-    { i: 26, t: "I have been scammed before by people on TikTok… you seem very genuine" },
+    { i: 68, t: "It hasn't been easy finding someone legit out here" },
     { i: 69, t: "I've been scammed before and I'm so glad I got in touch with you" },
     { i: 19, t: "It's a breath of fresh air to find someone legit" },
-    { i: 68, t: "It hasn't been easy finding someone legit out here" }
+    { i: 26, t: "I have been scammed before by people on TikTok… you seem very genuine" }
   ];
   const STACK = [30, 66, 36, 19, 57];
 
