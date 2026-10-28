@@ -1,0 +1,45 @@
+/* Spooky 2 · Pastel Goth: soft-spooky TikTok aesthetic. Black with lavender, bubblegum pink and mint, Bricolage
+   Grotesque, rounded everything, a little ghost by the headline. Cute, still dark. */
+:root{--cream:#0f0d14;--paper:#1b1724;--ink:#f5efff;--dim:#c9bedd;--honey:#c8a6ff;--honey-2:#ffb3d9;--line:rgba(200,166,255,.22);--mint:#9ff5d0;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;--body:'Nunito Sans',system-ui,sans-serif;--mono:'Nunito Sans',system-ui,sans-serif;--dlg-bg:#1b1724;--dlg-ink:#f5efff;--dlg-dim:#c9bedd;}
+body{background:radial-gradient(70% 40% at 100% 0,rgba(255,179,217,.12),transparent),radial-gradient(60% 40% at 0 30%,rgba(200,166,255,.12),transparent) #0f0d14;}
+.bar{background:rgba(15,13,20,.92);border-bottom:1px solid var(--line);}
+.brand{font:800 1.05rem/1 var(--display);letter-spacing:-.02em;text-transform:none;}
+.pill{border-radius:999px;border-color:#c8a6ff;color:#f5efff;text-transform:none;letter-spacing:0;font-size:.85rem;}
+.top{background:none;}
+.top::after{display:none;}
+.top::before{content:"";position:absolute;right:136px;top:30px;width:46px;height:56px;border-radius:23px 23px 6px 6px;background:#f5efff;
+  -webkit-mask:radial-gradient(circle at 15px 22px,transparent 4px,#000 4.5px) ,radial-gradient(circle at 31px 22px,transparent 4px,#000 4.5px);
+  -webkit-mask-composite:source-in;mask-composite:intersect;transform:rotate(-8deg);opacity:.95;}
+.top .top-art{filter:hue-rotate(220deg) saturate(.7);}
+.top h1{font:800 clamp(2.4rem,11.6vw,3.3rem)/.98 var(--display);letter-spacing:-.03em;text-transform:none;}
+.top h1 em{color:#ffb3d9;}
+.proofline{border-radius:999px;border-color:#9ff5d0;color:#9ff5d0;text-transform:none;letter-spacing:.02em;font:800 .82rem/1 var(--body);}
+.proofline b{color:#9ff5d0;font-family:var(--display);}
+.quote{border:1px solid var(--line);border-left:1px solid var(--line);border-radius:22px;background:#1b1724;}
+.quote q{font:600 1.04rem/1.3 var(--body);}
+.quote small{text-transform:none;letter-spacing:0;font-size:.78rem;}
+.quote img{border-radius:12px;}
+.cta2{border-radius:999px;}
+.cta2-tg{background:#c8a6ff;color:#0f0d14;}
+.cta2-wa{background:#9ff5d0;color:#0f0d14;}
+.cta2-tg .cta2-ic{color:#c8a6ff;}
+.cta2-wa .cta2-ic{color:#9ff5d0;}
+.cta2-txt b{font:800 1rem/1 var(--display);text-transform:none;letter-spacing:-.01em;}
+.sec{border-top:0;}
+.sec-k{color:#ffb3d9;letter-spacing:.1em;}
+.sec h2{font:800 2.3rem/1 var(--display);letter-spacing:-.03em;text-transform:none;}
+.scam{background:#1b1724;border-radius:28px 28px 0 0;}
+.how p{border-top:1px solid var(--line);}
+.how i::before{color:#9ff5d0;}
+.mitem{border-bottom:1px solid var(--line);}
+.mitem summary b{text-transform:none;font:800 1.05rem/1.1 var(--display);}
+.mitem summary em{color:#ffb3d9;font-family:var(--display);}
+.mitem summary img{border-radius:14px;}
+.mprices .p{border-radius:999px;}
+.vgrid button{border-radius:14px;}
+.btn{border-radius:999px;border-color:#c8a6ff;text-transform:none;letter-spacing:0;font-size:.95rem;}
+.links a{color:#c8a6ff;}
+.draft-note{margin:0;padding:0 16px calc(100px + env(safe-area-inset-bottom));text-align:center;font-size:.85rem;}
+.draft-note a{color:#c9bedd;}
+.dock-glow{background:linear-gradient(rgba(15,13,20,0),#0f0d14 40%);}

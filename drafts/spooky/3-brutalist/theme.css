@@ -1,0 +1,58 @@
+/* Spooky 3 · Brutalist: Gen-Z web brutalism in Halloween colors. Flat orange page, black type, thick black rules,
+   a visible grid, Space Grotesk + JetBrains Mono, square corners, no shadows, no glow. */
+:root{--cream:#ff5a00;--paper:#ff5a00;--ink:#0a0a0a;--dim:#1f1408;--honey:#0a0a0a;--honey-2:#0a0a0a;--line:#0a0a0a;--mint:#0a0a0a;
+  --display:'Space Grotesk',system-ui,sans-serif;--body:'Space Grotesk',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;--dlg-bg:#ff5a00;--dlg-ink:#0a0a0a;--dlg-dim:#1f1408;}
+body{background:linear-gradient(rgba(10,10,10,.12) 1px,transparent 1px) 0 0/100% 32px,linear-gradient(90deg,rgba(10,10,10,.12) 1px,transparent 1px) 0 0/32px 100%,#ff5a00;color:#0a0a0a;}
+.bar{background:#0a0a0a;color:#ff5a00;border-bottom:0;}
+.bar .brand{color:#ff5a00;font:700 1rem/1 var(--mono);letter-spacing:0;}
+.pill{background:#ff5a00;color:#0a0a0a;border:0;border-radius:0;font:700 .78rem/1 var(--mono);}
+.top{background:none;}
+.top::after{display:none;}
+.top .top-art{filter:grayscale(1) contrast(1.4);mix-blend-mode:multiply;}
+.top h1{font:700 clamp(2.6rem,12.4vw,3.5rem)/.92 var(--display);letter-spacing:-.05em;text-transform:none;color:#0a0a0a;}
+.top h1 em{color:#ff5a00;background:#0a0a0a;padding:0 .12em;}
+.proofline{border:3px solid #0a0a0a;border-radius:0;color:#0a0a0a;background:#ff5a00;font:700 .8rem/1 var(--mono);}
+.proofline b{color:#0a0a0a;font-family:var(--mono);}
+.quote{border:3px solid #0a0a0a;border-left:3px solid #0a0a0a;border-radius:0;background:#ff5a00;color:#0a0a0a;}
+.quote q{font:700 1.08rem/1.25 var(--display);}
+.quote small{color:#1f1408;font:500 .7rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em;}
+.quote img{border:2px solid #0a0a0a;border-radius:0;}
+.stack small,.stack small b{color:#0a0a0a;}
+.stack img{border-color:#0a0a0a;}
+.cta2{border:3px solid #0a0a0a;border-radius:0;}
+.cta2-tg{background:#0a0a0a;color:#ff5a00;}
+.cta2-wa{background:#fffbf5;color:#0a0a0a;}
+.cta2-ic{background:#ff5a00;}
+.cta2-tg .cta2-ic{color:#0a0a0a;}
+.cta2-wa .cta2-ic{background:#0a0a0a;color:#25d366;}
+.cta2-txt b{font:700 1rem/1 var(--mono);text-transform:uppercase;}
+.cta2-txt small{font:500 .72rem/1 var(--mono);}
+.ship-line{font:500 .8rem/1 var(--mono);color:#0a0a0a;}
+.ship-line i{background:#0a0a0a;}
+.sec{border-top:3px solid #0a0a0a;}
+.sec-k{font:700 .74rem/1 var(--mono);color:#0a0a0a;letter-spacing:.06em;}
+.sec h2{font:700 2.5rem/.95 var(--display);letter-spacing:-.05em;text-transform:none;}
+.scam{background:#0a0a0a;color:#ff5a00;}
+.scam .sec-k,.scam h2{color:#ff5a00;}
+.scam > .wrap > p{color:#ffd0b5;}
+.how p{border-top:2px solid #ff5a00;}
+.how i::before{color:#ff5a00;font-family:var(--mono);}
+.how b{color:#ff5a00;}
+.how span{color:#ffd0b5;}
+.scam .quote{background:#0a0a0a;color:#ff5a00;border-color:#ff5a00;}
+.scam .quote small{color:#ffd0b5;}
+.mitem{border:0;border-bottom:3px solid #0a0a0a;}
+.mitem summary b{font:700 1.05rem/1 var(--display);text-transform:none;letter-spacing:-.02em;}
+.mitem summary small{color:#1f1408;}
+.mitem summary em{font:700 1rem/1 var(--mono);color:#0a0a0a;background:#fffbf5;padding:6px 8px;border:2px solid #0a0a0a;}
+.mitem summary img{border:2px solid #0a0a0a;border-radius:0;background:#ff5a00;}
+.mprices .p{background:#fffbf5;border:2px solid #0a0a0a;border-radius:0;font-family:var(--mono);color:#0a0a0a;}
+.vgrid button{border:3px solid #0a0a0a;border-radius:0;}
+.btn{background:#0a0a0a;color:#ff5a00;border:0;border-radius:0;font:700 .85rem/1 var(--mono);}
+.ship-rows p,.faq details{border-bottom:3px solid #0a0a0a;}
+.ship-rows small,.faq p{color:#1f1408;}
+.links a{color:#0a0a0a;}
+.fine{color:#1f1408;}
+.draft-note{margin:0;padding:0 16px calc(100px + env(safe-area-inset-bottom));text-align:center;font:500 .8rem/1 var(--mono);}
+.draft-note a{color:#0a0a0a;}
+.dock-glow{background:linear-gradient(rgba(255,90,0,0),#ff5a00 40%);}

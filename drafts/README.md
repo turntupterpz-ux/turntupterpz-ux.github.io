@@ -21,6 +21,20 @@ a `<style>` block; the shared CSS is untouched. 1: panel under the header · 2: 
 Join strip and tabs · 3: chips under the header · 4: Join pill in the header · 5: icon tiles and a
 Join banner.
 
+## Night Shift Halloween drafts (`spooky/`)
+
+Five Halloween takes on the live Night Shift homepage (it already loads `night.css` + `dock.js`, so the
+iPhone fixes carry over). Built by `spooky/build.py`: copies `/index.html`, removes analytics, adds
+`noindex`, the style's Google Fonts and its `theme.css` after `night.css`.
+
+| Folder | Kind | Look |
+| --- | --- | --- |
+| `1-a24/` | Contemporary | Indie-horror poster: off-black/bone, Anton, one blood-orange accent, grain. |
+| `2-pastel-goth/` | Contemporary | Black + lavender/pink/mint, Bricolage Grotesque, rounded, little ghost. |
+| `3-brutalist/` | Contemporary | Flat orange, thick black rules, grid, Space Grotesk + JetBrains Mono. |
+| `4-bats/` | Pattern | Tiled bats and stars on purple, solid panels for every section. |
+| `5-candy-corn/` | Pattern | Tiled candy corn and pumpkins on brown, sections on cream cards. |
+
 ## Glow Graveyard variations (`glow/`)
 
 Five takes on `halloween/5-glow` with different fonts, fewer "AI" tells (no emoji icons, no sticker/badge

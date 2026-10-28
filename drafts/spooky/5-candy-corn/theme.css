@@ -1,0 +1,50 @@
+/* Spooky 5 · Candy Corn: tiled candy corn and little pumpkins on chocolate brown. Titan One titles, Nunito text.
+   Pattern sits behind solid cream panels so reading is never on top of it. */
+:root{--cream:#1a120c;--paper:#fff6e8;--ink:#fff6e8;--dim:#e9d9c2;--honey:#ff8a1e;--honey-2:#ffd23a;--line:rgba(255,246,232,.18);--mint:#ffd23a;
+  --display:'Titan One',system-ui,sans-serif;--body:'Nunito',system-ui,sans-serif;--mono:'Nunito',system-ui,sans-serif;--dlg-bg:#2a1c12;--dlg-ink:#fff6e8;--dlg-dim:#e9d9c2;}
+body{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Cg opacity='.5'%3E%3Cpath d='M24 10 34 34H14Z' fill='%23ffffff'/%3E%3Cpath d='M18 26h22l-3-8H21Z' fill='%23ff8a1e' transform='translate(-4 0)'/%3E%3Cpath d='M14 34h20l-3-8H17Z' fill='%23ffd23a' transform='translate(0 0)'/%3E%3C/g%3E%3Cg opacity='.45' transform='translate(56 52)'%3E%3Cellipse cx='16' cy='20' rx='16' ry='13' fill='%23e8590c'/%3E%3Cpath d='M16 7v-5' stroke='%2353a33a' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M10 9c0 8 0 18 0 22M22 9c0 8 0 18 0 22' stroke='%23b8440a' stroke-width='1.5' fill='none'/%3E%3C/g%3E%3C/svg%3E") 0 0/96px 96px,#1a120c;font-weight:600;}
+.bar{background:#ff8a1e;color:#1a120c;border-bottom:0;}
+.bar .brand{color:#1a120c;font:400 1.05rem/1 var(--display);text-transform:none;}
+.pill{background:#1a120c;color:#ffd23a;border:0;border-radius:999px;text-transform:none;letter-spacing:0;}
+.top{background:linear-gradient(180deg,rgba(26,18,12,0),rgba(26,18,12,.88) 42%);}
+.top::after{display:none;}
+.top h1{font:400 clamp(2.2rem,10.6vw,3rem)/1.02 var(--display);text-transform:none;color:#fff6e8;}
+.top h1 em{color:#ffd23a;}
+.proofline{background:#ffd23a;color:#1a120c;border:0;border-radius:999px;font-weight:800;}
+.proofline b{color:#1a120c;}
+.quote{background:#fff6e8;color:#2a1c12;border:0;border-radius:18px;box-shadow:0 5px 0 #ff8a1e;}
+.quote small{color:#6b4f36;text-transform:none;letter-spacing:0;font-size:.78rem;}
+.stack small{color:#e9d9c2;}
+.cta2{border-radius:18px;border:3px solid #1a120c;}
+.cta2-tg{background:#ff8a1e;color:#1a120c;}
+.cta2-wa{background:#fff6e8;color:#1a120c;}
+.cta2-ic{background:#1a120c;}
+.cta2-tg .cta2-ic{color:#ffd23a;}
+.cta2-txt b{font:400 1rem/1 var(--display);text-transform:none;}
+.ship-line{background:#1a120c;align-self:center;padding:6px 12px;border-radius:999px;}
+.sec{border-top:0;}
+.sec > .wrap{background:#fff6e8;color:#2a1c12;border-radius:22px;padding:20px 16px;box-shadow:0 6px 0 #ff8a1e;}
+.sec-k{color:#b84a00;}
+.sec h2{font:400 2.2rem/1.02 var(--display);text-transform:none;color:#2a1c12;}
+.scam > .wrap{background:#2a1c12;color:#fff6e8;box-shadow:0 6px 0 #ffd23a;}
+.scam .sec-k{color:#ffd23a;}
+.scam h2{color:#fff6e8;}
+.scam > .wrap > p,.how span{color:#e9d9c2;}
+.how b{color:#ffd23a;}
+.how i::before{color:#ff8a1e;}
+.scam .quote{background:#fff6e8;color:#2a1c12;}
+.mitem{border-bottom:1px solid rgba(42,28,18,.15);}
+.mitem summary b{text-transform:none;font:400 1.08rem/1 var(--display);color:#2a1c12;}
+.mitem summary small{color:#6b4f36;}
+.mitem summary em{color:#b84a00;font-family:var(--display);}
+.mitem summary img{background:#f3e3cc;}
+.mprices .p{background:#f3e3cc;color:#2a1c12;}
+.vgrid button{border-radius:12px;}
+.btn{background:#ff8a1e;color:#1a120c;border:0;border-radius:999px;text-transform:none;letter-spacing:0;font-family:var(--display);}
+.ship-rows p,.faq details{border-bottom:1px solid rgba(42,28,18,.15);}
+.ship-rows small,.faq p{color:#6b4f36;}
+.links a{color:#b84a00;}
+.fine{background:#1a120c;margin:0;}
+.draft-note{margin:0;padding:0 16px calc(100px + env(safe-area-inset-bottom));text-align:center;font-size:.85rem;background:#1a120c;}
+.draft-note a{color:#e9d9c2;}
+.dock-glow{background:linear-gradient(rgba(26,18,12,0),#1a120c 40%);}
