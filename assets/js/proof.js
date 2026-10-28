@@ -15,9 +15,9 @@
 
   // Short lines copied from real vouch screenshots; i is the screenshot's place in TT.vouches.
   const QUOTES = [
+    { i: 36, t: "Smell, taste, high are like nothing I've ever had before" },
     { i: 30, t: "It just landed after only two damn days" },
     { i: 66, t: "Hands down one of the best rosins I've ever tried" },
-    { i: 36, t: "Smell, taste, high are like nothing I've ever had before" },
     { i: 19, t: "It's a breath of fresh air to find someone legit" },
     { i: 57, t: "Great terps, great high, and a clean melt" },
     { i: 45, t: "Wilson Zero, top 5 strains" },

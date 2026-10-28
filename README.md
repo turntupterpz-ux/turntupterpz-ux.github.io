@@ -1,23 +1,26 @@
 # TurntUpTerpz website
 
 A mobile-first static website hosted with GitHub Pages at
-[turntupterpz.com](https://turntupterpz.com). The homepage ("Proof + price") is built for visitors
-arriving from TikTok: the first screen pairs the price hook ("Concentrates as low as $5/g") with real
-customer quotes and one big "Public Telegram channel" button, then a "Been burned before?" section,
-the menu, every vouch, shipping and FAQ. It started as `/drafts/tiktok/6-proof-price/`. The previous
-scroll-motion homepage ("Drip") is kept at `/drafts/7-drip/`.
+[turntupterpz.com](https://turntupterpz.com). The homepage ("Night Shift") is built for visitors
+arriving from TikTok on iPhones: a dark glow-green look (Archivo Black + Archivo, self-hosted), a first screen
+that fits an iPhone SE with the price hook ("Concentrates as low as $5/g"), real customer quotes and the
+Telegram + WhatsApp buttons, then "Been burned before?", the menu, every vouch, shipping and FAQ. A
+thumb-zone button bar (`assets/js/dock.js`) slides up once the main buttons scroll away. Layout is
+`assets/css/proof.css` with `assets/css/night.css` on top. It started as `/drafts/glow/1-night-shift/`.
+The previous homepages are kept at `/drafts/tiktok/6-proof-price/` and `/drafts/7-drip/`.
 
 ## Project structure
 
 ```text
 .
-├── index.html                    Homepage (Proof + price)
+├── index.html                    Homepage (Night Shift)
 ├── faq.html                      Full FAQ
 ├── menu.html                     Full menu image
 ├── vouches.html                  Redirect for old vouch-page links
 ├── 404.html                      "Page not found" page (GitHub Pages serves it for any missing URL)
 ├── assets/
-│   ├── css/proof.css             Homepage design
+│   ├── css/proof.css             Homepage layout and base design
+│   ├── css/night.css             Homepage Night Shift look + iPhone fixes (loaded after proof.css)
 │   ├── css/drip.css              Former Drip homepage design (drafts/7-drip, drafts/top, escape drafts)
 │   ├── css/site.css              FAQ and menu page design
 │   ├── css/dialogs.css           Vouch viewer and "open in browser" popups (homepage and drafts)
@@ -25,6 +28,7 @@ scroll-motion homepage ("Drip") is kept at `/drafts/7-drip/`.
 │   ├── js/site.js                Shared data: links, menu, vouch list, shipping countdown, viewer
 │   ├── js/scroll.js              Scroll-motion engine (pinned scenes, parallax, reveals)
 │   ├── js/proof.js               Homepage: menu, quote cards, vouch grid, shipping, live ship-today countdown
+│   ├── js/dock.js                Homepage: thumb-zone Telegram/WhatsApp bar
 │   ├── js/drip.js                Former Drip homepage script (drafts only)
 │   ├── js/app.js                 Previous homepage script (still used by /facetime/)
 │   ├── js/motion.js              Scroll-driven product animations
