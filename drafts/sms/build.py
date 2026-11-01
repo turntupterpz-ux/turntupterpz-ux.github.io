@@ -5,6 +5,7 @@ import re
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parent
 HOME = (ROOT / "index.html").read_text()
+HOME = re.sub(r'\n      <div class="sms-placement sms-hero">.*?</div>(?=\n      <p class="ship-line">)', '', HOME, count=1)
 SMS = "sms:+15309929795?body=Hey%20I%20came%20from%20your%20page"
 CARD = f'''<a class="sms-contact leaves-site track-link" data-label="home_sms" href="{SMS}"><span class="sms-icon" aria-hidden="true">✉</span><span><b>SMS/iMessage: +15309929795</b><small>Tap to text · message ready to send</small></span><span class="sms-arrow" aria-hidden="true">↗</span></a>'''
 
