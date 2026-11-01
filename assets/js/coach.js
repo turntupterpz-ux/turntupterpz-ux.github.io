@@ -100,10 +100,11 @@
 
   function open(link) {
     if (link) href = link.href;
-    const target = /whatsapp\.com|wa\.me/.test(href) ? "WhatsApp" : "Telegram";
+    const target = /^sms:/i.test(href) ? "SMS/iMessage" : /whatsapp\.com|wa\.me/.test(href) ? "WhatsApp" : "Telegram";
     document.querySelectorAll("[data-cc-target]").forEach((n) => { n.textContent = target; });
     $(".cc").dataset.target = target.toLowerCase();
-    $(".cc-copy").textContent = "Copy link instead";
+    $(".m-order").textContent = target === "SMS/iMessage" ? "Text" : "Order";
+    $(".cc-copy").textContent = target === "SMS/iMessage" ? "Copy number instead" : "Copy link instead";
     const box = $(".cc");
     box.hidden = false;
     root.classList.add("cc-open");
@@ -138,14 +139,15 @@
     $(".cc-dim").addEventListener("click", () => close(false));
     $(".cc-copy").addEventListener("click", (e) => {
       const b = e.currentTarget;
-      copy(href).then((ok) => {
-        b.textContent = ok ? "Copied ✓ Paste it in " + browser : "Couldn't copy, use the 3 taps";
+      const sms = /^sms:/i.test(href);
+      copy(sms ? href.match(/^sms:([^?]+)/i)[1] : href).then((ok) => {
+        b.textContent = ok ? "Copied ✓ Paste it in " + (sms ? "Messages" : browser) : "Couldn't copy, use the 3 taps";
         report(ok ? "coach_copy" : "coach_copy_failed");
       });
     });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && root.classList.contains("cc-open")) close(false); });
 
-    // every Telegram and WhatsApp button, including ones pages build later
+    // contact buttons, including ones pages build later
     document.addEventListener("click", (event) => {
       const link = event.target.closest && event.target.closest("a.leaves-site");
       if (!link) return;

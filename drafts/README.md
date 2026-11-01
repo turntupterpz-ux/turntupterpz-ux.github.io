@@ -3,6 +3,13 @@
 Homepage experiments, published at `turntupterpz.com/drafts/` (`noindex`, not linked from the live site,
 no analytics). `index.html` lists them all.
 
+## SMS/iMessage contact drafts (`sms/`)
+
+Five placements for an SMS button on the current homepage: hero button, quiet row, top bar,
+trust section, and footer. Each uses `sms:+15309929795?body=Hey%20I%20came%20from%20your%20page`
+and the shared TikTok browser exit guide. Run `python3 drafts/sms/build.py` after homepage changes.
+`sms/index.html` links to all five.
+
 ## Motion drafts (6 and 7)
 
 Both pull the menu, links, vouches and shipping countdown from `../assets/js/site.js`, so they stay
